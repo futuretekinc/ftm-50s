@@ -1,0 +1,1 @@
+#define UTS_RELEASE "2.6.37.0-FTM-50+"
