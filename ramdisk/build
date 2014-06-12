@@ -1,0 +1,761 @@
+#!/bin/bash 
+VERSION=`date`
+SSL='secuwayssl'
+ROOT=$PWD/target
+VDISK=ramdisk
+STL=/opt/STM/STLinux-2.4/devkit/armv5/target
+LN=/bin/ln
+CP=/bin/cp
+
+INCLUDE_SSHD=1
+INCLUDE_THTTPD=0
+INCLUDE_VSFTPD=1
+INCLUDE_TELNETD=1
+INCLUDE_XINETD=1
+INCLUDE_SER2NET=1
+
+function change_dir()
+{
+	cd 	    $ROOT/$1
+
+    echo    "change dir to $PWD"
+	echo	"Items are being generated on $1"
+}
+
+function link()
+{
+    echo $LN -s $1 $2
+    $LN -s $1 $2
+}
+
+function copy()
+{
+	if [ ! -e $ROOT/$1 ]
+	then
+		mkdir -p $ROOT/$1
+	fi
+
+    echo "$CP $STL/$1/$2 $ROOT/$1"
+    sudo $CP $STL/$1/$2 $ROOT/$1
+
+	pushd .
+	cd $ROOT/$1
+
+    if [ $# -gt 2 ]
+    then
+		echo "$LN -s $2 $3"
+		$LN -s $2 $3
+    fi
+
+    if [ $# -gt 3 ]
+    then
+		echo "$LN -s $3 $4"
+		$LN -s $3 $4
+    fi
+
+    if [ $# -gt 4 ]
+    then
+		echo "$LN -s $4 $5"
+		$LN -s $4 $5
+    fi
+    popd
+}
+
+function cp_usr_lib()
+{
+    echo $CP "$STL/usr/lib/$1" $1
+    $CP "$STL/usr/lib/$1" $1
+}
+
+dd if=/dev/zero of=ramdisk bs=1k count=65536
+mke2fs -F ramdisk
+
+if [ -d "./$ROOT" ]
+then
+	echo ""
+else
+	mkdir "$ROOT"
+fi
+
+sudo mount -o loop ramdisk "$ROOT"
+
+(
+    change_dir /
+
+	mkdir -p bin boot sbin lib
+	mkdir -p dev 
+	mkdir -p etc etc/init.d etc/sysconfig/network
+	mkdir -p usr usr/bin usr/sbin usr/lib 
+	mkdir -p var var/log var/lock var/run var/ftp var/run/vsftpd/empty var/lib/misc tmp 
+	mkdir -p www www/cgi-bin www/contents www/images www/scripts www/styles
+
+	echo $VERSION > etc/version
+
+	$CP -rf ../apps/target/*       .
+	$CP -rf ../apps/target/bin/*   ./bin/
+)
+
+(
+    change_dir /dev
+
+	sudo mknod ram0	   	b 	1 	0	# all on needs is ram0
+	sudo mknod ram1	   	b 	1 	1
+
+	sudo mknod hda     	b 	3 	0	# compact flash
+	sudo mknod hda1    	b 	3 	1
+	sudo mknod hda2    	b 	3 	2
+	sudo mknod hda3    	b 	3 	3
+	sudo mknod hda4    	b 	3 	4
+
+	sudo mknod mem     	c 	1 	1
+	sudo mknod kmem    	c 	1 	2
+	sudo mknod null    	c 	1 	3
+	sudo mknod port    	c 	1 	4
+	sudo mknod zero    	c 	1 	5
+	sudo mknod core    	c 	1 	6
+	sudo mknod full    	c 	1 	7
+	sudo mknod random  	c 	1 	8 	# used by dropbear to generate keys
+	sudo mknod urandom 	c 	1 	9 	# used by dropbear to generate keys
+	sudo mknod vsys    	c 	1 	10
+
+	sudo mknod ptyp0   	c 	2 	0 	# pseudo terminal devices for dropbear
+	sudo mknod ptyp1   	c 	2 	1
+	sudo mknod ptyp2   	c 	2	2
+	sudo mknod ptyp3   	c 	2 	3
+	sudo mknod ptyp4   	c 	2 	4
+
+	sudo mknod ttyp0   	c 	3 	0 	# pseudo terminal devices for telnet
+	sudo mknod ttyp1   	c 	3 	1
+	sudo mknod ttyp2   	c 	3 	2
+	sudo mknod ttyp3   	c 	3 	3
+	sudo mknod ttyp4   	c 	3 	4
+
+	sudo mknod ttyS0   	c 	4 	64 	# console port
+	sudo mknod ttyS1   	c 	4 	65 	# used for kgdb
+
+	sudo mknod tty0    	c 	4 	0
+	sudo mknod tty1    	c 	4 	1 	# not needed
+
+	sudo mknod tty     	c 	5 	0
+	sudo mknod console 	c 	5 	1
+	sudo mknod ptmx    	c 	5 	2 	# dropbear sshd
+
+	sudo mknod watchdog	c	10 	130 # watchdog in SC1100
+
+	sudo mknod ppp     	c	108	0 	# Point-to-Point Protocol
+
+	$LN -s ram0				ramdisk
+	#ln -s urandom 			random  # used by dropbear workaround, 1,8 was dead
+	$LN -s ../proc/self/fd/0 stdin 	# process i/o
+	$LN -s ../proc/self/fd/1 stdout
+	$LN -s ../proc/self/fd/2 stderr
+	$LN -s ../proc/kcore     kcore
+
+	sudo mkdir net
+	cd net
+	sudo mknod tun	c	10	200
+
+	exit	3
+)
+
+(
+    # Create items on /
+    change_dir /
+
+    link bin/busybox linuxrc
+
+	exit    3
+)
+
+(
+    # Create items on /bin
+    change_dir /bin
+
+    link busybox	ash
+	link busybox	base64
+	link busybox	bash
+	link busybox	cat 
+	link busybox	catv 
+	link busybox	chattr 
+	link busybox	chgrp 
+	link busybox	chmod 
+	link busybox	chown 
+	link busybox	conspy 
+	link busybox	cp 
+	link busybox	cpio 
+	link busybox	cttyhack
+	link busybox	date 
+	link busybox	dd 
+	link busybox	df 
+	link busybox	dmesg 
+	link busybox	dnsdomainname 
+	link busybox	dumpkmap 
+	link busybox	echo 
+	link busybox	ed 
+	link busybox	egrep 
+	link busybox	false 
+	link busybox	fdflush 
+	link busybox	fgrep
+	link busybox	fsync 
+	link busybox	getopt 
+	link busybox	grep 
+	link busybox	gunzip 
+	link busybox	gzip 
+	link busybox	hostname 
+	link busybox	hush 
+	link busybox	ionice 
+	link busybox	iostat 
+	link busybox	ipcalc 
+	link busybox	kbd_mode
+	link busybox	kill 
+	link busybox	linux32 
+	link busybox	linux64 
+	link busybox	ln 
+	link busybox	login 
+	link busybox	ls 
+	link busybox	lsattr 
+	link busybox	lzop 
+	link busybox	makemime 
+	link busybox	mkdir 
+	link busybox	mknod 
+	link busybox	mktemp
+	link busybox	more 
+	link busybox	mount 
+	link busybox	mountpoint 
+	link busybox	mpstat 
+	link busybox	mt 
+	link busybox	mv 
+	link busybox	netstat 
+	link busybox	nice 
+	link busybox	pidof 
+	link busybox	ping 
+	link busybox	ping6 
+	link busybox	pipe_progress
+	link busybox	printenv 
+	link busybox	ps 
+	link busybox	pwd 
+	link busybox	reformime 
+	link busybox	rev 
+	link busybox	rm 
+	link busybox	rmdir 
+	link busybox	rpm 
+	link busybox	run-parts 
+	link busybox	scriptreplay 
+	link busybox	sed 
+	link busybox	setarch
+	link busybox	setserial 
+	link busybox	sh 
+	link busybox	sleep 
+	link busybox	stat 
+	link busybox	stty 
+	link busybox	su 
+	link busybox	sync 
+	link busybox	tar 
+	link busybox	touch 
+	link busybox	true 
+	link busybox	umount 
+	link busybox	uname 
+	link busybox	usleep 
+	link busybox	vi
+	link busybox	watch 
+	link busybox	zcat 
+
+	exit    3
+)
+
+(
+    change_dir /lib
+
+	copy lib ld-2.10.2.so ld-linux.so.3
+	copy lib libanl-2.10.2.so libanl.so.1
+	copy lib libBrokenLocale-2.10.2.so libBrokenLocale.so.1
+	copy lib libc-2.10.2.so libc.so.6 libc.so.0 libc.so
+	copy lib libcfont.so.0.0.0 libcfont.so.0
+	copy lib libcidn-2.10.2.so libcidn.so.1
+	copy lib libcom_err.so.2.1 libcom_err.so.2
+	copy lib libconsole.so.0.0.0 libconsole.so.0
+	copy lib libcrypt-2.10.2.so libcrypt.so.1 libcrypt.so
+	copy lib libctutils.so.0.0.0 libctutils.so.0
+	copy lib libdl-2.10.2.so libdl.so.2 
+	copy lib libe2p.so.2.3 libe2p.so.2
+	copy lib libext2fs.so.2.4 libext2fs.so.2
+	copy lib libgcc_s-4.7.2.so.1 libgcc_s.so.1
+	copy lib libkeyutils-1.2.so libkeyutils.so.1 libkeyutils.so
+	copy lib libm-2.10.2.so libm.so.6 libm.so 
+	copy lib libmemusage.so
+	copy lib libncurses.so.5.5 libncurses.so.5
+	copy lib libnsl-2.10.2.so libnsl.so.1
+	copy lib libnss_compat-2.10.2.so libnss_compat.so.2
+	copy lib libnss_dns-2.10.2.so libnss_dns.so.2
+	copy lib libnss_files-2.10.2.so libnss_files.so.2 
+	copy lib libnss_hesiod-2.10.2.so
+	copy lib libnss_hesiod.so.2
+	copy lib libnss_nis-2.10.2.so libnss_nis.so.2
+	copy lib libnss_nisplus-2.10.2.so libnss_nisplus.so.2
+	copy lib libpcprofile.so
+	copy lib libproc-3.2.7.so libproc.so
+	copy lib libpthread-2.10.2.so libpthread.so.0
+	copy lib libresolv-2.10.2.so libresolv.so.2
+	copy lib librt-2.10.2.so librt.so.1 librt.so
+	copy lib libSegFault.so
+	copy lib libss.so.2.0 libss.so.2
+	copy lib libthread_db-1.0.so libthread_db.so.1
+	copy lib libutil-2.10.2.so libutil.so.1
+
+	copy lib libstdc++.so.6.0.14 libstdc++.so.6
+
+	exit	3
+)
+
+(
+    change_dir /usr/bin
+
+	copy usr/bin openssl
+
+	link	../../bin/busybox	[
+	link	../../bin/busybox	[[
+	link	../../bin/busybox	awk
+	link	../../bin/busybox	basename
+	link	../../bin/busybox	beep
+	link	../../bin/busybox	bunzip2
+	link	../../bin/busybox	bzcat
+	link	../../bin/busybox	bzip2
+	link	../../bin/busybox	cal
+	link	../../bin/busybox	chpst
+	link	../../bin/busybox	chrt
+	link	../../bin/busybox	chvt
+	link	../../bin/busybox	cksum
+	link	../../bin/busybox	clear
+	link	../../bin/busybox	cmp
+	link	../../bin/busybox	comm
+	link	../../bin/busybox	crontab
+	link	../../bin/busybox	cryptpw
+	link	../../bin/busybox	cut
+	link	../../bin/busybox	dc
+	link	../../bin/busybox	deallocvt
+	link	../../bin/busybox	diff
+	link	../../bin/busybox	dirname
+	link	../../bin/busybox	dos2unix
+	link	../../bin/busybox	du
+	link	../../bin/busybox	dumpleases
+	link	../../bin/busybox	eject
+	link	../../bin/busybox	env
+	link	../../bin/busybox	envdir
+	link	../../bin/busybox	envuidgid
+	link	../../bin/busybox	expand
+	link	../../bin/busybox	expr
+	link	../../bin/busybox	fgconsole
+	link	../../bin/busybox	find
+	link	../../bin/busybox	flock
+	link	../../bin/busybox	fold
+	link	../../bin/busybox	free
+	link	../../bin/busybox	ftpget
+	link	../../bin/busybox	ftpput
+	link	../../bin/busybox	fuser
+	link	../../bin/busybox	groups
+	link	../../bin/busybox	hd
+	link	../../bin/busybox	head
+	link	../../bin/busybox	hexdump
+	link	../../bin/busybox	hostid
+	link	../../bin/busybox	id
+	link	../../bin/busybox	install
+	link	../../bin/busybox	ipcrm
+	link	../../bin/busybox	ipcs
+	link	../../bin/busybox	killall
+	link	../../bin/busybox	killall5
+	link	../../bin/busybox	last
+	link	../../bin/busybox	less
+	link	../../bin/busybox	logger
+	link	../../bin/busybox	logname
+	link	../../bin/busybox	lpq
+	link	../../bin/busybox	lpr
+	link	../../bin/busybox	lsof
+	link	../../bin/busybox	lspci
+	link	../../bin/busybox	lsusb
+	link	../../bin/busybox	lzcat
+	link	../../bin/busybox	lzma
+	link	../../bin/busybox	lzopcat
+	link	../../bin/busybox	md5sum
+	link	../../bin/busybox	mesg
+	link	../../bin/busybox	microcom
+	link	../../bin/busybox	mkfifo
+	link	../../bin/busybox	mkpasswd
+	link	../../bin/busybox	nc
+	link	../../bin/busybox	nmeter
+	link	../../bin/busybox	nohup
+	link	../../bin/busybox	nslookup
+	link	../../bin/busybox	od
+	link	../../bin/busybox	openvt
+	link	../../bin/busybox	passwd
+	link	../../bin/busybox	patch
+	link	../../bin/busybox	pgrep
+	link	../../bin/busybox	pkill
+	link	../../bin/busybox	pmap
+	link	../../bin/busybox	printf
+	link	../../bin/busybox	pscan
+	link	../../bin/busybox	pstree
+	link	../../bin/busybox	pwdx
+	link	../../bin/busybox	readlink
+	link	../../bin/busybox	realpath
+	link	../../bin/busybox	renice
+	link	../../bin/busybox	reset
+	link	../../bin/busybox	resize
+	link	../../bin/busybox	rpm2cpio
+	link	../../bin/busybox	rtcwake
+	link	../../bin/busybox	runsv
+	link	../../bin/busybox	runsvdir
+	link	../../bin/busybox	rx
+	link	../../bin/busybox	script
+	link	../../bin/busybox	seq
+	link	../../bin/busybox	setkeycodes
+	link	../../bin/busybox	setsid
+	link	../../bin/busybox	setuidgid
+	link	../../bin/busybox	sha1sum
+	link	../../bin/busybox	sha256sum
+	link	../../bin/busybox	sha3sum
+	link	../../bin/busybox	sha512sum
+	link	../../bin/busybox	showkey
+	link	../../bin/busybox	smemcap
+	link	../../bin/busybox	softlimit
+	link	../../bin/busybox	sort
+	link	../../bin/busybox	split
+	link	../../bin/busybox	strings
+	link	../../bin/busybox	sum
+	link	../../bin/busybox	sv
+	link	../../bin/busybox	tac
+	link	../../bin/busybox	tail
+	link	../../bin/busybox	tcpsvd
+	link	../../bin/busybox	tee
+	link	../../bin/busybox	telnet
+	link	../../bin/busybox	test
+	link	../../bin/busybox	tftp
+	link	../../bin/busybox	time
+	link	../../bin/busybox	timeout
+	link	../../bin/busybox	top
+	link	../../bin/busybox	tr
+	link	../../bin/busybox	traceroute
+	link	../../bin/busybox	traceroute6
+	link	../../bin/busybox	tty
+	link	../../bin/busybox	ttysize
+	link	../../bin/busybox	udpsvd
+	link	../../bin/busybox	unexpand
+	link	../../bin/busybox	uniq
+	link	../../bin/busybox	unix2dos
+	link	../../bin/busybox	unlzma
+	link	../../bin/busybox	unlzop
+	link	../../bin/busybox	unxz
+	link	../../bin/busybox	unzip
+	link	../../bin/busybox	uptime
+	link	../../bin/busybox	users
+	link	../../bin/busybox	uudecode
+	link	../../bin/busybox	uuencode
+	link	../../bin/busybox	vlock
+	link	../../bin/busybox	volname
+	link	../../bin/busybox	wall
+	link	../../bin/busybox	wc
+	link	../../bin/busybox	wget
+	link	../../bin/busybox	which
+	link	../../bin/busybox	who
+	link	../../bin/busybox	whoami
+	link	../../bin/busybox	whois
+	link	../../bin/busybox	xargs
+	link	../../bin/busybox	xz
+	link	../../bin/busybox	xzcat
+	link	../../bin/busybox	yes
+
+    exit    3
+)
+
+(
+    change_dir  /sbin
+
+	link	../bin/busybox	acpid
+	link	../bin/busybox	adjtimex
+	link	../bin/busybox	arp
+	link	../bin/busybox	blkid
+	link	../bin/busybox	blockdev
+	link	../bin/busybox	bootchartd
+	link	../bin/busybox	depmod
+	link	../bin/busybox	devmem
+	link	../bin/busybox	fbsplash
+	link	../bin/busybox	fdisk
+	link	../bin/busybox	findfs
+	link	../bin/busybox	freeramdisk
+	link	../bin/busybox	fsck
+	link	../bin/busybox	fsck.minix
+	link	../bin/busybox	getty
+	link	../bin/busybox	halt
+	link	../bin/busybox	hdparm
+	link	../bin/busybox	hwclock
+	link	../bin/busybox	ifconfig
+	link	../bin/busybox	ifdown
+	link	../bin/busybox	ifenslave
+	link	../bin/busybox	ifup
+	link	../bin/busybox	init
+	link	../bin/busybox	insmod
+	link	../bin/busybox	ip
+	link	../bin/busybox	ipaddr
+	link	../bin/busybox	iplink
+	link	../bin/busybox	iproute
+	link	../bin/busybox	iprule
+	link	../bin/busybox	iptunnel
+	link	../bin/busybox	klogd
+	link	../bin/busybox	loadkmap
+	link	../bin/busybox	logread
+	link	../bin/busybox	losetup
+	link	../bin/busybox	lsmod
+	link	../bin/busybox	makedevs
+	link	../bin/busybox	man
+	link	../bin/busybox	mdev
+	link	../bin/busybox	mkdosfs
+	link	../bin/busybox	mke2fs
+	link	../bin/busybox	mkfs.ext2
+	link	../bin/busybox	mkfs.minix
+	link	../bin/busybox	mkfs.vfat
+	link	../bin/busybox	mkswap
+	link	../bin/busybox	modinfo
+	link	../bin/busybox	modprobe
+	link	../bin/busybox	nameif
+	link	../bin/busybox	pivot_root
+	link	../bin/busybox	poweroff
+	link	../bin/busybox	raidautorun
+	link	../bin/busybox	reboot
+	link	../bin/busybox	rmmod
+	link	../bin/busybox	route
+	link	../bin/busybox	runlevel
+	link	../bin/busybox	setconsole
+	link	../bin/busybox	slattach
+	link	../bin/busybox	start-stop-daemon
+	link	../bin/busybox	sulogin
+	link	../bin/busybox	swapoff
+	link	../bin/busybox	swapon
+	link	../bin/busybox	switch_root
+	link	../bin/busybox	sysctl
+	link	../bin/busybox	syslogd
+	link	../bin/busybox	tunctl
+	link	../bin/busybox	udhcpc
+	link	../bin/busybox	udhcpd
+	link	../bin/busybox	vconfig
+	link	../bin/busybox	watchdog
+	link	../bin/busybox	zcip
+
+	#copy sbin udhcpd
+
+    exit    3
+)
+
+(
+    change_dir /usr/lib
+
+	link ../../lib/libdl.so.2 libdl.so
+
+	copy usr/lib libz.so.1.2.5 libz.so.1 libz.so
+	copy usr/lib liblzo2.so.2.0.0 liblzo2.so.2 liblzo2.so
+	copy usr/lib libssl.so.1.0.0 libssl.so
+	copy usr/lib libcrypto.so.1.0.0 libcrypto.so
+
+    exit    3
+)
+
+(
+    change_dir /usr/sbin
+
+	copy usr/sbin mkfs.jffs2
+	copy usr/sbin flash_erase
+
+	link	../../bin/busybox	addgroup
+	link	../../bin/busybox	add-shell
+	link	../../bin/busybox	adduser
+	link	../../bin/busybox	arping
+	link	../../bin/busybox	brctl
+	link	../../bin/busybox	chpasswd
+	link	../../bin/busybox	chroot
+	link	../../bin/busybox	crond
+	link	../../bin/busybox	delgroup
+	link	../../bin/busybox	deluser
+	link	../../bin/busybox	dhcprelay
+	link	../../bin/busybox	dnsd
+	link	../../bin/busybox	ether-wake
+	link	../../bin/busybox	fakeidentd
+	link	../../bin/busybox	fbset
+	link	../../bin/busybox	fdformat
+	link	../../bin/busybox	ftpd
+	link	../../bin/busybox	httpd
+	link	../../bin/busybox	ifplugd
+	link	../../bin/busybox	inetd
+	link	../../bin/busybox	killall5
+	link	../../bin/busybox	loadfont
+	link	../../bin/busybox	lpd
+	link	../../bin/busybox	nanddump
+	link	../../bin/busybox	nandwrite
+	link	../../bin/busybox	nbd-client
+	link	../../bin/busybox	ntpd
+	link	../../bin/busybox	popmaildir
+	link	../../bin/busybox	powertop
+	link	../../bin/busybox	rdate
+	link	../../bin/busybox	rdev
+	link	../../bin/busybox	readahead
+	link	../../bin/busybox	readprofile
+	link	../../bin/busybox	remove-shell
+	link	../../bin/busybox	rtcwake
+	link	../../bin/busybox	sendmail
+	link	../../bin/busybox	setfont
+	link	../../bin/busybox	setlogcons
+	link	../../bin/busybox	svlogd
+	link	../../bin/busybox	telnetd
+	link	../../bin/busybox	tftpd
+	link	../../bin/busybox	ubiattach
+	link	../../bin/busybox	ubidetach
+	link	../../bin/busybox	ubimkvol
+	link	../../bin/busybox	ubirmvol
+	link	../../bin/busybox	ubirsvol
+	link	../../bin/busybox	ubiupdatevol
+	link	../../bin/busybox	udhcpd
+)
+
+if [ $INCLUDE_SSHD -eq 1 ]
+then
+(
+	copy usr/sbin sshd
+	copy usr/sbin snmpd
+	copy usr/sbin snmptrapd
+	copy usr/bin ssh
+	copy usr/bin ssh-add
+	copy usr/bin ssh-agent
+	#copy usr/bin ssh-argv0
+	#copy usr/bin ssh-askpass
+	#copy usr/bin ssh-copy-id
+	#copy usr/bin ssh-sshd
+	copy usr/bin ssh-keygen
+	copy usr/bin ssh-keyscan
+	#copy usr/bin ssh-vulnkey
+	copy usr/lib libwrap.so.0.7.6 libwrap.so.0 libwrap.so
+)
+fi
+
+if [ $INCLUDE_THTTPD -eq 1 ]
+then
+(
+	copy usr/sbin thttpd
+)
+fi
+
+if [ $INCLUDE_VSFTPD -eq 1 ]
+then
+(
+	copy usr/sbin vsftpd
+	copy etc/xinetd.d vsftpd
+	copy usr/lib libcap.so.2.16 libcap.so.2 libcap.so
+	copy usr/lib libattr.so.1.1.0 libattr.so.1 libattr.so
+)
+fi
+
+if [ $INCLUDE_TELNETD -eq 1 ]
+then
+(
+	copy usr/sbin in.telnetd
+	copy usr/lib  telnetlogin
+)
+fi
+
+if [ $INCLUDE_XINETD -eq 1 ]
+then
+(
+	copy usr/sbin xinetd
+)
+fi
+
+if [ $INCLUDE_SER2NET -eq 1 ]
+then
+(
+	copy usr/sbin ser2net
+)
+fi
+
+(
+	copy usr/share/terminfo/v vt100
+	copy usr/share/terminfo/v vt102
+)
+
+(
+	change_dir	/www
+	cp -rf ../../www/cgi-bin/*	cgi-bin/.
+	cp -rf ../../www/contents/* contents/.
+	cp -rf ../../www/images/*	images/.
+	cp -rf ../../www/scripts/*	scripts/.
+	cp -rf ../../www/styles/*	styles/.
+	cp -rf ../../www/*.html .
+)
+(
+	change_dir /www/cgi-bin
+	link req.cgi page
+	link req.cgi public
+	link req.cgi ssid
+	link req.cgi network
+	link req.cgi ssl
+	link req.cgi firewall
+	link req.cgi dhcp
+	link req.cgi wwan
+	link req.cgi syslog
+	link req.cgi system
+	link req.cgi logout
+	link iot.cgi network_state
+	link iot.cgi qos
+	link iot.cgi apn
+	link iot.cgi module
+	link iot.cgi config
+	link iot.cgi init
+	link iot.cgi cnum
+	link iot.cgi usim
+	link iot.cgi getdata
+)
+
+(
+	change_dir	/etc
+	mkdir -p	rc.d
+)
+
+(
+	$CP -rf static/* "$ROOT/"
+
+	case $SSL in
+		'sslplus')
+			$CP -rf import/ssl/frodo "$ROOT/usr/local"
+			#$CP -rf import/ssl/init.d/frodo "$ROOT/etc/init.d/ssld"
+			echo "enabled" > $ROOT/etc/service/ssld
+			echo "enabled" > $ROOT/etc/service/sslplus
+			mv "$ROOT/www/contents/config_sslplus" "$ROOT/www/contents/config_ssl"
+			mv "$ROOT/www/scripts/config_sslplus.js" "$ROOT/www/scripts/config_ssl.js"
+			;;
+
+		'secuwayssl')
+			$CP -rf import/ssl/secuwayssl "$ROOT/usr/local"
+			#$CP -rf import/ssl/init.d/secuwayssl "$ROOT/etc/init.d/ssld"
+			echo "enabled" > $ROOT/etc/service/ssld
+			echo "enabled" > $ROOT/etc/service/secuwayssl
+			mv "$ROOT/www/contents/config_secuwayssl" "$ROOT/www/contents/config_ssl"
+			mv "$ROOT/www/scripts/config_secuwayssl.js" "$ROOT/www/scripts/config_ssl.js"
+			;;
+	esac
+
+	$CP -rf node_usr/local/bin "$ROOT/usr/local"
+	$CP -rf node_usr/local/include "$ROOT/usr/local"
+	$CP -rf node_usr/local/lib "$ROOT/usr/local"
+	$CP -rf node_usr/local/share "$ROOT/usr/local"
+
+)
+
+(
+	sudo find "$ROOT/" -name .svn | xargs sudo rm -rf 
+
+	sudo umount $ROOT
+	
+	rm -rf $ROOT
+
+	gzip -f9 ramdisk
+	mkimage -n 'Ramdisk v1.0.0' -A arm -O linux -T ramdisk -C gzip -a 0x00a00000 -d ramdisk.gz ramdisk.img
+	$CP ramdisk.gz /tftpboot
+	$CP ramdisk.img /tftpboot
+
+    exit    3
+)

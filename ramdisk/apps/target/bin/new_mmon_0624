@@ -1,0 +1,493 @@
+#!/bin/sh
+
+_PID=`echo $$`
+_NAME=`basename $0`
+
+PIDFILE="/var/run/$MYNAME.pid"
+PPP_SCRIPTS_PATH="/etc/ppp/scripts"
+
+RETRY=0
+MAX_RETRY=3
+PPP_CONNECTION_WAIT_TIME=10
+PPP_CONNECTION_WAIT_TIME2=60
+PPP_CONNECTION_CHECK_TIME=10
+
+RSSI_RETRY=0
+RSSI_MAX_RETRY=3
+
+get_nwcause()
+{
+		file="/var/log/modem"
+		if [ -f $file ]
+		then
+			nwcause=`cat /var/log/modem | awk '/\#NWCAUSE\:/ { print }' | awk 'END { print }'`
+			if [ -n "$nwcause" ]
+			then
+					if [ "$nwcause" = "#NWCAUSE: \"SM\",0,8" ]
+					then
+							return 1
+					fi
+			fi
+		fi
+		return 0
+}
+
+get_init_qos()
+{
+		retval=`cat /etc/initQos.conf`
+		if [ "$retval" = "disabled" ]
+		then
+				return 0
+		else
+				return 1
+		fi
+}
+
+init_qos()
+{
+		retval=`mmd -p /dev/ttyS1 -c at+cgeqreq=2,2,8,384`
+		if [ "$retval" = "OK" ]
+		then
+				return 0
+		else 
+				return 1
+		fi
+}
+
+init_apn()
+{	
+		retval=`mmd -p /dev/ttyS1 -c at+cgdcont=2,"IP","biz.ktfwing.com","0.0.0.0",0,0`
+		if [ "$retval" = "OK" ]
+		then
+				return 0
+		else 
+				return 1
+		fi
+}
+
+is_modem_exist()
+{
+	`echo AT > /dev/ttyS1; sleep 0.1`
+	retval=`/www/cgi-bin/scripts/is_modem.sh`
+	if [ "$retval" = "true" ]
+	then
+		return  0
+	else
+		return  1
+	fi
+}
+
+is_ready()
+{
+	`echo AT+CPIN? > /dev/ttyS1; sleep 0.1`
+	retval=`/www/cgi-bin/scripts/usim.sh`
+	if [ "$retval" = "+CPIN: READY" ]
+	then
+		return	0
+	else
+		return	1
+	fi
+}
+
+is_registered()
+{
+	`echo AT+CREG? > /dev/ttyS1; sleep 0.1`
+	retval=`/www/cgi-bin/scripts/is_registered.sh | awk 'BEGIN { retval="false" }\
+		{\
+			if ($1 ~ /\+CREG:/)\
+			{\
+				count=split($2, fields, ",");\
+				if (count == 2 &&  fields[2] == "1")\
+				{\
+					retval="true"\
+				}\
+			}\
+		}END{ print retval }'`
+
+	if [ "$retval" = "true" ]
+	then
+		return	0
+	else
+		return	1
+	fi
+	
+}
+
+is_ppp_connected()
+{
+	retval=`/bin/cat /proc/net/dev |  awk 'BEGIN{ retval="false" }\
+		{\
+		if ($1 ~ /^ppp0/)\
+			{\
+				retval="true"\
+			}\
+		}END{ print retval }'`
+
+	if [ "$retval" = "true" ]
+	then
+		return	0
+	else
+		return	1
+	fi
+}
+
+get_ppp_scripts()
+{
+	retval=`mmd -p /dev/ttyS1 -c at+cops? | awk -v path=$PPP_SCRIPTS_PATH 'BEGIN { }\
+		{ \
+			if ($1 ~ /\+COPS:/)\
+			{\
+				count = split($2, fields, ",");\
+				if (count == 4)\
+				{\
+					gsub("\"","", fields[3]);\
+					if (fields[4] == "2")\
+					{\
+						path=(path)("/uc864-e");\
+					}\
+					else if (fields[4] == "7")\
+					{\
+						path=(path)("/kt_lte_connect");\
+					}\
+				}\
+			}\
+		}END{ print path }'`
+
+	echo "$retval"
+}
+
+get_ppp_ip()
+{
+	retval=`/sbin/ifconfig ppp0 |  awk 'BEGIN{ connected="false"; ipaddr="" }\
+		{\
+			if ($1 ~ /^ppp0/)\
+			{\
+				connected="true"\
+			}\
+			if ((connected == "true") && ($1 ~ /^inet$/) && ($2 ~ /^addr\:/))\
+			{\
+				split($2, fields, ":");\
+				ipaddr=fields[2];\
+			}\
+		}END{ print ipaddr }'`
+
+	echo "$retval"
+}
+
+already_running()
+{
+	PIDn=`pidof $NAME | wc -w`
+	if [ "$PIDn" = "1" ]
+	then
+		return	0
+	else
+		return	1
+	fi
+}
+
+put_stat()
+{
+	case $1 in
+		STAT_PPP_CONNECTION_COMPLETED)
+		
+	esac
+}
+
+STAT=STAT_UNINITIALIZED
+NEXT_STAT=STAT_UNINITIALIZED
+
+get_usb()
+{
+		retval=`/bin/cat /proc/net/dev |  awk '/FTDI/{print $1}'`
+		if [ "$retval" = "0:" ]
+		then
+				return 0
+		else 
+				return 1
+		fi
+}
+
+get_rssi()
+{
+	`echo AT#RFSTS > /dev/ttyS1; sleep 0.1`
+	retval=`/www/cgi-bin/scripts/network_status.sh | awk '/RFSTS/' | sed -e 's/,/ /g' | awk '{ print $7 }'`
+	echo "$retval"
+}
+
+change_stat()
+{
+	if [ "$STAT" != "$1" ]
+	then
+		STAT=$1
+
+		return	0
+	else
+		return	1
+	fi
+}
+
+usage()
+{
+	echo "usage : $_NAME"
+	exit
+}
+
+while getopts ":h:" opt 
+do
+	case $opt in
+		h)
+			usage
+			;;
+	esac
+done	
+
+already_running
+if [ $? -eq 0 ]
+then
+	exit	7
+fi
+
+is_mmd()
+{
+
+		MMD_PID=`pidof mmd`;
+		if [ -z "$MMD_PID" ]
+		then
+				return 0
+		else
+				return 1
+		fi
+}
+
+#is_pdp_reject()
+#{
+#	result=`mmd -p /dev/ttyS1 -c at#sgact=2,1 | awk '/NWCAUSE:/'`	
+#}
+
+#get_pid_time()
+#{
+#		time=`ps -ef | grep mmd | grep -v grep | awk '{ print $3 }' | sed -e 's/:/ /g' | awk '{ print $1 }'`
+#		return $time
+#}
+
+while [ 0 ]
+do
+#	is_mmd
+#	if [ $? -eq 0 ]
+#	then
+	case $STAT in
+		STAT_UNINITIALIZED)
+			`echo running > /tmp/ppp.connect`
+			#ret=`is_modem_exist`
+			is_modem_exist
+			#if [ "$ret" = "true" ]
+			if [ $? -eq 0 ]
+			then
+				`echo AT+CPIN=0000 > /dev/ttyS1; sleep 0.1`
+				`echo ATE1 > /dev/ttyS1; sleep 0.1`
+				`echo AT+CMEE=1 > /dev/ttyS1; sleep 0.1`
+				`echo AT#NWCAUSE=0,0,1,1 > /dev/ttyS1; sleep 0.1`
+				#NEXT_STAT=STAT_INITIALIZED;
+				NEXT_STAT=STAT_RSSI_CHECK;
+				
+				# 06/24
+#				get_init_qos
+#				if [ $? -eq 0 ]
+#				then
+#					NEXT_STAT=STAT_INIT_QOS;
+#				else
+#					NEXT_STAT=STAT_RSSI_CHECK;
+#				fi
+			fi
+			;;
+		STAT_INIT_QOS)
+			is_ready
+			if [ $? -eq 0 ]
+			then
+				init_qos
+				if [ $? -eq 0 ]
+				then
+#					`echo enabled > /etc/initQos.conf`
+					NEXT_STAT=STAT_INIT_APN;
+				fi
+			fi
+#			NEXT_STAT=STAT_RSSI_CHECK;
+			;;
+		STAT_INIT_APN)
+			is_ready
+			if [ $? -eq 0 ]
+			then
+				init_apn
+				if [ $? -eq 0 ]
+				then
+					`echo enabled > /etc/initQos.conf`
+					NEXT_STAT=STAT_RSSI_CHECK;
+				fi
+			fi
+			;;
+		STAT_RSSI_CHECK)
+			RSSI=`get_rssi`;
+			if [ "$RSSI" != "" ]
+			then
+				#echo $RSSI
+				if [ $RSSI -le -90 ]
+				then
+					#echo "stop"
+					`echo running > /tmp/ppp.connect`
+					is_ppp_connected
+					if [ $? -eq 0 ] 
+					then
+						PPPD_PID=`pidof pppd`;
+						if [ -n "$PPPD_PID" ]; then
+							kill -15 $PPPD_PID
+						fi
+						NEXT_STAT=STAT_LONGTERM_WAITING;
+					fi
+
+					if [ $RSSI_RETRY -lt $RSSI_MAX_RETRY ]
+					then
+						let 'RSSI_RETRY+=1';
+						NEXT_STAT=STAT_INITIALIZED;
+					else
+						RSSI_RETRY=0;
+						PPPD_PID=`pidof pppd`;
+						if [ -n "$PPPD_PID" ]; then
+							kill -15 $PPPD_PID
+						fi
+						NEXT_STAT=STAT_LONGTERM_WAITING;
+					fi
+				else
+					is_ppp_connected
+					if [ $? -eq 0 ] 
+					then
+						NEXT_STAT=STAT_PPP_CONNECTION_COMPLETED;
+					else 
+						#echo "none"
+						NEXT_STAT=STAT_INITIALIZED;
+					fi
+				fi
+			fi
+			;;
+
+		STAT_INITIALIZED)
+			`echo running > /tmp/ppp.connect`
+			is_ready
+			if [ $? -eq 0 ]
+			then
+				NEXT_STAT=STAT_SIM_READY;
+			fi
+			;;
+		STAT_SIM_READY)
+			`echo running > /tmp/ppp.connect`
+			is_registered
+			if [ $? -eq 0 ]
+			then
+				NEXT_STAT=STAT_REGISTERED;
+			fi
+			;;
+
+		STAT_REGISTERED)
+			`echo stop > /tmp/ppp.connect`
+			is_ppp_connected
+			if [ $? -eq 0 ]; then
+				NEXT_STAT=STAT_PPP_CONNECTION_COMPLETED;
+			else
+				#SCRIPT_FILE=`get_ppp_scripts`;
+				#echo "$SCRIPT_FILE"
+				#if [ -n "$SCRIPT_FILE" ]; then
+				/usr/sbin/pppd file /etc/ppp/scripts/uc864-e >& /var/log/pppd &
+				NEXT_STAT=STAT_WAITING_FOR_PPP_CONNECTION_COMPLETED;
+				RETRY=0;
+				#fi
+			fi
+			;;
+
+		STAT_WAITING_FOR_PPP_CONNECTION_COMPLETED)
+			`echo running > /tmp/ppp.connect`
+			sleep	$PPP_CONNECTION_WAIT_TIME;
+			NEXT_STAT=STAT_CHECK_PPPD;
+			;;
+		
+		STAT_LONGTERM_WAITING)
+			`echo stop > /tmp/ppp.connect`
+			sleep	$PPP_CONNECTION_WAIT_TIME2;
+			NEXT_STAT=STAT_REGISTERED;
+			#NEXT_STAT=STAT_RSSI_CHECK;
+			;;
+		
+		STAT_CHECK_PPPD)
+			`echo running > /tmp/ppp.connect`
+			PPPD_PID=`pidof pppd`;
+			if [ -z "$PPPD_PID" ] 
+			then
+				if [ $RETRY -lt $MAX_RETRY ]
+				then
+					let 'RETRY+=1';
+					/usr/sbin/pppd file /etc/ppp/scripts/uc864-e >& /var/log/pppd &
+					NEXT_STAT=STAT_WAITING_FOR_PPP_CONNECTION_COMPLETED;
+				else
+					RETRY=0;
+					NEXT_STAT=STAT_LONGTERM_WAITING;
+				fi
+			else
+				is_ppp_connected
+				if [ $? -eq 0 ] 
+				then
+					NEXT_STAT=STAT_PPP_CONNECTION_COMPLETED;
+				fi
+			fi
+			;;
+		STAT_PPP_CONNECTION_COMPLETED)
+			`echo stop > /tmp/ppp.connect`
+			sleep $PPP_CONNECTION_CHECK_TIME;
+
+			PPPD_PID=`pidof pppd`;
+			if [ -z "$PPPD_PID" ]; then
+				NEXT_STAT=STAT_PPP_IS_DISCONNECTED;
+			else 
+				NEXT_STAT=STAT_RSSI_CHECK;
+			fi
+			;;
+
+		STAT_PPP_IS_DISCONNECTED)
+			`echo stop > /tmp/ppp.connect`
+			NEXT_STAT=STAT_REGISTERED;
+			;;
+	esac
+#	else
+		
+#	fi
+
+#--------------------------------------------------------------------------------------------------------
+#pid_mmd=`pidof mmd`
+#if [ -z "$pid_mmd" ]
+#then
+#	echo mmd Nothing 1> /dev/null
+#else
+#	get_pid_time
+#	if [ $? -gt 0 ]
+#	then
+#		pidof mmd | xargs kill -15
+#	else
+#	    echo mmd Nothing 1> /dev/null
+#	fi
+#fi
+#-----------------------------------------------------------------------------------------------------------
+	
+#	mmd=`ps -ef | grep mmd | grep -v grep | awk '{ print $3 }' | sed -e 's/:/ /g' | awk '{ print $1 }'`
+#	if [ -n "$mmd" ]
+#	then
+#		if [ $mmd -gt 0 ]
+#		then
+#			`ps -ef | grep mmd | grep -v grep | awk '{ print $1 }' | xargs kill -15`
+#		fi
+#	fi
+#----------------------------------------------------------------------------------------------------------
+	change_stat $NEXT_STAT
+#if [ $? -eq 0 ]
+#	then
+#		echo ""
+#	fi
+
+	sleep	1
+done

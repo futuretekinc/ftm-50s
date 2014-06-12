@@ -1,0 +1,4 @@
+usbserinfo:1.0 driver:2.0
+0: name:"GSM modem (1-port)" vendor:1bc7 product:1003 num_ports:1 port:1 path:usb-spear-ohci.1-1
+1: name:"GSM modem (1-port)" vendor:1bc7 product:1003 num_ports:1 port:1 path:usb-spear-ohci.1-1
+2: name:"GSM modem (1-port)" vendor:1bc7 product:1003 num_ports:1 port:1 path:usb-spear-ohci.1-1

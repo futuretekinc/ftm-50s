@@ -1,0 +1,26 @@
+#!/bin/sh
+
+cd	/usr/local/frodo
+
+./mktap -c tap0
+ifconfig tap0 0.0.0.0 up
+
+
+export LD_LIBRARY_PATH=lib
+
+
+while true
+do 
+	if ! pidof marlin | sed "s/$$\$//" | grep -q [0-9]
+	then
+		./marlin ./conf/client.conf -c  & 
+	fi
+	sleep 3; 
+
+	if ! pidof client | sed "s/$$\$//" | grep -q [0-9]
+	then
+		./client -h | logger -t ssld &
+	fi
+	sleep 2; 
+done
+

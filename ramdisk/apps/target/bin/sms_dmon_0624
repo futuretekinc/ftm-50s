@@ -1,0 +1,240 @@
+#!/bin/sh
+
+state_check_sms=0
+state_cnum_sms=1
+state_delete_sms=2
+state_setting_apn=3
+state_setting_qos=4
+state_wait=5
+state_get_setting_sms=6
+state_set_text_mode=7
+state_uninitialize=8
+state=state_uninitialize
+temp_state=0
+
+#set_sms_text()
+#{
+#	result=`mmd -p /dev/ttyS1 -c at+cmgf=1`
+#        if [ "$result" = "OK" ]
+#        then            
+#                return 0
+#        else            
+#                return 1
+#        fi
+#}
+is_modem_exist()
+{
+	`echo AT > /dev/ttyS1; sleep 0.1`
+	retval=`/www/cgi-bin/scripts/is_modem.sh`
+	if [ "$retval" = "true" ]
+	then
+		return  0
+	else
+		return  1
+	fi
+}
+
+
+get_setting_sms()
+{
+#	`echo AT+CMGR=1 > /dev/ttyS1; sleep 0.1`
+	result=`/www/cgi-bin/scripts/get_setting_sms.sh | awk '/smsapn/'`
+	if [ -z "$result" ]
+	then
+		return 1
+	else
+		return 0
+	fi
+}
+
+get_new_sms()
+{
+	`echo AT+CMGR=1 > /dev/ttyS1; sleep 0.1`
+	result=`/www/cgi-bin/scripts/get_new_sms.sh | awk '/CMGR/'`
+	if [ -z "$result" ]
+	then
+		return 1
+	else
+		#echo $result
+		return 0
+	fi
+}
+
+setting_apn()
+{
+	result=`/www/cgi-bin/scripts/get_setting_sms.sh | awk '/smsapn/' | sed -e 's/:/ /g' | awk '{ print $2 }'`
+	`echo AT+CGDCONT=2,IP,$result,0.0.0.0,0,0 > /dev/ttyS1; sleep 0.1`
+#	result2=`mmd -p /dev/ttyS1 -c at+cgdcont=1,IP,$result,0.0.0.0,0,0`
+#	if [ "$result2" = "OK" ]
+#	then
+		return 0
+#	else
+#		return 1
+#	fi
+}
+
+setting_qos()
+{
+	result=`/www/cgi-bin/scripts/get_setting_sms.sh | awk '/smsapn/' | sed -e 's/:/ /g' | awk '{print $5 "," $3 "," $4}'`
+	`echo AT+CGEQREQ=2,$result > /dev/ttyS1; sleep 0.1`
+#	result2=`mmd -p /dev/ttyS1 -c at+cgeqreq=1,$result`
+#	if [ "$result2" = "OK" ]
+#	then
+		return 0
+#	else
+#		return 1
+#	fi
+}
+
+send_sms_cnum()
+{
+	result=`/www/cgi-bin/scripts/get_new_sms.sh | awk '/CMGR/' | sed -e 's/ //g' -e 's/,/ /g' | awk '{ print $2 }' | sed -e 's/\"//g'`
+#	`/www/cgi-bin/scripts/send_sms.sh $result`
+#	if [ "$result2" = "OK" ]
+#	then
+		return 0
+#	else
+#		return 1
+#	fi
+}
+
+delete_sms()
+{
+	`echo AT+CMGD=1 > /dev/ttyS1; sleep 0.1`
+#	result=`mmd -p /dev/ttyS1 -c at+cmgd=1`
+#	if [ "$result" = "OK" ]
+#	then
+		return 0
+#	else
+#		return 1
+#	fi
+}
+
+get_ppp_connecting()
+{
+#result=`cat /tmp/ppp.connect`
+
+	MMD_PID=`pidof mmd`;
+	if [ -z "$MMD_PID" ]
+#if [ "$result" = "stop" ]
+	then
+		return 0
+	else
+		return 1
+	fi
+}
+
+is_ready()
+{
+	`echo AT+CPIN? > /dev/ttyS1; sleep 0.1`
+	retval=`/www/cgi-bin/scripts/usim.sh`
+	if [ "$retval" = "+CPIN: READY" ]
+	then
+		return	0
+	else
+		return	1
+	fi
+}
+
+while [ 0 ]
+do
+#	mmd=`pidof mmd`
+#	if [ -z "$mmd" ]
+#	then
+#	get_ppp_connecting
+#	if [ $? -eq 0 ]
+#	then
+		#is_ready
+		#if [ $? -eq 0 ]
+		#then
+			case $state in
+				state_uninitialize)
+					is_modem_exist
+					if [ $? -eq 0 ]
+					then
+						state=state_set_text_mode
+					fi
+				;;
+				state_set_text_mode)
+					`echo AT+CMGF=1 > /dev/ttyS1; sleep 0.1`
+					state=state_check_sms
+				;;
+				state_check_sms)
+					get_new_sms
+					if [ $? -eq 0 ]
+					then
+						state=state_get_setting_sms
+					else
+						state=state_wait
+					fi
+				;;
+				state_get_setting_sms)
+					get_setting_sms
+					if [ $? -eq 0 ]
+					then
+						state=state_setting_apn
+					else
+						state=state_delete_sms
+					fi
+				;;
+				state_cnum_sms)
+					send_sms_cnum
+					if [ $? -eq 0 ]
+					then
+						sleep 2
+						#echo "send ok"
+						state=state_delete_sms
+					else
+						#echo "send fail"
+						state=state_wait
+					fi
+				;;
+				state_setting_apn)
+					setting_apn
+					if [ $? -eq 0 ]
+					then
+						sleep 1
+						#echo "set apn ok"
+						state=state_setting_qos
+					else
+						#echo "set apn fail"
+						state=state_wait
+					fi
+				;;
+				state_setting_qos)
+					setting_qos
+					if [ $? -eq 0 ]
+					then
+						sleep 1
+						#echo "set qos ok"
+#	state=state_cnum_sms # 0605
+						state=state_delete_sms
+					else
+						#echo "set qos fail"
+						state=state_wait
+					fi
+				;;
+				state_delete_sms)
+					delete_sms
+					if [ $? -eq 0 ]
+					then
+						#echo "delete"
+						state=state_wait
+					else
+						#echo "fail"
+						state=state_wait
+					fi
+				;;
+				state_wait)
+					sleep 5 
+					state=state_set_text_mode
+				;;
+				
+			esac
+		#fi
+#	fi
+#	fi
+	#echo "test"
+	sleep 3
+
+done

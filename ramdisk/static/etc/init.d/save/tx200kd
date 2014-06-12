@@ -1,0 +1,36 @@
+#!/bin/sh
+
+case "$1" in
+    start)
+		if ! pidof pppd | sed "s/$$\$//" | grep -q [0-9] ; then
+		   pppd call tx200k >> /var/log/pppd &
+		fi
+		;;
+	stop)
+	    pkill pppd 2>/dev/null
+		;;
+	restart)
+		pkill pppd
+		
+		while pidof pppd | sed "s/$$\$//" | grep -q [0-9] 
+		do
+			sleep 1
+		done
+
+		sleep 1
+
+		pppd call tx200k >> /var/log/pppd &
+		;;
+	status)
+		if pidof pppd | sed "s/$$\$//" | grep -q [0-9] ; then
+			if pidof pppd >/dev/null ; then
+				echo "running"
+			else
+				echo "stopped"
+			fi
+		else
+			echo "stopped"
+		fi
+		;;
+esac        
+

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+mpstat | tail -1 | awk '{ if ($2 ~ /^all/) {print 100-$11, "%"} else if ($3 ~ /^all/) { print 100 - $12, "%"} }'
+free | \
+awk \
+'BEGIN{\
+	mem_total = 0;\
+	mem_used = 0;\
+}\
+{ \
+	if ($1 ~ /^Mem:/)\
+	{ \
+		mem_total = $2;\
+		mem_used = $3;\
+	}; \
+}\
+END{\
+	printf("%5.1f MB / %5.1f MB = %5.2f %\n",  mem_used / 1024, mem_total / 1024, mem_used/mem_total * 100);\
+}'

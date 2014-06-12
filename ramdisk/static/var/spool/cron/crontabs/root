@@ -1,0 +1,2 @@
+00   00 * * * /usr/sbin/rdate -s time.bora.net && /sbin/hwclock -w
+00-59 * * * * check_taskmon &

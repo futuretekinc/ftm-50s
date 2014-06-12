@@ -1,0 +1,130 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BAUDRATE	xserial.c	18;"	d	file:
+CC	Makefile	/^CC=armv5-linux-gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS=-c -Wall$/;"	m
+DEBUG	xftmbcc.h	4;"	d
+EXECUTABLE	Makefile	/^EXECUTABLE=ftmbcc$/;"	m
+FALSE	xserial.c	21;"	d	file:
+LDFLAGS	Makefile	/^LDFLAGS=$/;"	m
+MODEMDEVICE	xserial.c	19;"	d	file:
+NO_PARITY_CHECK	xserial.c	15;"	d	file:
+OBJECTS	Makefile	/^OBJECTS=$(SOURCES:.c=.o)$/;"	m
+PARITY_CHECK	xserial.c	16;"	d	file:
+PMUC_SignalHandler	xserial.c	/^void PMUC_SignalHandler(int status)$/;"	f
+PMUC_SignalIOHandler	xserial.c	/^void PMUC_SignalIOHandler(int nStatus, siginfo_t *pIOInfo, void *pContext)$/;"	f
+PRCS_D	xutil.h	/^	PRCS_D	=	'D',$/;"	e	enum:__anon4
+PRCS_L	xutil.h	/^	PRCS_L	=	'L',$/;"	e	enum:__anon4
+PRCS_N	xutil.h	/^	PRCS_N	=	'N',$/;"	e	enum:__anon4
+PRCS_R	xutil.h	/^	PRCS_R	=	'R',$/;"	e	enum:__anon4
+PRCS_S	xutil.h	/^	PRCS_S	=	'S'$/;"	e	enum:__anon4
+PRCS_T	xutil.h	/^	PRCS_T	=	'T',$/;"	e	enum:__anon4
+PRCS_U	xutil.h	/^	PRCS_U	=	'U',$/;"	e	enum:__anon4
+PRCS_W	xutil.h	/^	PRCS_W	=	'W',$/;"	e	enum:__anon4
+PRCS_Z	xutil.h	/^	PRCS_Z	=	'Z',$/;"	e	enum:__anon4
+PRC_STATE	xutil.h	/^}	PRC_STATE;$/;"	t	typeref:enum:__anon4
+QUEUE_SIZE	xshared.c	11;"	d	file:
+SERIAL_CONTROL	xserial.c	14;"	d	file:
+SERIAL_INPUT	xserial.c	17;"	d	file:
+SOURCES	Makefile	/^SOURCES=main.c xftmbcc.c xserial.c tx200k.c xshared.c xutil.c$/;"	m
+TRUE	xserial.c	22;"	d	file:
+TX200K_ConnectionCheck	tx200k.c	/^int TX200K_ConnectionCheck(char *lpszDeviceName)$/;"	f
+TX200K_DATA	tx200k.c	/^}	TX200K_DATA;$/;"	t	typeref:struct:__anon7	file:
+TX200K_Init	tx200k.c	/^int	TX200K_Init(struct _XFTMBCC_TASK *pTask)$/;"	f
+TX200K_IsTaskAlive	tx200k.c	/^int	TX200K_IsTaskAlive(struct _XFTMBCC_TASK *pTask)$/;"	f
+TX200K_Main	tx200k.c	/^int	TX200K_Main(struct _XFTMBCC_TASK *pTask)$/;"	f
+TX200K_Reset	tx200k.c	/^int TX200K_Reset(struct _XFTMBCC_TASK *pTask)$/;"	f
+TX200K_STAT_INITIALIZING	tx200k.c	19;"	d	file:
+TX200K_STAT_MODEM_CHECKED	tx200k.c	18;"	d	file:
+TX200K_STAT_RUNNING	tx200k.c	20;"	d	file:
+TX200K_STAT_STOPPED	tx200k.c	21;"	d	file:
+TX200K_STAT_UNINITIALIZED	tx200k.c	17;"	d	file:
+TX200K_TaskInit	tx200k.c	/^int	TX200K_TaskInit(struct _XFTMBCC_TASK *pTask)$/;"	f
+XFTC_NONE	xftmbcc.h	/^	XFTC_NONE	= 0,$/;"	e	enum:__anon1
+XFTC_START	xftmbcc.h	/^	XFTC_START,$/;"	e	enum:__anon1
+XFTC_STOP	xftmbcc.h	/^	XFTC_STOP$/;"	e	enum:__anon1
+XFTMBCC_Final	xftmbcc.c	/^int	XFTMBCC_Final(void)$/;"	f
+XFTMBCC_Init	xftmbcc.c	/^int XFTMBCC_Init(XFTMBCC_SHARED_MEM *pSharedMem)$/;"	f
+XFTMBCC_MAX_NAME_LEN	xftmbcc.h	9;"	d
+XFTMBCC_MAX_TASKS	xftmbcc.h	8;"	d
+XFTMBCC_Main	xftmbcc.c	/^void XFTMBCC_Main(void)$/;"	f
+XFTMBCC_SHARED_MEM	xftmbcc.h	/^}	XFTMBCC_SHARED_MEM;$/;"	t	typeref:struct:__anon3
+XFTMBCC_SHARED_MEM_ID	xftmbcc.h	7;"	d
+XFTMBCC_StartDaemon	xftmbcc.c	/^int	XFTMBCC_StartDaemon(void)$/;"	f
+XFTMBCC_TASK	xftmbcc.h	/^}	XFTMBCC_TASK;$/;"	t	typeref:struct:_XFTMBCC_TASK
+XFTMBCC_TASK_SIGNAL	xftmbcc.h	/^} XFTMBCC_TASK_SIGNAL;$/;"	t	typeref:enum:__anon1
+XFTMBCC_TASK_STAT	xftmbcc.h	/^}	XFTMBCC_TASK_STAT;$/;"	t	typeref:enum:__anon2
+XFTS_INITIALIZED	xftmbcc.h	/^	XFTS_INITIALIZED,$/;"	e	enum:__anon2
+XFTS_INITIALIZING	xftmbcc.h	/^	XFTS_INITIALIZING,$/;"	e	enum:__anon2
+XFTS_RESTART	xftmbcc.h	/^	XFTS_RESTART,$/;"	e	enum:__anon2
+XFTS_RUNNING	xftmbcc.h	/^	XFTS_RUNNING,$/;"	e	enum:__anon2
+XFTS_START	xftmbcc.h	/^	XFTS_START,$/;"	e	enum:__anon2
+XFTS_STOPPED	xftmbcc.h	/^	XFTS_STOPPED,$/;"	e	enum:__anon2
+XFTS_STOPPING	xftmbcc.h	/^	XFTS_STOPPING,$/;"	e	enum:__anon2
+XFTS_UNINITIALIZED	xftmbcc.h	/^	XFTS_UNINITIALIZED = 0,$/;"	e	enum:__anon2
+XFTS_WAIT_FOR_REINIT	xftmbcc.h	/^	XFTS_WAIT_FOR_REINIT$/;"	e	enum:__anon2
+XSD_CloseLock	xshared.c	/^int	XSD_CloseLock(int fd, int index)$/;"	f
+XSD_Create	xshared.c	/^void *XSD_Create(key_t key, int size)$/;"	f
+XSD_GetMemAddr	xshared.c	/^void	*XSD_GetMemAddr(int nID)$/;"	f
+XSD_INFO	xshared.h	/^}	XSD_INFO;$/;"	t	typeref:struct:__anon6
+XSD_Init	xshared.c	/^int	XSD_Init(void)$/;"	f
+XSD_InitLock	xshared.c	/^void XSD_InitLock(void)$/;"	f
+XSD_InitUnlock	xshared.c	/^void XSD_InitUnlock(void)$/;"	f
+XSD_IsExist	xshared.c	/^int	XSD_IsExist(int nID)$/;"	f
+XSD_Open	xshared.c	/^void *XSD_Open(key_t key, int size)$/;"	f
+XSD_OpenLock	xshared.c	/^int XSD_OpenLock(int fd, int index)$/;"	f
+X_SHARED_DATA	xshared.c	/^}	X_SHARED_DATA;$/;"	t	typeref:struct:__anon5	file:
+_POSIX_SOURCE	xserial.c	20;"	d	file:
+_XFTMBCC_TASK	xftmbcc.h	/^typedef	struct _XFTMBCC_TASK$/;"	s
+__DEBUG_H__	debug.h	2;"	d
+__DHCP_H__	dhcp.h	2;"	d
+__TX200K_H__	tx200k.h	2;"	d
+__XFTMBCC_H__	xftmbcc.h	2;"	d
+__XSERIAL_H__	xserial.h	2;"	d
+__XSHARED_H__	xshared.h	2;"	d
+__XUTIL_H__	xutil.h	2;"	d
+buf	xshared.c	/^	char	buf[128];$/;"	m	struct:__anon5	file:
+close_serial	xserial.c	/^void close_serial( int fd ) $/;"	f
+fInit	xftmbcc.h	/^	int					(*fInit)(struct _XFTMBCC_TASK *pTask);$/;"	m	struct:_XFTMBCC_TASK
+fIsAlive	xftmbcc.h	/^	int					(*fIsAlive)(struct _XFTMBCC_TASK *pTask);$/;"	m	struct:_XFTMBCC_TASK
+fIsInitDone	xftmbcc.h	/^	int					(*fIsInitDone)(struct _XFTMBCC_TASK *pTask);$/;"	m	struct:_XFTMBCC_TASK
+fReset	xftmbcc.h	/^	int					(*fReset)(struct _XFTMBCC_TASK *pTask);$/;"	m	struct:_XFTMBCC_TASK
+fp	tx200k.c	/^	FILE	*fp;$/;"	m	struct:__anon7	file:
+getProcessID	xutil.c	/^unsigned int getProcessID(char *p_processname) $/;"	f
+getProcessIDList	xutil.c	/^unsigned int getProcessIDList(char *p_processname, int *lpPIDs, int nMaxCount) $/;"	f
+getProcessState	xutil.c	/^PRC_STATE	getProcessState(int nPID)$/;"	f
+lock	xshared.c	/^struct flock lock, unlock;$/;"	v	typeref:struct:flock
+long_options	main.c	/^static struct option long_options[] = $/;"	v	typeref:struct:option	file:
+lpSharedMemBase	xshared.c	/^static void *lpSharedMemBase[sizeof(lpSharedMemInfo) \/ sizeof(XSD_INFO)] = $/;"	v	file:
+lpSharedMemInfo	xshared.c	/^static const XSD_INFO	lpSharedMemInfo[] =$/;"	v	file:
+lpTasks	xftmbcc.h	/^	XFTMBCC_TASK	lpTasks[XFTMBCC_MAX_TASKS];	$/;"	m	struct:__anon3
+lpszBuf	xftmbcc.h	/^	char			lpszBuf[1024];$/;"	m	struct:__anon3
+main	main.c	/^int main(int argc, char *argv[])$/;"	f
+nDaemonID	xftmbcc.h	/^	int				nDaemonID;$/;"	m	struct:__anon3
+nPID	tx200k.c	/^	int		nPID;$/;"	m	struct:__anon7	file:
+nSharedMemInfoCount	xshared.c	/^static const int	nSharedMemInfoCount = sizeof(lpSharedMemInfo) \/ sizeof(XSD_INFO);$/;"	v	file:
+nSize	xshared.h	/^	int		nSize;$/;"	m	struct:__anon6
+nTasks	xftmbcc.h	/^	int				nTasks;$/;"	m	struct:__anon3
+nTimer	tx200k.c	/^	int		nTimer;$/;"	m	struct:__anon7	file:
+nWaitFlag	xserial.c	/^int nWaitFlag=TRUE;                    \/* TRUE while no signal received *\/$/;"	v
+name	xftmbcc.h	/^	char				name[XFTMBCC_MAX_NAME_LEN];$/;"	m	struct:_XFTMBCC_TASK
+open_serial	xserial.c	/^int open_serial( char *dev_name, int baud, struct termios *oldtio) $/;"	f
+pid	xftmbcc.h	/^	int					pid;$/;"	m	struct:_XFTMBCC_TASK
+serialConfiguration	xserial.c	/^int serialConfiguration(serial_handler handler, serial_handler_IO handler_IO, const char *device,$/;"	f
+serial_handler	xserial.c	/^	typedef void (*serial_handler)(int status);$/;"	t	file:
+serial_handler_IO	xserial.c	/^	typedef void (*serial_handler_IO)(int status, siginfo_t *ioinfo, void *context);$/;"	t	file:
+signal	xftmbcc.h	/^	XFTMBCC_TASK_SIGNAL	signal;$/;"	m	struct:_XFTMBCC_TASK
+stat	tx200k.c	/^	int		stat;$/;"	m	struct:__anon7	file:
+stat	xftmbcc.h	/^	XFTMBCC_TASK_STAT	stat;$/;"	m	struct:_XFTMBCC_TASK
+szPrivateData	xftmbcc.h	/^	char				szPrivateData[256];$/;"	m	struct:_XFTMBCC_TASK
+ulTags	xftmbcc.h	/^	unsigned long	ulTags;$/;"	m	struct:__anon3
+unlock	xshared.c	/^struct flock lock, unlock;$/;"	v	typeref:struct:
+xError	debug.h	10;"	d
+xError	debug.h	7;"	d
+xKey	xshared.h	/^	key_t	xKey;$/;"	m	struct:__anon6
+xTrace	debug.h	6;"	d
+xTrace	debug.h	9;"	d

@@ -1,0 +1,27 @@
+# Users that are not allowed to login via ftp
+root
+bin
+daemon
+sys
+adm
+lp
+sync
+shutdown
+halt
+mail
+news
+operator
+games
+ftp
+man
+nobody
+sshd
+dnsmasq
+ntp
+httpd
+squid
+rtpproxy
+dbus
+avahi
+nobody
+

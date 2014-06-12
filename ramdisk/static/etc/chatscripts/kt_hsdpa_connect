@@ -1,0 +1,9 @@
+#!/bin/sh
+#Connection to the network
+#'' AT+CGDCONT=1,"IP","APN","biz.ktfwing.com",0,0
+#'' AT+CGDCONT=1,"IP","biz.ktfwing.com"\r
+#Dial the number
+#OK\r 
+'' ATD*99***2#\r
+#The modem is waiting for the following answer
+CONNECT ''

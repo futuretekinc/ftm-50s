@@ -1,0 +1,22 @@
+#!/bin/sh
+
+DATE=`date +%Y%m%d-%H%M%S`
+
+mv -f "$Log" "$Log_`date +%Y-%m-%d-%H%M`"
+
+echo "########################################" >> $LOG
+echo "$DATE : Start the $TASK." >> $LOG
+
+CNT=`ps -e | grep "$TASK" | grep -v grep | wc -l`
+PID=`ps -e | grep "$TASK" | grep -v grep | awk '{print $1}'`
+
+if [ $CNT -ne 0 ]
+then
+	echo "$DATE | $TASK(PID : $PID) is already running." >> $LOG
+else
+	nohup $TASK >> $LOG &
+	echo "$DATE : $TASK has been started." >> $LOG
+fi
+
+echo "########################################" >> $LOG
+

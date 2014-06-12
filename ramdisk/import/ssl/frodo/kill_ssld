@@ -1,0 +1,17 @@
+#!/bin/sh
+
+if pidof run_ssld | sed "s/$$\$//" | grep -q [0-9]
+then
+	killall run_ssld
+fi
+
+if pidof marlin | sed "s/$$\$//" | grep -q [0-9]
+then
+	killall marlin
+fi
+
+if pidof client | sed "s/$$\$//" | grep -q [0-9]
+then
+	killall client
+fi
+

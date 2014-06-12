@@ -1,0 +1,23 @@
+#!/bin/bash
+
+TASK=taskmon
+
+DATE=`date +%Y%m%d-%H%M%S`
+CNT=`ps -e|egrep "\{$TASK\}"|grep -v grep|wc -l`
+
+if [ $CNT -lt 1 ]
+then
+	PROCESS=`ps -e|grep "\{$TASK\}"|grep -v grep|awk '{print $1}'`
+	if [ "$PROCESS" != "" ]
+	then
+		echo "$DATE : To end the $TASK."
+		kill -9 $PROCESS
+		wait
+	fi
+
+	echo "$DATE : To restart the $TASK."
+
+	$TASK &
+
+	echo "$DATE : Complete restart the $TASK."
+fi

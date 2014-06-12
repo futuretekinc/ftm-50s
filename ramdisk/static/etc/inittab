@@ -1,0 +1,7 @@
+#! /bin/ash
+::sysinit:/etc/rc.d/rc.sysinit
+::respawn:/sbin/getty 115200 ttyS0
+::restart:/sbin/init
+::ctrlaltdel:/sbin/reboot
+::shutdown:/bin/umount -a -r
+::shutdown:/sbin/swapoff -a

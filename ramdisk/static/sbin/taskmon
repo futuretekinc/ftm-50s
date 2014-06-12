@@ -1,0 +1,116 @@
+#!/bin/bash
+
+LIST_DIR="/etc:."
+LIST_FILE="taskmon.conf"
+LOG_DIR="/etc/log"
+LOG_FILE="taskmon.log"
+NORMAL_SLEEP=10		# normal waiting time
+PROB_SLEEP=1		# abnormal waiting time
+
+#LOG File Rename
+
+sleep 1
+
+if [ -d "$LOG_DIR" ]
+then
+	LOG="$LOG_DIR/$LOG_FILE"
+	if [ -e "$LOG" ]
+	then
+		i=9
+		while [ $i -gt 0 ]
+		do
+			BACK_LOG_FILE="$LOG.$i"
+			if [ -f "$LOG.$i" ]
+			then
+				let "j=i+1"
+				mv -f "$LOG.$i" "$LOG.$j"
+			fi
+			let "i=i-1"
+		done
+
+		mv -f "$LOG" "$LOG.1"
+	fi
+else
+	echo "log dir not exist."
+	LOG=/dev/null
+fi
+
+DIRS=`echo $LIST_DIR | sed 's/:/ /g'`
+
+for DIR in $DIRS
+do
+	_LIST="${DIR}/${LIST_FILE}"
+	
+	if [ -e "$_LIST" ]
+	then
+		LIST=$_LIST
+		TASKS=`awk '{ printf("%s ",$1) }' $LIST`
+		break
+	fi
+done
+
+if [ -z "$LIST" ]
+then
+	echo "config not found."
+	exit 0
+fi
+
+DATE=`date +%Y%m%d-%H%M%S`
+echo "########################################" >> $LOG
+echo "$DATE : TASK Monitor Start!" >> $LOG
+echo "########################################" >> $LOG
+
+for TASK in $TASKS
+do
+	DATE=`date +%Y%m%d-%H%M%S`
+	CNT=`ps -e|grep "$TASK"|grep -v grep|wc -l`
+
+	if pidof $TASK | [ $CNT -lt 1 ]
+	then
+		PROCESS=`ps -e|grep "$TASK"|grep -v grep|awk '{print $1}'`
+		if [ "$PROCESS" != "" ]
+		then
+			echo "$DATE : To end the $TASK." >> $LOG
+			kill -9 $PROCESS
+			wait
+		fi
+
+		echo "$DATE : Start the $TASK." >> $LOG
+		
+		CMDLINE=`awk -v task=$TASK '{ if ($1 ~ task) print nohup $0 }' $LIST`
+		$CMDLINE &
+
+		echo "$DATE : Complete start the $TASK." >> $LOG
+	fi
+done
+
+while [ 1 ]
+do
+	for TASK in $TASKS
+	do
+		DATE=`date +%Y%m%d-%H%M%S`
+		CNT=`ps -e|grep "$TASK"|grep -v grep|wc -l`
+
+		if [ $CNT -lt 1 ]
+		then
+			PROCESS=`ps -e|grep "$TASK"|grep -v grep|awk '{print $1}'`
+			if [ "$PROCESS" != "" ]
+			then
+				echo "$DATE : To end the $TASK." >> $LOG
+				kill -9 $PROCESS
+				wait
+			fi
+
+			echo "$DATE : To restart the $TASK." >> $LOG
+		
+			CMDLINE=`awk -v task=$TASK '{ if ($1 ~ task) print nohup $0 }' $LIST`
+			$CMDLINE &
+
+			echo "$DATE : Complete restart the $TASK." >> $LOG
+
+			sleep $PROB_SLEEP
+		fi
+	done
+
+	sleep $NORMAL_SLEEP
+done
