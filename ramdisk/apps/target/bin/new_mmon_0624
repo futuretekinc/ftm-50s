@@ -15,22 +15,6 @@ PPP_CONNECTION_CHECK_TIME=10
 RSSI_RETRY=0
 RSSI_MAX_RETRY=3
 
-get_nwcause()
-{
-		file="/var/log/modem"
-		if [ -f $file ]
-		then
-			nwcause=`cat /var/log/modem | awk '/\#NWCAUSE\:/ { print }' | awk 'END { print }'`
-			if [ -n "$nwcause" ]
-			then
-					if [ "$nwcause" = "#NWCAUSE: \"SM\",0,8" ]
-					then
-							return 1
-					fi
-			fi
-		fi
-		return 0
-}
 
 get_init_qos()
 {
@@ -289,7 +273,7 @@ do
 				`echo AT#NWCAUSE=0,0,1,1 > /dev/ttyS1; sleep 0.1`
 				#NEXT_STAT=STAT_INITIALIZED;
 				NEXT_STAT=STAT_RSSI_CHECK;
-				
+
 				# 06/24
 #				get_init_qos
 #				if [ $? -eq 0 ]
@@ -395,9 +379,19 @@ do
 				#SCRIPT_FILE=`get_ppp_scripts`;
 				#echo "$SCRIPT_FILE"
 				#if [ -n "$SCRIPT_FILE" ]; then
-				/usr/sbin/pppd file /etc/ppp/scripts/uc864-e >& /var/log/pppd &
-				NEXT_STAT=STAT_WAITING_FOR_PPP_CONNECTION_COMPLETED;
-				RETRY=0;
+				
+				#is_nwcause=`/www/cgi-bin/scripts/sgact.sh`
+				#if [ "$is_nwcause" != "stop" ]
+				res=`cat /tmp/nwcause`
+				if [ "$res" = "sending" ]
+				then
+					#echo $is_nwcause
+					/usr/sbin/pppd file /etc/ppp/scripts/uc864-e >& /var/log/pppd &
+					NEXT_STAT=STAT_WAITING_FOR_PPP_CONNECTION_COMPLETED;
+					RETRY=0;
+				else
+					NEXT_STAT=STAT_LONGTERM_WAITING;
+				fi
 				#fi
 			fi
 			;;
@@ -422,9 +416,18 @@ do
 			then
 				if [ $RETRY -lt $MAX_RETRY ]
 				then
-					let 'RETRY+=1';
-					/usr/sbin/pppd file /etc/ppp/scripts/uc864-e >& /var/log/pppd &
-					NEXT_STAT=STAT_WAITING_FOR_PPP_CONNECTION_COMPLETED;
+					#is_nwcause=`/www/cgi-bin/scripts/sgact.sh`
+					#if [ "$is_nwcause" != "stop" ]
+					res=`cat /tmp/nwcause`
+					if [ "$res" = "sending" ]
+					then
+						#echo "STAT_CHECK_PPPD"
+						let 'RETRY+=1';
+						/usr/sbin/pppd file /etc/ppp/scripts/uc864-e >& /var/log/pppd &
+						NEXT_STAT=STAT_WAITING_FOR_PPP_CONNECTION_COMPLETED;
+					else
+						NEXT_STAT=STAT_LONGTERM_WAITING;
+					fi
 				else
 					RETRY=0;
 					NEXT_STAT=STAT_LONGTERM_WAITING;

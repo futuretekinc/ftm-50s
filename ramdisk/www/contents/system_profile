@@ -2,6 +2,7 @@
 <hr>
 <form name='f'>
 	<h3 id='section1_title'>Device Informations</h3>
+	<h4 id='message'><h4>
 	<div class='clearfix'>
 	 	<table id='profile'>
 			<tbody>

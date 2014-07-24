@@ -60,12 +60,12 @@ do
 		is_sum=0
 		data=`getRxTx`;
 		`echo $data > /etc/ppp/data/curData`
-	else
-		if [ $is_sum -eq 0 ]
-		then
-			sum
-			is_sum=1
-		fi
+#	else
+#		if [ $is_sum -eq 0 ]
+#		then
+#			sum
+#			is_sum=1
+#		fi
 	fi
 	
 	sleep 1

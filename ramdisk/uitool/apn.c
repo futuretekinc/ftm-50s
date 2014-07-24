@@ -65,6 +65,14 @@ int IOT_APN(qentry_t *pReq)
 
 				}
 				pclose(fp);
+
+				//fp = popen("killall pppd", "r");
+				fp = popen("/www/cgi-bin/scripts/killpppd.sh", "r");
+				if (fp != NULL)
+				{
+						pclose(fp);
+				}
+
 				return 0;
 		}
 		return 0;

@@ -85,6 +85,7 @@ do
 			;;
 			STATE_COMPLETE)
 				###### Setting Network Time Zone ######
+				## REBOOT FTM-50S ##
 				`echo AT\#NITZ=1 > /dev/ttyS1; sleep 0.1`
 				`echo AT\&W > /dev/ttyS1; sleep 0.1`
 				`echo AT\&P > /dev/ttyS1; sleep 0.1`

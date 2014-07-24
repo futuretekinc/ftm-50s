@@ -183,6 +183,7 @@ function onApplyLocation()
 
 function loadModemVersion()
 {
+	document.getElementById('message').innerHTML='잠시만 기다려 주십시오..';
 	if(typeof window.ActiveXObject != 'undefined')
 	{
 		xmlhttp = (new ActiveXObject("Microsoft.XMLHTTP"));
@@ -207,11 +208,13 @@ function loadModemVersion()
             		// 파싱
             		var result2 = xmlhttp.responseXML.documentElement.getElementsByTagName("text")[0];
             		var text = result2.firstChild.nodeValue;
-					if (text == "done")
+					if (text == "done" || text == "URC MESSAGE")
 					{
-						alert("Please Refresh..");
+						//alert("Please Refresh..");
+						document.getElementById('message').innerHTML='다시 시도해 주십시오..';
 						return;
 					}
+					document.getElementById('message').innerHTML='';
 					var trimText = trim(text);
 					var textArr = trimText.split("||");
 					var ATCOMMAND = textArr[0].split(":")[0];

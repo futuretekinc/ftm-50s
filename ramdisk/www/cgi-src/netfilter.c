@@ -120,6 +120,30 @@ int	FTMC_Netfilter(qentry_t *pReq)
 			XML_PutError(pReq, "SET_NETFILTER", "Can't not create file\n");
 			return	-1;
 		}
+
+		//==============================================================
+		fprintf(fp, "*raw\n");
+		fprintf(fp, ":PREROUTING ACCEPT\n");
+		fprintf(fp, ":OUTPUT ACCEPT\n");
+		fprintf(fp, "COMMIT\n\n");
+
+		fprintf(fp, "*nat\n");
+		fprintf(fp, ":PREROUTING ACCEPT\n");
+		fprintf(fp, ":INPUT ACCEPT\n");
+		fprintf(fp, ":OUTPUT ACCEPT\n");
+		fprintf(fp, ":POSTROUTING ACCEPT\n");
+		fprintf(fp, "-A POSTROUTING -o ppp0 -j MASQUERADE\n");
+		fprintf(fp, "COMMIT\n\n");
+
+		fprintf(fp, "*mangle\n");
+		fprintf(fp, ":PREROUTING ACCEPT\n");
+		fprintf(fp, ":INPUT ACCEPT\n");
+		fprintf(fp, ":FORWARD ACCEPT\n");
+		fprintf(fp, ":OUTPUT ACCEPT\n");
+		fprintf(fp, ":POSTROUTING ACCEPT\n");
+		fprintf(fp, "COMMIT\n\n");
+		//==============================================================
+
 		fprintf(fp, "*filter\n");
 		fprintf(fp, ":INPUT ACCEPT\n");
 		fprintf(fp, ":FORWARD ACCEPT\n");

@@ -13,9 +13,15 @@ do
 			if [ $rows -ge 150 ]
 			then
 				`ps | grep ttyS1 | grep -v grep | awk '{ print $1 }' | xargs kill -9`
+
+
 #				echo "delete"
-				sleep 1
+
+
+				`sleep 0.1`
 				`cat /dev/ttyS1 &> /var/log/modem &`
+
+
 #				echo "ttyS1 restart"
 #			else
 #				echo "rows is under 150"

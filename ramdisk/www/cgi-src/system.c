@@ -269,6 +269,7 @@ int FTMC_System(qentry_t *pReq)
 								}
 						}
 
+
 				}
 				//			}
 				//			else 
@@ -295,11 +296,18 @@ int FTMC_System(qentry_t *pReq)
 	}
 	else if(strcmp(lpszCmd, "reboot") == 0)
 	{
-		FTMC_LoadIndex(pReq);
+		/*FTMC_LoadIndex(pReq);
 		XML_PutHeader(pReq);
 
+		
+		FILE *sumFP = popen("/www/cgi-bin/scripts/sum_data.sh", "r");
+		if (sumFP != NULL)
+		{
+				pclose(sumFP);
+		}
+
 		//FILE *fp = popen("sync;sync;", "r");
-		FILE *detachFp = popen("mmd -p /dev/ttyS1 -c at+cgatt=0", "r");
+		FILE *detachFp = popen("echo AT#SHDN > /dev/ttyS1; sleep 0.1", "r");
 		if (detachFp != NULL)
 		{
 				pclose(detachFp);
@@ -310,18 +318,33 @@ int FTMC_System(qentry_t *pReq)
 				XML_PutError(pReq, "SYSTEM", "");
 		}
 		//sleep (1);
+		
 
-		FILE *fp = popen("sleep 2;sync;sync; reboot", "r");
+		FILE *fp = popen("sleep 4;sync;sync; reboot", "r");
 		if (fp != NULL)
 		{
 			pclose(fp);	
 
 			//XML_PutOK(pReq, "SYSTEM");
 		}
+		*/
 		//else
 		//{
 		//	XML_PutError(pReq, "SYSTEM", "");
 		//}
+
+			FILE *fp;
+
+			fp = popen("./reboot.sh", "r");
+			if (fp == NULL)
+			{
+					perror("error");
+			} else {
+					pclose(fp);
+			}
+			qcgires_setcontenttype(pReq, "text/html");
+			printf("Please try again in a few minutes.");
+			pReq->free(pReq);
 	}
 	else
 	{

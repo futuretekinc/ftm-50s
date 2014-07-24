@@ -340,12 +340,12 @@ function saveDHCP( _element )
 	var dns2_value = _element.getElementsByTagName("DNS2")[0].firstChild.nodeValue;
 
 	var static_leases = _element.getElementsByTagName("STATIC_LEASE");
-	var ipaddr;
-	var macaddr;
+	var ipaddr=[];
+	var macaddr=[];
 	for(i = 0 ; i < static_leases.length ; i++)
 	{
-		ipaddr 	= static_leases[i].getElementsByTagName("IP")[0].firstChild.nodeValue;
-		macaddr	= static_leases[i].getElementsByTagName("MAC")[0].firstChild.nodeValue;
+		ipaddr.push(static_leases[i].getElementsByTagName("IP")[0].firstChild.nodeValue);
+		macaddr.push(static_leases[i].getElementsByTagName("MAC")[0].firstChild.nodeValue);
 	}
 
 	//======================================
@@ -364,9 +364,9 @@ function saveDHCP( _element )
 	var end_addr_arr = ip_pool_end_value.split(".");
 	var router_addr_arr = router_value.split(".");
 
-	var set_start_addr = start_addr_arr[0] + "." + start_addr_arr[1] + "." + net_addr_arr[2] + "." + start_addr_arr[3];
-	var set_end_addr = end_addr_arr[0] + "." + end_addr_arr[1] + "." + net_addr_arr[2] + "." + end_addr_arr[3];
-	var set_router_addr = router_addr_arr[0] + "." + router_addr_arr[1] + "." + net_addr_arr[2] + "." + router_addr_arr[3];
+	var set_start_addr = net_addr_arr[0] + "." + net_addr_arr[1] + "." + net_addr_arr[2] + "." + start_addr_arr[3];
+	var set_end_addr = net_addr_arr[0] + "." + net_addr_arr[1] + "." + net_addr_arr[2] + "." + end_addr_arr[3];
+	var set_router_addr = net_addr_arr[0] + "." + net_addr_arr[1] + "." + net_addr_arr[2] + "." + net_addr_arr[3];
 	//alert(set_start_addr);
 	//alert(set_end_addr);
 	//======================================
@@ -382,22 +382,19 @@ function saveDHCP( _element )
 	data += "&dns1=" + dns1_value;
 	data += "&dns2=" + dns2_value;
 
-	if (typeof(macaddr) != 'undefined')
+	if (macaddr.length > 0)
 	{
-		if (typeof(macaddr.length) != 'undefined')
+		for(i = 0 ; i < macaddr.length ; i++)
 		{
-			for(i = 0 ; i < macaddr.length ; i++)
-			{
-				data += "&mac" + i + "=" + macaddr[i].value;
-				data += "&ip" + i + "=" + ipaddr[i].value;
-				
-			}
-		}
-		else
-		{
-				data += "&mac0=" + macaddr.value;
-				data += "&ip0=" + ipaddr.value;
+			data += "&mac" + i + "=" + macaddr[i];
+			data += "&ip" + i + "=" + ipaddr[i];
+			
 		}			
+	}
+	else
+	{
+			data += "&mac0=" + "00:00:00:00:00:00";
+			data += "&ip0=" + "0.0.0.0";
 	}
 
 	xmlhttp.open( "POST", data, true );

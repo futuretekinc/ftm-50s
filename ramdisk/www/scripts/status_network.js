@@ -1,4 +1,5 @@
 <!-- Network Status -->
+var usim=true;
 
 function onInit()
 {
@@ -135,6 +136,13 @@ function loadNetworkState()
             		var result2 = xmlhttp.responseXML.documentElement.getElementsByTagName("text")[0];
 					
             		var text = result2.firstChild.nodeValue;
+
+					if (text == "done" || text == "URC MESSAGE")
+					{
+						document.getElementById('message').innerHTML='다시 시도해 주십시오..';
+						return;
+					}
+
 					var trimText = trim(text);
 					var textArr = trimText.split("||");
 					var ATCOMMAND = textArr[0].split(":")[0];
@@ -246,25 +254,35 @@ function loadCnum()
 							row.insertCell(18).innerHTML = "<td class='center'><p>" + "SIM wrong.." + "</p></td>";
 						break;
 						default:
-							var trimNumText = trim(result2.firstChild.nodeValue);					
-							var phoneNum;
-							if (trimNumText == "done")
-							{
-								phoneNum = "refresh.."
+							if (usim == true)
+							{	
+								var trimNumText = trim(result2.firstChild.nodeValue);					
+								var phoneNum;
+
+								if (trimNumText == "done")
+								{
+									phoneNum = "refresh.."
+								} else {
+									var textNumArr = trimNumText.split("||");
+									var NUM_ATCOMMAND = textNumArr[0].split(":")[0];
+									var NUM_ATCOMMAND_RES = textNumArr[0].split(":")[1];
+									phoneNum = NUM_ATCOMMAND_RES.split(",")[1];
+								}
+								document.getElementById('message').innerHTML='';
+								row.insertCell(18).innerHTML = "<td class='center'><p>" + phoneNum + "</p></td>";
 							} else {
-								var textNumArr = trimNumText.split("||");
-								var NUM_ATCOMMAND = textNumArr[0].split(":")[0];
-								var NUM_ATCOMMAND_RES = textNumArr[0].split(":")[1];
-								phoneNum = NUM_ATCOMMAND_RES.split(",")[1];
+								phoneNum = "미개통"
+								document.getElementById('message').innerHTML='';
+								row.insertCell(18).innerHTML = "<td class='center'><p>" + phoneNum + "</p></td>";
 							}
-							row.insertCell(18).innerHTML = "<td class='center'><p>" + phoneNum + "</p></td>";
 						break;
 					}
 					row.cells[18].setAttribute('class', 'center');
 
             	} else {
             		// error
-            		alert("Please Refresh..");
+            		//alert("Please Refresh..");
+					document.getElementById('message').innerHTML='다시 시도해 주십시오..';
 					//alert(result.firstChild.nodeValue);
             	}
             }
@@ -279,6 +297,7 @@ function loadCnum()
 
 function loadUsimInfo()
 {
+	//document.getElementById('message').innerHTML='잠시만 기다려 주십시오..';
 	if(typeof window.ActiveXObject != 'undefined')
 	{
 		xmlhttp = (new ActiveXObject("Microsoft.XMLHTTP"));
@@ -304,6 +323,12 @@ function loadUsimInfo()
             		// 파싱
             		var resultNode = xmlhttp.responseXML.documentElement.getElementsByTagName("text")[0];
 					var result = resultNode.firstChild.nodeValue;
+					
+					if (result == "done" || result == "URC MESSAGE")
+					{
+						document.getElementById('message').innerHTML='다시 시도해 주십시오..';
+					}
+
 					var label = document.getElementById("usim_status");
 					switch (result)
 					{
@@ -387,10 +412,122 @@ function loadpppData()
 					rx.innerHTML = bytesToSize(rx_data);
 					tx.innerHTML = bytesToSize(tx_data);
 					
-					loadUsimInfo();
+					//loadUsimInfo();
+					loadUsimStatus();
             	} else {
             		// error
-					loadUsimInfo();
+					//loadUsimInfo();
+					loadUsimStatus();
+            	}
+            }
+            catch(e)
+            {
+
+            }
+		}
+	}
+	xmlhttp.send();
+}
+
+function loadUsimStatus()
+{
+	document.getElementById('message').innerHTML='잠시만 기다려 주십시오..';
+	if(typeof window.ActiveXObject != 'undefined')
+	{
+		xmlhttp = (new ActiveXObject("Microsoft.XMLHTTP"));
+	}
+	else
+	{
+		xmlhttp = (new XMLHttpRequest());
+	}
+	
+	var data = "/cgi-bin/usim?cmd=state_status";
+
+	xmlhttp.open( "POST", data, true );
+	xmlhttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded;charset=euc-kr");
+	xmlhttp.onreadystatechange = function()
+	{
+		if( (xmlhttp.readyState == 4) && (xmlhttp.status == 200) )
+		{
+			try
+            {
+            	result = xmlhttp.responseXML.documentElement.getElementsByTagName("res")[0];
+            	if (result.firstChild.nodeValue == 'OK') {
+
+            		// 파싱
+            		var resultNode = xmlhttp.responseXML.documentElement.getElementsByTagName("text")[0];
+					var result = resultNode.firstChild.nodeValue;
+					var label = document.getElementById("usim_status");
+					//result = "false"
+					if (result == "true")
+					{
+						loadNwcause();
+						usim=true;
+					} else if (result == "false")
+					{
+						label.innerHTML = "미개통"
+						usim=false;
+						loadNetworkState();
+					}
+
+            	} else {
+            		// error
+            		alert("Please Refresh..");
+            	}
+            }
+            catch(e)
+            {
+
+            }
+		}
+	}
+	xmlhttp.send();
+}
+
+var refresh_count = 0;
+function loadNwcause()
+{
+	document.getElementById('message').innerHTML='잠시만 기다려 주십시오..';
+	if(typeof window.ActiveXObject != 'undefined')
+	{
+		xmlhttp = (new ActiveXObject("Microsoft.XMLHTTP"));
+	}
+	else
+	{
+		xmlhttp = (new XMLHttpRequest());
+	}
+	
+	var data = "/cgi-bin/usim?cmd=state_nwcause";
+
+	xmlhttp.open( "POST", data, true );
+	xmlhttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded;charset=euc-kr");
+	xmlhttp.onreadystatechange = function()
+	{
+		if( (xmlhttp.readyState == 4) && (xmlhttp.status == 200) )
+		{
+			try
+            {
+            	result = xmlhttp.responseXML.documentElement.getElementsByTagName("res")[0];
+            	if (result.firstChild.nodeValue == 'OK') {
+
+            		// 파싱
+            		var resultNode = xmlhttp.responseXML.documentElement.getElementsByTagName("text")[0];
+					var result = resultNode.firstChild.nodeValue;
+					var label = document.getElementById("usim_status");
+					//result = "false"
+
+					if (result == "sending")
+					{
+						loadUsimInfo();
+						return;
+					} else {
+						label.innerHTML = "발신정지"
+						alert("단말이 발신정지 상태입니다.\n고객센터에 연락하여 발신정지 해지를 요청하십시오.\n발신정지가 해지되면 단말을 재부팅 해주십시오.");
+						loadNetworkState();
+					}
+            	} else {
+            		// error
+            		alert("Please Refresh..");
             	}
             }
             catch(e)

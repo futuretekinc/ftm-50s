@@ -283,13 +283,13 @@ function selectEvent(selectObj)
 {
 	if (selectObj.value == "eth1")
 	{
-		document.f.ip_pool_start.value = "192.168." + ip_eth1[2] + ".20";
-		document.f.ip_pool_end.value = "192.168." + ip_eth1[2] + ".254";
-		document.f.router.value = "192.168." + ip_eth1[2] + ".1";
+		document.f.ip_pool_start.value = ip_eth1[0] + "." + ip_eth1[1] + "." + ip_eth1[2] + ".20";
+		document.f.ip_pool_end.value = ip_eth1[0] + "." + ip_eth1[1] + "." + ip_eth1[2] + ".254";
+		document.f.router.value = ip_eth1[0] + "." + ip_eth1[1] + "." + ip_eth1[2] + "." + ip_eth1[3];
 	} else {
-		document.f.ip_pool_start.value = "192.168." + ip_eth0[2] + ".20";
-		document.f.ip_pool_end.value = "192.168." + ip_eth0[2] + ".254";
-		document.f.router.value = "192.168." + ip_eth1[2] + ".1";
+		document.f.ip_pool_start.value = ip_eth0[0] + "." + ip_eth0[1] + "." + ip_eth0[2] + ".20";
+		document.f.ip_pool_end.value = ip_eth0[0] + "." + ip_eth0[1] + "." + ip_eth0[2] + ".254";
+		document.f.router.value = ip_eth0[0] + "." + ip_eth0[1] + "." + ip_eth0[2] + "." + ip_eth0[3];
 	}
 }
 

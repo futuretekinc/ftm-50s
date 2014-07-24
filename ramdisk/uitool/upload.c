@@ -49,8 +49,8 @@ int main(void)
 		}
 		
 		// result out
-		qcgires_setcontenttype(req, "text/html");
-		printf("Please try again in a few minutes.");
+//		qcgires_setcontenttype(req, "text/html");
+//		printf("Please try again in a few minutes.");
 		//printf("<br><a src='192.168.0.110'>HOME</a>");
 		//printf("You entered: <b>%s</b>\n", text);
 		//printf("<br><a href=\"%s\">%s</a> (%d bytes, %s) saved.",
@@ -82,7 +82,7 @@ int main(void)
 		//state = 
 		pclose(fp);
 		//printf("state is %d\n", state);
-
+/*
 		fp = popen("sync;sync; reboot", "r");
 		if (fp != NULL)
 		{
@@ -91,5 +91,19 @@ int main(void)
 
 		// de-allocate
 		req->free(req);
+*/		
+		//==========================================
+		fp = popen("./reboot.sh", "r");
+		if (fp == NULL)
+		{
+				perror("error");
+		} else {
+				pclose(fp);
+		}
+		qcgires_setcontenttype(req, "text/html");
+		printf("Please try again in a few minutes.");
+		req->free(req);
+		//==========================================
+
 		return 0;
 }

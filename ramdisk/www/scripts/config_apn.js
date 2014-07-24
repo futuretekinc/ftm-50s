@@ -26,6 +26,7 @@ function onLoad()
 
 function loadAPN()
 {
+	document.getElementById('message').innerHTML='잠시만 기다려 주십시오..';
 	if(typeof window.ActiveXObject != 'undefined')
 	{
 		xmlhttp = (new ActiveXObject("Microsoft.XMLHTTP"));
@@ -51,12 +52,13 @@ function loadAPN()
             		var result2 = xmlhttp.responseXML.documentElement.getElementsByTagName("text")[0];
             		var text = result2.firstChild.nodeValue;
 
-					if (apn == "done")
+					if (apn == "done" || apn=="URC MESSAGE")
 					{
-						alert("Please Refresh..");
+						//alert("Please Refresh..");
+						document.getElementById('message').innerHTML='다시 시도해 주십시오..';
 						return;
 					}
-
+					document.getElementById('message').innerHTML='';
 					var trimText = trim(text);
 					var textArr = trimText.split("||");
 					var ATCOMMAND = textArr[0].split(":")[0];
@@ -90,45 +92,48 @@ function loadAPN()
 
 function setAPN()
 {
-	if(typeof window.ActiveXObject != 'undefined') {
-		xmlhttp = (new ActiveXObject("Microsoft.XMLHTTP"));
-	} else {
-		xmlhttp = (new XMLHttpRequest());
-	}
-	
-	var sms_select = document.getElementById("smsSelect");
-	var data = "/cgi-bin/apn?cmd=set"
-
-	//var cid_select = document.getElementById("cidSelect");
-	var apn_tf = document.getElementById("apn");
-
-	data += "&cid=2"; //cid_select[cid_select.selectedIndex].value;
-	data += "&pdp_type=IP";
-	data += "&apn=" + apn_tf.value;
-	data += "&pdp_addr=0.0.0.0";
-	data += "&d_comp=0"; 
-	data += "&h_comp=0";
-	
-	xmlhttp.open( "POST", data, true );
-	xmlhttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded;charset=euc-kr");
-	xmlhttp.onreadystatechange = function()
+	if (confirm("설정 후 전화접속을 다시 시도합니다.\n(약 10초에서 1분사이에 시간이 소요됩니다.)"))
 	{
-		if( (xmlhttp.readyState == 4) && (xmlhttp.status == 200) )
-		{
-			try
-            {
-            	result = xmlhttp.responseXML.documentElement.getElementsByTagName("res")[0];
-            	if (result.firstChild.nodeValue == 'OK') {
-            		alert("APN : OK");
-            	} else {
-            		alert("APN : ERROR");
-            	}
-            }
-            catch(e)
-            {
-
-            }
+		if(typeof window.ActiveXObject != 'undefined') {
+			xmlhttp = (new ActiveXObject("Microsoft.XMLHTTP"));
+		} else {
+			xmlhttp = (new XMLHttpRequest());
 		}
+		
+		var sms_select = document.getElementById("smsSelect");
+		var data = "/cgi-bin/apn?cmd=set"
+
+		//var cid_select = document.getElementById("cidSelect");
+		var apn_tf = document.getElementById("apn");
+
+		data += "&cid=2"; //cid_select[cid_select.selectedIndex].value;
+		data += "&pdp_type=IP";
+		data += "&apn=" + apn_tf.value;
+		data += "&pdp_addr=0.0.0.0";
+		data += "&d_comp=0"; 
+		data += "&h_comp=0";
+		
+		xmlhttp.open( "POST", data, true );
+		xmlhttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded;charset=euc-kr");
+		xmlhttp.onreadystatechange = function()
+		{
+			if( (xmlhttp.readyState == 4) && (xmlhttp.status == 200) )
+			{
+				try
+				{
+					result = xmlhttp.responseXML.documentElement.getElementsByTagName("res")[0];
+					if (result.firstChild.nodeValue == 'OK') {
+						alert("APN : OK");
+					} else {
+						alert("APN : ERROR");
+					}
+				}
+				catch(e)
+				{
+
+				}
+			}
+		}
+		xmlhttp.send();
 	}
-	xmlhttp.send();
 }

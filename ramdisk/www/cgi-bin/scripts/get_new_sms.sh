@@ -10,11 +10,18 @@ then
 		#echo $result
 		if [ "$result" = "+CMGR:" ]
 		then
-			cmd=`cat /var/log/modem | sed /^$/d | sed -n "$next_row"p'`
+			next_row=`expr $next_row + 1`
+			cmd=`cat /var/log/modem | sed /^$/d |  sed -n "$next_row"p`
 			echo $cmd
+
+			#cmd=`cat /var/log/modem | sed /^$/d | awk '/smsapn/{ print }' | awk 'END { print }'`
+			#echo $cmd
+		elif [ "$result" = "OK" ]
+		then
+			echo none
 		elif [ "$result" = "+CME" ]
 		then
-			cmd=`cat /var/log/modem | sed /^$/d | sed -n "$next_row"p'`
+			cmd=`cat /var/log/modem | sed /^$/d | sed -n "$next_row"p`
 			echo $cmd
 		else 
 			echo "URC MESSAGE"

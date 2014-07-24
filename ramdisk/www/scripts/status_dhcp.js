@@ -70,7 +70,7 @@ function onLoad()
 				document.getElementById('router').innerHTML		= _router.firstChild.nodeValue;
 				document.getElementById('dns1').innerHTML		= _dns1.firstChild.nodeValue;
 				document.getElementById('dns2').innerHTML		= _dns2.firstChild.nodeValue;
-				if (_static == 1)
+				if (_static.firstChild.nodeValue == 1)
 				{
 					document.getElementById('static').innerHTML = "enable";
 				}
@@ -79,6 +79,7 @@ function onLoad()
 					document.getElementById('static').innerHTML = "disable";
 				}
 				
+				/*
 				static_leases = xmlhttp.responseXML.documentElement.getElementsByTagName("STATIC_LEASE");
 				if (static_leases.length != 0)
 				{
@@ -97,6 +98,7 @@ function onLoad()
 						cell.innerHTML = ipaddr;
 					}
 				}
+				*/
 				
 				leases = xmlhttp.responseXML.documentElement.getElementsByTagName("LEASE");
 				if (leases.length != 0)

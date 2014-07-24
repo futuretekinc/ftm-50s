@@ -9,6 +9,26 @@ var msgTheFirmwareUpdateCompleted=7;
 var msgIncorrectFirmware;
 var msg;
 
+var opts = {
+  lines: 11, // The number of lines to draw
+  length: 5, // The length of each line
+  width: 10, // The line thickness
+  radius: 20, // The radius of the inner circle
+  corners: 1, // Corner roundness (0..1)
+  rotate: 0, // The rotation offset
+  direction: 1, // 1: clockwise, -1: counterclockwise
+  color: '#000', // #rgb or #rrggbb or array of colors
+  speed: 1, // Rounds per second
+  trail: 60, // Afterglow percentage
+  shadow: false, // Whether to render a shadow
+  hwaccel: false, // Whether to use hardware acceleration
+  className: 'spinner', // The CSS class to assign to the spinner
+  zIndex: 2e9, // The z-index (defaults to 2000000000)
+  top: '50%', // Top position relative to parent
+  left: '50%' // Left position relative to parent
+};
+var spinner;
+
 function onInit()
 {
 	msg = new Array();
@@ -17,7 +37,7 @@ function onInit()
 	msg[msgDoYouWantToContinueUpgrade]	= "파일 전송을 완료 하였습니다.\n펌웨어 업그레이드를 진행하시겠습니까?";
 	msg[msgIncorrectFirmware]			= " 전송된 펌웨어가 올바르지 않습니다.\n확인 후 재전송해 주시기 바랍니다.";
 	msg[msgTheUpgardeCanceled] 			= "펌웨어 업그레이드가 취소되었습니다.";
-	msg[msgTheUpgradeCompleted] 		= "파일 업그레이드를 완료 하였습니다.\n정상적인 동작을 위해선느 시스템 재시작이 필요합니다.\n재시작 하겠습니까?";
+	msg[msgTheUpgradeCompleted] 		= "파일 업그레이드를 완료 하였습니다.\n정상적인 동작을 위해서 시스템 재시작이 필요합니다.\n재시작 하겠습니까?";
 	msg[msgPleaseSelectTheFirmware]		= "업그레이드용 펌웨어를 선택해 주십시오.";
 	msg[msgTheFirmwareIsUpdating]	= "펌웨어 업데이트 중 입니다.";
 	msg[msgTheFirmwareUpdateCompleted]	= "펌웨어 업데이트가 입니다.";
@@ -66,6 +86,7 @@ function addInfo(type, time, size, desc)
 
 function onLoad()
 {
+	spinner = new Spinner(opts);
 	onInit();
 
 	enablePageTimeout();
@@ -91,22 +112,32 @@ function onLoad()
 			{
 				test=0;
 				info = xmlhttp.responseXML.documentElement.getElementsByTagName("IMG_INFO");
-				for (i = info.length-3 ; i < info.length-1 ; i++)
+				var len = info.length - 2;
+				for (i = 2 ; i < info.length-1 ; i++)
 				{
 					var version = info[i].getElementsByTagName("DESC")[0].firstChild.nodeValue;
 					var verSubstr;
-					if (i==(info.length-3))
+					if (i==2)
 					{
 						verSubstr = version.substr(22);
 					} else {
 						verSubstr = version.substr(7);
 					}
 
-
-					addInfo("FTM-50S__" + info[i].getElementsByTagName("TYPE")[0].firstChild.nodeValue,
+					if (i==2)
+					{
+						addInfo("FTM-50S__" + info[i].getElementsByTagName("TYPE")[0].firstChild.nodeValue,
 									info[i].getElementsByTagName("TIME")[0].firstChild.nodeValue,
 									info[i].getElementsByTagName("SIZE")[0].firstChild.nodeValue,
 									verSubstr);
+					}
+					if (i==len)
+					{
+						addInfo("FTM-50S__" + info[i].getElementsByTagName("TYPE")[0].firstChild.nodeValue,
+									info[i].getElementsByTagName("TIME")[0].firstChild.nodeValue,
+									info[i].getElementsByTagName("SIZE")[0].firstChild.nodeValue,
+									verSubstr);
+					}
 
 				}
 			}
@@ -222,6 +253,7 @@ function onApplyUpgrade(filename)
 				//setTimeout(onProgress, 1000);
 				result = xmlhttp.responseXML.documentElement.getElementsByTagName("RET")[0];
             	if (result.firstChild.nodeValue == 'OK') {
+					spinner.stop();
 					alert(msg[msgTheUpgradeCompleted]);
 					onSystemReboot();
 				}
@@ -281,6 +313,8 @@ function onApplyUpload()
 
 				if (confirm(msg[msgDoYouWantToContinueUpgrade] + fw_info))
 				{
+					var target = document.getElementById('body');
+					spinner.spin(target);
 					onApplyUpgrade(document.f.file.files[0].name);	
 				}
 				else

@@ -17,6 +17,7 @@
 	<br>
 
 	<h3 id='section3_title'>3G</h3>
+	<h4 id='message'><h4>
 	<div class='clearfix'>
                 <table border="1" style="border: 1px none #ccc; border-collapse: collapse;">
                         <tbody>
@@ -24,7 +25,7 @@
                                         <td class='title center'><p id='usim_label'>USIM Status</p></td>
                                 </tr>
 				<tr>
-                                        <td class='title center'><p id='usim_status'>0</p></td>
+                                        <td class='title center'><p id='usim_status'>searching..</p></td>
                                 </tr>
                         </tbody>
                 </table>

@@ -1,4 +1,15 @@
 #!/bin/sh
+
+time=0
+while [ 0 ]
+do
+   time=`expr $time + 1`
+   if [ $time -eq 200 ]
+   then
+       break
+   fi
+done
+
 file="/var/log/modem"
 if [ -f $file ]
 then

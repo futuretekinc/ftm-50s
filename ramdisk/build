@@ -61,6 +61,12 @@ function copy()
     popd
 }
 
+function cp_dir()
+{
+	echo $CP -rf "$STL/$1" $1
+	$CP -rf "$STL/$1" $1
+}
+
 function cp_usr_lib()
 {
     echo $CP "$STL/usr/lib/$1" $1
@@ -85,7 +91,7 @@ sudo mount -o loop ramdisk "$ROOT"
 	mkdir -p bin boot sbin lib
 	mkdir -p dev 
 	mkdir -p etc etc/init.d etc/sysconfig/network
-	mkdir -p usr usr/bin usr/sbin usr/lib 
+	mkdir -p usr usr/bin usr/sbin usr/lib usr/share
 	mkdir -p var var/log var/lock var/run var/ftp var/run/vsftpd/empty var/lib/misc tmp 
 	mkdir -p www www/cgi-bin www/contents www/images www/scripts www/styles
 
@@ -164,6 +170,8 @@ sudo mount -o loop ramdisk "$ROOT"
 
     link bin/busybox linuxrc
 
+	cp_dir usr/share/zoneinfo 
+		
 	exit    3
 )
 
@@ -293,7 +301,7 @@ sudo mount -o loop ramdisk "$ROOT"
 	copy lib libnss_nis-2.10.2.so libnss_nis.so.2
 	copy lib libnss_nisplus-2.10.2.so libnss_nisplus.so.2
 	copy lib libpcprofile.so
-	copy lib libproc-3.2.7.so libproc.so
+#	copy lib libproc-3.2.7.so libproc.so
 	copy lib libpthread-2.10.2.so libpthread.so.0
 	copy lib libresolv-2.10.2.so libresolv.so.2
 	copy lib librt-2.10.2.so librt.so.1 librt.so
@@ -303,6 +311,8 @@ sudo mount -o loop ramdisk "$ROOT"
 	copy lib libutil-2.10.2.so libutil.so.1
 
 	copy lib libstdc++.so.6.0.14 libstdc++.so.6
+	copy usr/lib libcurl.so.4.2.0 libcurl.so.4
+	copy usr/lib libnetsnmp.so.30.0.2 libnetsnmp.so.30
 
 	exit	3
 )
@@ -562,6 +572,8 @@ sudo mount -o loop ramdisk "$ROOT"
 
 	copy usr/sbin mkfs.jffs2
 	copy usr/sbin flash_erase
+	copy usr/sbin cron
+	copy usr/sbin ntpdate
 
 	link	../../bin/busybox	addgroup
 	link	../../bin/busybox	add-shell
@@ -742,6 +754,7 @@ fi
 	$CP -rf node_usr/local/include "$ROOT/usr/local"
 	$CP -rf node_usr/local/lib "$ROOT/usr/local"
 	$CP -rf node_usr/local/share "$ROOT/usr/local"
+#	$CP -rf $STL/usr/share/snmp "$ROOT/usr/share/snmp"
 
 )
 
@@ -753,9 +766,8 @@ fi
 	rm -rf $ROOT
 
 	gzip -f9 ramdisk
-	mkimage -n 'Ramdisk v1.0.0' -A arm -O linux -T ramdisk -C gzip -a 0x00a00000 -d ramdisk.gz ramdisk.img
-	$CP ramdisk.gz /tftpboot
-	$CP ramdisk.img /tftpboot
+	mkimage -n 'Ramdisk v1.0.6' -A arm -O linux -T ramdisk -C gzip -a 0x00a00000 -d ramdisk.gz ramdisk.img
+	$CP ramdisk.img /tftpboot/ftm-50s
 
     exit    3
 )

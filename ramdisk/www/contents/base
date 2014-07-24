@@ -15,6 +15,7 @@
 	<!--- ###SCRIPT### --->
   <script type="text/javascript" src="/scripts/contents.js"></script>
   <script type="text/javascript" src="/scripts/md5.js"></script>
+  <script type="text/javascript" src="/scripts/spin.min.js"></script>
   </head>
 
 <body id='body' onload="onMainLoad();" hidden>
