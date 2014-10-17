@@ -1,0 +1,12 @@
+#!/bin/sh
+
+if pidof run_ssld | sed "s/$$\$//" | grep -q [0-9]
+then
+	killall run_ssld
+fi
+
+if pidof secuway_client | sed "s/$$\$//" | grep -q [0-9]
+then
+	killall secuway_client
+fi
+

@@ -35,6 +35,7 @@ deps_config := \
 	fs/qnx4/Kconfig \
 	fs/hpfs/Kconfig \
 	fs/omfs/Kconfig \
+	fs/mini_fo/Kconfig \
 	fs/minix/Kconfig \
 	fs/freevxfs/Kconfig \
 	fs/squashfs/Kconfig \
@@ -59,6 +60,7 @@ deps_config := \
 	fs/isofs/Kconfig \
 	fs/cachefiles/Kconfig \
 	fs/fscache/Kconfig \
+	fs/overlayfs/Kconfig \
 	fs/fuse/Kconfig \
 	fs/autofs4/Kconfig \
 	fs/quota/Kconfig \

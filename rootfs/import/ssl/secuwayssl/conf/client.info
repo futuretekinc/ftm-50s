@@ -1,0 +1,22 @@
+# client.info file format
+
+# userid: client user identifier
+# userpw: client user password
+# vpn_ip: vpn server ip
+# vpn_port: vpn service port
+# crypto: [yes|no]
+#	- yes <- use ssl protocol
+#	- no <- not use ssl protocol
+# log_size: max_log_size(kilobyte)
+#	if (size == 0) unlimited
+# version3: SecuwaySSL V3.0
+# site-to-site: use site-to-site
+
+userid: futuretec
+userpw: 111111111a
+vpn_ip: 211.41.163.99
+vpn_port: 443
+crypto: yes
+log_size: 50
+version3: yes
+site-to-site: yes

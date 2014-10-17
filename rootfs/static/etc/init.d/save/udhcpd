@@ -1,0 +1,27 @@
+#!/bin/ash
+
+case "$1" in
+	start) 
+		if ! pidof udhcpd | sed "s/$$\$//" | grep -q [0-9] ; then
+			udhcpd
+		fi	
+		;;
+
+	stop) 
+		pkill udhcpd
+		;;
+
+	restart)
+		pkill udhcpd
+
+		udhcpd
+		;;
+
+	status)
+		if pidof udhcpd | sed "s/$$\$//" | grep -q [0-9] ; then
+			echo "running"
+		else
+			echo "stopped"
+		fi
+		;;
+esac

@@ -1,0 +1,48 @@
+#!/bin/sh
+
+case "$1" in
+	"start") 
+		if ! pidof ssld | sed "s/$$\$//" | grep -q [0-9]
+		then
+			if [ -e /etc/service/ssld ]
+			then
+				USED=`cat /etc/service/ssld`
+				if [ $USED = 'enabled' ]
+				then
+					/usr/local/frodo/ssld &
+				fi
+			fi
+		else
+			if [ -e /etc/service/ssld ]
+			then
+				USED=`cat /etc/service/ssld`
+				if [ $USED = 'disabled' ]
+				then
+					"$0" stop
+				fi
+			fi
+		fi	
+		;;
+
+	"stop") 
+		killall ssld marlin client
+		;;
+
+	"restart")
+		"$0" "stop"
+		"$0" "start"
+		;;
+
+	"status")
+		if pidof ssld | sed "s/$$\$//" | grep -q [0-9]
+		then
+			echo "running"
+		else
+			echo "stopped"
+		fi
+		;;
+
+	*)
+		echo $"Usage: $0 {start|stop|restart|reload}"
+		;;
+esac

@@ -1,0 +1,4 @@
+cat /dev/ttyUSB2 > /dev/ttyUSB0 &
+cat /dev/ttyUSB0 > /dev/ttyUSB2 &
+stty -F /dev/ttyUSB2 -icrnl -ixon -ixoff -opost -isig -icanon -echo
+stty -F /dev/ttyUSB0 115200 -icrnl -ixon -ixoff -opost -isig -icanon -echo

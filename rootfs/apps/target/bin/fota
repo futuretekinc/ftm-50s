@@ -1,0 +1,99 @@
+#!/bin/sh
+
+STATE_WAITING=0
+STATE_DOWNLOADING=1
+STATE_DOWNLOAD_COMPLETE=2
+STATE_COMPLETE_WAIT=3
+STATE_COMPLETE=4
+STATE=STATE_WAITING
+
+get_nwcause()
+{
+		file="/var/log/modem"
+		if [ -f $file ]
+		then
+			nwcause=`cat /var/log/modem | awk '/\#NWCAUSE\:/ { print }' | awk 'END { print }'`
+			if [ -n "$nwcause" ]
+			then
+					if [ "$nwcause" = "#NWCAUSE: \"SM\",0,8" ]
+					then
+							echo "asdf"
+					fi
+			fi
+		fi
+}
+
+is_downloading()
+{
+	res=`cat /var/log/modem | awk '/\#700\:22/ { print }'`
+	if [ -n "$res" ]
+	then
+		return 1
+	else
+		return 0
+	fi
+}
+
+is_download_complete()
+{
+	res=`cat /var/log/modem | awk '/\#700\:23/ { print }'`
+	if [ -n "$res" ]
+	then
+		return 1
+	else
+		return 0
+	fi
+}
+
+while [ 0 ]
+do
+	file="/var/log/modem"
+	if [ -f $file ]
+	then
+		case $STATE in
+			STATE_WAITING)
+				###### Waiting #700:22 Message ######
+				is_downloading
+				if [ $? = 1 ]
+				then
+					STATE=STATE_DOWNLOAING
+				else
+					STATE=STATE_WAITING
+				fi 
+			;;
+			STATE_DOWNLOAING)
+				###### Waiting #700:23 Message ######
+				is_download_complete
+				if [ $? = 1 ]
+				then
+					STATE=STATE_DOWNLOAD_COMPLETE
+				else
+					STATE=STATE_DOWNLOAING
+				fi
+			;;
+			STATE_DOWNLOAD_COMPLETE)
+				###### Module Power Off & On ######
+				`echo AT\#REBOOT > /dev/ttyS1; sleep 0.1`
+				sleep 5
+				`echo AT+CPIN=0000 > /dev/ttyS1; sleep 0.1`
+				STATE=STATE_COMPLETE_WAIT
+			;;
+			STATE_COMPLETE_WAIT)
+				###### Waiting 4 minute ######
+				sleep 240
+				STATE=STATE_COMPLETE
+			;;
+			STATE_COMPLETE)
+				###### Setting Network Time Zone ######
+				## REBOOT FTM-50S ##
+				`echo AT\#NITZ=1 > /dev/ttyS1; sleep 0.1`
+				`echo AT\&W > /dev/ttyS1; sleep 0.1`
+				`echo AT\&P > /dev/ttyS1; sleep 0.1`
+				`echo AT\#REBOOT > /dev/ttyS1; sleep 0.1`
+				sleep 5
+				`echo AT+CPIN=0000 > /dev/ttyS1; sleep 0.1`
+				STATE=STATE_WAITING
+			;;
+		esac
+	fi
+done

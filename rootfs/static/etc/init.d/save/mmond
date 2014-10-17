@@ -1,0 +1,41 @@
+#!/bin/sh
+#
+# Start the Modem monitoring ...
+#
+
+case "$1" in
+	start)
+		if ! pidof mmon | sed "s/$$\$//" | grep -q [0-9] ; then
+			echo	"Starting modem monitor ..."
+			mmon -d
+		else
+			echo	"$0 already running!"
+		fi
+		;;
+
+	stop)
+		echo	"Stopping modem monitor..."
+		pkill mmon
+		;;
+
+	restart)
+		"$0"	stop
+		"$0"	start
+		;;
+
+	status)
+		if pidof mmon | sed "s/$$\$//" | grep -q [0-9] ; then
+			echo "running"
+		else
+			echo "stopped"
+		fi
+		;;
+
+	*)
+		echo $"Usage: $0 {start|stop|restart|status}"
+		exit 1
+		;;
+esac
+
+exit $?
+

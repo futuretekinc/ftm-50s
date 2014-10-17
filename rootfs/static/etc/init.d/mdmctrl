@@ -1,0 +1,50 @@
+#!/bin/sh
+
+case "$1" in
+	status)
+		if [ -e /dev/mdm_power_on ]
+		then
+			STAT=`cat /dev/mdm_power_on`
+			if [ $STAT -eq '1' ]
+			then
+				echo "running"
+			else
+				echo "stopped"
+			fi
+		else
+			echo "stopped"
+		fi
+		;;
+
+	start) 
+		if [ -e /dev/mdm_power_on ]
+		then
+			echo 1 > /dev/mdm_power_on
+		fi
+		;;
+
+	stop) 
+		if [ -e /dev/mdm_power_on ]
+		then
+			echo 0 > /dev/mdm_power_on
+		fi
+		;;
+
+	is_live)
+		if [ -e /dev/ttyUSB0 ]
+		then
+			echo "yes"
+		else
+			echo "no"
+		fi
+		;;
+
+	restart)
+		"$0"	stop
+		"$0"	start
+		;;
+
+	*)
+		echo $"Usage: $0 {start|stop|restart|status|is_live}"
+		exit 1
+esac

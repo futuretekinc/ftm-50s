@@ -101,11 +101,13 @@
 /*
  * USB/EHCI
  */
+#if !defined(CONFIG_SPEAR320_FTM)
 #if !defined(CONFIG_SPEAR_USBTTY)
 #define CONFIG_USB_EHCI				/* Enable EHCI USB support */
 #define CONFIG_USB_EHCI_SPEAR
 #define CONFIG_USB_STORAGE
 #define CONFIG_CMD_USB				/* Enable USB Commands */
+#endif
 #endif
 
 #if defined(CONFIG_USB_STORAGE)

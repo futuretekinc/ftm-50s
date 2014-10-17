@@ -1,0 +1,48 @@
+#!/bin/sh
+
+case "$1" in
+	"start") 
+		if ! pidof udhcpd | sed "s/$$\$//" | grep -q [0-9]
+		then
+			if [ -e /etc/service/udhcpd ]
+			then
+				USED=`cat /etc/service/udhcpd`
+				if [ $USED = 'enabled' ]
+				then
+					/sbin/udhcpd /etc/udhcpd.conf &
+				fi
+			fi
+		else
+			if [ -e /etc/service/udhcpd ]
+			then
+				USED=`cat /etc/service/udhcpd`
+				if [ $USED = 'disabled' ]
+				then
+					"$0" stop
+				fi
+			fi
+		fi	
+		;;
+
+	"stop") 
+		pkill udhcpd
+		;;
+
+	"restart")
+		"$0" "stop"
+		"$0" "start"
+		;;
+
+	"status")
+		if pidof udhcpd | sed "s/$$\$//" | grep -q [0-9]
+		then
+			echo "running"
+		else
+			echo "stopped"
+		fi
+		;;
+
+	*)
+		echo $"Usage: $0 {start|stop|restart|reload}"
+		;;
+esac

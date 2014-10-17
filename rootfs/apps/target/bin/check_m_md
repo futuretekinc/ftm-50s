@@ -1,0 +1,25 @@
+#!/bin/sh
+
+get_pid_time()
+{
+		time=`ps -ef | grep mmd | grep -v grep | awk '{ print $3 }' | sed -e 's/:/ /g' | awk '{ print $1 }'`
+		return $time
+}
+
+while [ 0 ]
+do
+	pid_mmd=`pidof mmd`
+	if [ -z "$pid_mmd" ]
+	then
+		echo mmd Nothing 1> /dev/null
+	else
+		get_pid_time
+		if [ $? -gt 0 ]
+		then
+			pidof mmd | xargs kill -15
+		else
+			echo mmd Nothing 1> /dev/null
+		fi
+	fi
+	sleep 1
+done

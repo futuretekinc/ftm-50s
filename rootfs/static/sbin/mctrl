@@ -1,0 +1,71 @@
+#!/bin/sh
+
+case "$1" in
+	init)
+		if [ ! -e /sys/class/gpio/gpio49 ]
+		then
+			echo 49 > /sys/class/gpio/export
+			echo out > /sys/class/gpio/gpio49/direction
+			echo 0 > /sys/class/gpio/gpio49/value
+		fi
+
+		if [ ! -e /sys/class/gpio/gpio50 ]
+		then
+			echo 50 > /sys/class/gpio/export
+			echo out > /sys/class/gpio/gpio50/direction
+			echo 0 > /sys/class/gpio/gpio49/value
+		fi
+
+		if [ ! -e /sys/class/gpio/gpio78 ]
+		then
+			echo 78 > /sys/class/gpio/export
+			echo out > /sys/class/gpio/gpio78/direction
+			echo 0 > /sys/class/gpio/gpio78/value
+		fi
+
+		;;
+	on)	
+		if [ -e /sys/class/gpio/gpio78 ]
+		then
+			echo 1 > /sys/class/gpio/gpio78/value
+		else
+			echo "The mctrl is not initialized."
+		fi
+		;;
+	
+	off)
+		if [ -e /sys/class/gpio/gpio78 ]
+		then
+			echo 0 > /sys/class/gpio/gpio78/value
+		else
+			echo "disabled"
+		fi
+		;;
+
+	reset)
+		if [ -e /sys/class/gpio/gpio78 ]
+		then
+			echo 0 > /sys/class/gpio/gpio78/value
+			sleep 1
+			echo 1 > /sys/class/gpio/gpio78/value
+		else
+			echo "disabled"
+		fi
+		;;
+
+	status)
+		if [ -e /sys/class/gpio/gpio78 ]
+		then
+			VAL=`cat /sys/class/gpio/gpio78/value`
+			if [ $VAL -eq "1" ]
+			then
+				echo "on"
+			else
+				echo "off"
+			fi
+		else
+			echo "disabled"
+		fi
+		;;
+
+esac

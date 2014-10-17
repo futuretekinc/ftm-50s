@@ -1,0 +1,33 @@
+#!/bin/sh
+
+# GPL $Id: watchdog,v 1.3 2005/10/09 16:39:05 cvonk Exp $
+# system init for the watchdog (watchdog)
+
+case "$1" in
+    start)
+		. /etc/watchdog.conf
+        watchdog -t $WATCHDOG_TIMEOUT /dev/watchdog
+        ;;
+
+    stop)
+        killall watchdog 2>/dev/null
+        ;;
+
+    restart)
+		$0 stop
+		$0 start
+		;;
+
+    status)
+        if pidof watchdog | sed "s/$$\$//" | grep -q [0-9] 
+        then
+			echo "running"
+		else
+			echo "stopped"
+		fi
+		;;
+
+	*)
+		echo $"Usage: $0 {start|stop|restart|status}"
+		exit 1
+esac

@@ -1,7 +1,7 @@
-/* This file is auto generated, version 64 */
+/* This file is auto generated, version 78 */
 #define UTS_MACHINE "arm"
-#define UTS_VERSION "#64 Wed Jul 23 19:27:53 KST 2014"
-#define LINUX_COMPILE_TIME "19:27:53"
+#define UTS_VERSION "#78 Thu Oct 16 14:43:43 KST 2014"
+#define LINUX_COMPILE_TIME "14:43:43"
 #define LINUX_COMPILE_BY "xtra"
 #define LINUX_COMPILE_HOST "ubuntu"
 #define LINUX_COMPILE_DOMAIN "(none)"

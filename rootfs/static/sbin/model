@@ -1,0 +1,11 @@
+#!/bin/sh
+
+CMDLINE=`cat /proc/cmdline`
+for x in $CMDLINE; do
+	case $x in
+		model=*)
+			echo "${x#model=}"
+			;;
+	esac
+done
+

@@ -1,0 +1,162 @@
+#!/bin/sh
+
+FILE_NAME=$1
+USB_STATE_0=0
+USB_STATE_3=1
+USB_STATE_NONE=2
+USB_STATE_IOT=3
+CURRENT_USB_STATE=$USB_STATE_NONE
+
+SLEEP_TIME=5
+
+`echo disabled > /tmp/dm.conf`
+
+is_ppp_connected()
+{
+		result=`/bin/cat /proc/net/dev | awk 'BEGIN{ result="false" }\
+		{\
+				if ($1 ~ /^ppp0/)\
+				{\
+						result="true"\
+				}\
+		} END { "$result" = "true" }'`
+		if [ "$result" = "true" ]
+		then	
+				return 0
+		else
+				return 1
+		fi
+}
+
+is_dm_exist()
+{
+		result=`cat /proc/tty/driver/usbserial | awk '/FTDI/ { print $1 }' | sed -e 's/://g'`
+		if [ "$result" = 0 ]
+		then
+				return 0
+		elif [ "$result" = 3 ]
+		then		
+				return 1
+		else 
+				return 2
+		fi
+}
+
+is_end_modem()
+{
+		result=`cat /proc/tty/driver/usbserial | awk 'END { print $1 }' | sed -e 's/://g'`
+		if [ "$result" = 2 ]
+		then
+				return 0
+		elif [ "$result" = 3 ]
+		then		
+				return 1
+		fi
+}
+
+is_modem_usb()
+{
+		result=`cat /proc/tty/driver/usbserial | awk '/modem/'`
+		if [ -z "$result" ]
+		then
+				return 0
+		else
+				return 1
+		fi
+}
+
+is_dm_connected()
+{
+		result=`cat /tmp/dm.conf`
+		if [ "$result" = "enabled" ]
+		then	
+				return 0
+		else
+				return 1
+		fi
+}
+
+is_cat_connected()
+{
+		result=`ps -ef | grep cat | grep -v grep | awk '{print $1}'`
+		if [ "$result" = "" ]
+		then
+				return 0
+		else 
+				return 1
+		fi
+}
+
+#is_modem_usb
+#if [ $? -eq 0 ]
+#then
+#	exit 7
+#fi
+
+while [ 0 ]
+do
+	sleep $SLEEP_TIME
+	
+	case $CURRENT_USB_STATE in
+		
+		$USB_STATE_0)	
+
+			is_dm_connected
+			if [ $? -eq 1 ]
+			then
+				cp -f /etc/ppp/scripts/save/uc864-e_1 /etc/ppp/scripts/uc864-e
+				/bin/dm_test
+				`echo enabled > /tmp/dm.conf`
+			fi
+			;;
+
+		$USB_STATE_3)
+		
+			is_dm_connected
+			if [ $? -eq 1 ]
+			then
+				cp -f /etc/ppp/scripts/save/uc864-e_0 /etc/ppp/scripts/uc864-e
+				/bin/dm_test2
+				`echo enabled > /tmp/dm.conf`
+			fi
+			;;
+
+		$USB_STATE_NONE)
+			is_end_modem
+			if [ $? -eq 0 ]
+			then
+				cp -f /etc/ppp/scripts/save/uc864-e_0 /etc/ppp/scripts/uc864-e
+			else
+				cp -f /etc/ppp/scripts/save/uc864-e_1 /etc/ppp/scripts/uc864-e
+			fi
+
+			is_dm_connected
+			if [ $? -eq 0 ]
+			then
+				#cp -f /etc/ppp/scripts/save/uc864-e_0 /etc/ppp/scripts/uc864-e
+				is_cat_connected
+				if [ $? -eq 1 ]
+				then
+					ps -ef | grep cat | grep -v grep | awk '{print $1}' | xargs kill -9
+				fi
+				`echo disabled > /tmp/dm.conf`
+			fi
+			
+			if [ $SLEEP_TIME -eq 5 ]
+			then
+				SLEEP_TIME=1
+			fi
+			;;
+	esac
+	
+	is_modem_usb
+	if [ $? -eq 0 ]
+	then
+		CURRENT_USB_STATE=$USB_STATE_IOT
+	else
+		is_dm_exist
+		CURRENT_USB_STATE=$?
+	fi
+	
+#sleep $SLEEP_TIME
+done

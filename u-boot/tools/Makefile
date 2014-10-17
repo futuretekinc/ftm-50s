@@ -194,13 +194,13 @@ $(obj)ubsha1$(SFX):	$(obj)os_support.o $(obj)sha1.o $(obj)ubsha1.o
 
 # Some of the tool objects need to be accessed from outside the tools directory
 $(obj)%.o: $(SRCTREE)/common/%.c
-	$(HOSTCC) -g $(HOSTCFLAGS_NOPED) -c -o $@ $<
+	$(HOSTCC) $(HOSTCFLAGS_NOPED) -c -o $@ $<
 
 $(obj)%.o: $(SRCTREE)/lib/%.c
-	$(HOSTCC) -g $(HOSTCFLAGS) -c -o $@ $<
+	$(HOSTCC) $(HOSTCFLAGS) -c -o $@ $<
 
 $(obj)%.o: $(SRCTREE)/lib/libfdt/%.c
-	$(HOSTCC) -g $(HOSTCFLAGS_NOPED) -c -o $@ $<
+	$(HOSTCC) $(HOSTCFLAGS_NOPED) -c -o $@ $<
 
 subdirs:
 ifeq ($(TOOLSUBDIRS),)

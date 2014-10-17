@@ -1,0 +1,47 @@
+#!/bin/sh
+
+NORMAL_SLEEP	60
+
+function	create_gpio
+{
+	if [ ! -e "/sys/class/gpio/gpio$2" ]; then
+		echo $2 > /sys/class/gpio/export
+		echo $4 > "/sys/class/gpio/gpio$2/active_low"
+		echo $3 > "/sys/class/gpio/gpio$2/direction"
+		if [ $3 = "out" ]
+			echo $5 > "/sys/class/gpio/gpio$2/value"
+		fi	
+
+        ln -s "/sys/class/gpio/gpio$2/value" /dev/$1
+	fi
+}
+
+function	uc864e_init
+{
+	create_gpio 3g_sw_on	49	out	1 1		#Switch	ON
+	create_gpio 3g_rst		50	out 0 0		#Reset OFF
+	create_gpio 3g_pwr_on	78	out 0 0		#Power OFF
+}
+
+function	uc864e_pwr_on
+{
+	echo 1 > /dev/3g_pwr_on
+}
+
+function	uc864e_pwr_off
+{
+	echo 0 > /dev/3g_pwr_on
+}
+
+function	uc864e_reset
+{
+	echo 1 > /dev/3g_rst
+	echo 0 > /dev/3g_rst
+
+}
+
+uc864e_init
+uc864e_pwr_off
+uc864e_pwr_on
+
+

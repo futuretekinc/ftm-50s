@@ -1,0 +1,21 @@
+#!/bin/sh
+
+Log=/home/xtra/testServer.out
+DATE=`date+%Y%m%d-%H%M%S`
+
+echo "########################################" >> $Log
+echo "Test Server를 종료합니다."
+
+Cnt=`ps -e | grep "TestServer" | grep -v grep | wc -l`
+PROCESS=`ps -e | grep "TestServer" | grep -v grep | awk '{print $1}'`
+
+if [ $Cnt -ne 0 ]
+then
+	kill -9 $PROCESS
+	echo "$DATE | Test Server(PID : $PROCESS)가 중지 되었습니다." >> $Log
+else
+	echo "$DATE : Test Server가 실행 중이 아닙니다." >> $Log
+fi
+
+echo "########################################" >> $Log
+

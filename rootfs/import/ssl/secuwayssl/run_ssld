@@ -1,0 +1,13 @@
+#!/bin/sh
+
+cd	/usr/local/secuwayssl
+
+while true
+do 
+	if ! pidof secuway_client | sed "s/$$\$//" | grep -q [0-9]
+	then
+		./secuway_client &
+	fi
+	sleep 5; 
+done
+

@@ -1,0 +1,32 @@
+#!/bin/sh
+
+`echo sending > /tmp/nwcause`
+
+is_nwcause()
+{
+	res=`cat /var/log/modem | awk '/\#NWCAUSE\: "SM",0,8/ { print }'`
+	if [ -n "$res" ]
+	then
+			return 1
+	else
+	        return 0
+	fi
+}
+
+while [ 0 ] 
+do
+	nwcause=`cat /tmp/nwcause`
+	if [ "$nwcause" = "sending" ]
+	then
+		is_nwcause
+		if [ $? -eq 1 ]
+		then
+			`echo seding stop > /tmp/nwcause`
+			`killall pppd`
+		fi
+	else
+		break
+	fi
+
+	sleep 1
+done

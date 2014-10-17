@@ -1,0 +1,4 @@
+./configure  --prefix=/usr \
+			--enable-static \
+			--enable-libipq --enable-devel CC=armv5-linux-gcc --host=arm-linux
+

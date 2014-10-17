@@ -1,0 +1,188 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BAUDRATE	main.c	16;"	d	file:
+BAUDRATE	xcom.c	29;"	d	file:
+BOOT_WAIT_TIME	xconfig.c	8;"	d	file:
+CC	Makefile	/^CC=armv5-linux-gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS=-c -Wall #-DDEBUG$/;"	m
+EXECUTABLE	Makefile	/^EXECUTABLE=mmon$/;"	m
+FALSE	xcom.c	22;"	d	file:
+LDFLAGS	Makefile	/^LDFLAGS=$/;"	m
+LIVE_CHECK_INTERVAL	xconfig.c	12;"	d	file:
+MAX_BOOT_WAIT_TIME	xconfig.c	10;"	d	file:
+MDM	modem.h	/^}	MDM;$/;"	t	typeref:struct:__anon8
+MDM_CMD_AT	modem.c	/^	MDM_CMD_AT		= 0,$/;"	e	enum:__anon9	file:
+MDM_CMD_ATE0	modem.c	/^	MDM_CMD_ATE0,$/;"	e	enum:__anon9	file:
+MDM_CMD_ATE1	modem.c	/^	MDM_CMD_ATE1$/;"	e	enum:__anon9	file:
+MDM_CMD_AT_GMM	modem.c	/^	MDM_CMD_AT_GMM,$/;"	e	enum:__anon9	file:
+MDM_Connect	modem.c	/^MDM_ERROR	MDM_Connect(MDM *pMDM)$/;"	f
+MDM_DEFAULT_SPEED	modem.h	53;"	d
+MDM_DEFAULT_TIMEOUT	modem.h	54;"	d
+MDM_Disconnect	modem.c	/^MDM_ERROR	MDM_Disconnect(MDM *pMDM)$/;"	f
+MDM_Disonnect	modem.c	/^MDM_ERROR	MDM_Disonnect(MDM *pMDM)$/;"	f
+MDM_ERROR	modem.h	/^}	MDM_ERROR;$/;"	t	typeref:enum:__anon3
+MDM_ERROR_CANT_OPEN_DEVICE	modem.h	/^	MDM_ERROR_CANT_OPEN_DEVICE$/;"	e	enum:__anon3
+MDM_ERROR_INVALID	modem.h	/^	MDM_ERROR_INVALID,$/;"	e	enum:__anon3
+MDM_ERROR_OK	modem.h	/^	MDM_ERROR_OK = 0,$/;"	e	enum:__anon3
+MDM_ERROR_TIMEOUT	modem.h	/^	MDM_ERROR_TIMEOUT,$/;"	e	enum:__anon3
+MDM_EchoOff	modem.c	/^MDM_ERROR MDM_EchoOff( MDM *pMDM )$/;"	f
+MDM_EchoOn	modem.c	/^MDM_ERROR MDM_EchoOn( MDM *pMDM )$/;"	f
+MDM_GetModel	modem.c	/^MDM_ERROR MDM_GetModel( MDM *pMDM, MDM_MODEL *pModel)$/;"	f
+MDM_GetModemInfo	modem.c	/^MDM_MODEM_INFO *MDM_GetModemInfo(MDM_MODEL xModel)$/;"	f
+MDM_Init	modem.c	/^int	MDM_Init(MDM *pMDM, char *lpszDevice, int nBaudrate, int nTimeout)$/;"	f
+MDM_IsLive	modem.c	/^int	MDM_IsLive(void)$/;"	f
+MDM_IsRunning	modem.c	/^int	MDM_IsRunning( MDM *pMDM)$/;"	f
+MDM_MANUFACTURER	modem.h	/^}	MDM_MANUFACTURER;$/;"	t	typeref:enum:__anon6
+MDM_MANU_TELIAN	modem.h	/^	MDM_MANU_TELIAN		=	0,$/;"	e	enum:__anon6
+MDM_MANU_TELIT	modem.h	/^	MDM_MANU_TELIT		=	1,$/;"	e	enum:__anon6
+MDM_MANU_UNKNOWN	modem.h	/^	MDM_MANU_UNKNOWN$/;"	e	enum:__anon6
+MDM_MODEL	modem.h	/^}	MDM_MODEL;$/;"	t	typeref:enum:__anon4
+MDM_MODEL_TX200K	modem.h	/^	MDM_MODEL_TX200K	=	0,$/;"	e	enum:__anon4
+MDM_MODEL_UC864_E	modem.h	/^	MDM_MODEL_UC864_E	=	1,$/;"	e	enum:__anon4
+MDM_MODEL_UC864_K	modem.h	/^	MDM_MODEL_UC864_K	=	2,$/;"	e	enum:__anon4
+MDM_MODEL_UNKNOWN	modem.h	/^	MDM_MODEL_UNKNOWN$/;"	e	enum:__anon4
+MDM_MODEM_INFO	modem.h	/^}	MDM_MODEM_INFO;$/;"	t	typeref:struct:__anon7
+MDM_ManufacturereName	modem.c	/^const char*	MDM_ManufacturereName(MDM_MANUFACTURER xManu)$/;"	f
+MDM_ModelName	modem.c	/^const char*	MDM_ModelName(MDM_MODEL xModel)$/;"	f
+MDM_ParseResponse	modem.c	/^int	MDM_ParseResponse(char *lpszResp, MDM_RESP *pResp)$/;"	f
+MDM_RESP	modem.c	/^}	MDM_RESP;$/;"	t	typeref:struct:__anon10	file:
+MDM_RIDX_MODEL	modem.h	51;"	d
+MDM_Recv	modem.c	/^MDM_ERROR MDM_Recv(MDM *pMDM, MDM_RESP *pResp)$/;"	f
+MDM_Restart	modem.c	/^void MDM_Restart(void)$/;"	f
+MDM_Send	modem.c	/^MDM_ERROR MDM_Send(MDM *pMDM, const char *lpszCmd)$/;"	f
+MDM_SetEcho	modem.c	/^MDM_ERROR MDM_SetEcho( MDM *pMDM, int on)$/;"	f
+MDM_Start	modem.c	/^void MDM_Start(void)$/;"	f
+MDM_Stop	modem.c	/^void MDM_Stop(void)$/;"	f
+MDM_TYPE	modem.h	/^}	MDM_TYPE;$/;"	t	typeref:enum:__anon5
+MDM_TYPE_3G	modem.h	/^	MDM_TYPE_3G			=	0,$/;"	e	enum:__anon5
+MDM_TYPE_LTE	modem.h	/^	MDM_TYPE_LTE		=	1,$/;"	e	enum:__anon5
+MDM_TYPE_UNKNOWN	modem.h	/^	MDM_TYPE_UNKNOWN$/;"	e	enum:__anon5
+MDM_TypeName	modem.c	/^const char*	MDM_TypeName(MDM_TYPE xType)$/;"	f
+MIN_BOOT_WAIT_TIME	xconfig.c	9;"	d	file:
+MMON_GetPPPStatus	mmon.c	/^int MMON_GetPPPStatus(void)$/;"	f
+MMON_Main	mmon.c	/^void	MMON_Main(XCFG *pxCfg)$/;"	f
+MM_CheckAndStart	main.c	/^int	MM_CheckAndStart(void)$/;"	f
+MM_GetPPPStatus	main.c	/^int MM_GetPPPStatus(void)$/;"	f
+MM_INFO	mmon.h	/^}	MM_INFO;$/;"	t	typeref:struct:__anon15
+MM_IsRunning	main.c	/^int MM_IsRunning(void)$/;"	f
+MM_Reset	main.c	/^int	MM_Reset(void)$/;"	f
+MM_STATE	mmon.h	/^}	MM_STATE;$/;"	t	typeref:enum:__anon14
+MM_STATE_ABNORMAL	mmon.h	/^	MM_STATE_ABNORMAL,$/;"	e	enum:__anon14
+MM_STATE_FAILED	mmon.h	/^	MM_STATE_FAILED,$/;"	e	enum:__anon14
+MM_STATE_INIT	mmon.h	/^	MM_STATE_INIT = 0,$/;"	e	enum:__anon14
+MM_STATE_RESET	mmon.h	/^	MM_STATE_RESET,$/;"	e	enum:__anon14
+MM_STATE_RUNNING	mmon.h	/^	MM_STATE_RUNNING,$/;"	e	enum:__anon14
+MM_STATE_STOPPED	mmon.h	/^	MM_STATE_STOPPED,$/;"	e	enum:__anon14
+MM_STATE_UNKNOWN	mmon.h	/^	MM_STATE_UNKNOWN$/;"	e	enum:__anon14
+MM_ShowModel	main.c	/^int MM_ShowModel(void)$/;"	f
+NO_PARITY_CHECK	xcom.h	19;"	d
+OBJECTS	Makefile	/^OBJECTS=$(SOURCES:.c=.o)$/;"	m
+PARITY_CHECK	xcom.h	20;"	d
+PORT	main.c	15;"	d	file:
+PRCS_D	xutil.h	/^	PRCS_D	=	'D',$/;"	e	enum:__anon2
+PRCS_L	xutil.h	/^	PRCS_L	=	'L',$/;"	e	enum:__anon2
+PRCS_N	xutil.h	/^	PRCS_N	=	'N',$/;"	e	enum:__anon2
+PRCS_R	xutil.h	/^	PRCS_R	=	'R',$/;"	e	enum:__anon2
+PRCS_S	xutil.h	/^	PRCS_S	=	'S'$/;"	e	enum:__anon2
+PRCS_T	xutil.h	/^	PRCS_T	=	'T',$/;"	e	enum:__anon2
+PRCS_U	xutil.h	/^	PRCS_U	=	'U',$/;"	e	enum:__anon2
+PRCS_W	xutil.h	/^	PRCS_W	=	'W',$/;"	e	enum:__anon2
+PRCS_Z	xutil.h	/^	PRCS_Z	=	'Z',$/;"	e	enum:__anon2
+PRC_STATE	xutil.h	/^}	PRC_STATE;$/;"	t	typeref:enum:__anon2
+QUEUE_SIZE	xshared.c	11;"	d	file:
+SERIAL_CONTROL	xcom.h	18;"	d
+SERIAL_INPUT	xcom.h	24;"	d
+SOURCES	Makefile	/^SOURCES=main.c xcom.c modem.c mmon.c xshared.c xconfig.c xutil.c xppp.c$/;"	m
+TIMEOUT	main.c	17;"	d	file:
+TRUE	xcom.c	26;"	d	file:
+XASSERT	xassert.h	13;"	d
+XASSERT	xassert.h	5;"	d
+XCFG	xconfig.h	/^}	XCFG;$/;"	t	typeref:struct:__anon13
+XCFG_Load	xconfig.c	/^int	XCFG_Load(XCFG *pxConfig, char *lpszName)$/;"	f
+XCFG_SetDefault	xconfig.c	/^int	XCFG_SetDefault(XCFG *pxConfig)$/;"	f
+XCOM	xcom.h	/^}	XCOM;$/;"	t	typeref:struct:__anon1
+XCOM_Close	xcom.c	/^int	XCOM_Close(XCOM *phCOM)$/;"	f
+XCOM_Open	xcom.c	/^int	XCOM_Open(char *lpszDevice, int nBaudrate, int nParity, XCOM *phCOM)$/;"	f
+XCOM_Read	xcom.c	/^int XCOM_Read(XCOM *phCOM, char *lpszBuf, int nMaxBuf, int nTimeout)$/;"	f
+XCOM_Write	xcom.c	/^int	XCOM_Write(XCOM *phCOM, const char *lpszBuf, int nLen)$/;"	f
+XERROR	debug.h	10;"	d
+XERROR	debug.h	7;"	d
+XP3_Restart	xppp.c	/^XP3_STATE	XP3_Restart(void)$/;"	f
+XP3_STATE	xppp.h	/^}	XP3_STATE;$/;"	t	typeref:enum:__anon11
+XP3_STATE_RUNNING	xppp.h	/^	XP3_STATE_RUNNING$/;"	e	enum:__anon11
+XP3_STATE_STOPPED	xppp.h	/^	XP3_STATE_STOPPED=0,$/;"	e	enum:__anon11
+XP3_Start	xppp.c	/^XP3_STATE	XP3_Start(void)$/;"	f
+XP3_Status	xppp.c	/^XP3_STATE	XP3_Status(void)$/;"	f
+XP3_Stop	xppp.c	/^XP3_STATE	XP3_Stop(void)$/;"	f
+XSD_CloseLock	xshared.c	/^int	XSD_CloseLock(int fd, int index)$/;"	f
+XSD_Create	xshared.c	/^void *XSD_Create(key_t key, int size)$/;"	f
+XSD_GetMemAddr	xshared.c	/^void	*XSD_GetMemAddr(int nID)$/;"	f
+XSD_INFO	xshared.h	/^}	XSD_INFO;$/;"	t	typeref:struct:__anon12
+XSD_Init	xshared.c	/^int	XSD_Init(void)$/;"	f
+XSD_InitLock	xshared.c	/^void XSD_InitLock(void)$/;"	f
+XSD_InitUnlock	xshared.c	/^void XSD_InitUnlock(void)$/;"	f
+XSD_IsExist	xshared.c	/^int	XSD_IsExist(int nID)$/;"	f
+XSD_Open	xshared.c	/^void *XSD_Open(key_t key, int size)$/;"	f
+XSD_OpenLock	xshared.c	/^int XSD_OpenLock(int fd, int index)$/;"	f
+XTRACE	debug.h	6;"	d
+XTRACE	debug.h	9;"	d
+_POSIX_SOURCE	xcom.c	19;"	d	file:
+_XCOM_H_	xcom.h	2;"	d
+__DEBUG_H__	debug.h	2;"	d
+__MMON_H__	mmon.h	2;"	d
+__MODEM_H__	modem.h	2;"	d
+__XCONFIG_H__	xconfig.h	2;"	d
+__XPPP_H__	xppp.h	2;"	d
+__XSHARED_H__	xshared.h	2;"	d
+__XUTIL_H__	xutil.h	2;"	d
+__X_ASSERT_H__	xassert.h	2;"	d
+bDaemonFlag	main.c	/^static int	bDaemonFlag = 0;$/;"	v	file:
+bEcho	modem.h	/^	int			bEcho;$/;"	m	struct:__anon8
+bOK	modem.c	/^	int		bOK;$/;"	m	struct:__anon10	file:
+bRun	xconfig.h	/^	int		bRun;$/;"	m	struct:__anon13
+getProcessID	xutil.c	/^unsigned int getProcessID(char *p_processname) $/;"	f
+getProcessIDList	xutil.c	/^unsigned int getProcessIDList(char *p_processname, int *lpPIDs, int nMaxCount) $/;"	f
+getProcessState	xutil.c	/^PRC_STATE	getProcessState(int nPID)$/;"	f
+hCOM	modem.h	/^	XCOM		hCOM;$/;"	m	struct:__anon8
+hPort	xcom.h	/^	int	hPort;$/;"	m	struct:__anon1
+lock	xshared.c	/^struct flock lock, unlock;$/;"	v	typeref:struct:flock
+long_options	main.c	/^static struct option long_options[] =$/;"	v	typeref:struct:option	file:
+lpSharedMemBase	xshared.c	/^static void *lpSharedMemBase[sizeof(lpSharedMemInfo) \/ sizeof(XSD_INFO)] = $/;"	v	file:
+lpSharedMemInfo	xshared.c	/^static const XSD_INFO	lpSharedMemInfo[] =$/;"	v	file:
+lpszAT	modem.c	/^const char	*lpszAT[] = $/;"	v
+lpszConfig	main.c	/^static char *lpszConfig = "\/etc\/mmon.conf";$/;"	v	file:
+lpszManufacturer	modem.c	/^const char *lpszManufacturer[] =$/;"	v
+lpszModel	modem.c	/^const char	*lpszModel[] =$/;"	v
+lpszSplits	modem.c	/^	char	*lpszSplits[16];$/;"	m	struct:__anon10	file:
+lpszType	modem.c	/^const char	*lpszType[] =$/;"	v
+main	main.c	/^int main(int argc, char *argv[])$/;"	f
+nBaudrate	modem.h	/^	int			nBaudrate;$/;"	m	struct:__anon8
+nBaudrate	xcom.h	/^	int	nBaudrate;$/;"	m	struct:__anon1
+nBaudrate	xconfig.h	/^	int		nBaudrate;$/;"	m	struct:__anon13
+nBootWaitTime	xconfig.h	/^	int		nBootWaitTime;$/;"	m	struct:__anon13
+nFrameTimeout	xcom.h	/^	int	nFrameTimeout;$/;"	m	struct:__anon1
+nLiveCheckInterval	xconfig.h	/^	int		nLiveCheckInterval;$/;"	m	struct:__anon13
+nParity	xcom.h	/^	int	nParity;$/;"	m	struct:__anon1
+nSharedMemInfoCount	xshared.c	/^static const int	nSharedMemInfoCount = sizeof(lpSharedMemInfo) \/ sizeof(XSD_INFO);$/;"	v	file:
+nSize	xshared.h	/^	int		nSize;$/;"	m	struct:__anon12
+nSplit	modem.c	/^	int		nSplit;$/;"	m	struct:__anon10	file:
+nTimeout	modem.h	/^	int			nTimeout;$/;"	m	struct:__anon8
+nTimeout	xconfig.h	/^	int		nTimeout;$/;"	m	struct:__anon13
+oldtio	xcom.h	/^	struct termios	oldtio;$/;"	m	struct:__anon1	typeref:struct:__anon1::termios
+szBuf	modem.c	/^	char	szBuf[4096];$/;"	m	struct:__anon10	file:
+szDevice	modem.h	/^	char		szDevice[1024];$/;"	m	struct:__anon8
+szDevice	xconfig.h	/^	char	szDevice[1024];$/;"	m	struct:__anon13
+unlock	xshared.c	/^struct flock lock, unlock;$/;"	v	typeref:struct:
+xCfg	main.c	/^static XCFG	xCfg;$/;"	v	file:
+xKey	xshared.h	/^	key_t	xKey;$/;"	m	struct:__anon12
+xManufacturer	modem.h	/^	MDM_MANUFACTURER	xManufacturer;$/;"	m	struct:__anon7
+xModel	main.c	/^MDM_MODEL	xModel = MDM_MODEL_UNKNOWN;$/;"	v
+xModel	modem.h	/^	MDM_MODEL			xModel;$/;"	m	struct:__anon7
+xModel	modem.h	/^	MDM_MODEL	xModel;$/;"	m	struct:__anon8
+xModemInfos	modem.c	/^MDM_MODEM_INFO	xModemInfos[] = $/;"	v
+xPID	mmon.h	/^	pid_t	xPID;$/;"	m	struct:__anon15
+xType	modem.h	/^	MDM_TYPE			xType;$/;"	m	struct:__anon7
