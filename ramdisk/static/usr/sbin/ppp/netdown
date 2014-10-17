@@ -1,3 +1,0 @@
-#!/bin/csh
-kill -INT 'cat /var/run/ppp0.pid'
-
