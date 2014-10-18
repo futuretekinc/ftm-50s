@@ -1,7 +1,7 @@
 /*
  * Automatically generated C config: don't edit
- * Linux/arm 2.6.37.0 Kernel Configuration
- * Thu Oct 16 13:58:08 2014
+ * Linux/arm 2.6.37.1 Kernel Configuration
+ * Sat Oct 18 08:29:27 2014
  */
 #define AUTOCONF_INCLUDED
 #define CONFIG_NF_CONNTRACK_H323 1

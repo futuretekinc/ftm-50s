@@ -785,12 +785,10 @@ fi
 			dd if=tmpfile.2 of=root.squashfs bs=64k conv=sync
 			echo -ne '\xde\xad\xc0\xde' >> root.squashfs
 
-			#dd if=root.squashfs of=rootfs_data ibs=64c obs=64c seek=2047
+			mkimage -n 'RootFS-1.0.6.0-FTM-50S' -A arm -O linux -T Ramdisk -C gzip -d root.squashfs rootfs.img
+			rm tmpfile.0 tmpfile.1 tmpfile.2 
 
-			#mkimage -n 'Ramdisk v1.0.6' -A arm -O linux -T rootfs -C gzip -d rootfs_data rootfs.img
-			#rm tmpfile.0 tmpfile.1 tmpfile.2 rootfs_data
-
-			$CP -rf root.squashfs /tftpboot/ftm-50s-new/rootfs.img
+			$CP -rf rootfs.img /tftpboot/ftm-50s-new/rootfs.img
 			;;
 
 		'ext2')

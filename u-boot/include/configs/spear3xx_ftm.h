@@ -59,6 +59,8 @@
 
 #include <configs/spear-common.h>
 
+#define CONFIG_SYS_INFO_BASE	0xF87E0000
+
 #undef	CONFIG_USB_STORAGE
 
 #if !defined(CONFIG_SPEAR_USBTTY)
@@ -208,7 +210,7 @@
 	"kernel_size=0x00380000\0"\
 	"rootfs_p_loc=0x00000000\0"\
 	"rootfs_s_loc=0x02000000\0"\
-	"rootfs_size=0x02000000\0"\
+	"rootfs_size=0x01E00000\0"\
 	"overlay_p_loc=0x04000000\0"\
 	"overlay_s_loc=0x06000000\0"\
 	"overlay_size=0x02000000\0"\
@@ -227,7 +229,10 @@
 	"rf_rootfs_s=nand erase \$(rootfs_s_loc) \$(rootfs_size)\;nand write \$(fileaddr) \$(rootfs_s_loc) \$(rootfs_size)\0"\
 	"rf_overlay=nand erase \$(overlay_p_loc) \$(overlay_size)\;nand erase \$(overlay_s_loc) \$(overlay_size)\0"\
 	"rf_user=nand erase \$(user_p_loc)\0"\
-	"setbootargs=setenv bootargs console=ttyS0,115200 mem=128M root=/dev/mtdblock5 ro rootwait noinitrd init=/sbin/overlay_init ethaddr=\$(ethaddr) eth1addr=\$(eth1addr) model=\$(model) devid=\$(devid)\0"
+	"kernel_loc=0xf8050000\0"\
+	"mtd_root=mtdblock5\0"\
+	"auto_recovery=1\0"\
+	"setbootargs=setenv bootargs console=ttyS0,115200 mem=128M root=/dev/\$(mtd_root) ro rootwait noinitrd init=/sbin/overlay_init ethaddr=\$(ethaddr) eth1addr=\$(eth1addr) model=\$(model) devid=\$(devid)\0"
 
 #undef	CONFIG_BOOTARGS
 
@@ -235,6 +240,6 @@
 #undef	CONFIG_NFSBOOTCOMMAND
 
 #undef	CONFIG_BOOTCOMMAND
-#define	CONFIG_BOOTCOMMAND	"run setbootargs;bootm $(kernel_p_loc)"
+#define	CONFIG_BOOTCOMMAND	"run recovery setbootargs;bootm $(kernel_loc)"
 
 #endif  /* __CONFIG_H */
