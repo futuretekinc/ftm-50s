@@ -68,7 +68,7 @@ int do_recovery(cmd_tbl_t * cmdtp, int flag, int argc, char *argv[])
 	rootfs_check_and_recovery();
 }
 
-int do_saveimg(cmd_tbl_t * cmdtp, int flag, int argc, char *argv[])
+int do_savefs(cmd_tbl_t * cmdtp, int flag, int argc, char *argv[])
 {
 	if (argc < 3)
 	{
@@ -133,73 +133,27 @@ int	kernel_check_and_recovery(void)
 
 	if (check_kernel((void *)kernel_p_loc, 1) == 0)
 	{
-		if (check_kernel((void *)kernel_s_loc, 1) == 0)
+		kernel_loc = kernel_p_loc;
+	}
+	else if (check_kernel((void *)kernel_s_loc, 1) == 0)
+	{
+		if ((auto_recovery == 1) && (kernel_p_loc != INVALID_LOC))
 		{
-			uint kernel_p_version = image_get_version((void *)kernel_p_loc);
-			uint kernel_s_version = image_get_version((void *)kernel_s_loc);
-
-			if (kernel_p_version > kernel_s_version)
-			{
-				if (auto_recovery == 1)
-				{
-					copy_image((void *)kernel_s_loc, (void *)kernel_p_loc, kernel_size);
-				}
-				kernel_loc = kernel_p_loc;
-			}
-			else if (kernel_p_version < kernel_s_version)
-			{
-				if (auto_recovery == 1)
-				{
-					copy_image((void *)kernel_p_loc, (void *)kernel_s_loc, kernel_size);
-					kernel_loc = kernel_p_loc;
-				}
-				else
-				{
-					kernel_loc = kernel_s_loc;
-				}
-			}
+			copy_image((void *)kernel_p_loc, (void *)kernel_s_loc, kernel_size);
+			kernel_loc = kernel_p_loc;
 		}
 		else
 		{
-			if (auto_recovery == 1)
-			{
-				if (kernel_s_loc != INVALID_LOC)
-				{
-					copy_image((void *)kernel_s_loc, (void *)kernel_p_loc, kernel_size);
-				}
-			}
-			kernel_loc = kernel_p_loc;
+			kernel_loc = kernel_s_loc;
 		}
 	}
 	else
 	{
-		if (check_kernel((void *)kernel_s_loc, 1) == 0)
-		{
-			if (auto_recovery == 1)
-			{
-				if (kernel_p_loc != INVALID_LOC)
-				{
-					copy_image((void *)kernel_p_loc, (void *)kernel_s_loc, kernel_size);
-					kernel_loc = kernel_p_loc;
-				}
-				else
-				{
-					kernel_loc = kernel_s_loc;
-				}
-			}
-			else
-			{
-				kernel_loc = kernel_s_loc;
-			}
-		}
-		else
-		{
-			goto error;
-		}
+		goto error;
 	}
 
 	set_kernel_loc(kernel_loc);
-	printf("kernel_loc = %s\n", getenv("kernel_loc"));
+
 	return	0;
 error:
 	return	1;
@@ -222,72 +176,29 @@ int	rootfs_check_and_recovery(void)
 	if (check_rootfs(1, 1) == 0)
 	{
 		puts("Primary RootFS is valid!\n");
-		puts("Start Checking Secondary RootFS\n");
-		if (check_rootfs(0, 1) == 0)
-		{
-			puts("Secondary RootFS is valid!\n");
-			uint rootfs_p_version = image_get_version((void *)rootfs_p_loc);
-			uint rootfs_s_version = image_get_version((void *)rootfs_s_loc);
-
-			if (rootfs_p_version > rootfs_s_version)
-			{
-				backup = 1;
-			}
-			else if (rootfs_p_version < rootfs_s_version)
-			{
-				restore = 1;
-			}
-		}
-		else
-		{
-			backup = 1;
-		}
 	}
-	else
+	else 
 	{
 		puts("Primary RootFS is invalid!\n");
 		puts("Start Checking Secondary RootFS\n");
 		if (check_rootfs(0, 1) == 0)
 		{
 			puts("Secondary RootFS is valid\n");
-			restore = 1;
+			if ((auto_recovery == 1) && (rootfs_p_loc != INVALID_LOC))
+			{
+				puts("Start restore(Secondary RootFS is copied to Primary RootFS)\n");
+				copy_rootfs(1);
+				puts("RootFS restore done.\n");
+			}
+			else
+			{
+				primary = 0;	
+			}
 		}
 		else
 		{
 			puts("All RootFS is invalid!!!\n");
 			goto error;
-		}
-	}
-
-	if (auto_recovery == 1)
-	{
-		if (backup)
-		{
-			if (rootfs_s_loc != INVALID_LOC)
-			{
-				puts("Start backup(Primary RootFS is copied to Secondary RootFS)\n");
-				copy_rootfs(1);
-			}
-		}
-		else if (restore)
-		{
-			if (rootfs_p_loc != INVALID_LOC)
-			{
-				puts("Start restore(Secondary RootFS is copied to Primary RootFS)\n");
-				copy_rootfs(0);
-			}
-			else
-			{
-				puts("Primary RootFS offset is invalid. Secondary RootFS is actived.\n");
-				primary = 0;	
-			}
-		}
-	}
-	else
-	{
-		if (restore)
-		{
-			primary = 0;	
 		}
 	}
 
@@ -437,6 +348,9 @@ int check_rootfs(int primary, int printout)
 		puts("ERROR: Invalid rootfs image\n");
 		goto error;
 	} 
+
+	printf ("Root FS at %08X:\n", (uint)rootfs_loc);
+	image_print_contents (buff);
 
 	return 0;
 
@@ -714,8 +628,8 @@ U_BOOT_CMD(
 
 
 U_BOOT_CMD(
-	saveimg,	CONFIG_SYS_MAXARGS,	0,	do_saveimg,
-	"save image",
-	     "    - save kernel/rootfs images\n"
+	savefs,	CONFIG_SYS_MAXARGS,	0,	do_savefs,
+	"save Root FS",
+	     "    - save Root File System images\n"
 );
 

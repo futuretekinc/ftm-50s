@@ -63,13 +63,13 @@ status $? 0
 
 echo -n " Mounting /tmp/overlay      : "
 mkdir -p /tmp/overlay
-mount -n -t jffs2 /dev/mtdblock7 /tmp/overlay
+mount -n -t yaffs2 /dev/mtdblock7 /tmp/overlay
 status $? 1
 
 mount -o move /tmp/overlay /overlay
 
+mount -t overlayfs -o noatime,lowerdir=/,upperdir=/overlay 'overlayfs:/overlay' /mnt 1>& /dev/null
 echo -n " Mounting overlayfs:/overlay: "
-mount -t overlayfs -o noatime,lowerdir=/,upperdir=/overlay 'overlayfs:/overlay' /mnt
 status $? 1
 
 mount -o move /proc /mnt/proc

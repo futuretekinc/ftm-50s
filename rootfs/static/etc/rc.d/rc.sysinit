@@ -95,14 +95,18 @@ if [ $? -eq 0 ]
 then
 	for i in $(cat /proc/mtd | grep user | awk '{print $1}' | sed -e 's/://' -e 's/mtd/mtdblock/')
 	do
-		mkdir /mnt/mtd
-		mount -t jffs2 /dev/$i /mnt/mtd
-		echo "[SUCCESS]"
+		if [ ! -e /mnt/mtd ]
+		then
+			mkdir /mnt/mtd
+		fi	
+
+		mount -t yaffs2 /dev/$i /mnt/mtd 1>& /dev/null
+		echo " Mounting user Space        : [SUCCESS]"
 		break
 	done
 
 else
-    echo "[FAILED]"
+	echo " Mounting user Space        : [FAILED]"
 fi 
 
 #   ---------------------------------------------
@@ -179,7 +183,7 @@ stty -F /dev/ttyS1 115200 -echo
 cat /dev/ttyS1 &> /var/log/modem &
 /bin/factory_reset_dmon &
 /bin/nwcause_dmon &
-/bin/check_m_md &
+#/bin/check_m_md &
 /bin/dm_dmon &
 echo stop > /tmp/ppp.connect
 /bin/init_modem_log &

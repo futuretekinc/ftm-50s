@@ -225,8 +225,8 @@
 	"rf_kernel_s=erase 1:61-116\;cp.b \$(fileaddr) \$(kernel_s_loc) \$(kernel_size)\0"\
 	"rf_rootfs=run rf_rootfs_dn rf_rootfs_p rf_rootfs_s\0"\
 	"rf_rootfs_dn=tftp \$(flashfiles)rootfs.img\0"\
-	"rf_rootfs_p=nand erase \$(rootfs_p_loc) \$(rootfs_size)\;nand write \$(fileaddr) \$(rootfs_p_loc) \$(rootfs_size)\0"\
-	"rf_rootfs_s=nand erase \$(rootfs_s_loc) \$(rootfs_size)\;nand write \$(fileaddr) \$(rootfs_s_loc) \$(rootfs_size)\0"\
+	"rf_rootfs_p=savefs rootfs p\0"\
+	"rf_rootfs_s=savefs rootfs s\0"\
 	"rf_overlay=nand erase \$(overlay_p_loc) \$(overlay_size)\;nand erase \$(overlay_s_loc) \$(overlay_size)\0"\
 	"rf_user=nand erase \$(user_p_loc)\0"\
 	"kernel_loc=0xf8050000\0"\
@@ -240,6 +240,6 @@
 #undef	CONFIG_NFSBOOTCOMMAND
 
 #undef	CONFIG_BOOTCOMMAND
-#define	CONFIG_BOOTCOMMAND	"run recovery setbootargs;bootm $(kernel_loc)"
+#define	CONFIG_BOOTCOMMAND	"recovery;run setbootargs;bootm $(kernel_loc)"
 
 #endif  /* __CONFIG_H */
