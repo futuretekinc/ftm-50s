@@ -28,7 +28,7 @@ qos_text=""
 is_modem_exist()
 {
 	`echo AT > /dev/ttyS1; sleep 0.1`
-	retval=`/www/cgi-bin/scripts/is_modem.sh`
+	retval=`is_modem.sh`
 	if [ "$retval" = "true" ]
 	then
 		return  0
@@ -41,7 +41,7 @@ is_modem_exist()
 get_setting_sms()
 {
 #	`echo AT+CMGR=1 > /dev/ttyS1; sleep 0.1`
-	result=`/www/cgi-bin/scripts/get_setting_sms.sh | awk '/smsapn/'`
+	result=`get_setting_sms.sh | awk '/smsapn/'`
 	if [ -z "$result" ]
 	then
 		return 1
@@ -55,7 +55,7 @@ get_new_sms()
 #	echo =====================================================
 	`echo AT+CMGR=1 > /dev/ttyS1; sleep 0.1`
 	sleep 0.5
-	result=`/www/cgi-bin/scripts/get_new_sms.sh`
+	result=`get_new_sms.sh`
 	if [ "$result" = "none" ]
 	then
 #		echo =============== none ==========================
@@ -110,7 +110,7 @@ setting_qos()
 
 send_sms_cnum()
 {
-	result=`/www/cgi-bin/scripts/get_new_sms.sh | awk '/CMGR/' | sed -e 's/ //g' -e 's/,/ /g' | awk '{ print $2 }' | sed -e 's/\"//g'`
+	result=`get_new_sms.sh | awk '/CMGR/' | sed -e 's/ //g' -e 's/,/ /g' | awk '{ print $2 }' | sed -e 's/\"//g'`
 #	`/www/cgi-bin/scripts/send_sms.sh $result`
 #	if [ "$result2" = "OK" ]
 #	then
@@ -149,7 +149,7 @@ get_ppp_connecting()
 is_ready()
 {
 	`echo AT+CPIN? > /dev/ttyS1; sleep 0.1`
-	retval=`/www/cgi-bin/scripts/usim.sh`
+	retval=`usim.sh`
 	if [ "$retval" = "+CPIN: READY" ]
 	then
 		return	0

@@ -125,9 +125,17 @@ do
 			is_end_modem
 			if [ $? -eq 0 ]
 			then
-				cp -f /etc/ppp/scripts/save/uc864-e_0 /etc/ppp/scripts/uc864-e
+				isDiff=`diff /etc/ppp/scripts/save/uc864-e_0 /etc/ppp/scripts/uc864-e`     
+                if [ -n "$isDiff" ]
+                then
+					cp -f /etc/ppp/scripts/save/uc864-e_0 /etc/ppp/scripts/uc864-e
+				fi
 			else
-				cp -f /etc/ppp/scripts/save/uc864-e_1 /etc/ppp/scripts/uc864-e
+				isDiff=`diff /etc/ppp/scripts/save/uc864-e_1 /etc/ppp/scripts/uc864-e`     
+                if [ -n "$isDiff" ]
+		        then
+					cp -f /etc/ppp/scripts/save/uc864-e_1 /etc/ppp/scripts/uc864-e
+				fi
 			fi
 
 			is_dm_connected

@@ -59,7 +59,7 @@ do
 	then
 		is_sum=0
 		data=`getRxTx`;
-		`echo $data > /etc/ppp/data/curData`
+		`echo $data > /tmp/curData`
 #	else
 #		if [ $is_sum -eq 0 ]
 #		then
@@ -68,5 +68,5 @@ do
 #		fi
 	fi
 	
-	sleep 1
+	sleep 5 
 done

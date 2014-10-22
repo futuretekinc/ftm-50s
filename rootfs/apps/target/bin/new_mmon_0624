@@ -52,7 +52,7 @@ init_apn()
 is_modem_exist()
 {
 	`echo AT > /dev/ttyS1; sleep 0.1`
-	retval=`/www/cgi-bin/scripts/is_modem.sh`
+	retval=`is_modem.sh`
 	if [ "$retval" = "true" ]
 	then
 		return  0
@@ -64,7 +64,7 @@ is_modem_exist()
 is_ready()
 {
 	`echo AT+CPIN? > /dev/ttyS1; sleep 0.1`
-	retval=`/www/cgi-bin/scripts/usim.sh`
+	retval=`usim.sh`
 	if [ "$retval" = "+CPIN: READY" ]
 	then
 		return	0
@@ -76,7 +76,7 @@ is_ready()
 is_registered()
 {
 	`echo AT+CREG? > /dev/ttyS1; sleep 0.1`
-	retval=`/www/cgi-bin/scripts/is_registered.sh | awk 'BEGIN { retval="false" }\
+	retval=`is_registered.sh | awk 'BEGIN { retval="false" }\
 		{\
 			if ($1 ~ /\+CREG:/)\
 			{\
@@ -194,7 +194,7 @@ get_usb()
 get_rssi()
 {
 	`echo AT#RFSTS > /dev/ttyS1; sleep 0.1`
-	retval=`/www/cgi-bin/scripts/network_status.sh | awk '/RFSTS/' | sed -e 's/,/ /g' | awk '{ print $7 }'`
+	retval=`network_status.sh | awk '/RFSTS/' | sed -e 's/,/ /g' | awk '{ print $7 }'`
 	echo "$retval"
 }
 

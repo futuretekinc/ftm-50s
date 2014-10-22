@@ -99,9 +99,9 @@
 #define CONFIG_ETHADDR		00:40:5c:01:01:01
 #define CONFIG_ETH1ADDR		00:40:5c:01:01:02
 #define CONFIG_NETMASK		255.255.255.0
-#define CONFIG_IPADDR		192.168.2.250
-#define CONFIG_SERVERIP		192.168.2.1
-#define CONFIG_GATEWAYIP	192.168.2.1
+#define CONFIG_IPADDR		10.0.1.125
+#define CONFIG_SERVERIP		10.0.1.101
+#define CONFIG_GATEWAYIP	10.0.1.1
 
 /* Serial Configuration (PL011) */
 #define CONFIG_SYS_SERIAL0			0xD0000000
@@ -204,35 +204,66 @@
 #define	CONFIG_EXTRA_ENV_SETTINGS	\
 	"model=FTM-50S\0"\
 	"devid=FTM-50S01A0001\0"\
-	"uboot_p_loc=0xf8010000\0"\
-	"kernel_p_loc=0xf8050000\0"\
-	"kernel_s_loc=0xf83d0000\0"\
-	"kernel_size=0x00380000\0"\
-	"rootfs_p_loc=0x00000000\0"\
-	"rootfs_s_loc=0x02000000\0"\
-	"rootfs_size=0x01E00000\0"\
-	"overlay_p_loc=0x04000000\0"\
-	"overlay_s_loc=0x06000000\0"\
-	"overlay_size=0x02000000\0"\
-	"user_p_loc=0x08000000\0"\
-	"flashfiles=ftm-50s-new\0"\
-	"rf_uboot=run rf_uboot_dn rf_uboot_p\0"\
-	"rf_uboot_dn=tftp \$(flashfiles)u-boot.img\0"\
-	"rf_uboot_p=protect off 1:1-3\;erase 1:1-3\;cp.b $(fileaddr) \$(uboot_p_loc) \$(filesize)\;protect on 1:1-3\0"\
-	"rf_kernel=run rf_kernel_dn rf_kernel_p rf_kernel_s\0"\
-	"rf_kernel_dn=tftp \$(flashfiles)uImage\0"\
-	"rf_kernel_p=erase 1:5-60\;cp.b \$(fileaddr) \$(kernel_p_loc) \$(kernel_size)\0"\
-	"rf_kernel_s=erase 1:61-116\;cp.b \$(fileaddr) \$(kernel_s_loc) \$(kernel_size)\0"\
-	"rf_rootfs=run rf_rootfs_dn rf_rootfs_p rf_rootfs_s\0"\
-	"rf_rootfs_dn=tftp \$(flashfiles)rootfs.img\0"\
-	"rf_rootfs_p=savefs rootfs p\0"\
-	"rf_rootfs_s=savefs rootfs s\0"\
-	"rf_overlay=nand erase \$(overlay_p_loc) \$(overlay_size)\;nand erase \$(overlay_s_loc) \$(overlay_size)\0"\
-	"rf_user=nand erase \$(user_p_loc)\0"\
+	"flashfiles=ftm-50s-new/\0"\
+	"loader_name=u-boot.img\0"\
+	"loader_loc=0xf8010000\0"\
+	"kernel_name=uImage\0"\
+	"kernel_0_loc=0xf8050000\0"\
+	"kernel_1_loc=0xf8410000\0"\
+	"kernel_size=0x003c0000\0"\
+	"rootfs_name=rootfs.img\0"\
+	"rootfs_0_mtd=mtdblock5\0"\
+	"rootfs_0_loc=0x00000000\0"\
+	"rootfs_1_mtd=mtdblock6\0"\
+	"rootfs_1_loc=0x02800000\0"\
+	"rootfs_size=0x02800000\0"\
+	"overlay_0_loc=0x05000000\0"\
+	"overlay_1_loc=0x06800000\0"\
+	"overlay_size=0x01800000\0"\
+	"user_0_loc=0x08000000\0"\
+	"user_1_loc=0x0C000000\0"\
+	"rf_loader=tftp $(flashfiles)$(loader_name);"\
+	           "protect off 1:1-3;"\
+	           "erase 1:1-3;"\
+	           "cp.b $(fileaddr) $(loader_loc) $(filesize);"\
+	           "protect on 1:1-3\0"\
+	"rf_kernel=tftp $(flashfiles)$(kernel_name)\;"\
+			   "protect off 1:5-124\;"\
+	           "erase 1:5-124\;"\
+	           "cp.b $(fileaddr) $(kernel_0_loc) $(kernel_size)\;"\
+	           "cp.b $(fileaddr) $(kernel_1_loc) $(kernel_size)\;"\
+	           "protect on 1:5-124\0"\
+	"rf_kernel_0=tftp $(flashfiles)$(kernel_name)\;"\
+			   "protect off 1:5-64\;"\
+	           "erase 1:5-64\;"\
+	           "cp.b $(fileaddr) $(kernel_0_loc) $(kernel_size)\;"\
+	           "protect on 1:5-64\0"\
+	"rf_kernel_1=tftp $(flashfiles)$(kernel_name)\;"\
+			   "protect off 1:65-124\;"\
+	           "erase 1:65-124\;"\
+	           "cp.b $(fileaddr) $(kernel_1_loc) $(kernel_size)\;"\
+	           "protect on 1:65-124\0"\
+	"rf_rootfs=tftp $(flashfiles)$(rootfs_name)\;"\
+			   "savefs rootfs 0\;"\
+			   "savefs rootfs 1\0"\
+	"rf_rootfs_0=tftp $(flashfiles)$(rootfs_name)\;"\
+	           "savefs rootfs 0\0"\
+	"rf_rootfs_1=tftp $(flashfiles)$(rootfs_name)\;"\
+	           "savefs rootfs 1\0"\
+	"rf_overlay=nand erase $(overlay_0_loc) $(overlay_size)\;"\
+			   "nand erase $(overlay_1_loc) $(overlay_size)\0"\
+	"rf_user=nand erase $(user_0_loc)\;"\
+	           "nand erase $(user_1_loc)\0"\
 	"kernel_loc=0xf8050000\0"\
-	"mtd_root=mtdblock5\0"\
+	"rootfs_mtd=$(rootfs_0_mtd)\0"\
 	"auto_recovery=1\0"\
-	"setbootargs=setenv bootargs console=ttyS0,115200 mem=128M root=/dev/\$(mtd_root) ro rootwait noinitrd init=/sbin/overlay_init ethaddr=\$(ethaddr) eth1addr=\$(eth1addr) model=\$(model) devid=\$(devid)\0"
+	"setbootargs=setenv bootargs console=ttyS0,115200 "\
+			   "mem=128M "\
+			   "root=/dev/$(rootfs_mtd) ro rootwait "\
+			   "noinitrd init=/sbin/overlay_init "\
+			   "ethaddr=$(ethaddr) eth1addr=$(eth1addr) "\
+			   "model=$(model) "\
+			   "devid=$(devid)\0"
 
 #undef	CONFIG_BOOTARGS
 

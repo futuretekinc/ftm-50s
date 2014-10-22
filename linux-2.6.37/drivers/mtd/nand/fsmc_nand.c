@@ -280,24 +280,24 @@ static struct fsmc_eccplace fsmc_ecc4_sp_place = {
 #if defined(CONFIG_MACH_SPEAR320_FTM)
 #define DEFAULT_PARTITION_TABLE(name, ersz, xl, ub, kr, rf)			\
 	static struct mtd_partition partition_info_##name##_blk[] = {	\
-		PARTITION("rootfs_p",	0 * rf * ersz,     rf * ersz),\
-		PARTITION("rootfs_s",	1 * rf * ersz,     rf * ersz),\
-		PARTITION("overlay_p",	2 * rf * ersz,     rf * ersz),\
-		PARTITION("overlay_s",	3 * rf * ersz,     rf * ersz),\
-		PARTITION("user_p",		4 * rf * ersz, 2 * rf * ersz),\
-		PARTITION("user_s",		6 * rf * ersz,             0),\
+		PARTITION("rootfs0",	  0 * rf * ersz,	40 * rf * ersz),\
+		PARTITION("rootfs1",	 40 * rf * ersz,    40 * rf * ersz),\
+		PARTITION("overlay0",	 80 * rf * ersz,    24 * rf * ersz),\
+		PARTITION("overlay1",	104 * rf * ersz,    24 * rf * ersz),\
+		PARTITION("user0",		128 * rf * ersz,    64 * rf * ersz),\
+		PARTITION("user1",		196 * rf * ersz,             0),\
 	}
 /*
  * Default partition layouts for nand devices
  * Size for "Root file system" is updated in driver based on actual device size
  */
-DEFAULT_PARTITION_TABLE(16KB, 0x4000, 0, 0, 0, 2048);
-DEFAULT_PARTITION_TABLE(64KB, 0x10000, 0, 0, 0, 512);
-DEFAULT_PARTITION_TABLE(128KB, 0x20000, 0, 0, 0, 256);
-DEFAULT_PARTITION_TABLE(256KB, 0x40000, 0, 0, 0, 128);
-DEFAULT_PARTITION_TABLE(512KB, 0x80000, 0, 0, 0, 64);
-DEFAULT_PARTITION_TABLE(1MB, 0x100000, 0, 0, 0, 32);
-DEFAULT_PARTITION_TABLE(2MB, 0x200000, 0, 0, 0, 16);
+DEFAULT_PARTITION_TABLE(16KB, 0x4000, 0, 0, 0, 64);
+DEFAULT_PARTITION_TABLE(64KB, 0x10000, 0, 0, 0, 16);
+DEFAULT_PARTITION_TABLE(128KB, 0x20000, 0, 0, 0, 8);
+DEFAULT_PARTITION_TABLE(256KB, 0x40000, 0, 0, 0, 4);
+DEFAULT_PARTITION_TABLE(512KB, 0x80000, 0, 0, 0, 2);
+DEFAULT_PARTITION_TABLE(1MB, 0x100000, 0, 0, 0, 1);
+DEFAULT_PARTITION_TABLE(2MB, 0x200000, 0, 0, 0, 1);
 #else
 #define DEFAULT_PARTITION_TABLE(name, ersz, xl, ub, kr)			\
 	static struct mtd_partition partition_info_##name##_blk[] = {	\

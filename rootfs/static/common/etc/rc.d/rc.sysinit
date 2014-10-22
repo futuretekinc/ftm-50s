@@ -1,0 +1,215 @@
+#!/bin/ash
+
+# if [ "${RCINIT}" != "done" ]; then
+#   ---------------------------------------------
+#   Common settings
+#   ---------------------------------------------
+
+#   ---------------------------------------------
+#   Prints execution status.
+#
+#   arg1 : Execution status
+#   arg2 : Continue (0) or Abort (1) on error
+#   ---------------------------------------------
+status ()
+{
+       if [ $1 -eq 0 ] ; then
+               echo "[SUCCESS]"
+       else
+               echo "[FAILED]"
+
+               if [ $2 -eq 1 ] ; then
+                       echo "... System init aborted."
+                       exit 1
+               fi
+       fi
+
+}
+
+#   ---------------------------------------------
+#   Create GPIO Control Device
+#   arg1 : GPIO Port Number
+#   arg2 : Device Name
+#   arg3 : Direction
+#   ---------------------------------------------
+create_gpio()
+{
+    case $3 in
+    in )    echo $1 > /sys/class/gpio/export
+            echo in > /sys/class/gpio/gpio$1/direction
+            if [ $4 = low ]
+            then
+				echo 1 > /sys/class/gpio/gpio$1/active_low
+			else
+				echo 0 > /sys/class/gpio/gpio$1/active_low
+			fi
+            ln -s /sys/class/gpio/gpio$1/value /dev/$2;;
+    out )   echo $1 > /sys/class/gpio/export
+            echo out > /sys/class/gpio/gpio$1/direction
+            if [ $4 = low ]
+            then
+				echo 1 > /sys/class/gpio/gpio$1/active_low
+			else
+				echo 0 > /sys/class/gpio/gpio$1/active_low
+			fi
+            if [ $5 = on ]
+            then
+				echo 1 > /sys/class/gpio/gpio$1/value
+			else
+				echo 0 > /sys/class/gpio/gpio$1/value
+			fi
+            ln -s /sys/class/gpio/gpio$1/value /dev/$2;;
+    esac
+}
+
+#   ---------------------------------------------
+#   Mount debugfs
+#   ---------------------------------------------
+cat /proc/filesystems | grep -q debugfs
+if [ $? -eq 0 ] ; then
+        echo -n " Mounting debugfs           : "
+	mkdir /dev/debug
+        mount -n -t debugfs debugfs /sys/kernel
+        status $? 1
+fi
+
+#   ---------------------------------------------
+#   GPIO
+#   ---------------------------------------------
+
+create_gpio 15 factory_reset in low
+create_gpio 77 nf_wp		out	low		off
+create_gpio 81 gps_rst		out low		off
+create_gpio 85 led_status	out low		off
+
+create_gpio 78 mdm_power_on out high	off 
+create_gpio 49 mdm_on		out low		on
+create_gpio 50 mdm_reset	out low		on
+
+#   ---------------------------------------------
+#   Mount User Space
+#   ---------------------------------------------
+echo -n " Mounting user Space        : "
+cat /proc/mtd | grep user >& /dev/null
+if [ $? -eq 0 ]
+then
+	for i in $(cat /proc/mtd | grep user | awk '{print $1}' | sed -e 's/://' -e 's/mtd/mtdblock/')
+	do
+		if [ ! -e /mnt/mtd ]
+		then
+			mkdir /mnt/mtd
+		fi	
+
+		mount -t yaffs2 /dev/$i /mnt/mtd 1>& /dev/null
+		echo " Mounting user Space        : [SUCCESS]"
+		break
+	done
+
+else
+	echo " Mounting user Space        : [FAILED]"
+fi 
+
+if [ -e /opt/thingplus-gateway ]
+then
+	echo "/opt/thingplus-gateway exists."
+	if [ ! -e /mnt/mtd/log ]
+	then
+		mkdir /mnt/mtd/log
+		cp /opt/thingplus-gateway/config /mnt/mtd/log
+	fi
+else
+	echo "/opt/thingplus-gateway not exists."
+fi	
+
+if [ ! -e /etc/initialized ]
+then
+	echo 'done' > /etc/initialized
+	echo "System initialize completed."
+	echo "Reboot now ..."
+	reboot -d 2
+	sleep 2
+fi
+#   ---------------------------------------------
+#   Set PATH
+#   ---------------------------------------------
+export LD_LIBRARY_PATH=/lib:/usr/local/lib:/opt/lib:/opt/usr/lib
+export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/opt/bin:/opt/usr/bin:/opt/usr/local/sbin
+
+#   ---------------------------------------------
+#	Network Configuration
+#   ---------------------------------------------
+ifdown lo
+ifup lo
+ifdown eth0
+ifup eth0
+ifdown eth1
+ifup eth1
+
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
+#   ---------------------------------------------
+#	Start the subsystems
+#   ---------------------------------------------
+	FAIL=0
+	for i in /etc/init.d/* 
+	do
+		if [ -f $i ]
+		then
+			echo "service $SERVICENAME start"
+			SERVICENAME=`echo $i | sed 's/\etc\/init.d\///'`
+			service $SERVICENAME start
+		fi
+	done
+#   ---------------------------------------------
+#   Done!
+#   ---------------------------------------------
+echo "Done."
+
+
+MODEL="UNDEFINED"
+SN="UNISSUED"
+
+CMDLINE=`cat /proc/cmdline`
+for x in $CMDLINE; do
+	case $x in
+		model=*)
+			export MODEL="${x#model=}"
+			;;
+		devid=*)
+			export SN="${x#devid=}"
+			;;
+	esac
+done
+
+hostname $MODEL
+VERSION=`cat /etc/version`
+#   ---------------------------------------------
+#   Get verbose
+#   ---------------------------------------------
+echo ""
+echo ""
+echo "    Model          : $MODEL"
+echo "    Filesystem     : $VERSION"
+echo ""
+echo ""
+echo "    Kernel release : `uname -s` `uname -r`"
+echo "    Kernel version : `uname -v`"
+echo ""
+
+#   ---------------------------------------------
+#	Start sms 
+#   ---------------------------------------------
+stty -F /dev/ttyS1 115200 -echo
+cat /dev/ttyS1 &> /var/log/modem &
+/bin/factory_reset_dmon &
+/bin/nwcause_dmon &
+#/bin/check_m_md &
+/bin/dm_dmon &
+echo stop > /tmp/ppp.connect
+/bin/init_modem_log &
+/bin/new_mmon_0624 &
+/bin/sms_dmon_0624 &
+#/bin/fota &
+#/bin/data_dmon &
+
+

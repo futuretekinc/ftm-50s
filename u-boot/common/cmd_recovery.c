@@ -30,14 +30,18 @@
 #include <post.h>
 #include <nand.h>
 
-#define	INVALID_LOC	0xFFFFFFFF
+#define	INVALID_UINT	0xFFFFFFFF
 #define	SYS_INFO_MAGIC	0x1F3D5B79
+#define	SYSINFO_MAX		2
+#define	KERNEL_MAX		2
+#define	ROOTFS_MAX		2
 typedef struct
 {	
 	uint			magic;
 	uint			index;
-	image_header_t	rootfs_p;
-	image_header_t	rootfs_s;
+	uint			primary_kernel;
+	uint			primary_fs;
+	image_header_t	rootfs[ROOTFS_MAX];
 	uint			crc32;
 }	sys_info_t;
 	
@@ -49,16 +53,16 @@ extern int  _nand_write(ulong offset, size_t size, void *buff);
 static int	kernel_check_and_recovery(void);
 static int	rootfs_check_and_recovery(void);
 static int	check_kernel(void *loc, int printout);
-static int	check_rootfs(int primary, int printout);
+static int	check_rootfs(int index, int printout);
 static int	copy_image(void *dest, void *src, unsigned long len);
-static int  copy_rootfs(int backup);
 static uint	getenv_uint(char *name);
 static uint	string_to_version(char *s);
 static uint	image_get_version(const image_header_t *hdr);
 static int	set_kernel_loc(uint loc);
-static int	save_rootfs(cmd_tbl_t * cmdtp, int flag, uint addr, uint len, int primary);
+static int	save_rootfs(cmd_tbl_t * cmdtp, int flag, int index, uint addr, uint len);
 static int	save_sys_info(sys_info_t *info);
 static int	load_sys_info(sys_info_t *info);
+static void mem_dump(void *addr, int len);
 
 extern int nand_curr_device;
 
@@ -78,16 +82,24 @@ int do_savefs(cmd_tbl_t * cmdtp, int flag, int argc, char *argv[])
 	if (strcmp(argv[1], "rootfs") == 0)
 	{
 		uint addr;
+		uint index;
 		uint len  = getenv_uint("rootfs_size");
-
 		if (len == 0)
 		{
+			puts ("RootFS size is invalid!\n");
 			goto error;	
+		}
+
+		index = simple_strtoul(argv[2], NULL, 16);
+		if (index >= ROOTFS_MAX)
+		{
+			printf("RootFS index is out of range(0 .. %d)!\n", ROOTFS_MAX);
+			goto error;
 		}
 
 		if (argc == 4)
 		{
-			addr = simple_strtoul(argv[4], NULL, 16);	
+			addr = simple_strtoul(argv[3], NULL, 16);	
 		}
 		else
 		{
@@ -96,18 +108,11 @@ int do_savefs(cmd_tbl_t * cmdtp, int flag, int argc, char *argv[])
 
 		if (addr == 0)
 		{
+			puts("RootFS image location is invalid.\n");
 			goto error;	
 		}
 
-		if (argv[2][0] == 'p')
-		{
-			save_rootfs(cmdtp, flag, addr, len, 1);
-		}
-		else if (argv[2][0] == 's')
-		{
-			save_rootfs(cmdtp, flag, addr, len, 0);
-		}
-		else
+		if (save_rootfs(cmdtp, flag, index, addr, len) != 0)
 		{
 			goto error;	
 		}
@@ -120,31 +125,49 @@ error:
 
 int	kernel_check_and_recovery(void)
 {
+	sys_info_t	sysinfo;
 	uint	kernel_loc;
-	uint	kernel_p_loc;
-	uint	kernel_s_loc;
 	uint	kernel_size;
 	uint	auto_recovery = 0;
+	int		i;
 
-	kernel_p_loc= getenv_uint("kernel_p_loc");
-	kernel_s_loc= getenv_uint("kernel_s_loc");
-	kernel_size	= getenv_uint("kernel_size");
-	auto_recovery=getenv_uint("auto_recovery");
-
-	if (check_kernel((void *)kernel_p_loc, 1) == 0)
+	if (load_sys_info(&sysinfo) != 0)
 	{
-		kernel_loc = kernel_p_loc;
+		puts("ERROR : SysInfo is invalid!\n");
+		goto error;	
 	}
-	else if (check_kernel((void *)kernel_s_loc, 1) == 0)
+
+	for(i = 0 ; i < KERNEL_MAX ; i++)
 	{
-		if ((auto_recovery == 1) && (kernel_p_loc != INVALID_LOC))
+		char	name[64];
+
+		sprintf(name, "kernel_%d_loc", (sysinfo.primary_kernel + i) % KERNEL_MAX);
+
+		kernel_loc= getenv_uint(name);
+		if (check_kernel((void *)kernel_loc, 1) == 0)
 		{
-			copy_image((void *)kernel_p_loc, (void *)kernel_s_loc, kernel_size);
-			kernel_loc = kernel_p_loc;
+			break;
 		}
-		else
+	}
+
+	if (i == KERNEL_MAX)
+	{
+		goto error;	
+	}
+
+	auto_recovery=getenv_uint("auto_recovery");
+	if ((i != 0) && (auto_recovery == 1))
+	{
+		char	name[64];
+		uint	kernel_p_loc;
+
+		sprintf(name, "kernel_%d_loc", sysinfo.primary_kernel);
+		kernel_p_loc = getenv_uint(name);
+		kernel_size	= getenv_uint("kernel_size");
+		if ((kernel_p_loc != INVALID_UINT) && (kernel_size != INVALID_UINT))
 		{
-			kernel_loc = kernel_s_loc;
+			copy_image((void *)kernel_p_loc, (void *)kernel_loc, kernel_size);
+			kernel_loc = kernel_p_loc;
 		}
 	}
 	else
@@ -162,53 +185,37 @@ error:
 
 int	rootfs_check_and_recovery(void)
 {
-	int		primary = 1;
-	uint	rootfs_p_loc;
-	uint	rootfs_s_loc;
-	uint	auto_recovery = 0;
-	int		backup = 0, restore = 0;
+	sys_info_t	sysinfo;
+	int			i;
 
-	rootfs_p_loc= getenv_uint("rootfs_p_loc");
-	rootfs_s_loc= getenv_uint("rootfs_s_loc");
-	auto_recovery =getenv_uint("auto_recovery");
 
-	puts("Start Checking Primary RootFS\n");
-	if (check_rootfs(1, 1) == 0)
+	if (load_sys_info(&sysinfo) != 0)
 	{
-		puts("Primary RootFS is valid!\n");
+		puts("ERROR : SysInfo is invalid!\n");
+		goto error;	
 	}
-	else 
+
+	for(i = 0 ; i < ROOTFS_MAX ; i++)
 	{
-		puts("Primary RootFS is invalid!\n");
-		puts("Start Checking Secondary RootFS\n");
-		if (check_rootfs(0, 1) == 0)
+		
+		int index = (sysinfo.primary_fs + i) % ROOTFS_MAX;	
+		puts("Check RootFS : ");
+		if (check_rootfs(index, 0) == 0)
 		{
-			puts("Secondary RootFS is valid\n");
-			if ((auto_recovery == 1) && (rootfs_p_loc != INVALID_LOC))
-			{
-				puts("Start restore(Secondary RootFS is copied to Primary RootFS)\n");
-				copy_rootfs(1);
-				puts("RootFS restore done.\n");
-			}
-			else
-			{
-				primary = 0;	
-			}
+			char		buff[64];
+
+			printf("[SUCCESS]\n");
+
+			sprintf(buff, "rootfs_%d_mtd", index);
+			setenv ("rootfs_mtd", getenv(buff));
+			break;
 		}
-		else
-		{
-			puts("All RootFS is invalid!!!\n");
-			goto error;
-		}
+		printf("[FAILED]\n");
 	}
 
-	if (primary)
+	if (i != 0)
 	{
-		setenv("mtd_root", "mtdblock5");
-	}
-	else
-	{
-		setenv("mtd_root", "mtdblock6");
+		puts("Primary RootFS is invalid!\n");	
 	}
 
 	return	0;
@@ -230,7 +237,7 @@ uint	getenv_uint(char *name)
 	return	simple_strtoul(val, NULL, 16);
 error:
 
-	return	INVALID_LOC;
+	return	INVALID_UINT;
 }
 
 int check_kernel(void *loc, int printout)
@@ -277,42 +284,30 @@ error:
 	return	1;
 }
 
-int check_rootfs(int primary, int printout)
+int check_rootfs(int index, int printout)
 {
 	sys_info_t	sysinfo;
 	void		*buff= (void*)CONFIG_SYS_LOAD_ADDR;	
 	ulong		rootfs_loc;
 	ulong		rootfs_size;
+	char		name[64];
 	nand_info_t *nand;
 
-	if (primary)
-	{
-	}
 	if (load_sys_info(&sysinfo) != 0)
 	{
 		puts("System information loading failed!\n");
 		goto error;
 	}
 
-	if (primary)
+	sprintf(name, "rootfs_%d_loc", index);
+	rootfs_loc= getenv_uint(name);
+	if(rootfs_loc == INVALID_UINT)
 	{
-		rootfs_loc= getenv_uint("rootfs_p_loc");
-		memcpy(buff, &sysinfo.rootfs_p, sizeof(image_header_t));
-		if(rootfs_loc == INVALID_LOC)
-		{
-			puts("ERROR: can't primary location\n");	
-		}
-	}
-	else
-	{
-		rootfs_loc= getenv_uint("rootfs_s_loc");
-		memcpy(buff, &sysinfo.rootfs_s, sizeof(image_header_t));
-		if(rootfs_loc == INVALID_LOC)
-		{
-			puts("ERROR: can't secondary location\n");	
-		}
+		printf("ERROR: can't find location[name = 0x%08x]\n", rootfs_loc);	
+		goto error;
 	}
 
+	memcpy(buff, &sysinfo.rootfs[index], sizeof(image_header_t));
 	if (genimg_get_format (buff) != IMAGE_FORMAT_LEGACY)
 	{
 		puts("ERROR: Invalid image format!\n");
@@ -361,7 +356,13 @@ error:
 int copy_image(void *dest, void *src, unsigned long len)
 {
 	unsigned long dest_start, dest_end;
-	void *buff= (void*)CONFIG_SYS_LOAD_ADDR;	
+	void *buff;
+	
+	buff = malloc(len);
+	if (buff == NULL)
+	{
+		return	1;	
+	}
 
 
 	memcpy(buff, src, len);
@@ -394,63 +395,11 @@ int copy_image(void *dest, void *src, unsigned long len)
 		goto error;
 	}
 
+	free(buff);
 	return	0;
 
 error:
-	return	1;
-}
-
-int copy_rootfs(int backup)
-{
-	sys_info_t	sys_info;
-	void*		buff = (void*)CONFIG_SYS_LOAD_ADDR;
-	uint		rootfs_p_loc= getenv_uint("rootfs_p_loc");
-	uint		rootfs_s_loc= getenv_uint("rootfs_s_loc");
-	uint		rootfs_size = getenv_uint("rootfs_size");
-
-	if (backup)
-	{
-		if (_nand_read(rootfs_p_loc, rootfs_size,buff) != 0)
-		{
-			goto error;	
-		}
-
-		if (_nand_erase(rootfs_s_loc, rootfs_size, 1, 0) != 0 || 
-			_nand_write(rootfs_s_loc, rootfs_size, buff) != 0)
-		{
-			goto error;	
-		}
-
-		load_sys_info(&sys_info);
-
-		memcpy(&sys_info.rootfs_s, &sys_info.rootfs_p, sizeof(image_header_t));
-
-		save_sys_info(&sys_info);
-	
-	}
-	else
-	{
-		if (_nand_read(rootfs_s_loc, rootfs_size,buff) != 0)
-		{
-			goto error;	
-		}
-
-		if (_nand_erase(rootfs_p_loc, rootfs_size, 1, 0) != 0 || 
-			_nand_write(rootfs_p_loc, rootfs_size, buff) != 0)
-		{
-			goto error;	
-		}
-
-		load_sys_info(&sys_info);
-
-		memcpy(&sys_info.rootfs_p, &sys_info.rootfs_s, sizeof(image_header_t));
-
-		save_sys_info(&sys_info);
-	}
-
-	return	0;
-
-error:
+	free(buff);
 	return	1;
 }
 
@@ -519,41 +468,27 @@ static int set_kernel_loc(uint loc)
 
 int	load_sys_info(sys_info_t *info)
 {
-	sys_info_t *base = 0;
-	sys_info_t *base0 = (sys_info_t *)CONFIG_SYS_INFO_BASE;
-	sys_info_t *base1 = (sys_info_t *)(CONFIG_SYS_INFO_BASE + 0x10000);
+	sys_info_t *lastinfo = 0;
+	int			i;
 
-	if (base0->crc32 == crc32(0, (const unsigned char *)base0, sizeof(sys_info_t) - sizeof(uint)))
+	for(i = 0 ; i < SYSINFO_MAX ; i++)
 	{
-		if (base1->crc32 == crc32(0, (const unsigned char *)base1, sizeof(sys_info_t) - sizeof(uint)))
+		sys_info_t *base = (sys_info_t *)(CONFIG_SYS_INFO_BASE + 0x10000 * i);
+		if (base->crc32 == crc32(0, (const uchar *)base, sizeof(sys_info_t) - sizeof(uint)))
 		{
-			if (base0->index < base1->index)
+			if ((lastinfo == 0) || (lastinfo->index < base->index))
 			{
-				base = base1;
+				lastinfo = base;	
 			}
-			else
-			{
-				base = base0;	
-			}
-		}
-		else
-		{
-			base = base0;	
-		}
-	}
-	else
-	{
-		if (base1->crc32 == crc32(0, (const unsigned char *)base1, sizeof(sys_info_t) - sizeof(uint)))
-		{
-			base = base1;
-		}
-		else
-		{
-			goto error;
 		}
 	}
 
-	memcpy(info, base, sizeof(sys_info_t));
+	if (lastinfo == 0)
+	{
+		goto error;
+	}
+
+	memcpy(info, lastinfo, sizeof(sys_info_t));
 
 	return	0;
 
@@ -568,14 +503,7 @@ int	save_sys_info(sys_info_t *info)
 	info->index++;
 	info->crc32 = crc32(0, (const unsigned char *)info, sizeof(sys_info_t) - sizeof(uint));
 
-	if (info->index % 2 == 0)
-	{
-		base = (sys_info_t *)CONFIG_SYS_INFO_BASE;
-	}
-	else
-	{
-		base = (sys_info_t *)(CONFIG_SYS_INFO_BASE + 0x10000);
-	}
+	base = (sys_info_t *)(CONFIG_SYS_INFO_BASE + 0x10000 * (info->index % SYSINFO_MAX));
 
 
 	copy_image(base, info, sizeof(sys_info_t));
@@ -583,10 +511,12 @@ int	save_sys_info(sys_info_t *info)
 	return	0;
 }
 
-int	save_rootfs(cmd_tbl_t * cmdtp, int flag, uint addr, uint len, int primary)
+int	save_rootfs(cmd_tbl_t * cmdtp, int flag, int index, uint addr, uint len)
 {
 	sys_info_t	sys_info;
-	char	buf[64];
+	char		buf[64];
+	uint		offset, size;
+	int			i;
 
 	if (load_sys_info(&sys_info) != 0)
 	{
@@ -594,28 +524,49 @@ int	save_rootfs(cmd_tbl_t * cmdtp, int flag, uint addr, uint len, int primary)
 		sys_info.magic = SYS_INFO_MAGIC;
 	}
 
-	if (primary)
+	if (index >= ROOTFS_MAX)
 	{
-		uint	rootfs_p    = getenv_uint("rootfs_p_loc");	
-		uint	rootfs_size = getenv_uint("rootfs_size");	
-
-		memcpy(&sys_info.rootfs_p, (void *)addr, sizeof(image_header_t));
-		_nand_erase(rootfs_p, rootfs_size, 1, 0);
-		_nand_write(rootfs_p, rootfs_size, (void *)(addr + sizeof(image_header_t)));
+		goto error;		
 	}
-	else
+
+	sprintf(buf, "rootfs_%d_loc", index);
+	offset = getenv_uint(buf);	
+	size = getenv_uint("rootfs_size");	
+
+	if (offset == INVALID_UINT || size == INVALID_UINT)
 	{
-		uint	rootfs_s    = getenv_uint("rootfs_s_loc");	
-		uint	rootfs_size = getenv_uint("rootfs_size");	
-
-		memcpy(&sys_info.rootfs_s, (void *)addr, sizeof(image_header_t));
-		_nand_erase(rootfs_s, rootfs_size, 1, 0);
-		_nand_write(rootfs_s, rootfs_size, (void *)(addr + sizeof(image_header_t)));
+		goto error;	
 	}
+	
+	_nand_erase(offset, size, 1, 0);
+	_nand_write(offset, size, (void *)(addr + sizeof(image_header_t)));
+
+	memcpy(&sys_info.rootfs[index], (void *)addr, sizeof(image_header_t));
+	sys_info.primary_fs = index;
+
 
 	save_sys_info(&sys_info);
 
 	return	0;
+
+error:
+	return	1;
+}
+
+void mem_dump(void *addr, int len)
+{
+	int	i;
+
+	printf("memdump(0x%08x, 0x%08x)\n", addr, len);
+	for(i = 0 ; i < len ; i++)
+	{
+		printf("%02x ", ((uchar *)addr)[i]);
+		if ((i+1) % 8 == 0)
+		{
+			printf("\n");	
+		}
+	}
+
 }
 
 /***************************************************/

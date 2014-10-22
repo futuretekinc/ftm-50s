@@ -1,12 +1,15 @@
 #!/bin/bash 
+
+TARGET='ThingPlus'
+
 FSTYPE='squashfs'
 VERSION=`date`
-SSL='secuwayssl'
 ROOT=$PWD/target
 STL=/opt/STM/STLinux-2.4/devkit/armv5/target
 LN=/bin/ln
 CP=/bin/cp
 
+SSL='secuwayssl'
 INCLUDE_SSHD=1
 INCLUDE_THTTPD=0
 INCLUDE_VSFTPD=1
@@ -94,10 +97,9 @@ fi
 	mkdir -p bin boot sbin lib
 	mkdir -p dev 
 	mkdir -p usr usr/bin usr/sbin usr/lib usr/share
-	mkdir -p var var/log var/lock var/run var/ftp var/run/vsftpd/empty var/lib/misc 
+	mkdir -p var var/run var/lock var/log var/lib var/ftp var/empty
 	mkdir -p etc
 	mkdir -p rom
-	mkdir -p www www/cgi-bin www/contents www/images www/scripts www/styles
 
 	echo $VERSION > etc/version
 
@@ -556,6 +558,7 @@ fi
 	link	../bin/busybox	watchdog
 	link	../bin/busybox	zcip
 
+	#copy sbin udhcpc
 	#copy sbin udhcpd
 
     exit    3
@@ -697,45 +700,13 @@ fi
 )
 
 (
-	change_dir	/www
-	cp -rf ../../www/cgi-bin/*	cgi-bin/.
-	cp -rf ../../www/contents/* contents/.
-	cp -rf ../../www/images/*	images/.
-	cp -rf ../../www/scripts/*	scripts/.
-	cp -rf ../../www/styles/*	styles/.
-	cp -rf ../../www/*.html .
-)
-(
-	change_dir /www/cgi-bin
-	link req.cgi page
-	link req.cgi public
-	link req.cgi ssid
-	link req.cgi network
-	link req.cgi ssl
-	link req.cgi firewall
-	link req.cgi dhcp
-	link req.cgi wwan
-	link req.cgi syslog
-	link req.cgi system
-	link req.cgi logout
-	link iot.cgi network_state
-	link iot.cgi qos
-	link iot.cgi apn
-	link iot.cgi module
-	link iot.cgi config
-	link iot.cgi init
-	link iot.cgi cnum
-	link iot.cgi usim
-	link iot.cgi getdata
-)
-
-(
 	change_dir	/etc
 	mkdir -p	rc.d
 )
 
 (
-	$CP -rf static/* "$ROOT/"
+	
+	$CP -rf static/common/* "$ROOT/"
 
 	case $SSL in
 		'sslplus')
@@ -757,18 +728,28 @@ fi
 			;;
 	esac
 
-	$CP -rf node_usr/local/bin "$ROOT/usr/local"
-	$CP -rf node_usr/local/include "$ROOT/usr/local"
-	$CP -rf node_usr/local/lib "$ROOT/usr/local"
-	$CP -rf node_usr/local/share "$ROOT/usr/local"
-	$CP -rf $STL/usr/share/snmp "$ROOT/usr/share/snmp"
+	case $TARGET in
+		'ThingPlus')
+
+			$CP -rf static/tpgw/* "$ROOT/"
+			$CP -rf node_usr/local/bin "$ROOT/usr/local"
+			$CP -rf node_usr/local/include "$ROOT/usr/local"
+			$CP -rf node_usr/local/lib "$ROOT/usr/local"
+			$CP -rf node_usr/local/share "$ROOT/usr/local"
+			$CP -rf $STL/usr/share/snmp "$ROOT/usr/share/snmp"
+			;;
+		*)
+			;;
+
+	esac
 
 )
 
 (
-	sudo find "$ROOT/" -name .svn | xargs sudo rm -rf 
+	sudo find "$ROOT/" -name .git* | xargs sudo rm -rf 
+	sudo find "$ROOT/" -name .svn  | xargs sudo rm -rf 
 
-	mv $ROOT/etc $ROOT/etc.default
+#	mv $ROOT/etc $ROOT/etc.default
 
 	case $FSTYPE in
 		'squashfs')
