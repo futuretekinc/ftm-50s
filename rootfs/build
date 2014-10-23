@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-TARGET='ThingPlus'
+TARGET='Basic'
 
 FSTYPE='squashfs'
 VERSION=`date`
@@ -737,6 +737,9 @@ fi
 			$CP -rf node_usr/local/lib "$ROOT/usr/local"
 			$CP -rf node_usr/local/share "$ROOT/usr/local"
 			$CP -rf $STL/usr/share/snmp "$ROOT/usr/share/snmp"
+			;;
+		'Basic')
+			$CP -rf static/general/* "$ROOT/"
 			;;
 		*)
 			;;
