@@ -156,8 +156,8 @@ static struct flash_device flash_devices[] = {
 static struct mtd_partition part_info_8M[] = {
 	DEFINE_PARTS("xLoader", 0x00000000, 0x00010000),
 	DEFINE_PARTS("UBoot",	0x00010000, 0x00040000),
-	DEFINE_PARTS("Kernel",	0x00050000, 0x00380000),
-	DEFINE_PARTS("Kernel",	0x003d0000, 0x00380000),
+	DEFINE_PARTS("Kernel",	0x00050000, 0x003c0000),
+	DEFINE_PARTS("Kernel",	0x00410000, 0x003c0000),
 	DEFINE_PARTS("SysInfo",	0x007d0000, 0x00030000),
 };
 static struct mtd_partition part_info_16M[] = {
