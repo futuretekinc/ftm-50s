@@ -88,11 +88,6 @@ echo -n " Mounting /var/lock         : "
 mount -n -t tmpfs tmpfs /var/lock
 status $? 1
 
-echo -n " Mounting /var/lib          : "
-mount -n -t tmpfs tmpfs /var/lib
-status $? 1
-
-echo -n " Mounting /var/log          : "
 mount -n -t tmpfs tmpfs /var/log
 status $? 1
 
