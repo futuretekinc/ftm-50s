@@ -91,7 +91,8 @@ do_sync() {
   touch $INPROGRESS_FILE
 
   RSYNC_PASSWORD=$OPT_PASSWORD \
-  $RSYNC -avz \
+  $RSYNC -rlvz \
+  --size-only \
   --delete-after \
   --delete-excluded \
   $EXCLUDE_OPTION \
