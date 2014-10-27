@@ -3,7 +3,7 @@
 
 test -f /usr/sbin/cron || exit 0
 
-#LSBNAMES='-l'  # Uncomment for LSB name support in /etc/cron.d/
+LSBNAMES='-l'  # Uncomment for LSB name support in /etc/cron.d/
 
 case "$1" in
 start)	echo -n "Starting periodic command scheduler: cron"
