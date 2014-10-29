@@ -1,2 +1,3 @@
 *.squashfs
 rootfs.img
+rootfs.log

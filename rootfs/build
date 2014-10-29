@@ -1,6 +1,7 @@
 #!/bin/bash 
 
-TARGET='ThingPlus'
+TARGET='FTM-50S'
+#TARGET='FTM-50S+TP'	#FTM-50S + Daliworks ThingPlus
 
 FSTYPE='squashfs'
 VERSION=`date`
@@ -9,7 +10,7 @@ STL=/opt/STM/STLinux-2.4/devkit/armv5/target
 LN=/bin/ln
 CP=/bin/cp
 
-SSL='secuwayssl'
+#SSL='secuwayssl'
 INCLUDE_SSHD=1
 INCLUDE_THTTPD=0
 INCLUDE_VSFTPD=1
@@ -729,7 +730,7 @@ fi
 	esac
 
 	case $TARGET in
-		'ThingPlus')
+		'FTM-50S+TP')
 
 			$CP -rf static/tpgw/* "$ROOT/"
 			$CP -rf node_usr/local/bin "$ROOT/usr/local"
@@ -738,6 +739,19 @@ fi
 			$CP -rf node_usr/local/share "$ROOT/usr/local"
 			$CP -rf $STL/usr/share/snmp "$ROOT/usr/share/snmp"
 			;;
+
+		'FTM-50S')				
+			$CP -rf static/general/* "$ROOT/"
+
+			mkdir -p www
+			$CP -rf www/cgi-bin/*  	"$ROOT/www/cgi-bin/."
+			$CP -rf www/contents/* 	"$ROOT/www/contents/."
+			$CP -rf www/images/*   	"$ROOT/www/images/."
+			$CP -rf www/scripts/*  	"$ROOT/www/scripts/."
+			$CP -rf www/styles/*   	"$ROOT/www/styles/."
+			$CP -rf www/*.html 		"$ROOT/www/"
+			;;
+
 		*)
 			;;
 
@@ -749,11 +763,11 @@ fi
 	sudo find "$ROOT/" -name .git* | xargs sudo rm -rf 
 	sudo find "$ROOT/" -name .svn  | xargs sudo rm -rf 
 
-#	mv $ROOT/etc $ROOT/etc.default
-
 	case $FSTYPE in
 		'squashfs')
 			rm -rf root.squashfs
+
+			find $ROOT > rootfs.log
 
 			/opt/STM/STLinux-2.4/host/bin/mksquashfs $ROOT root.squashfs -all-root
 
