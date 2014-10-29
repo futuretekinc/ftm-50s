@@ -60,14 +60,14 @@ mkdir /dev/net
 mdev -s
 status $? 0
 
-echo -n " Mounting /tmp/overlay      : "
 mkdir -p /tmp/overlay
 mount -n -t yaffs2 /dev/mtdblock7 /tmp/overlay
+echo -n " Mounting /tmp/overlay      : "
 status $? 1
 
 mount -o move /tmp/overlay /overlay
 
-mount -n -t overlayfs -o noatime,lowerdir=/,upperdir=/overlay 'overlayfs:/overlay' /mnt 1>& /dev/null
+mount -n -t overlayfs -o noatime,lowerdir=/,upperdir=/overlay 'overlayfs:/overlay' /mnt 2>&1
 echo -n " Mounting overlayfs:/overlay: "
 status $? 1
 
@@ -80,35 +80,25 @@ mount -o move /rom/dev	/dev
 mount -o move /rom/tmp	/tmp
 mount -o move /rom/overlay /overlay
 
-echo -n " Mounting /var/run          : "
-mount -n -t tmpfs tmpfs /var/run
+echo -n " Mounting /var              : "
+mount -n -t tmpfs tmpfs /var
 status $? 1
 
-echo -n " Mounting /var/lock         : "
-mount -n -t tmpfs tmpfs /var/lock
-status $? 1
+mkdir -p /var/run
+mkdir -p /var/lock
+mkdir -p /var/log
+mkdir -p /var/empty
+mkdir -p /var/lib/misc
+mkdir -p /var/spool/cron/crontabs
 
-mount -n -t tmpfs tmpfs /var/log
-status $? 1
-
-echo -n " Mounting /var/empty        : "
-mount -n -t tmpfs tmpfs /var/empty
-status $? 1
-
-
-#if [ ! -e /etc ]
-#then
-#	mkdir /etc
-#	cp -rf /etc.default/* /etc
-#	echo "System initialized."
-#fi
-#
-#if [ ! -e /opt/thingplus-gateway ]
-#then
-#	cd /
-#	tar xvfz /opt/tpgw.tgz 
-#	echo "ThingPlus-Gateway installation completed."
-#fi
+cat /proc/filesystems | grep -q debugfs
+if [ $? -eq 0 ]
+then
+	echo -n " Mounting debugfs           : "
+	mkdir /dev/debug
+	mount -n -t debugfs debugfs /sys/kernel
+	status $? 1
+fi
 
 exec /sbin/init
 

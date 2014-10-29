@@ -1,5 +1,7 @@
 #!/bin/sh
 
+. /lib/functions/ftmenv.sh
+
 TASK="node"
 #OPTIONS="--stack_size=1024 --max_old_space_size=20 --max_new_space_size=4096 --max_executable_size=10 --gc_global --gc_interval=100 --trace-gc --track_gc_object_stats --trace_gc_verbose"
 OPTIONS="--stack_size=1024 --max_old_space_size=20 --max_new_space_size=4096 --max_executable_size=10"
@@ -28,7 +30,8 @@ case "$1" in
 
 		if ! pidof $TASK | sed "s/$$\$//" | grep -q [0-9] ; then
 			cd $DIR
-			$CMD 2>&1 | svlogd $LOG_DIR &
+		#	$CMD 2>&1 | svlogd $LOG_DIR &
+			$CMD  | svlogd $LOG_DIR &
 		fi	
 		;;
 

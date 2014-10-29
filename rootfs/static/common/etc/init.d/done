@@ -1,0 +1,26 @@
+#!/bin/sh
+
+. /lib/functions/ftmenv.sh
+
+MODEL=$(get_model)
+VERSION=$(get_version)
+
+case "$1" in
+	start)
+		echo "Done."
+		#   ---------------------------------------------
+		#   Get verbose
+		#   ---------------------------------------------
+		echo " ---------------------------------------------"
+		echo ""
+		echo "    Model          : $MODEL"
+		echo "    Filesystem     : $VERSION"
+		echo ""
+		echo ""
+		echo "    Kernel release : `uname -s` `uname -r`"
+		echo "    Kernel version : `uname -v`"
+		echo ""
+		echo " ---------------------------------------------"
+		;;
+esac
+

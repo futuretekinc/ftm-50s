@@ -1,0 +1,31 @@
+#!/bin/sh
+
+. /lib/functions/ftmenv.sh
+
+WAN=$(get_wan)
+
+case "$1" in
+	start)
+		brctl addbr lan
+		if [ "$WAN" = "ppp0" ]
+		then
+			brctl addif lan eth0
+		fi
+		brctl addif lan eth1
+		;;
+
+	stop)
+		brctl delif lan eth1
+		if [ "$WAN" = "ppp0" ]
+		then
+			brctl delif lan eth0
+		fi
+		brctl delbr lan
+		;;
+
+	restart)
+		"$0" stop
+		"$0" start
+		;;
+esac
+

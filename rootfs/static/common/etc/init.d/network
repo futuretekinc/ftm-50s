@@ -1,0 +1,36 @@
+#!/bin/sh
+
+. /lib/functions/ftmenv.sh
+
+WAN=$(get_wan)
+
+case "$1" in
+	start)
+		ifdown 	lo
+		ifup 	lo
+
+		ifconfig eth1 0.0.0.0 up
+		if [ "$WAN" = "ppp0" ]
+		then
+			ifconfig eth0 0.0.0.0 up
+		else
+			ifup	eth0
+		fi
+		ifup lan
+
+		echo 1 > /proc/sys/net/ipv4/ip_forward
+		;;
+
+	stop)
+
+		ifdown	lan
+		ifdown 	eth0
+		ifconfig eth1 down
+
+		echo 0 > /proc/sys/net/ipv4/ip_forward
+		;;
+
+	restart)
+		;;
+esac
+

@@ -21,23 +21,33 @@ iface lo inet loopback
 
 # An example ethernet card setup: (broadcast and gateway are optional)
 #
+auto wan
+iface wan inet dhcp
+
+auto lan
+iface lan inet static
+	address 192.168.2.1
+	network 192.168.2.0
+	netmask 255.255.255.0
+	broadcast 192.168.2.255
+    pre-up [ -f /etc/network/local-network-ok ]
+
 auto eth0
 #iface eth0 inet dhcp
 #    pre-up [ -f /etc/network/local-network-ok ]
 iface eth0 inet static
     address 192.168.1.1
-    network 192.168.1.0
-    netmask 255.255.255.0
-    broadcast 192.168.1.255
-    pre-up [ -f /etc/network/local-network-ok ]
+	network 192.168.1.0
+	netmask 255.255.255.0
+	broadcast 192.168.1.255
+	pre-up [ -f /etc/network/local-network-ok ]
 
 auto eth1
 # iface eth1 inet dhcp
 #     pre-up [ -f /etc/network/local-network-ok ]
 iface eth1 inet static
-    address 192.168.2.1
-    network 192.168.2.0
-    netmask 255.255.255.0
-    broadcast 192.168.2.255
-    pre-up [ -f /etc/network/local-network-ok ]
-
+	address 192.168.2.1
+	network 192.168.2.0
+	netmask 255.255.255.0
+	broadcast 192.168.2.255
+	pre-up [ -f /etc/network/local-network-ok ]

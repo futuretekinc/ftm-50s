@@ -1,0 +1,30 @@
+#!/bin/sh
+
+. /lib/functions/ftmenv.sh
+
+TTY=/dev/ttyS1
+WAN=$(get_wan)
+
+case "$1" in
+	start)
+#   ---------------------------------------------
+#	Start 
+#   ---------------------------------------------
+		/bin/factory_reset_dmon &
+
+		if [ $WAN = "ppp0" ]
+		then
+			stty -F $TTY 115200 -echo
+			cat $TTY &> /var/log/modem &
+			/bin/nwcause_dmon &
+			#/bin/check_m_md &
+			/bin/dm_dmon &
+			echo stop > /tmp/ppp.connect
+			/bin/init_modem_log &
+			/bin/new_mmon_0624 &
+			/bin/sms_dmon_0624 &
+			#/bin/fota &
+			#/bin/data_dmon &
+		fi
+		;;
+esac

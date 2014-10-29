@@ -83,7 +83,7 @@ else
 	mkdir "$ROOT"
 fi
 
-if [ $FSTYPE -eq 'ext2' ]
+if [ "$FSTYPE" = "ext2" ]
 then
 	dd if=/dev/zero of=rootfs.ext2 bs=1k count=65535
 	mke2fs -F rootfs.ext2
@@ -97,7 +97,7 @@ fi
 	mkdir -p bin boot sbin lib
 	mkdir -p dev 
 	mkdir -p usr usr/bin usr/sbin usr/lib usr/share
-	mkdir -p var var/run var/lock var/log var/lib var/ftp var/empty
+	mkdir -p var # var/run var/lock var/log var/lib var/ftp var/empty
 	mkdir -p etc
 	mkdir -p rom
 
@@ -280,44 +280,43 @@ fi
 (
     change_dir /lib
 
-	copy lib ld-2.14.1.so ld-linux.so.3
-	copy lib libanl-2.14.1.so libanl.so.1
-	copy lib libBrokenLocale-2.14.1.so libBrokenLocale.so.1
-	copy lib libc-2.14.1.so libc.so.6 libc.so.0 libc.so
+	copy lib ld-2.10.2.so ld-linux.so.3
+	copy lib libanl-2.10.2.so libanl.so.1
+	copy lib libBrokenLocale-2.10.2.so libBrokenLocale.so.1
+	copy lib libc-2.10.2.so libc.so.6 libc.so.0 libc.so
 	copy lib libcfont.so.0.0.0 libcfont.so.0
-	copy lib libcidn-2.14.1.so libcidn.so.1
+	copy lib libcidn-2.10.2.so libcidn.so.1
 	copy lib libcom_err.so.2.1 libcom_err.so.2
 	copy lib libconsole.so.0.0.0 libconsole.so.0
-	copy lib libcrypt-2.14.1.so libcrypt.so.1 libcrypt.so
+	copy lib libcrypt-2.10.2.so libcrypt.so.1 libcrypt.so
 	copy lib libctutils.so.0.0.0 libctutils.so.0
-	copy lib libdl-2.14.1.so libdl.so.2 
+	copy lib libdl-2.10.2.so libdl.so.2 
 	copy lib libe2p.so.2.3 libe2p.so.2
 	copy lib libext2fs.so.2.4 libext2fs.so.2
-	copy lib libgcc_s-4.8.2.so.1 libgcc_s.so.1
+	copy lib libgcc_s-4.7.2.so.1 libgcc_s.so.1
 	copy lib libkeyutils-1.2.so libkeyutils.so.1 libkeyutils.so
-	copy lib libm-2.14.1.so libm.so.6 libm.so 
+	copy lib libm-2.10.2.so libm.so.6 libm.so 
 	copy lib libmemusage.so
 	copy lib libncurses.so.5.5 libncurses.so.5
-	copy lib libnsl-2.14.1.so libnsl.so.1
-	copy lib libnss_compat-2.14.1.so libnss_compat.so.2
-	copy lib libnss_dns-2.14.1.so libnss_dns.so.2
-	copy lib libnss_files-2.14.1.so libnss_files.so.2 
-	copy lib libnss_hesiod-2.14.1.so
+	copy lib libnsl-2.10.2.so libnsl.so.1
+	copy lib libnss_compat-2.10.2.so libnss_compat.so.2
+	copy lib libnss_dns-2.10.2.so libnss_dns.so.2
+	copy lib libnss_files-2.10.2.so libnss_files.so.2 
+	copy lib libnss_hesiod-2.10.2.so
 	copy lib libnss_hesiod.so.2
-	copy lib libnss_nis-2.14.1.so libnss_nis.so.2
-	copy lib libnss_nisplus-2.14.1.so libnss_nisplus.so.2
+	copy lib libnss_nis-2.10.2.so libnss_nis.so.2
+	copy lib libnss_nisplus-2.10.2.so libnss_nisplus.so.2
 	copy lib libpcprofile.so
 #	copy lib libproc-3.2.7.so libproc.so
-	copy lib libpthread-2.14.1.so libpthread.so.0
-	copy lib libresolv-2.14.1.so libresolv.so.2
-	copy lib librt-2.14.1.so librt.so.1 librt.so
+	copy lib libpthread-2.10.2.so libpthread.so.0
+	copy lib libresolv-2.10.2.so libresolv.so.2
+	copy lib librt-2.10.2.so librt.so.1 librt.so
 	copy lib libSegFault.so
 	copy lib libss.so.2.0 libss.so.2
 	copy lib libthread_db-1.0.so libthread_db.so.1
-	copy lib libutil-2.14.1.so libutil.so.1
+	copy lib libutil-2.10.2.so libutil.so.1
 
-	copy lib libstdc++.so.6.0.14 libstdc++.so.6
-	copy usr/lib libcurl.so.4.3.0 libcurl.so.4
+	copy usr/lib libcurl.so.4.2.0 libcurl.so.4
 	copy usr/lib libnetsnmp.so.30.0.2 libnetsnmp.so.30
 	copy usr/lib libnetsnmpmibs.so.30.0.2 libnetsnmpmibs.so.30
 	copy usr/lib libnetsnmptrapd.so.30.0.2 libnetsnmptrapd.so.30
@@ -573,6 +572,7 @@ fi
 	copy usr/lib liblzo2.so.2.0.0 liblzo2.so.2 liblzo2.so
 	copy usr/lib libssl.so.1.0.0 libssl.so
 	copy usr/lib libcrypto.so.1.0.0 libcrypto.so
+	copy usr/lib libstdc++.so.6.0.17 libstdc++.so.6
 
     exit    3
 )

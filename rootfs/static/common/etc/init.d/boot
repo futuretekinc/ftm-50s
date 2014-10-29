@@ -1,0 +1,133 @@
+#!/bin/sh
+
+#   ---------------------------------------------
+#   Prints execution status.
+#
+#   arg1 : Execution status
+#   arg2 : Continue (0) or Abort (1) on error
+#   ---------------------------------------------
+status ()
+{
+       if [ $1 -eq 0 ] ; then
+               echo "[SUCCESS]"
+       else
+               echo "[FAILED]"
+
+               if [ $2 -eq 1 ] ; then
+                       echo "... System init aborted."
+                       exit 1
+               fi
+       fi
+
+}
+
+#   ---------------------------------------------
+#   Create GPIO Control Device
+#   arg1 : GPIO Port Number
+#   arg2 : Device Name
+#   arg3 : Direction
+#   ---------------------------------------------
+create_gpio()
+{
+    case $3 in
+    in )    echo $1 > /sys/class/gpio/export
+            echo in > /sys/class/gpio/gpio$1/direction
+            if [ $4 = low ]
+            then
+				echo 1 > /sys/class/gpio/gpio$1/active_low
+			else
+				echo 0 > /sys/class/gpio/gpio$1/active_low
+			fi
+            ln -s /sys/class/gpio/gpio$1/value /dev/$2;;
+    out )   echo $1 > /sys/class/gpio/export
+            echo out > /sys/class/gpio/gpio$1/direction
+            if [ $4 = low ]
+            then
+				echo 1 > /sys/class/gpio/gpio$1/active_low
+			else
+				echo 0 > /sys/class/gpio/gpio$1/active_low
+			fi
+            if [ $5 = on ]
+            then
+				echo 1 > /sys/class/gpio/gpio$1/value
+			else
+				echo 0 > /sys/class/gpio/gpio$1/value
+			fi
+            ln -s /sys/class/gpio/gpio$1/value /dev/$2;;
+    esac
+}
+
+boot_mount()
+{
+#   ---------------------------------------------
+#   Mount User Space
+#   ---------------------------------------------
+	FAILED=1
+	cat /proc/mtd | grep user >& /dev/null
+	for i in $(cat /proc/mtd | grep user | awk '{print $1}' | sed -e 's/://' -e 's/mtd/mtdblock/')
+	do
+		if [ ! -e /mnt/mtd ]
+		then
+			mkdir /mnt/mtd
+		fi	
+		mount -t yaffs2 /dev/$i /mnt/mtd 2>&1
+		echo " Mounting user Space        : [SUCCESS]"
+		FAILED=0
+		break
+	done
+
+	if [ $FAILED != 0 ]
+	then
+		echo " Mounting user Space        : [FAILED]"
+	fi 
+}
+
+
+
+boot_setenv()
+{
+	#   ---------------------------------------------
+	#   Set PATH
+	#   ---------------------------------------------
+	export LD_LIBRARY_PATH=/lib:/usr/local/lib:/opt/lib:/opt/usr/lib
+	export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/opt/bin
+
+	VERSION=`cat /etc/version`
+
+	hostname $MODEL
+}
+
+boot_setgpio()
+{
+	#   ---------------------------------------------
+	#   GPIO
+	#   ---------------------------------------------
+	create_gpio 15 factory_reset	in 	low
+	create_gpio 77 nf_wp			out	low		off
+	create_gpio 81 gps_rst			out low		off
+	create_gpio 85 led_status		out low		off
+	create_gpio 78 mdm_power_on 	out high	off 
+	create_gpio 49 mdm_on			out low		on
+	create_gpio 50 mdm_reset		out low		on
+}
+
+boot_setconfig()
+{
+	#   ---------------------------------------------
+	#   Set default configuration
+	#   ---------------------------------------------
+	cp -r /etc/configs/* /tmp
+	
+}
+
+. /lib/functions/ftmenv.sh
+
+case "$1" in
+	start)	
+		boot_mount
+		boot_setgpio
+		boot_setconfig
+
+		hostname $(get_model)
+		;;
+esac

@@ -1,5 +1,7 @@
 #!/bin/sh
 
+. /lib/functions/ftmenv.sh
+
 case "$1" in
 	start) 
 		if ! pidof vsftpd | sed "s/$$\$//" | grep -q [0-9]
