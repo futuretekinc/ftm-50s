@@ -1,0 +1,44 @@
+#!/bin/sh
+
+TARGET=dhcpd
+
+case "$1" in
+	"start") 
+		if ! pidof $TARGET | sed "s/$$\$//" | grep -q [0-9]
+		then
+			if [ ! -e /var/lib/$TARGET ]
+			then
+				mkdir -p /var/lib/$TARGET
+			if 	
+
+			if [ -e /var/lib/$TARGET/dhcpd.leases ]
+			then
+				echo -n > /var/lib/$TARGET/dhcpd.leases
+			fi
+
+			/usr/sbin/$TARGET -cf /etc/dhcpd.conf -lf /var/lib/$TARGET/dhcpd.leases &
+		fi	
+		;;
+
+	"stop") 
+		pkill $TARGET
+		;;
+
+	"restart")
+		"$0" "stop"
+		"$0" "start"
+		;;
+
+	"status")
+		if pidof $TARGET | sed "s/$$\$//" | grep -q [0-9]
+		then
+			echo "running"
+		else
+			echo "stopped"
+		fi
+		;;
+
+	*)
+		echo $"Usage: $0 {start|stop|restart|reload}"
+		;;
+esac

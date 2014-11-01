@@ -1,0 +1,33 @@
+#!/bin/sh
+
+boot_mount()
+{
+#   ---------------------------------------------
+#   Mount User Space
+#   ---------------------------------------------
+	FAILED=1
+	cat /proc/mtd | grep user >& /dev/null
+	for i in $(cat /proc/mtd | grep user | awk '{print $1}' | sed -e 's/://' -e 's/mtd/mtdblock/')
+	do
+		if [ ! -e /mnt/mtd ]
+		then
+			mkdir /mnt/mtd
+		fi	
+		mount -t yaffs2 /dev/$i /mnt/mtd 2>&1
+		echo " Mounting user Space        : [SUCCESS]"
+		FAILED=0
+		break
+	done
+
+	if [ $FAILED != 0 ]
+	then
+		echo " Mounting user Space        : [FAILED]"
+	fi 
+}
+
+
+case "$1" in
+	start)	
+		boot_mount
+		;;
+esac

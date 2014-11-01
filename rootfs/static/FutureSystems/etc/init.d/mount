@@ -1,0 +1,25 @@
+#!/bin/sh
+
+case "$1" in
+	start)
+		FAILED=1
+		cat /proc/mtd | grep user >& /dev/null
+		for i in $(cat /proc/mtd | grep user | awk '{print $1}' | sed -e 's/://' -e 's/mtd/mtdblock/')
+		do
+			if [ ! -e /usr/local ]
+			then
+				mkdir /usr/local
+			fi	
+			mount -t yaffs2 /dev/$i /usr/local 2>&1
+			FAILED=0
+			echo " Mounting user Space        : [SUCCESS]"
+			break
+		done
+
+		if [ $FAILED != 0 ]
+		then
+			echo " Mounting user Space        : [FAILED]"
+		fi 
+		;;
+esac
+
