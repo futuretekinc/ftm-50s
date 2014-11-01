@@ -3,24 +3,31 @@
 . /lib/functions/ftmenv.sh
 
 WAN=$(get_wan)
+BRIDGE_MODE=$(is_bridge)
 
 case "$1" in
 	start)
-		brctl addbr lan
-		if [ "$WAN" = "ppp0" ]
+		if [ "$BRIDGE_MODE" = "on" ]
 		then
-			brctl addif lan eth0
+			brctl addbr lan
+			if [ "$WAN" = "ppp0" ]
+			then
+				brctl addif lan eth0
+			fi
+			brctl addif lan eth1
 		fi
-		brctl addif lan eth1
 		;;
 
 	stop)
-		brctl delif lan eth1
-		if [ "$WAN" = "ppp0" ]
+		if [ "$BRIDGE_MODE" = "on" ]
 		then
-			brctl delif lan eth0
+			brctl delif lan eth1
+			if [ "$WAN" = "ppp0" ]
+			then
+				brctl delif lan eth0
+			fi
+			brctl delbr lan
 		fi
-		brctl delbr lan
 		;;
 
 	restart)

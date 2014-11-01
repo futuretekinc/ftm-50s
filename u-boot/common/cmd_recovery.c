@@ -46,14 +46,18 @@ typedef struct
 }	sys_info_t;
 	
 
+#define	PRINTF(verbose, ...) {if (verbose) printf(__VA_ARGS__);}
+#define	PUTS(verbose, ...) {if (verbose) puts(__VA_ARGS__);}
+
 extern int  _nand_erase(ulong offset, size_t size, int clean, int quite);
 extern int  _nand_read(ulong offset, size_t size, void *buff);
 extern int  _nand_write(ulong offset, size_t size, void *buff);
 
 static int	kernel_check_and_recovery(void);
 static int	rootfs_check_and_recovery(void);
-static int	check_kernel(void *loc, int printout);
-static int	check_rootfs(int index, int printout);
+static int	check_kernel(void *loc, int verbose);
+static int	check_rootfs(int index, int vervose);
+static int 	recovery_rootfs(sys_info_t	*sysinfo);
 static int	copy_image(void *dest, void *src, unsigned long len);
 static uint	getenv_uint(char *name);
 static uint	string_to_version(char *s);
@@ -63,6 +67,7 @@ static int	save_rootfs(cmd_tbl_t * cmdtp, int flag, int index, uint addr, uint l
 static int	save_sys_info(sys_info_t *info);
 static int	load_sys_info(sys_info_t *info);
 static void mem_dump(void *addr, int len);
+
 
 extern int nand_curr_device;
 
@@ -199,7 +204,14 @@ int	rootfs_check_and_recovery(void)
 	{
 		
 		int index = (sysinfo.primary_fs + i) % ROOTFS_MAX;	
-		puts("Check RootFS : ");
+		if (i == 0)
+		{
+			printf("Check primary rootfs : ");
+		}
+		else
+		{
+			printf("Check secondary rootfs : ");
+		}
 		if (check_rootfs(index, 0) == 0)
 		{
 			char		buff[64];
@@ -213,9 +225,35 @@ int	rootfs_check_and_recovery(void)
 		printf("[FAILED]\n");
 	}
 
+	if (i == ROOTFS_MAX)
+	{
+		puts("ERROR : All rootfs is incorrect.\n");
+		goto error;	
+	}
+
 	if (i != 0)
 	{
-		puts("Primary RootFS is invalid!\n");	
+		puts("Primary rootfs is invalid!\n");	
+
+		uint	auto_recovery = 0;
+		auto_recovery=getenv_uint("auto_recovery");
+		if (auto_recovery == 1)
+		{
+			char		buff[64];
+			puts("Primary rootfs is configured auto recovery mode!\n");	
+			puts("Recovery start!.\n");
+			if (recovery_rootfs(&sysinfo) == 0)
+			{
+				puts("Primary rootfs recovery is completed !.\n");
+				sprintf(buff, "rootfs_%d_mtd", sysinfo.primary_fs);
+				setenv ("rootfs_mtd", getenv(buff));
+			
+			}
+			else
+			{
+				puts("Primary rootfs recovery is failed!.\n");
+			}
+		}
 	}
 
 	return	0;
@@ -284,7 +322,7 @@ error:
 	return	1;
 }
 
-int check_rootfs(int index, int printout)
+int check_rootfs(int index, int verbose)
 {
 	sys_info_t	sysinfo;
 	void		*buff= (void*)CONFIG_SYS_LOAD_ADDR;	
@@ -295,7 +333,7 @@ int check_rootfs(int index, int printout)
 
 	if (load_sys_info(&sysinfo) != 0)
 	{
-		puts("System information loading failed!\n");
+		PUTS(verbose, "System information loading failed!\n");
 		goto error;
 	}
 
@@ -303,20 +341,20 @@ int check_rootfs(int index, int printout)
 	rootfs_loc= getenv_uint(name);
 	if(rootfs_loc == INVALID_UINT)
 	{
-		printf("ERROR: can't find location[name = 0x%08x]\n", rootfs_loc);	
+		PRINTF(verbose,"ERROR: can't find location[name = 0x%08x]\n", rootfs_loc);	
 		goto error;
 	}
 
 	memcpy(buff, &sysinfo.rootfs[index], sizeof(image_header_t));
 	if (genimg_get_format (buff) != IMAGE_FORMAT_LEGACY)
 	{
-		puts("ERROR: Invalid image format!\n");
+		PUTS(verbose,"ERROR: Invalid image format!\n");
 		goto error;
 	}
 		
 	if (!image_check_hcrc (buff))
 	{
-		puts("ERROR: Invalid head crc!\n");
+		PUTS(verbose,"ERROR: Invalid head crc!\n");
 		goto error;
 	}
 
@@ -325,7 +363,7 @@ int check_rootfs(int index, int printout)
 	if (nand_curr_device < 0 || nand_curr_device >= CONFIG_SYS_MAX_NAND_DEVICE ||
 	    !nand_info[nand_curr_device].name) 
 	{  
-		puts("ERROR: no devices available\n");
+		PUTS(verbose,"ERROR: no devices available\n");
 		goto error;	
 	}
 
@@ -334,23 +372,65 @@ int check_rootfs(int index, int printout)
 	nand = &nand_info[nand_curr_device];
 	if (nand_read_skip_bad(nand, rootfs_loc, (size_t*)&rootfs_size, &((u_char *)buff)[sizeof(image_header_t)]) != 0)
 	{
-		puts("ERROR: nand read failed\n");
+		PUTS(verbose,"ERROR: nand read failed\n");
 		goto error;	
 	}
 
 	if (!image_check_dcrc (buff)) 
 	{
-		puts("ERROR: Invalid rootfs image\n");
+		PUTS(verbose,"ERROR: Invalid rootfs image\n");
 		goto error;
 	} 
 
-	printf ("Root FS at %08X:\n", (uint)rootfs_loc);
+	PRINTF(verbose, "Root FS at %08X:\n", (uint)rootfs_loc);
 	image_print_contents (buff);
 
 	return 0;
 
 error:
 	return	1;
+}
+
+int recovery_rootfs(sys_info_t	*sysinfo)
+{
+	void*	buff;
+	ulong 	primary_loc;
+	ulong	secondary_loc;
+	uint  	rootfs_size;
+	nand_info_t *nandinfo;
+	nand_erase_options_t opts;
+
+	if (sysinfo->primary_fs == 0)
+	{
+		primary_loc = getenv_uint("rootfs_0_loc");
+		secondary_loc = getenv_uint("rootfs_1_loc");
+	}
+	else
+	{
+		primary_loc = getenv_uint("rootfs_1_loc");
+		secondary_loc = getenv_uint("rootfs_0_loc");
+	}
+	rootfs_size= getenv_uint("rootfs_size");
+
+
+	buff = (void *)0x800000;
+	nandinfo= &nand_info[nand_curr_device];
+
+
+	opts.length = rootfs_size;
+	opts.offset = primary_loc;
+	opts.quiet	= 0;
+	opts.jffs2  = 0;
+	opts.scrub  = 0;
+
+	if ((nand_read_skip_bad(nandinfo, secondary_loc, &rootfs_size, buff) != 0) ||
+		(nand_erase_opts(nandinfo, &opts) != 0) ||
+		(nand_write_skip_bad(nandinfo, primary_loc, &rootfs_size, buff) != 0))
+	{
+		return	1;	
+	}
+		
+	return	0;
 }
 
 int copy_image(void *dest, void *src, unsigned long len)

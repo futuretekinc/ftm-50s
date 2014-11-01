@@ -1,7 +1,8 @@
 #!/bin/bash 
 
-TARGET='FTM-50S'
-#TARGET='FTM-50S+TP'	#FTM-50S + Daliworks ThingPlus
+#TARGET='FTM-50S'
+#TARGET='FTM-50S+FS'		#FTM-50S + Future Systems	
+TARGET='FTM-50S+TP'	#FTM-50S + Daliworks ThingPlus
 
 FSTYPE='squashfs'
 VERSION=`date`
@@ -17,6 +18,8 @@ INCLUDE_VSFTPD=1
 INCLUDE_TELNETD=1
 INCLUDE_XINETD=1
 INCLUDE_SER2NET=1
+
+ISC_DHCPD=1
 
 function change_dir()
 {
@@ -585,6 +588,7 @@ fi
 	copy usr/sbin flash_erase
 	copy usr/sbin cron
 	copy usr/sbin ntpdate
+	copy usr/sbin dhcpd
 
 	link	../../bin/busybox	addgroup
 	link	../../bin/busybox	add-shell
@@ -695,6 +699,14 @@ then
 )
 fi
 
+if [ $ISC_DHCPD -eq 1 ]
+then
+(
+	$CP -rf apps/ics-dhcpd/* "$ROOT/"
+
+)
+fi
+
 (
 	copy usr/share/terminfo/v vt100
 	copy usr/share/terminfo/v vt102
@@ -738,6 +750,22 @@ fi
 			$CP -rf node_usr/local/lib "$ROOT/usr/local"
 			$CP -rf node_usr/local/share "$ROOT/usr/local"
 			$CP -rf $STL/usr/share/snmp "$ROOT/usr/share/snmp"
+
+			echo 'on' > "$ROOT/etc/configs/bridge"	
+			;;
+
+		'FTM-50S+FS')				
+			$CP -rf static/general/* "$ROOT/"
+			$CP -rf static/FutureSystems/* "$ROOT/"
+			rm "$ROOT/etc/rc.d/*bridge"
+
+			mkdir -p www
+			$CP -rf www/cgi-bin/*  	"$ROOT/www/cgi-bin/."
+			$CP -rf www/contents/* 	"$ROOT/www/contents/."
+			$CP -rf www/images/*   	"$ROOT/www/images/."
+			$CP -rf www/scripts/*  	"$ROOT/www/scripts/."
+			$CP -rf www/styles/*   	"$ROOT/www/styles/."
+			$CP -rf www/*.html 		"$ROOT/www/"
 			;;
 
 		'FTM-50S')				
@@ -750,6 +778,8 @@ fi
 			$CP -rf www/scripts/*  	"$ROOT/www/scripts/."
 			$CP -rf www/styles/*   	"$ROOT/www/styles/."
 			$CP -rf www/*.html 		"$ROOT/www/"
+
+			echo 'on' > "$ROOT/etc/configs/bridge"	
 			;;
 
 		*)

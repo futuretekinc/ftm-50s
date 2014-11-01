@@ -3,34 +3,59 @@
 . /lib/functions/ftmenv.sh
 
 WAN=$(get_wan)
+BRIDGE_MODE=$(is_bridge)
 
 case "$1" in
 	start)
 		ifdown 	lo
 		ifup 	lo
-
-		ifconfig eth1 0.0.0.0 up
-		if [ "$WAN" = "ppp0" ]
+		
+		if [ "$BRIDGE_MODE" = "on" ]
 		then
-			ifconfig eth0 0.0.0.0 up
+			ifconfig eth1 0.0.0.0 up
+			if [ "$WAN" = "ppp0" ]
+			then
+				ifconfig eth0 0.0.0.0 up
+			else
+				ifup	eth0
+			fi
+			ifup lan
 		else
-			ifup	eth0
+			ifdown eth1
+			ifup eth1
+			ifdown eth0
+			ifup eth0
 		fi
-		ifup lan
 
 		echo 1 > /proc/sys/net/ipv4/ip_forward
 		;;
 
 	stop)
-
-		ifdown	lan
-		ifdown 	eth0
-		ifconfig eth1 down
+		if [ "$BRIDGE_MODE" = "on" ]
+		then
+			ifdown eth0
+			ifdown eth1
+		else
+			ifdown	lan
+			if [ "$WAN" = "ppp0" ]
+			then
+				ifconfig eth0 down
+			else
+				ifdown 	eth0
+			fi
+			ifconfig eth1 down
+		fi
 
 		echo 0 > /proc/sys/net/ipv4/ip_forward
 		;;
 
 	restart)
+		"$0" stop
+		"$0" start
+		;;
+
+	*)
+		echo "Usage : $0 {start|stop|restart}"
 		;;
 esac
 

@@ -278,6 +278,16 @@ static struct fsmc_eccplace fsmc_ecc4_sp_place = {
 #define PARTITION(n, off, sz)	{.name = n, .offset = off, .size = sz}
 
 #if defined(CONFIG_MACH_SPEAR320_FTM)
+#if defined(CONFIG_MACH_FTM50S_FS)
+#define DEFAULT_PARTITION_TABLE(name, ersz, xl, ub, kr, rf)			\
+	static struct mtd_partition partition_info_##name##_blk[] = {	\
+		PARTITION("rootfs0",	  0 * rf * ersz,	40 * rf * ersz),\
+		PARTITION("rootfs1",	 40 * rf * ersz,    40 * rf * ersz),\
+		PARTITION("overlay0",	 80 * rf * ersz,    24 * rf * ersz),\
+		PARTITION("overlay1",	104 * rf * ersz,    24 * rf * ersz),\
+		PARTITION("user0",		128 * rf * ersz,    0),\
+	}
+#else
 #define DEFAULT_PARTITION_TABLE(name, ersz, xl, ub, kr, rf)			\
 	static struct mtd_partition partition_info_##name##_blk[] = {	\
 		PARTITION("rootfs0",	  0 * rf * ersz,	40 * rf * ersz),\
@@ -287,6 +297,7 @@ static struct fsmc_eccplace fsmc_ecc4_sp_place = {
 		PARTITION("user0",		128 * rf * ersz,    64 * rf * ersz),\
 		PARTITION("user1",		196 * rf * ersz,             0),\
 	}
+#endif
 /*
  * Default partition layouts for nand devices
  * Size for "Root file system" is updated in driver based on actual device size

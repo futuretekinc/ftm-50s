@@ -1,7 +1,7 @@
-/* This file is auto generated, version 4 */
+/* This file is auto generated, version 7 */
 #define UTS_MACHINE "arm"
-#define UTS_VERSION "#4 Mon Oct 27 04:17:48 PDT 2014"
-#define LINUX_COMPILE_TIME "04:17:48"
+#define UTS_VERSION "#7 Wed Oct 29 19:57:59 PDT 2014"
+#define LINUX_COMPILE_TIME "19:57:59"
 #define LINUX_COMPILE_BY "xtra"
 #define LINUX_COMPILE_HOST "ubuntu"
 #define LINUX_COMPILE_DOMAIN "(none)"

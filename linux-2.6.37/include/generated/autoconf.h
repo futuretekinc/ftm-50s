@@ -1,7 +1,7 @@
 /*
  * Automatically generated C config: don't edit
  * Linux/arm 2.6.37.1 Kernel Configuration
- * Mon Oct 27 04:15:34 2014
+ * Wed Oct 29 19:57:54 2014
  */
 #define AUTOCONF_INCLUDED
 #define CONFIG_NF_CONNTRACK_H323 1
@@ -394,6 +394,7 @@
 #define CONFIG_INPUT_MOUSEDEV_SCREEN_X 1024
 #define CONFIG_NEED_DMA_MAP_STATE 1
 #define CONFIG_IP_VS_PROTO_TCP 1
+#define CONFIG_MACH_FTM50S_GEN 1
 #define CONFIG_NETFILTER_XT_MATCH_CONNBYTES 1
 #define CONFIG_PAGE_OFFSET 0xC0000000
 #define CONFIG_DEBUG_SPINLOCK_SLEEP 1
