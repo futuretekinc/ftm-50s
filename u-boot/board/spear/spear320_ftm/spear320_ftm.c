@@ -128,6 +128,7 @@ int board_init(void)
 	phy_reset();
 	NF_write_protect_off();
 	telit_init();
+
 	return spear_board_init(MACH_TYPE_SPEAR320_FTM);
 }
 
@@ -177,5 +178,19 @@ int board_eth_init(bd_t *bis)
 				CONFIG_MACB0_PHY) >= 0)
 		ret++;
 #endif
+
+	{
+		if ((miiphy_write("mii0", 0, 31, 0x0004) != 0) ||
+			(miiphy_write("mii0", 0, 16, 0x4077) != 0) ||
+			(miiphy_write("mii0", 0, 31, 0x0000) != 0))
+		{
+		}
+
+		if ((miiphy_write("macb0", 0, 31, 0x0004) != 0) ||
+			(miiphy_write("macb0", 0, 16, 0x4077) != 0) ||
+			(miiphy_write("macb0", 0, 31, 0x0000) != 0))
+		{
+		}
+	}
 	return ret;
 }
