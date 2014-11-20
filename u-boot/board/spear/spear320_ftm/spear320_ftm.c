@@ -180,17 +180,29 @@ int board_eth_init(bd_t *bis)
 #endif
 
 	{
-		if ((miiphy_write("mii0", 0, 31, 0x0004) != 0) ||
-			(miiphy_write("mii0", 0, 16, 0x4077) != 0) ||
-			(miiphy_write("mii0", 0, 31, 0x0000) != 0))
+		if ((miiphy_write("mii0", 0, 31, 0x0004) != 0) || 
+			(miiphy_write("mii0", 0, 16, 0x4077) != 0))
 		{
 		}
+		miiphy_write("mii0", 0, 31, 0x0000);
 
-		if ((miiphy_write("macb0", 0, 31, 0x0004) != 0) ||
-			(miiphy_write("macb0", 0, 16, 0x4077) != 0) ||
-			(miiphy_write("macb0", 0, 31, 0x0000) != 0))
+		if ((miiphy_write("mii0", 0, 31, 0x0007) != 0) || 
+			(miiphy_write("mii0", 0, 19, 0x0001) != 0))
 		{
 		}
+		miiphy_write("mii0", 0, 31, 0x0000);
+
+		if ((miiphy_write("macb0", 0, 31, 0x0004) != 0) || 
+			(miiphy_write("macb0", 0, 16, 0x4077) != 0))
+		{
+		}
+		miiphy_write("macb0", 0, 31, 0x0000);
+
+		if ((miiphy_write("macb0", 0, 31, 0x0007) != 0) || 
+			(miiphy_write("macb0", 0, 19, 0x0001) != 0))
+		{
+		}
+		miiphy_write("macb0", 0, 31, 0x0000);
 	}
 	return ret;
 }
