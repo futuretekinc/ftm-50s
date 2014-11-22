@@ -1,0 +1,12 @@
+: Configure command line arguments.
+config_arg0='./Configure'
+config_args='-Dusecrosscompile -Dtargethost=arm-linux -Dtargetarch=arm-linux -Dcc=armv5-linux-gcc -Dusrinc=/opt/STM/STLinux-2.4/devkit/armv5/arm-926ejs-linux-gnueabi/include/ -Dincpth=/opt/STM/STLinux-2.4/devkit/armv5/arm-926ejs-linux-gnueabi/include/ -Dlibpth=/opt/STM/STLinux-2.4/devkit/armv5/lib -Dtargetdir=/home/xtra/work/ftm-50s/apps/target'
+config_argc=8
+config_arg1='-Dusecrosscompile'
+config_arg2='-Dtargethost=arm-linux'
+config_arg3='-Dtargetarch=arm-linux'
+config_arg4='-Dcc=armv5-linux-gcc'
+config_arg5='-Dusrinc=/opt/STM/STLinux-2.4/devkit/armv5/arm-926ejs-linux-gnueabi/include/'
+config_arg6='-Dincpth=/opt/STM/STLinux-2.4/devkit/armv5/arm-926ejs-linux-gnueabi/include/'
+config_arg7='-Dlibpth=/opt/STM/STLinux-2.4/devkit/armv5/lib'
+config_arg8='-Dtargetdir=/home/xtra/work/ftm-50s/apps/target'

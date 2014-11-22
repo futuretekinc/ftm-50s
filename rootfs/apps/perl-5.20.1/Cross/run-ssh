@@ -1,0 +1,23 @@
+#!/bin/sh
+env=''
+case "$1" in
+-cwd)
+  shift
+  cwd=$1
+  shift
+  ;;
+esac
+case "$1" in
+-env)
+  shift
+  env=$1
+  shift
+  ;;
+esac
+case "$cwd" in
+'') cwd=/home/xtra/work/ftm-50s/apps/target ;;
+esac
+exe=$1
+shift
+/home/xtra/work/ftm-50s/rootfs/apps/perl-5.20.1/Cross/to-scp $exe
+ssh -p 22 -l root arm-linux "cd $cwd && $env $exe $@"

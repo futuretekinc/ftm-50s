@@ -1,0 +1,1 @@
+/home/xtra/work/ftm-50s/rootfs/apps/perl-5.20.1/cpan/Locale-Maketext-Simple/t/3-load_po_with_i_default.t

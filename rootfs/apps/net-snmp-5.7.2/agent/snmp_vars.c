@@ -428,13 +428,13 @@ should_init(const char *module_name)
         listp = initlist;
         while (listp) {
             if (strcmp(listp->module_name, module_name) == 0) {
-                DEBUGMSGTL(("mib_init", "initializing: %s\n",
+                DEBUGMSGTL(("mib_init1", "initializing: %s\n",
                             module_name));
                 return DO_INITIALIZE;
             }
             listp = listp->next;
         }
-        DEBUGMSGTL(("mib_init", "skipping:     %s\n", module_name));
+        DEBUGMSGTL(("mib_init1", "skipping:     %s\n", module_name));
         return DONT_INITIALIZE;
     }
 
@@ -445,14 +445,14 @@ should_init(const char *module_name)
         listp = noinitlist;
         while (listp) {
             if (strcmp(listp->module_name, module_name) == 0) {
-                DEBUGMSGTL(("mib_init", "skipping:     %s\n",
+                DEBUGMSGTL(("mib_init2", "skipping:     %s\n",
                             module_name));
                 return DONT_INITIALIZE;
             }
             listp = listp->next;
         }
     }
-    DEBUGMSGTL(("mib_init", "initializing: %s\n", module_name));
+    DEBUGMSGTL(("mib_init2", "initializing: %s\n", module_name));
 
     /*
      * initialize it 

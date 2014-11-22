@@ -1,0 +1,1 @@
+/home/xtra/work/ftm-50s/rootfs/apps/perl-5.20.1/hints/irix_6_1.sh

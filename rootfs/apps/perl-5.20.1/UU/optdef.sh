@@ -1,0 +1,9 @@
+#!/bin/sh
+usecrosscompile='define'
+targethost='arm-linux'
+targetarch='arm-linux'
+cc='armv5-linux-gcc'
+usrinc='/opt/STM/STLinux-2.4/devkit/armv5/arm-926ejs-linux-gnueabi/include/'
+incpth='/opt/STM/STLinux-2.4/devkit/armv5/arm-926ejs-linux-gnueabi/include/'
+libpth='/opt/STM/STLinux-2.4/devkit/armv5/lib'
+targetdir='/home/xtra/work/ftm-50s/apps/target'

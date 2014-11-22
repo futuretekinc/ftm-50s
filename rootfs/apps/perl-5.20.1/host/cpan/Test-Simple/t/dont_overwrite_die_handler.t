@@ -1,0 +1,1 @@
+/home/xtra/work/ftm-50s/rootfs/apps/perl-5.20.1/cpan/Test-Simple/t/dont_overwrite_die_handler.t
