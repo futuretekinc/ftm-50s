@@ -323,10 +323,10 @@ fi
 	copy lib libutil-2.10.2.so libutil.so.1
 
 	copy usr/lib libcurl.so.4.2.0 libcurl.so.4
-	copy usr/lib libnetsnmp.so.30.0.2 libnetsnmp.so.30
-	copy usr/lib libnetsnmpmibs.so.30.0.2 libnetsnmpmibs.so.30
-	copy usr/lib libnetsnmptrapd.so.30.0.2 libnetsnmptrapd.so.30
-	copy usr/lib libnetsnmpagent.so.30.0.2 libnetsnmpagent.so.30
+	#copy usr/lib libnetsnmp.so.30.0.2 libnetsnmp.so.30
+	#copy usr/lib libnetsnmpmibs.so.30.0.2 libnetsnmpmibs.so.30
+	#copy usr/lib libnetsnmptrapd.so.30.0.2 libnetsnmptrapd.so.30
+	#copy usr/lib libnetsnmpagent.so.30.0.2 libnetsnmpagent.so.30
 
 	exit	3
 )

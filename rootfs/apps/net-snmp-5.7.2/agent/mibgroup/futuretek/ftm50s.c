@@ -45,37 +45,58 @@ struct variable4 ftm50s_variables[] = {
 #define PRODDESCRIPTION		6
 {PRODDESCRIPTION,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RWRITE,
  var_ftm50s, 2,  { 1,6 }},
-#define NETTYPE		7
-{NETTYPE,  ASN_INTEGER,  NETSNMP_OLDAPI_RONLY,
+#define NETCOUNT		7
+{NETCOUNT,  ASN_INTEGER,  NETSNMP_OLDAPI_RONLY,
  var_ftm50s, 2,  { 2,1 }},
-#define NETMAC		8
-{NETMAC,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
- var_ftm50s, 2,  { 2,2 }},
-#define NETIP		9
-{NETIP,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
- var_ftm50s, 2,  { 2,3 }},
-#define NETMASK		10
-{NETMASK,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
- var_ftm50s, 2,  { 2,4 }},
-#define NETGATEWAYIP		11
+#define NETGATEWAYIP		8
 {NETGATEWAYIP,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
- var_ftm50s, 2,  { 2,5 }},
-#define TEMPCOUNT		12
+ var_ftm50s, 2,  { 2,3 }},
+#define POINTCOUNT		9
+{POINTCOUNT,  ASN_INTEGER,  NETSNMP_OLDAPI_RONLY,
+ var_ftm50s, 3,  { 3,1,1 }},
+#define TEMPCOUNT		10
 {TEMPCOUNT,  ASN_INTEGER,  NETSNMP_OLDAPI_RONLY,
  var_ftm50s, 3,  { 3,256,1 }},
-#define HUMICOUNT		13
+#define HUMICOUNT		11
 {HUMICOUNT,  ASN_INTEGER,  NETSNMP_OLDAPI_RONLY,
  var_ftm50s, 3,  { 3,512,1 }},
-#define DICOUNT		14
+#define DICOUNT		12
 {DICOUNT,  ASN_INTEGER,  NETSNMP_OLDAPI_RONLY,
  var_ftm50s, 3,  { 3,1281,1 }},
-#define DOCOUNT		15
+#define DOCOUNT		13
 {DOCOUNT,  ASN_INTEGER,  NETSNMP_OLDAPI_RONLY,
  var_ftm50s, 3,  { 3,1537,1 }},
-#define RLCOUNT		16
+#define RLCOUNT		14
 {RLCOUNT,  ASN_INTEGER,  NETSNMP_OLDAPI_RONLY,
  var_ftm50s, 3,  { 3,1538,1 }},
 
+#define NETID		1
+{NETID,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
+ var_netTable, 4,  { 2,2 , 1, 1 }},
+#define NETTYPE		2
+{NETTYPE,  ASN_INTEGER,  NETSNMP_OLDAPI_RONLY,
+ var_netTable, 4,  { 2,2 , 1, 2 }},
+#define NETMAC		3
+{NETMAC,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
+ var_netTable, 4,  { 2,2 , 1, 3 }},
+#define NETIP		4
+{NETIP,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RWRITE,
+ var_netTable, 4,  { 2,2 , 1, 4 }},
+#define NETMASK		5
+{NETMASK,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
+ var_netTable, 4,  { 2,2 , 1, 5 }},
+#define POINTGROUPID		1
+{POINTGROUPID,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
+ var_pointTable, 5,  { 3,1,2 , 1, 1 }},
+#define POINTGROUPTYPE		2
+{POINTGROUPTYPE,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
+ var_pointTable, 5,  { 3,1,2 , 1, 2 }},
+#define POINTGROUPCOUNT		3
+{POINTGROUPCOUNT,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
+ var_pointTable, 5,  { 3,1,2 , 1, 3 }},
+#define POINTTGROUPOID		4
+{POINTTGROUPOID,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
+ var_pointTable, 5,  { 3,1,2 , 1, 4 }},
 #define TEMPID		1
 {TEMPID,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
  var_tempTable, 5,  { 3,256,2 , 1, 1 }},
@@ -285,19 +306,13 @@ var_ftm50s(struct variable *vp,
         *write_method = write_prodDescription;
         VAR = VALUE;	/* XXX */
         return (u_char*) &VAR;
-    case NETTYPE:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    case NETMAC:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    case NETIP:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    case NETMASK:
+    case NETCOUNT:
         VAR = VALUE;	/* XXX */
         return (u_char*) &VAR;
     case NETGATEWAYIP:
+        VAR = VALUE;	/* XXX */
+        return (u_char*) &VAR;
+    case POINTCOUNT:
         VAR = VALUE;	/* XXX */
         return (u_char*) &VAR;
     case TEMPCOUNT:
@@ -322,6 +337,120 @@ var_ftm50s(struct variable *vp,
 }
 
 
+/*
+ * var_netTable():
+ *   Handle this table separately from the scalar value case.
+ *   The workings of this are basically the same as for var_ftm50s above.
+ */
+unsigned char *
+var_netTable(struct variable *vp,
+    	    oid     *name,
+    	    size_t  *length,
+    	    int     exact,
+    	    size_t  *var_len,
+    	    WriteMethod **write_method)
+{
+    /* variables we may use later */
+    static long long_ret;
+    static u_long ulong_ret;
+    static unsigned char string[SPRINT_MAX_LEN];
+    static oid objid[MAX_OID_LEN];
+    static struct counter64 c64;
+
+    /* 
+   * This assumes that the table is a 'simple' table.
+   *	See the implementation documentation for the meaning of this.
+   *	You will need to provide the correct value for the TABLE_SIZE parameter
+   *
+   * If this table does not meet the requirements for a simple table,
+   *	you will need to provide the replacement code yourself.
+   *	Mib2c is not smart enough to write this for you.
+   *    Again, see the implementation documentation for what is required.
+   */
+    if (header_simple_table(vp,name,length,exact,var_len,write_method, TABLE_SIZE)
+                                                == MATCH_FAILED )
+    return NULL;
+
+    /* 
+   * this is where we do the value assignments for the mib results.
+   */
+    switch(vp->magic) {
+    case NETID:
+        VAR = VALUE;	/* XXX */
+        return (u_char*) &VAR;
+    case NETTYPE:
+        VAR = VALUE;	/* XXX */
+        return (u_char*) &VAR;
+    case NETMAC:
+        VAR = VALUE;	/* XXX */
+        return (u_char*) &VAR;
+    case NETIP:
+        *write_method = write_netIP;
+        VAR = VALUE;	/* XXX */
+        return (u_char*) &VAR;
+    case NETMASK:
+        VAR = VALUE;	/* XXX */
+        return (u_char*) &VAR;
+    default:
+      ERROR_MSG("");
+    }
+    return NULL;
+}
+/*
+ * var_pointTable():
+ *   Handle this table separately from the scalar value case.
+ *   The workings of this are basically the same as for var_ftm50s above.
+ */
+unsigned char *
+var_pointTable(struct variable *vp,
+    	    oid     *name,
+    	    size_t  *length,
+    	    int     exact,
+    	    size_t  *var_len,
+    	    WriteMethod **write_method)
+{
+    /* variables we may use later */
+    static long long_ret;
+    static u_long ulong_ret;
+    static unsigned char string[SPRINT_MAX_LEN];
+    static oid objid[MAX_OID_LEN];
+    static struct counter64 c64;
+
+    /* 
+   * This assumes that the table is a 'simple' table.
+   *	See the implementation documentation for the meaning of this.
+   *	You will need to provide the correct value for the TABLE_SIZE parameter
+   *
+   * If this table does not meet the requirements for a simple table,
+   *	you will need to provide the replacement code yourself.
+   *	Mib2c is not smart enough to write this for you.
+   *    Again, see the implementation documentation for what is required.
+   */
+    if (header_simple_table(vp,name,length,exact,var_len,write_method, TABLE_SIZE)
+                                                == MATCH_FAILED )
+    return NULL;
+
+    /* 
+   * this is where we do the value assignments for the mib results.
+   */
+    switch(vp->magic) {
+    case POINTGROUPID:
+        VAR = VALUE;	/* XXX */
+        return (u_char*) &VAR;
+    case POINTGROUPTYPE:
+        VAR = VALUE;	/* XXX */
+        return (u_char*) &VAR;
+    case POINTGROUPCOUNT:
+        VAR = VALUE;	/* XXX */
+        return (u_char*) &VAR;
+    case POINTTGROUPOID:
+        VAR = VALUE;	/* XXX */
+        return (u_char*) &VAR;
+    default:
+      ERROR_MSG("");
+    }
+    return NULL;
+}
 /*
  * var_tempTable():
  *   Handle this table separately from the scalar value case.
@@ -746,6 +875,61 @@ write_prodDescription(int      action,
     return SNMP_ERR_NOERROR;
 }
 
+int
+write_netIP(int      action,
+            u_char   *var_val,
+            u_char   var_val_type,
+            size_t   var_val_len,
+            u_char   *statP,
+            oid      *name,
+            size_t   name_len)
+{
+    char value;
+    int size;
+
+    switch ( action ) {
+        case RESERVE1:
+          if (var_val_type != ASN_OCTET_STR) {
+              fprintf(stderr, "write to ftm50s not ASN_OCTET_STR\n");
+              return SNMP_ERR_WRONGTYPE;
+          }
+          if (var_val_len > sizeof(char)) {
+              fprintf(stderr,"write to ftm50s: bad length\n");
+              return SNMP_ERR_WRONGLENGTH;
+          }
+          break;
+
+        case RESERVE2:
+          size  = var_val_len;
+          value = * (char *) var_val;
+
+          break;
+
+        case FREE:
+             /* Release any resources that have been allocated */
+          break;
+
+        case ACTION:
+             /*
+              * The variable has been stored in 'value' for you to use,
+              * and you have just been asked to do something with it.
+              * Note that anything done here must be reversable in the UNDO case
+              */
+          break;
+
+        case UNDO:
+             /* Back out any changes made in the ACTION case */
+          break;
+
+        case COMMIT:
+             /*
+              * Things are working well, so it's now safe to make the change
+              * permanently.  Make sure that anything done here can't fail!
+              */
+          break;
+    }
+    return SNMP_ERR_NOERROR;
+}
 int
 write_tempName(int      action,
             u_char   *var_val,

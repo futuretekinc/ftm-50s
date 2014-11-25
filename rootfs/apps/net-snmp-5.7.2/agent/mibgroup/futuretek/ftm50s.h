@@ -8,12 +8,15 @@
 /* function declarations */
 void init_ftm50s(void);
 FindVarMethod var_ftm50s;
+FindVarMethod var_netTable;
+FindVarMethod var_pointTable;
 FindVarMethod var_tempTable;
 FindVarMethod var_humiTable;
 FindVarMethod var_diTable;
 FindVarMethod var_doTable;
 FindVarMethod var_rlTable;
     WriteMethod write_prodDescription;
+    WriteMethod write_netIP;
     WriteMethod write_tempName;
     WriteMethod write_tempState;
     WriteMethod write_tempUpdateInterval;

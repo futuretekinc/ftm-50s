@@ -1,12 +1,9 @@
---SME_msg: This MIB has been generated using a demo version of SimpleMibEditor.
-
-FTM-50-MIB DEFINITIONS ::= BEGIN
+    --SME_msg: This MIB has been generated using a demo version of SimpleMibEditor.
+FTM-50S-MIB DEFINITIONS ::= BEGIN
     IMPORTS
     Integer32, OBJECT-TYPE, MODULE-IDENTITY,
     enterprises
         FROM SNMPv2-SMI
-    futuretek
-        FROM FUTURETEK-MIB
     DisplayString
         FROM SNMPv2-TC
     OBJECT-GROUP
@@ -17,12 +14,13 @@ FTM-50-MIB DEFINITIONS ::= BEGIN
         ORGANIZATION        "FutureTek,Inc."
         CONTACT-INFO        "xtra"
         DESCRIPTION         "Please replace this text with your description."
-        REVISION            "201410291938Z"
-        DESCRIPTION         "."
+
+        REVISION            "201410241125Z"
+        DESCRIPTION         "initial version of this module"
         ::= { futuretek 2 }
 
 
---    futuretek OBJECT IDENTIFIER ::= { enterprises 42251 }
+    futuretek OBJECT IDENTIFIER ::= { enterprises 42251 }
 
     product OBJECT IDENTIFIER ::= { ftm50s 1 }
 
@@ -63,52 +61,162 @@ FTM-50-MIB DEFINITIONS ::= BEGIN
 
     prodDescription OBJECT-TYPE
         SYNTAX              DisplayString
-        MAX-ACCESS          read-create
+        MAX-ACCESS          read-write
         STATUS              current
         DESCRIPTION         "Please replace this text with your description."
         ::= { product 6 }
 
     network OBJECT IDENTIFIER ::= { ftm50s 2 }
 
-    netType OBJECT-TYPE
+    netCount OBJECT-TYPE
         SYNTAX              Integer32
         MAX-ACCESS          read-only
         STATUS              current
-        DESCRIPTION         "Please replace this text with your description."
+        DESCRIPTION         "Network interface count."
         ::= { network 1 }
+
+    netTable OBJECT-TYPE
+        SYNTAX              SEQUENCE OF NetEntry
+        MAX-ACCESS          not-accessible
+        STATUS              current
+        DESCRIPTION         "Network Interface table."
+        ::= { network 2 }
+
+    netEntry OBJECT-TYPE
+        SYNTAX              NetEntry
+        MAX-ACCESS          not-accessible
+        STATUS              current
+        DESCRIPTION         "Network Interface."
+        INDEX               {
+                                netID
+                            }
+        ::= { netTable 1 }
+
+    NetEntry ::= SEQUENCE {
+        netID
+            DisplayString,
+        netType
+            Integer32,
+        netMAC
+            DisplayString,
+        netIP
+            DisplayString,
+        netMask
+            DisplayString
+    }
+
+    netID OBJECT-TYPE
+        SYNTAX              DisplayString 
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Interface Index"
+        ::= { netEntry 1 }
+
+    netType OBJECT-TYPE
+        SYNTAX              Integer32 
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Interface Type(Ethernet, Wi-Fi, WCDMA, LTE)."
+        ::= { netEntry 2 }
 
     netMAC OBJECT-TYPE
         SYNTAX              DisplayString
         MAX-ACCESS          read-only
         STATUS              current
-        DESCRIPTION         "Please replace this text with your description."
-        ::= { network 2 }
+        DESCRIPTION         "MAC Address"
+        ::= { netEntry 3 }
 
     netIP OBJECT-TYPE
         SYNTAX              DisplayString
-        MAX-ACCESS          read-only
+        MAX-ACCESS          read-write
         STATUS              current
-        DESCRIPTION         "Please replace this text with your description."
-        ::= { network 3 }
+        DESCRIPTION         "IP Address"
+        ::= { netEntry 4 }
 
     netMask OBJECT-TYPE
         SYNTAX              DisplayString
         MAX-ACCESS          read-only
         STATUS              current
-        DESCRIPTION         "Please replace this text with your description."
-        ::= { network 4 }
+        DESCRIPTION         "Subnet Mask"
+        ::= { netEntry 5 }
 
     netGatewayIP OBJECT-TYPE
         SYNTAX              DisplayString
         MAX-ACCESS          read-only
         STATUS              current
         DESCRIPTION         "Please replace this text with your description."
-        ::= { network 5 }
+        ::= { network 3 }
+
 
     endpoints OBJECT IDENTIFIER ::= { ftm50s 3 }
 
     epPoint OBJECT IDENTIFIER ::= { endpoints 1 }
 
+    pointCount OBJECT-TYPE
+        SYNTAX              Integer32
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { epPoint 1 }
+
+    pointTable OBJECT-TYPE
+        SYNTAX              SEQUENCE OF PointEntry
+        MAX-ACCESS          not-accessible
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { epPoint 2 }
+
+    pointEntry OBJECT-TYPE
+        SYNTAX              PointEntry
+        MAX-ACCESS          not-accessible
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        INDEX               {
+                                pointGroupID
+                            }
+        ::= { pointTable 1 }
+
+    PointEntry ::= SEQUENCE {
+        pointGroupID
+            DisplayString,
+        pointGroupType
+            DisplayString,
+        pointGroupCount
+            DisplayString,
+        pointtGroupOID
+            DisplayString
+    }
+
+   pointGroupID OBJECT-TYPE
+        SYNTAX              DisplayString
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { pointEntry 1 }
+
+   pointGroupType OBJECT-TYPE
+        SYNTAX              DisplayString
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { pointEntry 2 }
+
+   pointGroupCount OBJECT-TYPE
+        SYNTAX              DisplayString
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { pointEntry 3 }
+
+   pointtGroupOID OBJECT-TYPE
+        SYNTAX              DisplayString
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { pointEntry 4 }
+
+	
+	
     epTemperature OBJECT IDENTIFIER ::= { endpoints 256 }
 
     tempCount OBJECT-TYPE

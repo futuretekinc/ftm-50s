@@ -31,7 +31,7 @@ if (defined(&my_getenv("SNMPSHAREPATH"))) {
   $opts{'c'} = &my_getenv("SNMPSHAREPATH") . "/snmpconf-data";
 }
 else {
-  $opts{'c'} = "/usr/local/share/snmp/snmpconf-data";
+  $opts{'c'} = "/usr/share/snmp/snmpconf-data";
 }
  
 # default config file path
@@ -39,7 +39,7 @@ if (defined(&my_getenv("SNMPCONFPATH"))) {
   $confpath = &my_getenv("SNMPCONFPATH");
 }
 else {
-  $confpath = "/usr/local/share/snmp";
+  $confpath = "/usr/share/snmp";
 }
 
 # home environment variable
@@ -100,7 +100,7 @@ if ($^O eq 'MSWin32') {
   $ENV_SEPARATOR = ';';
 }
 my @searchpath = split(/$ENV_SEPARATOR/, $confpath);
-push @searchpath, "/usr/local/etc/snmp";
+push @searchpath, "/usr/etc/snmp";
 push @searchpath, ".";
 push @searchpath, "$home";
 

@@ -1,0 +1,1201 @@
+creating directory /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/version.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/version.h
+installing version.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/net-snmp-features.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/net-snmp-features.h
+installing net-snmp-features.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp
+creating directory /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp
+libtool: install: /usr/bin/install -c -m 644 include/net-snmp/net-snmp-config.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/net-snmp-config.h
+installing include/net-snmp/net-snmp-config.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp
+creating directory /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/aix.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/aix.h
+installing aix.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/bsd.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/bsd.h
+installing bsd.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/bsdi3.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/bsdi3.h
+installing bsdi3.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/bsdi4.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/bsdi4.h
+installing bsdi4.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/bsdi.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/bsdi.h
+installing bsdi.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/cygwin.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/cygwin.h
+installing cygwin.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/darwin.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/darwin.h
+installing darwin.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/darwin7.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/darwin7.h
+installing darwin7.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/darwin8.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/darwin8.h
+installing darwin8.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/darwin9.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/darwin9.h
+installing darwin9.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/darwin10.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/darwin10.h
+installing darwin10.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/dragonfly.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/dragonfly.h
+installing dragonfly.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/dynix.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/dynix.h
+installing dynix.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/freebsd2.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/freebsd2.h
+installing freebsd2.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/freebsd3.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/freebsd3.h
+installing freebsd3.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/freebsd4.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/freebsd4.h
+installing freebsd4.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/freebsd5.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/freebsd5.h
+installing freebsd5.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/freebsd6.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/freebsd6.h
+installing freebsd6.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/freebsd7.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/freebsd7.h
+installing freebsd7.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/freebsd8.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/freebsd8.h
+installing freebsd8.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/freebsd9.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/freebsd9.h
+installing freebsd9.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/freebsd10.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/freebsd10.h
+installing freebsd10.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/freebsd.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/freebsd.h
+installing freebsd.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/generic.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/generic.h
+installing generic.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/hpux.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/hpux.h
+installing hpux.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/irix.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/irix.h
+installing irix.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/linux.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/linux.h
+installing linux.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/mingw32.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/mingw32.h
+installing mingw32.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/mips.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/mips.h
+installing mips.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/netbsd.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/netbsd.h
+installing netbsd.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/osf5.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/osf5.h
+installing osf5.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/openbsd.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/openbsd.h
+installing openbsd.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/openbsd5.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/openbsd5.h
+installing openbsd5.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/openbsd4.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/openbsd4.h
+installing openbsd4.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/solaris2.3.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/solaris2.3.h
+installing solaris2.3.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/solaris2.4.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/solaris2.4.h
+installing solaris2.4.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/solaris2.5.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/solaris2.5.h
+installing solaris2.5.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/solaris2.6.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/solaris2.6.h
+installing solaris2.6.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/solaris.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/solaris.h
+installing solaris.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/sunos.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/sunos.h
+installing sunos.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/svr5.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/svr5.h
+installing svr5.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/sysv.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/sysv.h
+installing sysv.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/system/ultrix4.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system/ultrix4.h
+installing ultrix4.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/system
+creating directory /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/machine
+libtool: install: /usr/bin/install -c -m 644 ./include/net-snmp/machine/generic.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/machine/generic.h
+installing generic.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/machine
+making installlibs in /home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/snmplib
+make[1]: Entering directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/snmplib'
+libtool: install: /usr/bin/install -c .libs/libnetsnmp.so.30.0.2 /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmp.so.30.0.2
+libtool: install: (cd /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib && { ln -s -f libnetsnmp.so.30.0.2 libnetsnmp.so.30 || { rm -f libnetsnmp.so.30 && ln -s libnetsnmp.so.30.0.2 libnetsnmp.so.30; }; })
+libtool: install: (cd /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib && { ln -s -f libnetsnmp.so.30.0.2 libnetsnmp.so || { rm -f libnetsnmp.so && ln -s libnetsnmp.so.30.0.2 libnetsnmp.so; }; })
+libtool: install: /usr/bin/install -c .libs/libnetsnmp.lai /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmp.la
+libtool: install: /usr/bin/install -c .libs/libnetsnmp.a /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmp.a
+libtool: install: chmod 644 /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmp.a
+libtool: install: ranlib /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmp.a
+installing libnetsnmp.la in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/STM/STLinux-2.4/devkit/armv5/bin:.:/sbin" ldconfig -n /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[1]: Leaving directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/snmplib'
+making installlibs in /home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/agent
+make[1]: Entering directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/agent'
+libtool: install: (cd /home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/agent; /bin/bash /home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/libtool  --mode=relink armv5-linux-gcc -fno-strict-aliasing -g -O2 -Ulinux -Dlinux=linux -rpath /usr/lib -version-info 30:2:0 -o libnetsnmpagent.la helpers/all_helpers.lo helpers/baby_steps.lo helpers/bulk_to_next.lo helpers/cache_handler.lo helpers/debug_handler.lo helpers/instance.lo helpers/mode_end_call.lo helpers/multiplexer.lo helpers/null.lo helpers/old_api.lo helpers/read_only.lo helpers/row_merge.lo helpers/scalar.lo helpers/scalar_group.lo helpers/serialize.lo helpers/snmp_get_statistic.lo helpers/stash_cache.lo helpers/stash_to_next.lo helpers/table.lo helpers/table_array.lo helpers/table_container.lo helpers/table_data.lo helpers/table_dataset.lo helpers/table_iterator.lo helpers/table_row.lo helpers/table_tdata.lo helpers/watcher.lo agent_handler.lo agent_index.lo agent_read_config.lo agent_registry.lo agent_sysORTable.lo agent_trap.lo kernel.lo snmp_agent.lo snmp_vars.lo mibgroup/snmpv3/usmConf.lo mibgroup/agentx/master.lo mibgroup/agentx/subagent.lo mibgroup/utilities/execute.lo mibgroup/utilities/iquery.lo mibgroup/mibII/vacm_conf.lo mibgroup/agentx/protocol.lo mibgroup/agentx/client.lo mibgroup/agentx/master_admin.lo mibgroup/agentx/agentx_config.lo ../snmplib/libnetsnmp.la -lm -inst-prefix-dir /home/xtra/work/ftm-50s/rootfs/apps/target)
+libtool: relink: armv5-linux-gcc -shared  -fPIC -DPIC  helpers/.libs/all_helpers.o helpers/.libs/baby_steps.o helpers/.libs/bulk_to_next.o helpers/.libs/cache_handler.o helpers/.libs/debug_handler.o helpers/.libs/instance.o helpers/.libs/mode_end_call.o helpers/.libs/multiplexer.o helpers/.libs/null.o helpers/.libs/old_api.o helpers/.libs/read_only.o helpers/.libs/row_merge.o helpers/.libs/scalar.o helpers/.libs/scalar_group.o helpers/.libs/serialize.o helpers/.libs/snmp_get_statistic.o helpers/.libs/stash_cache.o helpers/.libs/stash_to_next.o helpers/.libs/table.o helpers/.libs/table_array.o helpers/.libs/table_container.o helpers/.libs/table_data.o helpers/.libs/table_dataset.o helpers/.libs/table_iterator.o helpers/.libs/table_row.o helpers/.libs/table_tdata.o helpers/.libs/watcher.o .libs/agent_handler.o .libs/agent_index.o .libs/agent_read_config.o .libs/agent_registry.o .libs/agent_sysORTable.o .libs/agent_trap.o .libs/kernel.o .libs/snmp_agent.o .libs/snmp_vars.o mibgroup/snmpv3/.libs/usmConf.o mibgroup/agentx/.libs/master.o mibgroup/agentx/.libs/subagent.o mibgroup/utilities/.libs/execute.o mibgroup/utilities/.libs/iquery.o mibgroup/mibII/.libs/vacm_conf.o mibgroup/agentx/.libs/protocol.o mibgroup/agentx/.libs/client.o mibgroup/agentx/.libs/master_admin.o mibgroup/agentx/.libs/agentx_config.o   -L/home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib -L/usr/lib -lnetsnmp -lrt -lm  -O2   -Wl,-soname -Wl,libnetsnmpagent.so.30 -o .libs/libnetsnmpagent.so.30.0.2
+libtool: install: /usr/bin/install -c .libs/libnetsnmpagent.so.30.0.2T /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmpagent.so.30.0.2
+libtool: install: (cd /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib && { ln -s -f libnetsnmpagent.so.30.0.2 libnetsnmpagent.so.30 || { rm -f libnetsnmpagent.so.30 && ln -s libnetsnmpagent.so.30.0.2 libnetsnmpagent.so.30; }; })
+libtool: install: (cd /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib && { ln -s -f libnetsnmpagent.so.30.0.2 libnetsnmpagent.so || { rm -f libnetsnmpagent.so && ln -s libnetsnmpagent.so.30.0.2 libnetsnmpagent.so; }; })
+libtool: install: /usr/bin/install -c .libs/libnetsnmpagent.lai /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmpagent.la
+libtool: install: /usr/bin/install -c .libs/libnetsnmpagent.a /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmpagent.a
+libtool: install: chmod 644 /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmpagent.a
+libtool: install: ranlib /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmpagent.a
+installing libnetsnmpagent.la in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/STM/STLinux-2.4/devkit/armv5/bin:.:/sbin" ldconfig -n /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+making installlibs in /home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/agent/helpers
+make[2]: Entering directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/agent/helpers'
+libtool: install: /usr/bin/install -c .libs/libnetsnmphelpers.so.30.0.2 /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmphelpers.so.30.0.2
+libtool: install: (cd /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib && { ln -s -f libnetsnmphelpers.so.30.0.2 libnetsnmphelpers.so.30 || { rm -f libnetsnmphelpers.so.30 && ln -s libnetsnmphelpers.so.30.0.2 libnetsnmphelpers.so.30; }; })
+libtool: install: (cd /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib && { ln -s -f libnetsnmphelpers.so.30.0.2 libnetsnmphelpers.so || { rm -f libnetsnmphelpers.so && ln -s libnetsnmphelpers.so.30.0.2 libnetsnmphelpers.so; }; })
+libtool: install: /usr/bin/install -c .libs/libnetsnmphelpers.lai /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmphelpers.la
+libtool: install: /usr/bin/install -c .libs/libnetsnmphelpers.a /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmphelpers.a
+libtool: install: chmod 644 /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmphelpers.a
+libtool: install: ranlib /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmphelpers.a
+installing libnetsnmphelpers.la in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/STM/STLinux-2.4/devkit/armv5/bin:.:/sbin" ldconfig -n /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[2]: Leaving directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/agent/helpers'
+making installlibs in /home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/agent/mibgroup
+make[2]: Entering directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/agent/mibgroup'
+make[2]: Leaving directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/agent/mibgroup'
+libtool: install: (cd /home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/agent; /bin/bash /home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/libtool  --mode=relink armv5-linux-gcc -fno-strict-aliasing -g -O2 -Ulinux -Dlinux=linux -rpath /usr/lib -version-info 30:2:0 -o libnetsnmpmibs.la mibgroup/futuretek/ftm50s.lo mibgroup/futuretek/futuretek.lo mibgroup/snmpv3/snmpMPDStats_5_5.lo mibgroup/snmpv3/usmStats_5_5.lo mibgroup/snmpv3/snmpEngine.lo mibgroup/snmpv3/usmUser.lo mibgroup/mibII/snmp_mib_5_5.lo mibgroup/mibII/system_mib.lo mibgroup/mibII/sysORTable.lo mibgroup/mibII/at.lo mibgroup/mibII/ip.lo mibgroup/mibII/tcp.lo mibgroup/mibII/icmp.lo mibgroup/mibII/udp.lo mibgroup/mibII/vacm_vars.lo mibgroup/mibII/setSerialNo.lo mibgroup/ucd-snmp/disk_hw.lo mibgroup/ucd-snmp/proc.lo mibgroup/ucd-snmp/versioninfo.lo mibgroup/ucd-snmp/pass.lo mibgroup/ucd-snmp/pass_persist.lo mibgroup/ucd-snmp/loadave.lo mibgroup/agent/extend.lo mibgroup/ucd-snmp/errormib.lo mibgroup/ucd-snmp/file.lo mibgroup/ucd-snmp/dlmod.lo mibgroup/ucd-snmp/proxy.lo mibgroup/ucd-snmp/logmatch.lo mibgroup/ucd-snmp/memory.lo mibgroup/ucd-snmp/vmstat.lo mibgroup/notification/snmpNotifyTable.lo mibgroup/notification/snmpNotifyFilterProfileTable.lo mibgroup/notification-log-mib/notification_log.lo mibgroup/target/target_counters_5_5.lo mibgroup/target/snmpTargetAddrEntry.lo mibgroup/target/snmpTargetParamsEntry.lo mibgroup/target/target.lo mibgroup/agent/nsTransactionTable.lo mibgroup/agent/nsModuleTable.lo mibgroup/agent/nsCache.lo mibgroup/agent/nsLogging.lo mibgroup/agent/nsVacmAccessTable.lo mibgroup/disman/event/mteScalars.lo mibgroup/disman/event/mteTrigger.lo mibgroup/disman/event/mteTriggerTable.lo mibgroup/disman/event/mteTriggerDeltaTable.lo mibgroup/disman/event/mteTriggerExistenceTable.lo mibgroup/disman/event/mteTriggerBooleanTable.lo mibgroup/disman/event/mteTriggerThresholdTable.lo mibgroup/disman/event/mteTriggerConf.lo mibgroup/disman/event/mteEvent.lo mibgroup/disman/event/mteEventTable.lo mibgroup/disman/event/mteEventSetTable.lo mibgroup/disman/event/mteEventNotificationTable.lo mibgroup/disman/event/mteEventConf.lo mibgroup/disman/event/mteObjects.lo mibgroup/disman/event/mteObjectsTable.lo mibgroup/disman/event/mteObjectsConf.lo mibgroup/disman/schedule/schedCore.lo mibgroup/disman/schedule/schedConf.lo mibgroup/disman/schedule/schedTable.lo mibgroup/utilities/override.lo mibgroup/host/hrh_storage.lo mibgroup/host/hrh_filesys.lo mibgroup/host/hrSWInstalledTable.lo mibgroup/host/hrSWRunTable.lo mibgroup/host/hr_system.lo mibgroup/host/hr_device.lo mibgroup/host/hr_other.lo mibgroup/host/hr_proc.lo mibgroup/host/hr_network.lo mibgroup/host/hr_print.lo mibgroup/host/hr_disk.lo mibgroup/host/hr_partition.lo mibgroup/util_funcs/header_generic.lo mibgroup/mibII/updates.lo mibgroup/util_funcs.lo mibgroup/mibII/kernel_linux.lo mibgroup/mibII/ipAddr.lo mibgroup/mibII/var_route.lo mibgroup/mibII/route_write.lo mibgroup/mibII/tcpTable.lo mibgroup/mibII/udpTable.lo mibgroup/mibII/vacm_context.lo mibgroup/ip-mib/ip_scalars.lo mibgroup/util_funcs/header_simple_table.lo mibgroup/util_funcs/restart.lo mibgroup/ucd-snmp/pass_common.lo mibgroup/header_complex.lo mibgroup/snmp-notification-mib/snmpNotifyFilterTable/snmpNotifyFilterTable.lo mibgroup/host/data_access/swinst.lo mibgroup/host/data_access/swrun.lo mibgroup/host/hrSWRunPerfTable.lo mibgroup/if-mib/ifTable/ifTable.lo mibgroup/if-mib/ifXTable/ifXTable.lo mibgroup/ip-mib/ipAddressTable/ipAddressTable.lo mibgroup/ip-mib/ipAddressPrefixTable/ipAddressPrefixTable.lo mibgroup/ip-mib/ipDefaultRouterTable/ipDefaultRouterTable.lo mibgroup/ip-mib/inetNetToMediaTable/inetNetToMediaTable.lo mibgroup/ip-mib/inetNetToMediaTable/inetNetToMediaTable_interface.lo mibgroup/ip-mib/inetNetToMediaTable/inetNetToMediaTable_data_access.lo mibgroup/ip-mib/ipSystemStatsTable/ipSystemStatsTable.lo mibgroup/ip-mib/ipSystemStatsTable/ipSystemStatsTable_interface.lo mibgroup/ip-mib/ipSystemStatsTable/ipSystemStatsTable_data_access.lo mibgroup/ip-mib/ipv6ScopeZoneIndexTable/ipv6ScopeZoneIndexTable.lo mibgroup/ip-mib/ipIfStatsTable/ipIfStatsTable.lo mibgroup/ip-mib/ipIfStatsTable/ipIfStatsTable_interface.lo mibgroup/ip-mib/ipIfStatsTable/ipIfStatsTable_data_access.lo mibgroup/ip-forward-mib/ipCidrRouteTable/ipCidrRouteTable.lo mibgroup/ip-forward-mib/inetCidrRouteTable/inetCidrRouteTable.lo mibgroup/tcp-mib/tcpConnectionTable/tcpConnectionTable.lo mibgroup/tcp-mib/tcpListenerTable/tcpListenerTable.lo mibgroup/udp-mib/udpEndpointTable/udpEndpointTable.lo mibgroup/hardware/fsys/hw_fsys.lo mibgroup/hardware/fsys/fsys_mntent.lo mibgroup/hardware/memory/hw_mem.lo mibgroup/hardware/memory/memory_linux.lo mibgroup/hardware/cpu/cpu.lo mibgroup/hardware/cpu/cpu_linux.lo mibgroup/snmp-notification-mib/snmpNotifyFilterTable/snmpNotifyFilterTable_interface.lo mibgroup/snmp-notification-mib/snmpNotifyFilterTable/snmpNotifyFilterTable_data_access.lo mibgroup/host/data_access/swinst_apt.lo mibgroup/host/data_access/swrun_procfs_status.lo mibgroup/if-mib/data_access/interface.lo mibgroup/if-mib/ifTable/ifTable_interface.lo mibgroup/if-mib/ifTable/ifTable_data_access.lo mibgroup/if-mib/ifXTable/ifXTable_interface.lo mibgroup/if-mib/ifXTable/ifXTable_data_access.lo mibgroup/ip-mib/ipAddressTable/ipAddressTable_interface.lo mibgroup/ip-mib/ipAddressTable/ipAddressTable_data_access.lo mibgroup/ip-mib/ipAddressPrefixTable/ipAddressPrefixTable_interface.lo mibgroup/ip-mib/ipAddressPrefixTable/ipAddressPrefixTable_data_access.lo mibgroup/ip-mib/ipDefaultRouterTable/ipDefaultRouterTable_interface.lo mibgroup/ip-mib/ipDefaultRouterTable/ipDefaultRouterTable_data_access.lo mibgroup/ip-mib/ipDefaultRouterTable/ipDefaultRouterTable_data_get.lo mibgroup/ip-mib/data_access/arp_common.lo mibgroup/ip-mib/data_access/arp_netlink.lo mibgroup/ip-mib/data_access/systemstats_common.lo mibgroup/ip-mib/data_access/systemstats_linux.lo mibgroup/ip-mib/data_access/scalars_linux.lo mibgroup/ip-mib/ipv6ScopeZoneIndexTable/ipv6ScopeZoneIndexTable_interface.lo mibgroup/ip-mib/ipv6ScopeZoneIndexTable/ipv6ScopeZoneIndexTable_data_access.lo mibgroup/ip-mib/ipIfStatsTable/ipIfStatsTable_data_get.lo mibgroup/ip-forward-mib/ipCidrRouteTable/ipCidrRouteTable_interface.lo mibgroup/ip-forward-mib/ipCidrRouteTable/ipCidrRouteTable_data_access.lo mibgroup/ip-forward-mib/inetCidrRouteTable/inetCidrRouteTable_interface.lo mibgroup/ip-forward-mib/inetCidrRouteTable/inetCidrRouteTable_data_access.lo mibgroup/tcp-mib/data_access/tcpConn_common.lo mibgroup/tcp-mib/data_access/tcpConn_linux.lo mibgroup/util_funcs/get_pid_from_inode.lo mibgroup/tcp-mib/tcpConnectionTable/tcpConnectionTable_interface.lo mibgroup/tcp-mib/tcpConnectionTable/tcpConnectionTable_data_access.lo mibgroup/tcp-mib/tcpListenerTable/tcpListenerTable_interface.lo mibgroup/tcp-mib/tcpListenerTable/tcpListenerTable_data_access.lo mibgroup/udp-mib/udpEndpointTable/udpEndpointTable_interface.lo mibgroup/udp-mib/udpEndpointTable/udpEndpointTable_data_access.lo mibgroup/if-mib/data_access/interface_linux.lo mibgroup/if-mib/data_access/interface_ioctl.lo mibgroup/ip-mib/data_access/ipaddress_common.lo mibgroup/ip-mib/data_access/ipaddress_linux.lo mibgroup/ip-mib/data_access/defaultrouter_common.lo mibgroup/ip-mib/data_access/defaultrouter_linux.lo mibgroup/ip-mib/data_access/ipv6scopezone_common.lo mibgroup/ip-mib/data_access/ipv6scopezone_linux.lo mibgroup/ip-forward-mib/data_access/route_common.lo mibgroup/ip-forward-mib/data_access/route_linux.lo mibgroup/ip-forward-mib/data_access/route_ioctl.lo mibgroup/udp-mib/data_access/udp_endpoint_common.lo mibgroup/udp-mib/data_access/udp_endpoint_linux.lo mibgroup/ip-mib/data_access/ipaddress_ioctl.lo mib_modules.lo auto_nlist.lo libnetsnmpagent.la ../snmplib/libnetsnmp.la -ldl -lm -inst-prefix-dir /home/xtra/work/ftm-50s/rootfs/apps/target)
+libtool: relink: armv5-linux-gcc -shared  -fPIC -DPIC  mibgroup/futuretek/.libs/ftm50s.o mibgroup/futuretek/.libs/futuretek.o mibgroup/snmpv3/.libs/snmpMPDStats_5_5.o mibgroup/snmpv3/.libs/usmStats_5_5.o mibgroup/snmpv3/.libs/snmpEngine.o mibgroup/snmpv3/.libs/usmUser.o mibgroup/mibII/.libs/snmp_mib_5_5.o mibgroup/mibII/.libs/system_mib.o mibgroup/mibII/.libs/sysORTable.o mibgroup/mibII/.libs/at.o mibgroup/mibII/.libs/ip.o mibgroup/mibII/.libs/tcp.o mibgroup/mibII/.libs/icmp.o mibgroup/mibII/.libs/udp.o mibgroup/mibII/.libs/vacm_vars.o mibgroup/mibII/.libs/setSerialNo.o mibgroup/ucd-snmp/.libs/disk_hw.o mibgroup/ucd-snmp/.libs/proc.o mibgroup/ucd-snmp/.libs/versioninfo.o mibgroup/ucd-snmp/.libs/pass.o mibgroup/ucd-snmp/.libs/pass_persist.o mibgroup/ucd-snmp/.libs/loadave.o mibgroup/agent/.libs/extend.o mibgroup/ucd-snmp/.libs/errormib.o mibgroup/ucd-snmp/.libs/file.o mibgroup/ucd-snmp/.libs/dlmod.o mibgroup/ucd-snmp/.libs/proxy.o mibgroup/ucd-snmp/.libs/logmatch.o mibgroup/ucd-snmp/.libs/memory.o mibgroup/ucd-snmp/.libs/vmstat.o mibgroup/notification/.libs/snmpNotifyTable.o mibgroup/notification/.libs/snmpNotifyFilterProfileTable.o mibgroup/notification-log-mib/.libs/notification_log.o mibgroup/target/.libs/target_counters_5_5.o mibgroup/target/.libs/snmpTargetAddrEntry.o mibgroup/target/.libs/snmpTargetParamsEntry.o mibgroup/target/.libs/target.o mibgroup/agent/.libs/nsTransactionTable.o mibgroup/agent/.libs/nsModuleTable.o mibgroup/agent/.libs/nsCache.o mibgroup/agent/.libs/nsLogging.o mibgroup/agent/.libs/nsVacmAccessTable.o mibgroup/disman/event/.libs/mteScalars.o mibgroup/disman/event/.libs/mteTrigger.o mibgroup/disman/event/.libs/mteTriggerTable.o mibgroup/disman/event/.libs/mteTriggerDeltaTable.o mibgroup/disman/event/.libs/mteTriggerExistenceTable.o mibgroup/disman/event/.libs/mteTriggerBooleanTable.o mibgroup/disman/event/.libs/mteTriggerThresholdTable.o mibgroup/disman/event/.libs/mteTriggerConf.o mibgroup/disman/event/.libs/mteEvent.o mibgroup/disman/event/.libs/mteEventTable.o mibgroup/disman/event/.libs/mteEventSetTable.o mibgroup/disman/event/.libs/mteEventNotificationTable.o mibgroup/disman/event/.libs/mteEventConf.o mibgroup/disman/event/.libs/mteObjects.o mibgroup/disman/event/.libs/mteObjectsTable.o mibgroup/disman/event/.libs/mteObjectsConf.o mibgroup/disman/schedule/.libs/schedCore.o mibgroup/disman/schedule/.libs/schedConf.o mibgroup/disman/schedule/.libs/schedTable.o mibgroup/utilities/.libs/override.o mibgroup/host/.libs/hrh_storage.o mibgroup/host/.libs/hrh_filesys.o mibgroup/host/.libs/hrSWInstalledTable.o mibgroup/host/.libs/hrSWRunTable.o mibgroup/host/.libs/hr_system.o mibgroup/host/.libs/hr_device.o mibgroup/host/.libs/hr_other.o mibgroup/host/.libs/hr_proc.o mibgroup/host/.libs/hr_network.o mibgroup/host/.libs/hr_print.o mibgroup/host/.libs/hr_disk.o mibgroup/host/.libs/hr_partition.o mibgroup/util_funcs/.libs/header_generic.o mibgroup/mibII/.libs/updates.o mibgroup/.libs/util_funcs.o mibgroup/mibII/.libs/kernel_linux.o mibgroup/mibII/.libs/ipAddr.o mibgroup/mibII/.libs/var_route.o mibgroup/mibII/.libs/route_write.o mibgroup/mibII/.libs/tcpTable.o mibgroup/mibII/.libs/udpTable.o mibgroup/mibII/.libs/vacm_context.o mibgroup/ip-mib/.libs/ip_scalars.o mibgroup/util_funcs/.libs/header_simple_table.o mibgroup/util_funcs/.libs/restart.o mibgroup/ucd-snmp/.libs/pass_common.o mibgroup/.libs/header_complex.o mibgroup/snmp-notification-mib/snmpNotifyFilterTable/.libs/snmpNotifyFilterTable.o mibgroup/host/data_access/.libs/swinst.o mibgroup/host/data_access/.libs/swrun.o mibgroup/host/.libs/hrSWRunPerfTable.o mibgroup/if-mib/ifTable/.libs/ifTable.o mibgroup/if-mib/ifXTable/.libs/ifXTable.o mibgroup/ip-mib/ipAddressTable/.libs/ipAddressTable.o mibgroup/ip-mib/ipAddressPrefixTable/.libs/ipAddressPrefixTable.o mibgroup/ip-mib/ipDefaultRouterTable/.libs/ipDefaultRouterTable.o mibgroup/ip-mib/inetNetToMediaTable/.libs/inetNetToMediaTable.o mibgroup/ip-mib/inetNetToMediaTable/.libs/inetNetToMediaTable_interface.o mibgroup/ip-mib/inetNetToMediaTable/.libs/inetNetToMediaTable_data_access.o mibgroup/ip-mib/ipSystemStatsTable/.libs/ipSystemStatsTable.o mibgroup/ip-mib/ipSystemStatsTable/.libs/ipSystemStatsTable_interface.o mibgroup/ip-mib/ipSystemStatsTable/.libs/ipSystemStatsTable_data_access.o mibgroup/ip-mib/ipv6ScopeZoneIndexTable/.libs/ipv6ScopeZoneIndexTable.o mibgroup/ip-mib/ipIfStatsTable/.libs/ipIfStatsTable.o mibgroup/ip-mib/ipIfStatsTable/.libs/ipIfStatsTable_interface.o mibgroup/ip-mib/ipIfStatsTable/.libs/ipIfStatsTable_data_access.o mibgroup/ip-forward-mib/ipCidrRouteTable/.libs/ipCidrRouteTable.o mibgroup/ip-forward-mib/inetCidrRouteTable/.libs/inetCidrRouteTable.o mibgroup/tcp-mib/tcpConnectionTable/.libs/tcpConnectionTable.o mibgroup/tcp-mib/tcpListenerTable/.libs/tcpListenerTable.o mibgroup/udp-mib/udpEndpointTable/.libs/udpEndpointTable.o mibgroup/hardware/fsys/.libs/hw_fsys.o mibgroup/hardware/fsys/.libs/fsys_mntent.o mibgroup/hardware/memory/.libs/hw_mem.o mibgroup/hardware/memory/.libs/memory_linux.o mibgroup/hardware/cpu/.libs/cpu.o mibgroup/hardware/cpu/.libs/cpu_linux.o mibgroup/snmp-notification-mib/snmpNotifyFilterTable/.libs/snmpNotifyFilterTable_interface.o mibgroup/snmp-notification-mib/snmpNotifyFilterTable/.libs/snmpNotifyFilterTable_data_access.o mibgroup/host/data_access/.libs/swinst_apt.o mibgroup/host/data_access/.libs/swrun_procfs_status.o mibgroup/if-mib/data_access/.libs/interface.o mibgroup/if-mib/ifTable/.libs/ifTable_interface.o mibgroup/if-mib/ifTable/.libs/ifTable_data_access.o mibgroup/if-mib/ifXTable/.libs/ifXTable_interface.o mibgroup/if-mib/ifXTable/.libs/ifXTable_data_access.o mibgroup/ip-mib/ipAddressTable/.libs/ipAddressTable_interface.o mibgroup/ip-mib/ipAddressTable/.libs/ipAddressTable_data_access.o mibgroup/ip-mib/ipAddressPrefixTable/.libs/ipAddressPrefixTable_interface.o mibgroup/ip-mib/ipAddressPrefixTable/.libs/ipAddressPrefixTable_data_access.o mibgroup/ip-mib/ipDefaultRouterTable/.libs/ipDefaultRouterTable_interface.o mibgroup/ip-mib/ipDefaultRouterTable/.libs/ipDefaultRouterTable_data_access.o mibgroup/ip-mib/ipDefaultRouterTable/.libs/ipDefaultRouterTable_data_get.o mibgroup/ip-mib/data_access/.libs/arp_common.o mibgroup/ip-mib/data_access/.libs/arp_netlink.o mibgroup/ip-mib/data_access/.libs/systemstats_common.o mibgroup/ip-mib/data_access/.libs/systemstats_linux.o mibgroup/ip-mib/data_access/.libs/scalars_linux.o mibgroup/ip-mib/ipv6ScopeZoneIndexTable/.libs/ipv6ScopeZoneIndexTable_interface.o mibgroup/ip-mib/ipv6ScopeZoneIndexTable/.libs/ipv6ScopeZoneIndexTable_data_access.o mibgroup/ip-mib/ipIfStatsTable/.libs/ipIfStatsTable_data_get.o mibgroup/ip-forward-mib/ipCidrRouteTable/.libs/ipCidrRouteTable_interface.o mibgroup/ip-forward-mib/ipCidrRouteTable/.libs/ipCidrRouteTable_data_access.o mibgroup/ip-forward-mib/inetCidrRouteTable/.libs/inetCidrRouteTable_interface.o mibgroup/ip-forward-mib/inetCidrRouteTable/.libs/inetCidrRouteTable_data_access.o mibgroup/tcp-mib/data_access/.libs/tcpConn_common.o mibgroup/tcp-mib/data_access/.libs/tcpConn_linux.o mibgroup/util_funcs/.libs/get_pid_from_inode.o mibgroup/tcp-mib/tcpConnectionTable/.libs/tcpConnectionTable_interface.o mibgroup/tcp-mib/tcpConnectionTable/.libs/tcpConnectionTable_data_access.o mibgroup/tcp-mib/tcpListenerTable/.libs/tcpListenerTable_interface.o mibgroup/tcp-mib/tcpListenerTable/.libs/tcpListenerTable_data_access.o mibgroup/udp-mib/udpEndpointTable/.libs/udpEndpointTable_interface.o mibgroup/udp-mib/udpEndpointTable/.libs/udpEndpointTable_data_access.o mibgroup/if-mib/data_access/.libs/interface_linux.o mibgroup/if-mib/data_access/.libs/interface_ioctl.o mibgroup/ip-mib/data_access/.libs/ipaddress_common.o mibgroup/ip-mib/data_access/.libs/ipaddress_linux.o mibgroup/ip-mib/data_access/.libs/defaultrouter_common.o mibgroup/ip-mib/data_access/.libs/defaultrouter_linux.o mibgroup/ip-mib/data_access/.libs/ipv6scopezone_common.o mibgroup/ip-mib/data_access/.libs/ipv6scopezone_linux.o mibgroup/ip-forward-mib/data_access/.libs/route_common.o mibgroup/ip-forward-mib/data_access/.libs/route_linux.o mibgroup/ip-forward-mib/data_access/.libs/route_ioctl.o mibgroup/udp-mib/data_access/.libs/udp_endpoint_common.o mibgroup/udp-mib/data_access/.libs/udp_endpoint_linux.o mibgroup/ip-mib/data_access/.libs/ipaddress_ioctl.o .libs/mib_modules.o .libs/auto_nlist.o   -L/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/snmplib/.libs -L/home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib -L/usr/lib -lnetsnmpagent -lnetsnmp -lrt -ldl -lm  -O2   -Wl,-soname -Wl,libnetsnmpmibs.so.30 -o .libs/libnetsnmpmibs.so.30.0.2
+libtool: install: /usr/bin/install -c .libs/libnetsnmpmibs.so.30.0.2T /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmpmibs.so.30.0.2
+libtool: install: (cd /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib && { ln -s -f libnetsnmpmibs.so.30.0.2 libnetsnmpmibs.so.30 || { rm -f libnetsnmpmibs.so.30 && ln -s libnetsnmpmibs.so.30.0.2 libnetsnmpmibs.so.30; }; })
+libtool: install: (cd /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib && { ln -s -f libnetsnmpmibs.so.30.0.2 libnetsnmpmibs.so || { rm -f libnetsnmpmibs.so && ln -s libnetsnmpmibs.so.30.0.2 libnetsnmpmibs.so; }; })
+libtool: install: /usr/bin/install -c .libs/libnetsnmpmibs.lai /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmpmibs.la
+libtool: install: /usr/bin/install -c .libs/libnetsnmpmibs.a /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmpmibs.a
+libtool: install: chmod 644 /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmpmibs.a
+libtool: install: ranlib /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmpmibs.a
+installing libnetsnmpmibs.la in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/STM/STLinux-2.4/devkit/armv5/bin:.:/sbin" ldconfig -n /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[1]: Leaving directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/agent'
+making installlibs in /home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/apps
+make[1]: Entering directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/apps'
+libtool: install: (cd /home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/apps; /bin/bash /home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/libtool  --mode=relink armv5-linux-gcc -fno-strict-aliasing -g -O2 -Ulinux -Dlinux=linux -rpath /usr/lib -version-info 30:2:0 -o libnetsnmptrapd.la snmptrapd_handlers.lo snmptrapd_log.lo snmptrapd_auth.lo snmptrapd_sql.lo ../agent/libnetsnmpmibs.la ../snmplib/libnetsnmp.la -inst-prefix-dir /home/xtra/work/ftm-50s/rootfs/apps/target)
+libtool: relink: armv5-linux-gcc -shared  -fPIC -DPIC  .libs/snmptrapd_handlers.o .libs/snmptrapd_log.o .libs/snmptrapd_auth.o .libs/snmptrapd_sql.o   -L/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/agent/.libs -L/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/snmplib/.libs -L/home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib -L/usr/lib -lnetsnmpmibs -lnetsnmpagent -ldl -lm -lnetsnmp -lrt  -O2   -Wl,-soname -Wl,libnetsnmptrapd.so.30 -o .libs/libnetsnmptrapd.so.30.0.2
+libtool: install: /usr/bin/install -c .libs/libnetsnmptrapd.so.30.0.2T /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmptrapd.so.30.0.2
+libtool: install: (cd /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib && { ln -s -f libnetsnmptrapd.so.30.0.2 libnetsnmptrapd.so.30 || { rm -f libnetsnmptrapd.so.30 && ln -s libnetsnmptrapd.so.30.0.2 libnetsnmptrapd.so.30; }; })
+libtool: install: (cd /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib && { ln -s -f libnetsnmptrapd.so.30.0.2 libnetsnmptrapd.so || { rm -f libnetsnmptrapd.so && ln -s libnetsnmptrapd.so.30.0.2 libnetsnmptrapd.so; }; })
+libtool: install: /usr/bin/install -c .libs/libnetsnmptrapd.lai /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmptrapd.la
+libtool: install: /usr/bin/install -c .libs/libnetsnmptrapd.a /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmptrapd.a
+libtool: install: chmod 644 /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmptrapd.a
+libtool: install: ranlib /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmptrapd.a
+installing libnetsnmptrapd.la in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/STM/STLinux-2.4/devkit/armv5/bin:.:/sbin" ldconfig -n /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+making installlibs in /home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/apps/snmpnetstat
+make[2]: Entering directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/apps/snmpnetstat'
+make[2]: Leaving directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/apps/snmpnetstat'
+make[1]: Leaving directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/apps'
+making installlibs in /home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/local
+make[1]: Entering directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/local'
+make[1]: Leaving directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/local'
+making installlibs in /home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/mibs
+make[1]: Entering directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/mibs'
+make[1]: Leaving directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/mibs'
+libtool: install: /usr/bin/install -c net-snmp-config /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin/net-snmp-config
+libtool: install: /usr/bin/install -c net-snmp-create-v3-user /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin/net-snmp-create-v3-user
+installing net-snmp-config in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin
+installing net-snmp-create-v3-user in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin
+making install in /home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/snmplib
+make[1]: Entering directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/snmplib'
+creating directory /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/net-snmp-includes.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/net-snmp-includes.h
+installing net-snmp-includes.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/config_api.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/config_api.h
+installing config_api.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/mib_api.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/mib_api.h
+installing mib_api.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/output_api.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/output_api.h
+installing output_api.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/pdu_api.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/pdu_api.h
+installing pdu_api.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/session_api.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/session_api.h
+installing session_api.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/snmpv3_api.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/snmpv3_api.h
+installing snmpv3_api.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/varbind_api.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/varbind_api.h
+installing varbind_api.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/types.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/types.h
+installing types.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/utilities.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/utilities.h
+installing utilities.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/version.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/version.h
+installing version.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/definitions.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/definitions.h
+installing definitions.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp
+creating directory /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/README /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/README
+installing README in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/asn1.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/asn1.h
+installing asn1.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/callback.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/callback.h
+installing callback.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/cert_util.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/cert_util.h
+installing cert_util.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/container.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/container.h
+installing container.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/container_binary_array.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/container_binary_array.h
+installing container_binary_array.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/container_list_ssll.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/container_list_ssll.h
+installing container_list_ssll.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/container_iterator.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/container_iterator.h
+installing container_iterator.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/container_null.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/container_null.h
+installing container_null.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/factory.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/factory.h
+installing factory.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/data_list.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/data_list.h
+installing data_list.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/default_store.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/default_store.h
+installing default_store.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/dir_utils.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/dir_utils.h
+installing dir_utils.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/fd_event_manager.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/fd_event_manager.h
+installing fd_event_manager.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/file_utils.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/file_utils.h
+installing file_utils.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/int64.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/int64.h
+installing int64.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/keytools.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/keytools.h
+installing keytools.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/mib.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/mib.h
+installing mib.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/md5.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/md5.h
+installing md5.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/parse.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/parse.h
+installing parse.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/read_config.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/read_config.h
+installing read_config.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/scapi.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/scapi.h
+installing scapi.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/snmp.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/snmp.h
+installing snmp.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/snmp_alarm.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/snmp_alarm.h
+installing snmp_alarm.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/snmp_api.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/snmp_api.h
+installing snmp_api.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/large_fd_set.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/large_fd_set.h
+installing large_fd_set.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/snmp_assert.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/snmp_assert.h
+installing snmp_assert.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/snmp_client.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/snmp_client.h
+installing snmp_client.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/snmp_debug.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/snmp_debug.h
+installing snmp_debug.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/snmp_impl.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/snmp_impl.h
+installing snmp_impl.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/snmp_logging.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/snmp_logging.h
+installing snmp_logging.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/snmp_parse_args.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/snmp_parse_args.h
+installing snmp_parse_args.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/snmp_service.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/snmp_service.h
+installing snmp_service.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/snmp-tc.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/snmp-tc.h
+installing snmp-tc.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/snmpv3.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/snmpv3.h
+installing snmpv3.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/system.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/system.h
+installing system.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/text_utils.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/text_utils.h
+installing text_utils.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/tools.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/tools.h
+installing tools.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/transform_oids.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/transform_oids.h
+installing transform_oids.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/types.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/types.h
+installing types.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/getopt.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/getopt.h
+installing getopt.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/lcd_time.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/lcd_time.h
+installing lcd_time.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/mt_support.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/mt_support.h
+installing mt_support.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/oid.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/oid.h
+installing oid.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/oid_stash.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/oid_stash.h
+installing oid_stash.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/snmp_enum.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/snmp_enum.h
+installing snmp_enum.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/snmp_secmod.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/snmp_secmod.h
+installing snmp_secmod.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/ucd_compat.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/ucd_compat.h
+installing ucd_compat.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/vacm.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/vacm.h
+installing vacm.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/check_varbind.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/check_varbind.h
+installing check_varbind.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/snmp_transport.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/snmp_transport.h
+installing snmp_transport.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/winpipe.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/winpipe.h
+installing winpipe.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/winservice.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/winservice.h
+installing winservice.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/snmpUDPBaseDomain.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/snmpUDPBaseDomain.h
+installing snmpUDPBaseDomain.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/snmpUDPIPv4BaseDomain.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/snmpUDPIPv4BaseDomain.h
+installing snmpUDPIPv4BaseDomain.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/snmpTCPBaseDomain.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/snmpTCPBaseDomain.h
+installing snmpTCPBaseDomain.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/snmpSocketBaseDomain.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/snmpSocketBaseDomain.h
+installing snmpSocketBaseDomain.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/snmpIPv4BaseDomain.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/snmpIPv4BaseDomain.h
+installing snmpIPv4BaseDomain.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/snmpUDPDomain.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/snmpUDPDomain.h
+installing snmpUDPDomain.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/snmpTCPDomain.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/snmpTCPDomain.h
+installing snmpTCPDomain.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/snmpAliasDomain.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/snmpAliasDomain.h
+installing snmpAliasDomain.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/snmpUnixDomain.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/snmpUnixDomain.h
+installing snmpUnixDomain.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/snmpCallbackDomain.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/snmpCallbackDomain.h
+installing snmpCallbackDomain.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/snmpusm.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/snmpusm.h
+installing snmpusm.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+creating directory /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/library/snmpv3-security-includes.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library/snmpv3-security-includes.h
+installing ../include/net-snmp/library/snmpv3-security-includes.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/library
+libtool: install: /usr/bin/install -c .libs/libnetsnmp.so.30.0.2 /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmp.so.30.0.2
+libtool: install: (cd /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib && { ln -s -f libnetsnmp.so.30.0.2 libnetsnmp.so.30 || { rm -f libnetsnmp.so.30 && ln -s libnetsnmp.so.30.0.2 libnetsnmp.so.30; }; })
+libtool: install: (cd /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib && { ln -s -f libnetsnmp.so.30.0.2 libnetsnmp.so || { rm -f libnetsnmp.so && ln -s libnetsnmp.so.30.0.2 libnetsnmp.so; }; })
+libtool: install: /usr/bin/install -c .libs/libnetsnmp.lai /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmp.la
+libtool: install: /usr/bin/install -c .libs/libnetsnmp.a /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmp.a
+libtool: install: chmod 644 /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmp.a
+libtool: install: ranlib /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmp.a
+installing libnetsnmp.la in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/STM/STLinux-2.4/devkit/armv5/bin:.:/sbin" ldconfig -n /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[1]: Leaving directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/snmplib'
+making install in /home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/agent
+make[1]: Entering directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/agent'
+creating directory /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/agent_read_config.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/agent_read_config.h
+installing agent_read_config.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/agent_registry.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/agent_registry.h
+installing agent_registry.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/agent_index.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/agent_index.h
+installing agent_index.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/agent_sysORTable.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/agent_sysORTable.h
+installing agent_sysORTable.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/agent_trap.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/agent_trap.h
+installing agent_trap.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/auto_nlist.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/auto_nlist.h
+installing auto_nlist.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/ds_agent.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/ds_agent.h
+installing ds_agent.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/snmp_agent.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/snmp_agent.h
+installing snmp_agent.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/snmp_vars.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/snmp_vars.h
+installing snmp_vars.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/var_struct.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/var_struct.h
+installing var_struct.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/agent_handler.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/agent_handler.h
+installing agent_handler.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/net-snmp-agent-includes.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/net-snmp-agent-includes.h
+installing net-snmp-agent-includes.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/mib_modules.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/mib_modules.h
+installing mib_modules.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/agent_callbacks.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/agent_callbacks.h
+installing agent_callbacks.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/sysORTable.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/sysORTable.h
+installing sysORTable.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/all_helpers.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/all_helpers.h
+installing all_helpers.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/baby_steps.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/baby_steps.h
+installing baby_steps.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/bulk_to_next.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/bulk_to_next.h
+installing bulk_to_next.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/cache_handler.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/cache_handler.h
+installing cache_handler.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/debug_handler.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/debug_handler.h
+installing debug_handler.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/instance.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/instance.h
+installing instance.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/mode_end_call.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/mode_end_call.h
+installing mode_end_call.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/multiplexer.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/multiplexer.h
+installing multiplexer.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/null.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/null.h
+installing null.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/old_api.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/old_api.h
+installing old_api.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/read_only.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/read_only.h
+installing read_only.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/row_merge.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/row_merge.h
+installing row_merge.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/scalar.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/scalar.h
+installing scalar.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/scalar_group.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/scalar_group.h
+installing scalar_group.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/serialize.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/serialize.h
+installing serialize.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/snmp_get_statistic.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/snmp_get_statistic.h
+installing snmp_get_statistic.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/stash_cache.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/stash_cache.h
+installing stash_cache.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/stash_to_next.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/stash_to_next.h
+installing stash_to_next.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/table_array.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/table_array.h
+installing table_array.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/table_container.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/table_container.h
+installing table_container.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/table.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/table.h
+installing table.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/table_data.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/table_data.h
+installing table_data.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/table_dataset.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/table_dataset.h
+installing table_dataset.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/table_tdata.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/table_tdata.h
+installing table_tdata.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/table_iterator.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/table_iterator.h
+installing table_iterator.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/watcher.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/watcher.h
+installing watcher.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/mfd.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/mfd.h
+installing mfd.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/set_helper.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/set_helper.h
+installing set_helper.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+creating directory /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/mib_module_config.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/mib_module_config.h
+installing ../include/net-snmp/agent/mib_module_config.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../include/net-snmp/agent/agent_module_config.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/agent_module_config.h
+installing ../include/net-snmp/agent/agent_module_config.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 mibgroup/mib_module_includes.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/mib_module_includes.h
+installing mibgroup/mib_module_includes.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: (cd /home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/agent; /bin/bash /home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/libtool  --mode=relink armv5-linux-gcc -fno-strict-aliasing -g -O2 -Ulinux -Dlinux=linux -rpath /usr/lib -version-info 30:2:0 -o libnetsnmpagent.la helpers/all_helpers.lo helpers/baby_steps.lo helpers/bulk_to_next.lo helpers/cache_handler.lo helpers/debug_handler.lo helpers/instance.lo helpers/mode_end_call.lo helpers/multiplexer.lo helpers/null.lo helpers/old_api.lo helpers/read_only.lo helpers/row_merge.lo helpers/scalar.lo helpers/scalar_group.lo helpers/serialize.lo helpers/snmp_get_statistic.lo helpers/stash_cache.lo helpers/stash_to_next.lo helpers/table.lo helpers/table_array.lo helpers/table_container.lo helpers/table_data.lo helpers/table_dataset.lo helpers/table_iterator.lo helpers/table_row.lo helpers/table_tdata.lo helpers/watcher.lo agent_handler.lo agent_index.lo agent_read_config.lo agent_registry.lo agent_sysORTable.lo agent_trap.lo kernel.lo snmp_agent.lo snmp_vars.lo mibgroup/snmpv3/usmConf.lo mibgroup/agentx/master.lo mibgroup/agentx/subagent.lo mibgroup/utilities/execute.lo mibgroup/utilities/iquery.lo mibgroup/mibII/vacm_conf.lo mibgroup/agentx/protocol.lo mibgroup/agentx/client.lo mibgroup/agentx/master_admin.lo mibgroup/agentx/agentx_config.lo ../snmplib/libnetsnmp.la -lm -inst-prefix-dir /home/xtra/work/ftm-50s/rootfs/apps/target)
+libtool: relink: armv5-linux-gcc -shared  -fPIC -DPIC  helpers/.libs/all_helpers.o helpers/.libs/baby_steps.o helpers/.libs/bulk_to_next.o helpers/.libs/cache_handler.o helpers/.libs/debug_handler.o helpers/.libs/instance.o helpers/.libs/mode_end_call.o helpers/.libs/multiplexer.o helpers/.libs/null.o helpers/.libs/old_api.o helpers/.libs/read_only.o helpers/.libs/row_merge.o helpers/.libs/scalar.o helpers/.libs/scalar_group.o helpers/.libs/serialize.o helpers/.libs/snmp_get_statistic.o helpers/.libs/stash_cache.o helpers/.libs/stash_to_next.o helpers/.libs/table.o helpers/.libs/table_array.o helpers/.libs/table_container.o helpers/.libs/table_data.o helpers/.libs/table_dataset.o helpers/.libs/table_iterator.o helpers/.libs/table_row.o helpers/.libs/table_tdata.o helpers/.libs/watcher.o .libs/agent_handler.o .libs/agent_index.o .libs/agent_read_config.o .libs/agent_registry.o .libs/agent_sysORTable.o .libs/agent_trap.o .libs/kernel.o .libs/snmp_agent.o .libs/snmp_vars.o mibgroup/snmpv3/.libs/usmConf.o mibgroup/agentx/.libs/master.o mibgroup/agentx/.libs/subagent.o mibgroup/utilities/.libs/execute.o mibgroup/utilities/.libs/iquery.o mibgroup/mibII/.libs/vacm_conf.o mibgroup/agentx/.libs/protocol.o mibgroup/agentx/.libs/client.o mibgroup/agentx/.libs/master_admin.o mibgroup/agentx/.libs/agentx_config.o   -L/home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib -L/usr/lib -lnetsnmp -lrt -lm  -O2   -Wl,-soname -Wl,libnetsnmpagent.so.30 -o .libs/libnetsnmpagent.so.30.0.2
+libtool: install: /usr/bin/install -c .libs/libnetsnmpagent.so.30.0.2T /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmpagent.so.30.0.2
+libtool: install: (cd /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib && { ln -s -f libnetsnmpagent.so.30.0.2 libnetsnmpagent.so.30 || { rm -f libnetsnmpagent.so.30 && ln -s libnetsnmpagent.so.30.0.2 libnetsnmpagent.so.30; }; })
+libtool: install: (cd /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib && { ln -s -f libnetsnmpagent.so.30.0.2 libnetsnmpagent.so || { rm -f libnetsnmpagent.so && ln -s libnetsnmpagent.so.30.0.2 libnetsnmpagent.so; }; })
+libtool: install: /usr/bin/install -c .libs/libnetsnmpagent.lai /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmpagent.la
+libtool: install: /usr/bin/install -c .libs/libnetsnmpagent.a /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmpagent.a
+libtool: install: chmod 644 /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmpagent.a
+libtool: install: ranlib /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmpagent.a
+installing libnetsnmpagent.la in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/STM/STLinux-2.4/devkit/armv5/bin:.:/sbin" ldconfig -n /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+making installlibs in /home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/agent/helpers
+make[2]: Entering directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/agent/helpers'
+libtool: install: /usr/bin/install -c .libs/libnetsnmphelpers.so.30.0.2 /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmphelpers.so.30.0.2
+libtool: install: (cd /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib && { ln -s -f libnetsnmphelpers.so.30.0.2 libnetsnmphelpers.so.30 || { rm -f libnetsnmphelpers.so.30 && ln -s libnetsnmphelpers.so.30.0.2 libnetsnmphelpers.so.30; }; })
+libtool: install: (cd /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib && { ln -s -f libnetsnmphelpers.so.30.0.2 libnetsnmphelpers.so || { rm -f libnetsnmphelpers.so && ln -s libnetsnmphelpers.so.30.0.2 libnetsnmphelpers.so; }; })
+libtool: install: /usr/bin/install -c .libs/libnetsnmphelpers.lai /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmphelpers.la
+libtool: install: /usr/bin/install -c .libs/libnetsnmphelpers.a /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmphelpers.a
+libtool: install: chmod 644 /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmphelpers.a
+libtool: install: ranlib /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmphelpers.a
+installing libnetsnmphelpers.la in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/STM/STLinux-2.4/devkit/armv5/bin:.:/sbin" ldconfig -n /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[2]: Leaving directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/agent/helpers'
+making installlibs in /home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/agent/mibgroup
+make[2]: Entering directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/agent/mibgroup'
+make[2]: Leaving directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/agent/mibgroup'
+libtool: install: (cd /home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/agent; /bin/bash /home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/libtool  --mode=relink armv5-linux-gcc -fno-strict-aliasing -g -O2 -Ulinux -Dlinux=linux -rpath /usr/lib -version-info 30:2:0 -o libnetsnmpmibs.la mibgroup/futuretek/ftm50s.lo mibgroup/futuretek/futuretek.lo mibgroup/snmpv3/snmpMPDStats_5_5.lo mibgroup/snmpv3/usmStats_5_5.lo mibgroup/snmpv3/snmpEngine.lo mibgroup/snmpv3/usmUser.lo mibgroup/mibII/snmp_mib_5_5.lo mibgroup/mibII/system_mib.lo mibgroup/mibII/sysORTable.lo mibgroup/mibII/at.lo mibgroup/mibII/ip.lo mibgroup/mibII/tcp.lo mibgroup/mibII/icmp.lo mibgroup/mibII/udp.lo mibgroup/mibII/vacm_vars.lo mibgroup/mibII/setSerialNo.lo mibgroup/ucd-snmp/disk_hw.lo mibgroup/ucd-snmp/proc.lo mibgroup/ucd-snmp/versioninfo.lo mibgroup/ucd-snmp/pass.lo mibgroup/ucd-snmp/pass_persist.lo mibgroup/ucd-snmp/loadave.lo mibgroup/agent/extend.lo mibgroup/ucd-snmp/errormib.lo mibgroup/ucd-snmp/file.lo mibgroup/ucd-snmp/dlmod.lo mibgroup/ucd-snmp/proxy.lo mibgroup/ucd-snmp/logmatch.lo mibgroup/ucd-snmp/memory.lo mibgroup/ucd-snmp/vmstat.lo mibgroup/notification/snmpNotifyTable.lo mibgroup/notification/snmpNotifyFilterProfileTable.lo mibgroup/notification-log-mib/notification_log.lo mibgroup/target/target_counters_5_5.lo mibgroup/target/snmpTargetAddrEntry.lo mibgroup/target/snmpTargetParamsEntry.lo mibgroup/target/target.lo mibgroup/agent/nsTransactionTable.lo mibgroup/agent/nsModuleTable.lo mibgroup/agent/nsCache.lo mibgroup/agent/nsLogging.lo mibgroup/agent/nsVacmAccessTable.lo mibgroup/disman/event/mteScalars.lo mibgroup/disman/event/mteTrigger.lo mibgroup/disman/event/mteTriggerTable.lo mibgroup/disman/event/mteTriggerDeltaTable.lo mibgroup/disman/event/mteTriggerExistenceTable.lo mibgroup/disman/event/mteTriggerBooleanTable.lo mibgroup/disman/event/mteTriggerThresholdTable.lo mibgroup/disman/event/mteTriggerConf.lo mibgroup/disman/event/mteEvent.lo mibgroup/disman/event/mteEventTable.lo mibgroup/disman/event/mteEventSetTable.lo mibgroup/disman/event/mteEventNotificationTable.lo mibgroup/disman/event/mteEventConf.lo mibgroup/disman/event/mteObjects.lo mibgroup/disman/event/mteObjectsTable.lo mibgroup/disman/event/mteObjectsConf.lo mibgroup/disman/schedule/schedCore.lo mibgroup/disman/schedule/schedConf.lo mibgroup/disman/schedule/schedTable.lo mibgroup/utilities/override.lo mibgroup/host/hrh_storage.lo mibgroup/host/hrh_filesys.lo mibgroup/host/hrSWInstalledTable.lo mibgroup/host/hrSWRunTable.lo mibgroup/host/hr_system.lo mibgroup/host/hr_device.lo mibgroup/host/hr_other.lo mibgroup/host/hr_proc.lo mibgroup/host/hr_network.lo mibgroup/host/hr_print.lo mibgroup/host/hr_disk.lo mibgroup/host/hr_partition.lo mibgroup/util_funcs/header_generic.lo mibgroup/mibII/updates.lo mibgroup/util_funcs.lo mibgroup/mibII/kernel_linux.lo mibgroup/mibII/ipAddr.lo mibgroup/mibII/var_route.lo mibgroup/mibII/route_write.lo mibgroup/mibII/tcpTable.lo mibgroup/mibII/udpTable.lo mibgroup/mibII/vacm_context.lo mibgroup/ip-mib/ip_scalars.lo mibgroup/util_funcs/header_simple_table.lo mibgroup/util_funcs/restart.lo mibgroup/ucd-snmp/pass_common.lo mibgroup/header_complex.lo mibgroup/snmp-notification-mib/snmpNotifyFilterTable/snmpNotifyFilterTable.lo mibgroup/host/data_access/swinst.lo mibgroup/host/data_access/swrun.lo mibgroup/host/hrSWRunPerfTable.lo mibgroup/if-mib/ifTable/ifTable.lo mibgroup/if-mib/ifXTable/ifXTable.lo mibgroup/ip-mib/ipAddressTable/ipAddressTable.lo mibgroup/ip-mib/ipAddressPrefixTable/ipAddressPrefixTable.lo mibgroup/ip-mib/ipDefaultRouterTable/ipDefaultRouterTable.lo mibgroup/ip-mib/inetNetToMediaTable/inetNetToMediaTable.lo mibgroup/ip-mib/inetNetToMediaTable/inetNetToMediaTable_interface.lo mibgroup/ip-mib/inetNetToMediaTable/inetNetToMediaTable_data_access.lo mibgroup/ip-mib/ipSystemStatsTable/ipSystemStatsTable.lo mibgroup/ip-mib/ipSystemStatsTable/ipSystemStatsTable_interface.lo mibgroup/ip-mib/ipSystemStatsTable/ipSystemStatsTable_data_access.lo mibgroup/ip-mib/ipv6ScopeZoneIndexTable/ipv6ScopeZoneIndexTable.lo mibgroup/ip-mib/ipIfStatsTable/ipIfStatsTable.lo mibgroup/ip-mib/ipIfStatsTable/ipIfStatsTable_interface.lo mibgroup/ip-mib/ipIfStatsTable/ipIfStatsTable_data_access.lo mibgroup/ip-forward-mib/ipCidrRouteTable/ipCidrRouteTable.lo mibgroup/ip-forward-mib/inetCidrRouteTable/inetCidrRouteTable.lo mibgroup/tcp-mib/tcpConnectionTable/tcpConnectionTable.lo mibgroup/tcp-mib/tcpListenerTable/tcpListenerTable.lo mibgroup/udp-mib/udpEndpointTable/udpEndpointTable.lo mibgroup/hardware/fsys/hw_fsys.lo mibgroup/hardware/fsys/fsys_mntent.lo mibgroup/hardware/memory/hw_mem.lo mibgroup/hardware/memory/memory_linux.lo mibgroup/hardware/cpu/cpu.lo mibgroup/hardware/cpu/cpu_linux.lo mibgroup/snmp-notification-mib/snmpNotifyFilterTable/snmpNotifyFilterTable_interface.lo mibgroup/snmp-notification-mib/snmpNotifyFilterTable/snmpNotifyFilterTable_data_access.lo mibgroup/host/data_access/swinst_apt.lo mibgroup/host/data_access/swrun_procfs_status.lo mibgroup/if-mib/data_access/interface.lo mibgroup/if-mib/ifTable/ifTable_interface.lo mibgroup/if-mib/ifTable/ifTable_data_access.lo mibgroup/if-mib/ifXTable/ifXTable_interface.lo mibgroup/if-mib/ifXTable/ifXTable_data_access.lo mibgroup/ip-mib/ipAddressTable/ipAddressTable_interface.lo mibgroup/ip-mib/ipAddressTable/ipAddressTable_data_access.lo mibgroup/ip-mib/ipAddressPrefixTable/ipAddressPrefixTable_interface.lo mibgroup/ip-mib/ipAddressPrefixTable/ipAddressPrefixTable_data_access.lo mibgroup/ip-mib/ipDefaultRouterTable/ipDefaultRouterTable_interface.lo mibgroup/ip-mib/ipDefaultRouterTable/ipDefaultRouterTable_data_access.lo mibgroup/ip-mib/ipDefaultRouterTable/ipDefaultRouterTable_data_get.lo mibgroup/ip-mib/data_access/arp_common.lo mibgroup/ip-mib/data_access/arp_netlink.lo mibgroup/ip-mib/data_access/systemstats_common.lo mibgroup/ip-mib/data_access/systemstats_linux.lo mibgroup/ip-mib/data_access/scalars_linux.lo mibgroup/ip-mib/ipv6ScopeZoneIndexTable/ipv6ScopeZoneIndexTable_interface.lo mibgroup/ip-mib/ipv6ScopeZoneIndexTable/ipv6ScopeZoneIndexTable_data_access.lo mibgroup/ip-mib/ipIfStatsTable/ipIfStatsTable_data_get.lo mibgroup/ip-forward-mib/ipCidrRouteTable/ipCidrRouteTable_interface.lo mibgroup/ip-forward-mib/ipCidrRouteTable/ipCidrRouteTable_data_access.lo mibgroup/ip-forward-mib/inetCidrRouteTable/inetCidrRouteTable_interface.lo mibgroup/ip-forward-mib/inetCidrRouteTable/inetCidrRouteTable_data_access.lo mibgroup/tcp-mib/data_access/tcpConn_common.lo mibgroup/tcp-mib/data_access/tcpConn_linux.lo mibgroup/util_funcs/get_pid_from_inode.lo mibgroup/tcp-mib/tcpConnectionTable/tcpConnectionTable_interface.lo mibgroup/tcp-mib/tcpConnectionTable/tcpConnectionTable_data_access.lo mibgroup/tcp-mib/tcpListenerTable/tcpListenerTable_interface.lo mibgroup/tcp-mib/tcpListenerTable/tcpListenerTable_data_access.lo mibgroup/udp-mib/udpEndpointTable/udpEndpointTable_interface.lo mibgroup/udp-mib/udpEndpointTable/udpEndpointTable_data_access.lo mibgroup/if-mib/data_access/interface_linux.lo mibgroup/if-mib/data_access/interface_ioctl.lo mibgroup/ip-mib/data_access/ipaddress_common.lo mibgroup/ip-mib/data_access/ipaddress_linux.lo mibgroup/ip-mib/data_access/defaultrouter_common.lo mibgroup/ip-mib/data_access/defaultrouter_linux.lo mibgroup/ip-mib/data_access/ipv6scopezone_common.lo mibgroup/ip-mib/data_access/ipv6scopezone_linux.lo mibgroup/ip-forward-mib/data_access/route_common.lo mibgroup/ip-forward-mib/data_access/route_linux.lo mibgroup/ip-forward-mib/data_access/route_ioctl.lo mibgroup/udp-mib/data_access/udp_endpoint_common.lo mibgroup/udp-mib/data_access/udp_endpoint_linux.lo mibgroup/ip-mib/data_access/ipaddress_ioctl.lo mib_modules.lo auto_nlist.lo libnetsnmpagent.la ../snmplib/libnetsnmp.la -ldl -lm -inst-prefix-dir /home/xtra/work/ftm-50s/rootfs/apps/target)
+libtool: relink: armv5-linux-gcc -shared  -fPIC -DPIC  mibgroup/futuretek/.libs/ftm50s.o mibgroup/futuretek/.libs/futuretek.o mibgroup/snmpv3/.libs/snmpMPDStats_5_5.o mibgroup/snmpv3/.libs/usmStats_5_5.o mibgroup/snmpv3/.libs/snmpEngine.o mibgroup/snmpv3/.libs/usmUser.o mibgroup/mibII/.libs/snmp_mib_5_5.o mibgroup/mibII/.libs/system_mib.o mibgroup/mibII/.libs/sysORTable.o mibgroup/mibII/.libs/at.o mibgroup/mibII/.libs/ip.o mibgroup/mibII/.libs/tcp.o mibgroup/mibII/.libs/icmp.o mibgroup/mibII/.libs/udp.o mibgroup/mibII/.libs/vacm_vars.o mibgroup/mibII/.libs/setSerialNo.o mibgroup/ucd-snmp/.libs/disk_hw.o mibgroup/ucd-snmp/.libs/proc.o mibgroup/ucd-snmp/.libs/versioninfo.o mibgroup/ucd-snmp/.libs/pass.o mibgroup/ucd-snmp/.libs/pass_persist.o mibgroup/ucd-snmp/.libs/loadave.o mibgroup/agent/.libs/extend.o mibgroup/ucd-snmp/.libs/errormib.o mibgroup/ucd-snmp/.libs/file.o mibgroup/ucd-snmp/.libs/dlmod.o mibgroup/ucd-snmp/.libs/proxy.o mibgroup/ucd-snmp/.libs/logmatch.o mibgroup/ucd-snmp/.libs/memory.o mibgroup/ucd-snmp/.libs/vmstat.o mibgroup/notification/.libs/snmpNotifyTable.o mibgroup/notification/.libs/snmpNotifyFilterProfileTable.o mibgroup/notification-log-mib/.libs/notification_log.o mibgroup/target/.libs/target_counters_5_5.o mibgroup/target/.libs/snmpTargetAddrEntry.o mibgroup/target/.libs/snmpTargetParamsEntry.o mibgroup/target/.libs/target.o mibgroup/agent/.libs/nsTransactionTable.o mibgroup/agent/.libs/nsModuleTable.o mibgroup/agent/.libs/nsCache.o mibgroup/agent/.libs/nsLogging.o mibgroup/agent/.libs/nsVacmAccessTable.o mibgroup/disman/event/.libs/mteScalars.o mibgroup/disman/event/.libs/mteTrigger.o mibgroup/disman/event/.libs/mteTriggerTable.o mibgroup/disman/event/.libs/mteTriggerDeltaTable.o mibgroup/disman/event/.libs/mteTriggerExistenceTable.o mibgroup/disman/event/.libs/mteTriggerBooleanTable.o mibgroup/disman/event/.libs/mteTriggerThresholdTable.o mibgroup/disman/event/.libs/mteTriggerConf.o mibgroup/disman/event/.libs/mteEvent.o mibgroup/disman/event/.libs/mteEventTable.o mibgroup/disman/event/.libs/mteEventSetTable.o mibgroup/disman/event/.libs/mteEventNotificationTable.o mibgroup/disman/event/.libs/mteEventConf.o mibgroup/disman/event/.libs/mteObjects.o mibgroup/disman/event/.libs/mteObjectsTable.o mibgroup/disman/event/.libs/mteObjectsConf.o mibgroup/disman/schedule/.libs/schedCore.o mibgroup/disman/schedule/.libs/schedConf.o mibgroup/disman/schedule/.libs/schedTable.o mibgroup/utilities/.libs/override.o mibgroup/host/.libs/hrh_storage.o mibgroup/host/.libs/hrh_filesys.o mibgroup/host/.libs/hrSWInstalledTable.o mibgroup/host/.libs/hrSWRunTable.o mibgroup/host/.libs/hr_system.o mibgroup/host/.libs/hr_device.o mibgroup/host/.libs/hr_other.o mibgroup/host/.libs/hr_proc.o mibgroup/host/.libs/hr_network.o mibgroup/host/.libs/hr_print.o mibgroup/host/.libs/hr_disk.o mibgroup/host/.libs/hr_partition.o mibgroup/util_funcs/.libs/header_generic.o mibgroup/mibII/.libs/updates.o mibgroup/.libs/util_funcs.o mibgroup/mibII/.libs/kernel_linux.o mibgroup/mibII/.libs/ipAddr.o mibgroup/mibII/.libs/var_route.o mibgroup/mibII/.libs/route_write.o mibgroup/mibII/.libs/tcpTable.o mibgroup/mibII/.libs/udpTable.o mibgroup/mibII/.libs/vacm_context.o mibgroup/ip-mib/.libs/ip_scalars.o mibgroup/util_funcs/.libs/header_simple_table.o mibgroup/util_funcs/.libs/restart.o mibgroup/ucd-snmp/.libs/pass_common.o mibgroup/.libs/header_complex.o mibgroup/snmp-notification-mib/snmpNotifyFilterTable/.libs/snmpNotifyFilterTable.o mibgroup/host/data_access/.libs/swinst.o mibgroup/host/data_access/.libs/swrun.o mibgroup/host/.libs/hrSWRunPerfTable.o mibgroup/if-mib/ifTable/.libs/ifTable.o mibgroup/if-mib/ifXTable/.libs/ifXTable.o mibgroup/ip-mib/ipAddressTable/.libs/ipAddressTable.o mibgroup/ip-mib/ipAddressPrefixTable/.libs/ipAddressPrefixTable.o mibgroup/ip-mib/ipDefaultRouterTable/.libs/ipDefaultRouterTable.o mibgroup/ip-mib/inetNetToMediaTable/.libs/inetNetToMediaTable.o mibgroup/ip-mib/inetNetToMediaTable/.libs/inetNetToMediaTable_interface.o mibgroup/ip-mib/inetNetToMediaTable/.libs/inetNetToMediaTable_data_access.o mibgroup/ip-mib/ipSystemStatsTable/.libs/ipSystemStatsTable.o mibgroup/ip-mib/ipSystemStatsTable/.libs/ipSystemStatsTable_interface.o mibgroup/ip-mib/ipSystemStatsTable/.libs/ipSystemStatsTable_data_access.o mibgroup/ip-mib/ipv6ScopeZoneIndexTable/.libs/ipv6ScopeZoneIndexTable.o mibgroup/ip-mib/ipIfStatsTable/.libs/ipIfStatsTable.o mibgroup/ip-mib/ipIfStatsTable/.libs/ipIfStatsTable_interface.o mibgroup/ip-mib/ipIfStatsTable/.libs/ipIfStatsTable_data_access.o mibgroup/ip-forward-mib/ipCidrRouteTable/.libs/ipCidrRouteTable.o mibgroup/ip-forward-mib/inetCidrRouteTable/.libs/inetCidrRouteTable.o mibgroup/tcp-mib/tcpConnectionTable/.libs/tcpConnectionTable.o mibgroup/tcp-mib/tcpListenerTable/.libs/tcpListenerTable.o mibgroup/udp-mib/udpEndpointTable/.libs/udpEndpointTable.o mibgroup/hardware/fsys/.libs/hw_fsys.o mibgroup/hardware/fsys/.libs/fsys_mntent.o mibgroup/hardware/memory/.libs/hw_mem.o mibgroup/hardware/memory/.libs/memory_linux.o mibgroup/hardware/cpu/.libs/cpu.o mibgroup/hardware/cpu/.libs/cpu_linux.o mibgroup/snmp-notification-mib/snmpNotifyFilterTable/.libs/snmpNotifyFilterTable_interface.o mibgroup/snmp-notification-mib/snmpNotifyFilterTable/.libs/snmpNotifyFilterTable_data_access.o mibgroup/host/data_access/.libs/swinst_apt.o mibgroup/host/data_access/.libs/swrun_procfs_status.o mibgroup/if-mib/data_access/.libs/interface.o mibgroup/if-mib/ifTable/.libs/ifTable_interface.o mibgroup/if-mib/ifTable/.libs/ifTable_data_access.o mibgroup/if-mib/ifXTable/.libs/ifXTable_interface.o mibgroup/if-mib/ifXTable/.libs/ifXTable_data_access.o mibgroup/ip-mib/ipAddressTable/.libs/ipAddressTable_interface.o mibgroup/ip-mib/ipAddressTable/.libs/ipAddressTable_data_access.o mibgroup/ip-mib/ipAddressPrefixTable/.libs/ipAddressPrefixTable_interface.o mibgroup/ip-mib/ipAddressPrefixTable/.libs/ipAddressPrefixTable_data_access.o mibgroup/ip-mib/ipDefaultRouterTable/.libs/ipDefaultRouterTable_interface.o mibgroup/ip-mib/ipDefaultRouterTable/.libs/ipDefaultRouterTable_data_access.o mibgroup/ip-mib/ipDefaultRouterTable/.libs/ipDefaultRouterTable_data_get.o mibgroup/ip-mib/data_access/.libs/arp_common.o mibgroup/ip-mib/data_access/.libs/arp_netlink.o mibgroup/ip-mib/data_access/.libs/systemstats_common.o mibgroup/ip-mib/data_access/.libs/systemstats_linux.o mibgroup/ip-mib/data_access/.libs/scalars_linux.o mibgroup/ip-mib/ipv6ScopeZoneIndexTable/.libs/ipv6ScopeZoneIndexTable_interface.o mibgroup/ip-mib/ipv6ScopeZoneIndexTable/.libs/ipv6ScopeZoneIndexTable_data_access.o mibgroup/ip-mib/ipIfStatsTable/.libs/ipIfStatsTable_data_get.o mibgroup/ip-forward-mib/ipCidrRouteTable/.libs/ipCidrRouteTable_interface.o mibgroup/ip-forward-mib/ipCidrRouteTable/.libs/ipCidrRouteTable_data_access.o mibgroup/ip-forward-mib/inetCidrRouteTable/.libs/inetCidrRouteTable_interface.o mibgroup/ip-forward-mib/inetCidrRouteTable/.libs/inetCidrRouteTable_data_access.o mibgroup/tcp-mib/data_access/.libs/tcpConn_common.o mibgroup/tcp-mib/data_access/.libs/tcpConn_linux.o mibgroup/util_funcs/.libs/get_pid_from_inode.o mibgroup/tcp-mib/tcpConnectionTable/.libs/tcpConnectionTable_interface.o mibgroup/tcp-mib/tcpConnectionTable/.libs/tcpConnectionTable_data_access.o mibgroup/tcp-mib/tcpListenerTable/.libs/tcpListenerTable_interface.o mibgroup/tcp-mib/tcpListenerTable/.libs/tcpListenerTable_data_access.o mibgroup/udp-mib/udpEndpointTable/.libs/udpEndpointTable_interface.o mibgroup/udp-mib/udpEndpointTable/.libs/udpEndpointTable_data_access.o mibgroup/if-mib/data_access/.libs/interface_linux.o mibgroup/if-mib/data_access/.libs/interface_ioctl.o mibgroup/ip-mib/data_access/.libs/ipaddress_common.o mibgroup/ip-mib/data_access/.libs/ipaddress_linux.o mibgroup/ip-mib/data_access/.libs/defaultrouter_common.o mibgroup/ip-mib/data_access/.libs/defaultrouter_linux.o mibgroup/ip-mib/data_access/.libs/ipv6scopezone_common.o mibgroup/ip-mib/data_access/.libs/ipv6scopezone_linux.o mibgroup/ip-forward-mib/data_access/.libs/route_common.o mibgroup/ip-forward-mib/data_access/.libs/route_linux.o mibgroup/ip-forward-mib/data_access/.libs/route_ioctl.o mibgroup/udp-mib/data_access/.libs/udp_endpoint_common.o mibgroup/udp-mib/data_access/.libs/udp_endpoint_linux.o mibgroup/ip-mib/data_access/.libs/ipaddress_ioctl.o .libs/mib_modules.o .libs/auto_nlist.o   -L/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/snmplib/.libs -L/home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib -L/usr/lib -lnetsnmpagent -lnetsnmp -lrt -ldl -lm  -O2   -Wl,-soname -Wl,libnetsnmpmibs.so.30 -o .libs/libnetsnmpmibs.so.30.0.2
+libtool: install: /usr/bin/install -c .libs/libnetsnmpmibs.so.30.0.2T /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmpmibs.so.30.0.2
+libtool: install: (cd /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib && { ln -s -f libnetsnmpmibs.so.30.0.2 libnetsnmpmibs.so.30 || { rm -f libnetsnmpmibs.so.30 && ln -s libnetsnmpmibs.so.30.0.2 libnetsnmpmibs.so.30; }; })
+libtool: install: (cd /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib && { ln -s -f libnetsnmpmibs.so.30.0.2 libnetsnmpmibs.so || { rm -f libnetsnmpmibs.so && ln -s libnetsnmpmibs.so.30.0.2 libnetsnmpmibs.so; }; })
+libtool: install: /usr/bin/install -c .libs/libnetsnmpmibs.lai /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmpmibs.la
+libtool: install: /usr/bin/install -c .libs/libnetsnmpmibs.a /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmpmibs.a
+libtool: install: chmod 644 /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmpmibs.a
+libtool: install: ranlib /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmpmibs.a
+installing libnetsnmpmibs.la in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/STM/STLinux-2.4/devkit/armv5/bin:.:/sbin" ldconfig -n /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+libtool: install: /usr/bin/install -c .libs/snmpd /home/xtra/work/ftm-50s/rootfs/apps/target/usr/sbin/snmpd
+installing snmpd in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/sbin
+making install in /home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/agent/helpers
+make[2]: Entering directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/agent/helpers'
+libtool: install: /usr/bin/install -c .libs/libnetsnmphelpers.so.30.0.2 /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmphelpers.so.30.0.2
+libtool: install: (cd /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib && { ln -s -f libnetsnmphelpers.so.30.0.2 libnetsnmphelpers.so.30 || { rm -f libnetsnmphelpers.so.30 && ln -s libnetsnmphelpers.so.30.0.2 libnetsnmphelpers.so.30; }; })
+libtool: install: (cd /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib && { ln -s -f libnetsnmphelpers.so.30.0.2 libnetsnmphelpers.so || { rm -f libnetsnmphelpers.so && ln -s libnetsnmphelpers.so.30.0.2 libnetsnmphelpers.so; }; })
+libtool: install: /usr/bin/install -c .libs/libnetsnmphelpers.lai /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmphelpers.la
+libtool: install: /usr/bin/install -c .libs/libnetsnmphelpers.a /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmphelpers.a
+libtool: install: chmod 644 /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmphelpers.a
+libtool: install: ranlib /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmphelpers.a
+installing libnetsnmphelpers.la in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/STM/STLinux-2.4/devkit/armv5/bin:.:/sbin" ldconfig -n /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[2]: Leaving directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/agent/helpers'
+making install in /home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/agent/mibgroup
+make[2]: Entering directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/agent/mibgroup'
+make[2]: Leaving directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/agent/mibgroup'
+libtool: install: /usr/bin/install -c -m 644 ../agent/mibgroup/struct.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/struct.h
+installing struct.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../agent/mibgroup/util_funcs.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/util_funcs.h
+installing util_funcs.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent
+libtool: install: /usr/bin/install -c -m 644 ../agent/mibgroup/util_funcs/header_generic.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/util_funcs/header_generic.h
+installing util_funcs/header_generic.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/util_funcs
+libtool: install: /usr/bin/install -c -m 644 ../agent/mibgroup/util_funcs/header_simple_table.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/util_funcs/header_simple_table.h
+installing util_funcs/header_simple_table.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/util_funcs
+libtool: install: /usr/bin/install -c -m 644 ../agent/mibgroup/util_funcs/MIB_STATS_CACHE_TIMEOUT.h /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/util_funcs/MIB_STATS_CACHE_TIMEOUT.h
+installing util_funcs/MIB_STATS_CACHE_TIMEOUT.h in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/include/net-snmp/agent/util_funcs
+make[1]: Leaving directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/agent'
+making install in /home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/apps
+make[1]: Entering directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/apps'
+libtool: install: (cd /home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/apps; /bin/bash /home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/libtool  --mode=relink armv5-linux-gcc -fno-strict-aliasing -g -O2 -Ulinux -Dlinux=linux -rpath /usr/lib -version-info 30:2:0 -o libnetsnmptrapd.la snmptrapd_handlers.lo snmptrapd_log.lo snmptrapd_auth.lo snmptrapd_sql.lo ../agent/libnetsnmpmibs.la ../snmplib/libnetsnmp.la -inst-prefix-dir /home/xtra/work/ftm-50s/rootfs/apps/target)
+libtool: relink: armv5-linux-gcc -shared  -fPIC -DPIC  .libs/snmptrapd_handlers.o .libs/snmptrapd_log.o .libs/snmptrapd_auth.o .libs/snmptrapd_sql.o   -L/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/agent/.libs -L/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/snmplib/.libs -L/home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib -L/usr/lib -lnetsnmpmibs -lnetsnmpagent -ldl -lm -lnetsnmp -lrt  -O2   -Wl,-soname -Wl,libnetsnmptrapd.so.30 -o .libs/libnetsnmptrapd.so.30.0.2
+libtool: install: /usr/bin/install -c .libs/libnetsnmptrapd.so.30.0.2T /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmptrapd.so.30.0.2
+libtool: install: (cd /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib && { ln -s -f libnetsnmptrapd.so.30.0.2 libnetsnmptrapd.so.30 || { rm -f libnetsnmptrapd.so.30 && ln -s libnetsnmptrapd.so.30.0.2 libnetsnmptrapd.so.30; }; })
+libtool: install: (cd /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib && { ln -s -f libnetsnmptrapd.so.30.0.2 libnetsnmptrapd.so || { rm -f libnetsnmptrapd.so && ln -s libnetsnmptrapd.so.30.0.2 libnetsnmptrapd.so; }; })
+libtool: install: /usr/bin/install -c .libs/libnetsnmptrapd.lai /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmptrapd.la
+libtool: install: /usr/bin/install -c .libs/libnetsnmptrapd.a /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmptrapd.a
+libtool: install: chmod 644 /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmptrapd.a
+libtool: install: ranlib /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib/libnetsnmptrapd.a
+installing libnetsnmptrapd.la in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/STM/STLinux-2.4/devkit/armv5/bin:.:/sbin" ldconfig -n /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /home/xtra/work/ftm-50s/rootfs/apps/target/usr/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+making installlibs in /home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/apps/snmpnetstat
+make[2]: Entering directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/apps/snmpnetstat'
+make[2]: Leaving directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/apps/snmpnetstat'
+libtool: install: /usr/bin/install -c .libs/snmpget /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin/snmpget
+libtool: install: /usr/bin/install -c .libs/snmpgetnext /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin/snmpgetnext
+libtool: install: /usr/bin/install -c .libs/snmpset /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin/snmpset
+libtool: install: /usr/bin/install -c .libs/snmpwalk /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin/snmpwalk
+libtool: install: /usr/bin/install -c .libs/snmpbulkwalk /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin/snmpbulkwalk
+libtool: install: /usr/bin/install -c .libs/snmptable /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin/snmptable
+libtool: install: /usr/bin/install -c .libs/snmptrap /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin/snmptrap
+libtool: install: /usr/bin/install -c .libs/snmpbulkget /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin/snmpbulkget
+libtool: install: /usr/bin/install -c .libs/snmptranslate /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin/snmptranslate
+libtool: install: /usr/bin/install -c .libs/snmpstatus /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin/snmpstatus
+libtool: install: /usr/bin/install -c .libs/snmpdelta /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin/snmpdelta
+libtool: install: /usr/bin/install -c .libs/snmptest /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin/snmptest
+libtool: install: /usr/bin/install -c .libs/snmpdf /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin/snmpdf
+libtool: install: /usr/bin/install -c .libs/agentxtrap /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin/agentxtrap
+libtool: install: /usr/bin/install -c .libs/snmpvacm /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin/snmpvacm
+libtool: install: /usr/bin/install -c .libs/snmpusm /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin/snmpusm
+libtool: install: /usr/bin/install -c .libs/encode_keychange /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin/encode_keychange
+installing snmpget in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin
+installing snmpgetnext in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin
+installing snmpset in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin
+installing snmpwalk in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin
+installing snmpbulkwalk in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin
+installing snmptable in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin
+installing snmptrap in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin
+installing snmpbulkget in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin
+installing snmptranslate in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin
+installing snmpstatus in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin
+installing snmpdelta in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin
+installing snmptest in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin
+installing snmpdf in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin
+installing agentxtrap in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin
+installing snmpvacm in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin
+installing snmpusm in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin
+installing encode_keychange in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin
+libtool: install: /usr/bin/install -c .libs/snmptrapd /home/xtra/work/ftm-50s/rootfs/apps/target/usr/sbin/snmptrapd
+installing snmptrapd in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/sbin
+making install in /home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/apps/snmpnetstat
+make[2]: Entering directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/apps/snmpnetstat'
+libtool: install: /usr/bin/install -c .libs/snmpnetstat /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin/snmpnetstat
+installing snmpnetstat in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin
+make[2]: Leaving directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/apps/snmpnetstat'
+rm -f /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin/snmpinform
+ln -s snmptrap /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin/snmpinform
+libtool: install: /usr/bin/install -c -m 644 ./snmp_perl_trapd.pl /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmp_perl_trapd.pl
+install:  installed snmp_perl_trapd.pl in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp
+make[1]: Leaving directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/apps'
+making install in /home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/local
+make[1]: Entering directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/local'
+libtool: install: /usr/bin/install -c snmpcheck.made /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin/snmpcheck
+install:  installed snmpcheck in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin
+libtool: install: /usr/bin/install -c tkmib.made /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin/tkmib
+install:  installed tkmib in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin
+libtool: install: /usr/bin/install -c mib2c.made /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin/mib2c
+install:  installed mib2c in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin
+libtool: install: /usr/bin/install -c fixproc.made /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin/fixproc
+install:  installed fixproc in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin
+libtool: install: /usr/bin/install -c ipf-mod.pl.made /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin/ipf-mod.pl
+install:  installed ipf-mod.pl in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin
+libtool: install: /usr/bin/install -c snmpconf.made /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin/snmpconf
+install:  installed snmpconf in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin
+libtool: install: /usr/bin/install -c traptoemail.made /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin/traptoemail
+install:  installed traptoemail in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin
+libtool: install: /usr/bin/install -c snmp-bridge-mib.made /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin/snmp-bridge-mib
+install:  installed snmp-bridge-mib in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin
+libtool: install: /usr/bin/install -c net-snmp-cert.made /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin/net-snmp-cert
+install:  installed net-snmp-cert in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin
+libtool: install: /usr/bin/install -c ./mib2c-update /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin/mib2c-update
+install:  installed mib2c-update in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/bin
+libtool: install: /usr/bin/install -c -m 644 ./mib2c.conf /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c.conf
+install:  installed mib2c.conf in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp
+libtool: install: /usr/bin/install -c -m 644 ./mib2c.iterate.conf /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c.iterate.conf
+install:  installed mib2c.iterate.conf in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp
+libtool: install: /usr/bin/install -c -m 644 ./mib2c.iterate_access.conf /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c.iterate_access.conf
+install:  installed mib2c.iterate_access.conf in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp
+libtool: install: /usr/bin/install -c -m 644 ./mib2c.create-dataset.conf /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c.create-dataset.conf
+install:  installed mib2c.create-dataset.conf in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp
+libtool: install: /usr/bin/install -c -m 644 ./mib2c.mfd.conf /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c.mfd.conf
+install:  installed mib2c.mfd.conf in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp
+libtool: install: /usr/bin/install -c -m 644 ./mib2c.array-user.conf /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c.array-user.conf
+install:  installed mib2c.array-user.conf in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp
+libtool: install: /usr/bin/install -c -m 644 ./mib2c.column_enums.conf /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c.column_enums.conf
+install:  installed mib2c.column_enums.conf in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp
+libtool: install: /usr/bin/install -c -m 644 ./mib2c.column_defines.conf /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c.column_defines.conf
+install:  installed mib2c.column_defines.conf in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp
+libtool: install: /usr/bin/install -c -m 644 ./mib2c.column_storage.conf /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c.column_storage.conf
+install:  installed mib2c.column_storage.conf in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp
+libtool: install: /usr/bin/install -c -m 644 ./mib2c.old-api.conf /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c.old-api.conf
+install:  installed mib2c.old-api.conf in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp
+libtool: install: /usr/bin/install -c -m 644 ./mib2c.scalar.conf /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c.scalar.conf
+install:  installed mib2c.scalar.conf in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp
+libtool: install: /usr/bin/install -c -m 644 ./mib2c.check_values.conf /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c.check_values.conf
+install:  installed mib2c.check_values.conf in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp
+libtool: install: /usr/bin/install -c -m 644 ./mib2c.check_values_local.conf /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c.check_values_local.conf
+install:  installed mib2c.check_values_local.conf in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp
+libtool: install: /usr/bin/install -c -m 644 ./mib2c.access_functions.conf /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c.access_functions.conf
+install:  installed mib2c.access_functions.conf in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp
+libtool: install: /usr/bin/install -c -m 644 ./mib2c.notify.conf /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c.notify.conf
+install:  installed mib2c.notify.conf in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp
+libtool: install: /usr/bin/install -c -m 644 ./mib2c.int_watch.conf /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c.int_watch.conf
+install:  installed mib2c.int_watch.conf in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp
+libtool: install: /usr/bin/install -c -m 644 ./mib2c.genhtml.conf /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c.genhtml.conf
+install:  installed mib2c.genhtml.conf in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp
+libtool: install: /usr/bin/install -c -m 644 ./mib2c.raw-table.conf /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c.raw-table.conf
+install:  installed mib2c.raw-table.conf in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp
+libtool: install: /usr/bin/install -c -m 644 ./mib2c.table_data.conf /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c.table_data.conf
+install:  installed mib2c.table_data.conf in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp
+libtool: install: /usr/bin/install -c -m 644 ./mib2c.container.conf /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c.container.conf
+install:  installed mib2c.container.conf in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp
+libtool: install: /usr/bin/install -c -m 644 ./mib2c.perl.conf /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c.perl.conf
+install:  installed mib2c.perl.conf in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp
+libtool: install: /usr/bin/install -c -m 644 ./snmpconf.dir/snmpd-data/system /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data/snmpd-data/system
+install:  installed snmpd-data/system in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data
+libtool: install: /usr/bin/install -c -m 644 ./snmpconf.dir/snmpd-data/acl /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data/snmpd-data/acl
+install:  installed snmpd-data/acl in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data
+libtool: install: /usr/bin/install -c -m 644 ./snmpconf.dir/snmpd-data/trapsinks /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data/snmpd-data/trapsinks
+install:  installed snmpd-data/trapsinks in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data
+libtool: install: /usr/bin/install -c -m 644 ./snmpconf.dir/snmpd-data/monitor /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data/snmpd-data/monitor
+install:  installed snmpd-data/monitor in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data
+libtool: install: /usr/bin/install -c -m 644 ./snmpconf.dir/snmpd-data/extending /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data/snmpd-data/extending
+install:  installed snmpd-data/extending in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data
+libtool: install: /usr/bin/install -c -m 644 ./snmpconf.dir/snmpd-data/operation /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data/snmpd-data/operation
+install:  installed snmpd-data/operation in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data
+libtool: install: /usr/bin/install -c -m 644 ./snmpconf.dir/snmpd-data/basic_setup /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data/snmpd-data/basic_setup
+install:  installed snmpd-data/basic_setup in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data
+libtool: install: /usr/bin/install -c -m 644 ./snmpconf.dir/snmpd-data/snmpconf-config /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data/snmpd-data/snmpconf-config
+install:  installed snmpd-data/snmpconf-config in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data
+libtool: install: /usr/bin/install -c -m 644 ./snmpconf.dir/snmp-data/authopts /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data/snmp-data/authopts
+install:  installed snmp-data/authopts in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data
+libtool: install: /usr/bin/install -c -m 644 ./snmpconf.dir/snmp-data/debugging /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data/snmp-data/debugging
+install:  installed snmp-data/debugging in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data
+libtool: install: /usr/bin/install -c -m 644 ./snmpconf.dir/snmp-data/output /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data/snmp-data/output
+install:  installed snmp-data/output in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data
+libtool: install: /usr/bin/install -c -m 644 ./snmpconf.dir/snmp-data/mibs /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data/snmp-data/mibs
+install:  installed snmp-data/mibs in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data
+libtool: install: /usr/bin/install -c -m 644 ./snmpconf.dir/snmp-data/snmpconf-config /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data/snmp-data/snmpconf-config
+install:  installed snmp-data/snmpconf-config in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data
+libtool: install: /usr/bin/install -c -m 644 ./snmpconf.dir/snmptrapd-data/formatting /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data/snmptrapd-data/formatting
+install:  installed snmptrapd-data/formatting in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data
+libtool: install: /usr/bin/install -c -m 644 ./snmpconf.dir/snmptrapd-data/traphandle /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data/snmptrapd-data/traphandle
+install:  installed snmptrapd-data/traphandle in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data
+libtool: install: /usr/bin/install -c -m 644 ./snmpconf.dir/snmptrapd-data/authentication /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data/snmptrapd-data/authentication
+install:  installed snmptrapd-data/authentication in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data
+libtool: install: /usr/bin/install -c -m 644 ./snmpconf.dir/snmptrapd-data/logging /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data/snmptrapd-data/logging
+install:  installed snmptrapd-data/logging in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data
+libtool: install: /usr/bin/install -c -m 644 ./snmpconf.dir/snmptrapd-data/runtime /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data/snmptrapd-data/runtime
+install:  installed snmptrapd-data/runtime in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data
+libtool: install: /usr/bin/install -c -m 644 ./snmpconf.dir/snmptrapd-data/snmpconf-config /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data/snmptrapd-data/snmpconf-config
+install:  installed snmptrapd-data/snmpconf-config in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/snmpconf-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/default-mfd-top.m2c /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/default-mfd-top.m2c
+install:  installed default-mfd-top.m2c in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/details-enums.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/details-enums.m2i
+install:  installed details-enums.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/details-node.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/details-node.m2i
+install:  installed details-node.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/details-table.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/details-table.m2i
+install:  installed details-table.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/generic-ctx-copy.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/generic-ctx-copy.m2i
+install:  installed generic-ctx-copy.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/generic-ctx-get.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/generic-ctx-get.m2i
+install:  installed generic-ctx-get.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/generic-ctx-set.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/generic-ctx-set.m2i
+install:  installed generic-ctx-set.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/generic-data-allocate.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/generic-data-allocate.m2i
+install:  installed generic-data-allocate.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/generic-data-context.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/generic-data-context.m2i
+install:  installed generic-data-context.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/generic-get-char.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/generic-get-char.m2i
+install:  installed generic-get-char.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/generic-get-decl-bot.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/generic-get-decl-bot.m2i
+install:  installed generic-get-decl-bot.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/generic-get-decl.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/generic-get-decl.m2i
+install:  installed generic-get-decl.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/generic-get-long.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/generic-get-long.m2i
+install:  installed generic-get-long.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/generic-get-oid.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/generic-get-oid.m2i
+install:  installed generic-get-oid.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/generic-get-U64.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/generic-get-U64.m2i
+install:  installed generic-get-U64.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/generic-header-bottom.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/generic-header-bottom.m2i
+install:  installed generic-header-bottom.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/generic-header-top.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/generic-header-top.m2i
+install:  installed generic-header-top.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/generic-source-includes.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/generic-source-includes.m2i
+install:  installed generic-source-includes.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/generic-table-constants.m2c /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/generic-table-constants.m2c
+install:  installed generic-table-constants.m2c in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/generic-table-enums.m2c /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/generic-table-enums.m2c
+install:  installed generic-table-enums.m2c in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/generic-table-indexes-from-oid.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/generic-table-indexes-from-oid.m2i
+install:  installed generic-table-indexes-from-oid.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/generic-table-indexes-set.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/generic-table-indexes-set.m2i
+install:  installed generic-table-indexes-set.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/generic-table-indexes-to-oid.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/generic-table-indexes-to-oid.m2i
+install:  installed generic-table-indexes-to-oid.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/generic-table-indexes-varbind-setup.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/generic-table-indexes-varbind-setup.m2i
+install:  installed generic-table-indexes-varbind-setup.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/generic-table-indexes.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/generic-table-indexes.m2i
+install:  installed generic-table-indexes.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/generic-table-oids.m2c /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/generic-table-oids.m2c
+install:  installed generic-table-oids.m2c in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/generic-value-map-func.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/generic-value-map-func.m2i
+install:  installed generic-value-map-func.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/generic-value-map-reverse.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/generic-value-map-reverse.m2i
+install:  installed generic-value-map-reverse.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/generic-value-map.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/generic-value-map.m2i
+install:  installed generic-value-map.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/m2c-internal-warning.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/m2c-internal-warning.m2i
+install:  installed m2c-internal-warning.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/m2c_setup_enum.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/m2c_setup_enum.m2i
+install:  installed m2c_setup_enum.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/m2c_setup_node.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/m2c_setup_node.m2i
+install:  installed m2c_setup_node.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/m2c_setup_table.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/m2c_setup_table.m2i
+install:  installed m2c_setup_table.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/m2c_table_save_defaults.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/m2c_table_save_defaults.m2i
+install:  installed m2c_table_save_defaults.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/mfd-access-container-cached-defines.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/mfd-access-container-cached-defines.m2i
+install:  installed mfd-access-container-cached-defines.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/mfd-access-unsorted-external-defines.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/mfd-access-unsorted-external-defines.m2i
+install:  installed mfd-access-unsorted-external-defines.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/mfd-data-access.m2c /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/mfd-data-access.m2c
+install:  installed mfd-data-access.m2c in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/mfd-data-get.m2c /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/mfd-data-get.m2c
+install:  installed mfd-data-get.m2c in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/mfd-data-set.m2c /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/mfd-data-set.m2c
+install:  installed mfd-data-set.m2c in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/mfd-doxygen.m2c /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/mfd-doxygen.m2c
+install:  installed mfd-doxygen.m2c in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/mfd-interactive-setup.m2c /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/mfd-interactive-setup.m2c
+install:  installed mfd-interactive-setup.m2c in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/mfd-interface.m2c /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/mfd-interface.m2c
+install:  installed mfd-interface.m2c in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/mfd-makefile.m2m /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/mfd-makefile.m2m
+install:  installed mfd-makefile.m2m in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/mfd-readme.m2c /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/mfd-readme.m2c
+install:  installed mfd-readme.m2c in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/mfd-top.m2c /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/mfd-top.m2c
+install:  installed mfd-top.m2c in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/mfd-persistence.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/mfd-persistence.m2i
+install:  installed mfd-persistence.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/node-get.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/node-get.m2i
+install:  installed node-get.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/node-set.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/node-set.m2i
+install:  installed node-set.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/node-storage.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/node-storage.m2i
+install:  installed node-storage.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/node-validate.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/node-validate.m2i
+install:  installed node-validate.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/node-varbind-validate.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/node-varbind-validate.m2i
+install:  installed node-varbind-validate.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/parent-dependencies.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/parent-dependencies.m2i
+install:  installed parent-dependencies.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/parent-set.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/parent-set.m2i
+install:  installed parent-set.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/subagent.m2c /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/subagent.m2c
+install:  installed subagent.m2c in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/syntax-COUNTER64-get.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/syntax-COUNTER64-get.m2i
+install:  installed syntax-COUNTER64-get.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/syntax-DateAndTime-get.m2d /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/syntax-DateAndTime-get.m2d
+install:  installed syntax-DateAndTime-get.m2d in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/syntax-DateAndTime-get.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/syntax-DateAndTime-get.m2i
+install:  installed syntax-DateAndTime-get.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/syntax-DateAndTime-readme.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/syntax-DateAndTime-readme.m2i
+install:  installed syntax-DateAndTime-readme.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/syntax-InetAddress-get.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/syntax-InetAddress-get.m2i
+install:  installed syntax-InetAddress-get.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/syntax-InetAddress-set.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/syntax-InetAddress-set.m2i
+install:  installed syntax-InetAddress-set.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/syntax-InetAddressType-get.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/syntax-InetAddressType-get.m2i
+install:  installed syntax-InetAddressType-get.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/syntax-InetAddressType-set.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/syntax-InetAddressType-set.m2i
+install:  installed syntax-InetAddressType-set.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/syntax-RowStatus-dependencies.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/syntax-RowStatus-dependencies.m2i
+install:  installed syntax-RowStatus-dependencies.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/syntax-RowStatus-get.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/syntax-RowStatus-get.m2i
+install:  installed syntax-RowStatus-get.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/syntax-RowStatus-varbind-validate.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/syntax-RowStatus-varbind-validate.m2i
+install:  installed syntax-RowStatus-varbind-validate.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/syntax-StorageType-dependencies.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/syntax-StorageType-dependencies.m2i
+install:  installed syntax-StorageType-dependencies.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+libtool: install: /usr/bin/install -c -m 644 ./mib2c-conf.d/syntax-TestAndIncr-get.m2i /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data/syntax-TestAndIncr-get.m2i
+install:  installed syntax-TestAndIncr-get.m2i in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mib2c-data
+make[1]: Leaving directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/local'
+making install in /home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/mibs
+make[1]: Entering directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/mibs'
+libtool: install: /usr/bin/install -c -m 644 ./RFC1155-SMI.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/RFC1155-SMI.txt
+install: installed RFC1155-SMI.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./RFC1213-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/RFC1213-MIB.txt
+install: installed RFC1213-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./RFC-1215.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/RFC-1215.txt
+install: installed RFC-1215.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./SNMPv2-CONF.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/SNMPv2-CONF.txt
+install: installed SNMPv2-CONF.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./SNMPv2-SMI.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/SNMPv2-SMI.txt
+install: installed SNMPv2-SMI.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./SNMPv2-TC.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/SNMPv2-TC.txt
+install: installed SNMPv2-TC.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./SNMPv2-TM.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/SNMPv2-TM.txt
+install: installed SNMPv2-TM.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./SNMPv2-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/SNMPv2-MIB.txt
+install: installed SNMPv2-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./SNMP-FRAMEWORK-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/SNMP-FRAMEWORK-MIB.txt
+install: installed SNMP-FRAMEWORK-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./SNMP-MPD-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/SNMP-MPD-MIB.txt
+install: installed SNMP-MPD-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./SNMP-TARGET-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/SNMP-TARGET-MIB.txt
+install: installed SNMP-TARGET-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./SNMP-NOTIFICATION-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/SNMP-NOTIFICATION-MIB.txt
+install: installed SNMP-NOTIFICATION-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./SNMP-PROXY-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/SNMP-PROXY-MIB.txt
+install: installed SNMP-PROXY-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./SNMP-USER-BASED-SM-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/SNMP-USER-BASED-SM-MIB.txt
+install: installed SNMP-USER-BASED-SM-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./SNMP-VIEW-BASED-ACM-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/SNMP-VIEW-BASED-ACM-MIB.txt
+install: installed SNMP-VIEW-BASED-ACM-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./SNMP-COMMUNITY-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/SNMP-COMMUNITY-MIB.txt
+install: installed SNMP-COMMUNITY-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./TRANSPORT-ADDRESS-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/TRANSPORT-ADDRESS-MIB.txt
+install: installed TRANSPORT-ADDRESS-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./IF-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/IF-MIB.txt
+install: installed IF-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./IF-INVERTED-STACK-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/IF-INVERTED-STACK-MIB.txt
+install: installed IF-INVERTED-STACK-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./EtherLike-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/EtherLike-MIB.txt
+install: installed EtherLike-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./IP-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/IP-MIB.txt
+install: installed IP-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./IP-FORWARD-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/IP-FORWARD-MIB.txt
+install: installed IP-FORWARD-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./IANA-RTPROTO-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/IANA-RTPROTO-MIB.txt
+install: installed IANA-RTPROTO-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./TCP-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/TCP-MIB.txt
+install: installed TCP-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./UDP-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/UDP-MIB.txt
+install: installed UDP-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./INET-ADDRESS-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/INET-ADDRESS-MIB.txt
+install: installed INET-ADDRESS-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./HCNUM-TC.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/HCNUM-TC.txt
+install: installed HCNUM-TC.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./HOST-RESOURCES-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/HOST-RESOURCES-MIB.txt
+install: installed HOST-RESOURCES-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./HOST-RESOURCES-TYPES.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/HOST-RESOURCES-TYPES.txt
+install: installed HOST-RESOURCES-TYPES.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./RMON-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/RMON-MIB.txt
+install: installed RMON-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./IPV6-TC.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/IPV6-TC.txt
+install: installed IPV6-TC.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./IPV6-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/IPV6-MIB.txt
+install: installed IPV6-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./IPV6-ICMP-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/IPV6-ICMP-MIB.txt
+install: installed IPV6-ICMP-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./IPV6-TCP-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/IPV6-TCP-MIB.txt
+install: installed IPV6-TCP-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./IPV6-UDP-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/IPV6-UDP-MIB.txt
+install: installed IPV6-UDP-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./IPV6-FLOW-LABEL-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/IPV6-FLOW-LABEL-MIB.txt
+install: installed IPV6-FLOW-LABEL-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./TUNNEL-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/TUNNEL-MIB.txt
+install: installed TUNNEL-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./DISMAN-EVENT-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/DISMAN-EVENT-MIB.txt
+install: installed DISMAN-EVENT-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./DISMAN-SCRIPT-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/DISMAN-SCRIPT-MIB.txt
+install: installed DISMAN-SCRIPT-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./DISMAN-SCHEDULE-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/DISMAN-SCHEDULE-MIB.txt
+install: installed DISMAN-SCHEDULE-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./NOTIFICATION-LOG-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/NOTIFICATION-LOG-MIB.txt
+install: installed NOTIFICATION-LOG-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./SNMP-USM-AES-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/SNMP-USM-AES-MIB.txt
+install: installed SNMP-USM-AES-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./SNMP-USM-DH-OBJECTS-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/SNMP-USM-DH-OBJECTS-MIB.txt
+install: installed SNMP-USM-DH-OBJECTS-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./SCTP-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/SCTP-MIB.txt
+install: installed SCTP-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./BRIDGE-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/BRIDGE-MIB.txt
+install: installed BRIDGE-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./AGENTX-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/AGENTX-MIB.txt
+install: installed AGENTX-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./SMUX-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/SMUX-MIB.txt
+install: installed SMUX-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./IANAifType-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/IANAifType-MIB.txt
+install: installed IANAifType-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./IANA-LANGUAGE-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/IANA-LANGUAGE-MIB.txt
+install: installed IANA-LANGUAGE-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./IANA-ADDRESS-FAMILY-NUMBERS-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/IANA-ADDRESS-FAMILY-NUMBERS-MIB.txt
+install: installed IANA-ADDRESS-FAMILY-NUMBERS-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./NET-SNMP-TC.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/NET-SNMP-TC.txt
+install: installed NET-SNMP-TC.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./NET-SNMP-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/NET-SNMP-MIB.txt
+install: installed NET-SNMP-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./NET-SNMP-AGENT-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/NET-SNMP-AGENT-MIB.txt
+install: installed NET-SNMP-AGENT-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./NET-SNMP-EXAMPLES-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/NET-SNMP-EXAMPLES-MIB.txt
+install: installed NET-SNMP-EXAMPLES-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./NET-SNMP-EXTEND-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/NET-SNMP-EXTEND-MIB.txt
+install: installed NET-SNMP-EXTEND-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./NET-SNMP-PASS-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/NET-SNMP-PASS-MIB.txt
+install: installed NET-SNMP-PASS-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./UCD-SNMP-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/UCD-SNMP-MIB.txt
+install: installed UCD-SNMP-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./UCD-DEMO-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/UCD-DEMO-MIB.txt
+install: installed UCD-DEMO-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./UCD-IPFWACC-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/UCD-IPFWACC-MIB.txt
+install: installed UCD-IPFWACC-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./UCD-DLMOD-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/UCD-DLMOD-MIB.txt
+install: installed UCD-DLMOD-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./UCD-DISKIO-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/UCD-DISKIO-MIB.txt
+install: installed UCD-DISKIO-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./SNMPv2-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/SNMPv2-MIB.txt
+install: installed SNMPv2-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./IF-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/IF-MIB.txt
+install: installed IF-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./IP-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/IP-MIB.txt
+install: installed IP-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./TCP-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/TCP-MIB.txt
+install: installed TCP-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./UDP-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/UDP-MIB.txt
+install: installed UDP-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./HOST-RESOURCES-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/HOST-RESOURCES-MIB.txt
+install: installed HOST-RESOURCES-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./NOTIFICATION-LOG-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/NOTIFICATION-LOG-MIB.txt
+install: installed NOTIFICATION-LOG-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./DISMAN-EVENT-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/DISMAN-EVENT-MIB.txt
+install: installed DISMAN-EVENT-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./DISMAN-SCHEDULE-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/DISMAN-SCHEDULE-MIB.txt
+install: installed DISMAN-SCHEDULE-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./UCD-SNMP-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/UCD-SNMP-MIB.txt
+install: installed UCD-SNMP-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./UCD-DEMO-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/UCD-DEMO-MIB.txt
+install: installed UCD-DEMO-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./SNMP-TARGET-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/SNMP-TARGET-MIB.txt
+install: installed SNMP-TARGET-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./NET-SNMP-AGENT-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/NET-SNMP-AGENT-MIB.txt
+install: installed NET-SNMP-AGENT-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./DISMAN-EVENT-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/DISMAN-EVENT-MIB.txt
+install: installed DISMAN-EVENT-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./HOST-RESOURCES-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/HOST-RESOURCES-MIB.txt
+install: installed HOST-RESOURCES-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./HOST-RESOURCES-TYPES.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/HOST-RESOURCES-TYPES.txt
+install: installed HOST-RESOURCES-TYPES.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./SNMP-MPD-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/SNMP-MPD-MIB.txt
+install: installed SNMP-MPD-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./SNMP-USER-BASED-SM-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/SNMP-USER-BASED-SM-MIB.txt
+install: installed SNMP-USER-BASED-SM-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./SNMP-FRAMEWORK-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/SNMP-FRAMEWORK-MIB.txt
+install: installed SNMP-FRAMEWORK-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./SNMP-USER-BASED-SM-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/SNMP-USER-BASED-SM-MIB.txt
+install: installed SNMP-USER-BASED-SM-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./SNMP-VIEW-BASED-ACM-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/SNMP-VIEW-BASED-ACM-MIB.txt
+install: installed SNMP-VIEW-BASED-ACM-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./SNMP-COMMUNITY-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/SNMP-COMMUNITY-MIB.txt
+install: installed SNMP-COMMUNITY-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./IF-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/IF-MIB.txt
+install: installed IF-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./IP-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/IP-MIB.txt
+install: installed IP-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./IP-FORWARD-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/IP-FORWARD-MIB.txt
+install: installed IP-FORWARD-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./TCP-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/TCP-MIB.txt
+install: installed TCP-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./UDP-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/UDP-MIB.txt
+install: installed UDP-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./NET-SNMP-PASS-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/NET-SNMP-PASS-MIB.txt
+install: installed NET-SNMP-PASS-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./NET-SNMP-EXTEND-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/NET-SNMP-EXTEND-MIB.txt
+install: installed NET-SNMP-EXTEND-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./UCD-DLMOD-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/UCD-DLMOD-MIB.txt
+install: installed UCD-DLMOD-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./SNMP-NOTIFICATION-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/SNMP-NOTIFICATION-MIB.txt
+install: installed SNMP-NOTIFICATION-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./SNMPv2-TM.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/SNMPv2-TM.txt
+install: installed SNMPv2-TM.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./NET-SNMP-VACM-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/NET-SNMP-VACM-MIB.txt
+install: installed NET-SNMP-VACM-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./DISMAN-SCHEDULE-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/DISMAN-SCHEDULE-MIB.txt
+install: installed DISMAN-SCHEDULE-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./FTM-50-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/FTM-50-MIB.txt
+install: installed FTM-50-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+libtool: install: /usr/bin/install -c -m 644 ./FUTURETEK-MIB.txt /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs/FUTURETEK-MIB.txt
+install: installed FUTURETEK-MIB.txt in /home/xtra/work/ftm-50s/rootfs/apps/target/usr/share/snmp/mibs
+make[1]: Leaving directory `/home/xtra/work/ftm-50s/rootfs/apps/net-snmp-5.7.2/mibs'
