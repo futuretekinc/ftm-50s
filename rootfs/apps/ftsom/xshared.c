@@ -84,6 +84,11 @@ void *XSD_Open(key_t key, int size)
 	return	shmat(nID, NULL, 0);
 }
 
+int XSD_Close(key_t key)
+{
+	return	0;
+}
+
 int XSD_Delete(key_t key)
 {
 	return	shmctl(key, IPC_RMID, 0);

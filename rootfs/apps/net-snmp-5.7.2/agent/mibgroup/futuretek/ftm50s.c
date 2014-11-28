@@ -7,7 +7,7 @@
 #include <net-snmp/net-snmp-includes.h>
 #include <net-snmp/agent/net-snmp-agent-includes.h>
 #include "ftm50s.h"
-
+#include "libconfig.h"
 #define	TABLE_SIZE	10
 
 /* 
@@ -235,11 +235,11 @@ struct variable4 ftm50s_variables[] = {
 };
 /*    (L = length of the oidsuffix) */
 
-
 /** Initializes the ftm50s module */
 void
 init_ftm50s(void)
 {
+	static config_t	cfg;
 
     DEBUGMSGTL(("ftm50s", "Initializing\n"));
 
@@ -248,7 +248,8 @@ init_ftm50s(void)
                ftm50s_variables_oid);
 
     /* place any other initialization junk you need here */
-}
+	ft_som_init(NULL);
+  }
 
 /*
  * var_ftm50s():
@@ -286,26 +287,65 @@ var_ftm50s(struct variable *vp,
     /* 
    * this is where we do the value assignments for the mib results.
    */
-    switch(vp->magic) {
+    switch(vp->magic) 
+	{
     case PRODID:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
+		{
+			if (0 > ft_som_get_devid(string, sizeof(string)))
+			{
+				string[0] = '\0';
+			}
+
+			*var_len  =strlen(string);
+
+        	return string;
+		}
+
     case PRODMODEL:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
+		{
+			if (0 > ft_som_get_model(string, sizeof(string)))
+			{
+				string[0] = '\0';
+			}
+
+			*var_len  =strlen(string);
+
+        	return string;
+		}
+
     case PRODVENDOR:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
+		{
+			strcpy(string, "FutureTek,Inc.");
+			*var_len  =strlen(string);
+
+			return	string;
+		}
+
     case PRODHWVER:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
+		{
+			sprintf(string, "1.0.0.0");
+			*var_len  =strlen(string);
+
+			return	string;
+		}
+
     case PRODSWVER:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
+		{
+			sprintf(string, "1.0.0.0");
+			*var_len  =strlen(string);
+
+			return	string;
+		}
+
     case PRODDESCRIPTION:
-        *write_method = write_prodDescription;
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
+		{
+        	*write_method = write_prodDescription;
+			sprintf(string, "FTM-50S");
+			*var_len  =strlen(string);
+
+			return	string;
+		}
+
     case NETCOUNT:
         VAR = VALUE;	/* XXX */
         return (u_char*) &VAR;
@@ -316,20 +356,45 @@ var_ftm50s(struct variable *vp,
         VAR = VALUE;	/* XXX */
         return (u_char*) &VAR;
     case TEMPCOUNT:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
+		{
+			unsigned int *value = (unsigned int *)string;
+
+			*value = ft_som_obj_count(0x01000000);
+        	return (u_char*) value;
+		}
+
     case HUMICOUNT:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
+		{
+			unsigned int *value = (unsigned int *)string;
+
+			*value = ft_som_obj_count(0x02000000);
+        	return (u_char*) value;
+		}
+
     case DICOUNT:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
+		{
+			unsigned int *value = (unsigned int *)string;
+
+			*value = ft_som_obj_count(0x05000000);
+        	return (u_char*) value;
+		}
+
     case DOCOUNT:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
+		{
+			unsigned int *value = (unsigned int *)string;
+
+			*value = ft_som_obj_count(0x06000000);
+        	return (u_char*) value;
+		}
+
     case RLCOUNT:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
+		{
+			unsigned int *value = (unsigned int *)string;
+
+			*value = ft_som_obj_count(0x06000000);
+        	return (u_char*) value;
+		}
+
     default:
       ERROR_MSG("");
     }

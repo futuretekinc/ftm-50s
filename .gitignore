@@ -80,3 +80,4 @@ GTAGS
 */arch/arm/boot/compressed/*.gzip
 */arch/arm/boot/compressed/vmlinux
 download/
+

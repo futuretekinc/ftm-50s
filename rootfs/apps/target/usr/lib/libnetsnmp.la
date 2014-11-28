@@ -17,7 +17,7 @@ old_library='libnetsnmp.a'
 inherited_linker_flags=''
 
 # Libraries that this one depends upon.
-dependency_libs=' -lrt'
+dependency_libs=' -L/home/xtra/work/ftm-50s/rootfs/apps/devtools/lib -lrt'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''
