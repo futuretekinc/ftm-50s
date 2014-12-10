@@ -406,7 +406,6 @@ AUTOLOAD	perl/ASN/ASN.pm	/^sub AUTOLOAD {$/;"	s
 AUTOLOAD	perl/AnyData_SNMP/netsh	/^sub AUTOLOAD {$/;"	s
 AUTOLOAD	perl/OID/OID.pm	/^sub AUTOLOAD {$/;"	s
 AUTOLOAD	perl/SNMP/SNMP.pm	/^sub AUTOLOAD {$/;"	s
-AUTOLOAD	perl/SNMP/blib/lib/SNMP.pm	/^sub AUTOLOAD {$/;"	s
 AUTOLOAD	perl/TrapReceiver/TrapReceiver.pm	/^sub AUTOLOAD {$/;"	s
 AUTOLOAD	perl/agent/agent.pm	/^sub AUTOLOAD {$/;"	s
 AUTOLOAD	perl/agent/default_store/default_store.pm	/^sub AUTOLOAD {$/;"	s
@@ -712,17 +711,17 @@ CERT_INDEX_FORMAT	snmplib/cert_util.c	96;"	d	file:
 CERT_LOAD_ERR	snmplib/cert_util.c	1116;"	d	file:
 CERT_LOAD_OK	snmplib/cert_util.c	1115;"	d	file:
 CERT_LOAD_PARTIAL	snmplib/cert_util.c	1117;"	d	file:
-CFLAGS	Makefile	/^CFLAGS		= -fno-strict-aliasing -g -O2 -Ulinux -Dlinux=linux $/;"	m
-CFLAGS	agent/Makefile	/^CFLAGS		= -fno-strict-aliasing -g -O2 -Ulinux -Dlinux=linux $/;"	m
-CFLAGS	agent/helpers/Makefile	/^CFLAGS		= -fno-strict-aliasing -g -O2 -Ulinux -Dlinux=linux $/;"	m
-CFLAGS	agent/mibgroup/Makefile	/^CFLAGS		= -fno-strict-aliasing -g -O2 -Ulinux -Dlinux=linux $/;"	m
-CFLAGS	apps/Makefile	/^CFLAGS		= -fno-strict-aliasing -g -O2 -Ulinux -Dlinux=linux $/;"	m
-CFLAGS	apps/snmpnetstat/Makefile	/^CFLAGS		= -fno-strict-aliasing -g -O2 -Ulinux -Dlinux=linux $/;"	m
-CFLAGS	local/Makefile	/^CFLAGS		= -fno-strict-aliasing -g -O2 -Ulinux -Dlinux=linux $/;"	m
-CFLAGS	man/Makefile	/^CFLAGS		= -fno-strict-aliasing -g -O2 -Ulinux -Dlinux=linux $/;"	m
-CFLAGS	mibs/Makefile	/^CFLAGS		= -fno-strict-aliasing -g -O2 -Ulinux -Dlinux=linux $/;"	m
-CFLAGS	snmplib/Makefile	/^CFLAGS		= -fno-strict-aliasing -g -O2 -Ulinux -Dlinux=linux $/;"	m
-CFLAGS	testing/Makefile	/^CFLAGS		= -fno-strict-aliasing -g -O2 -Ulinux -Dlinux=linux $/;"	m
+CFLAGS	Makefile	/^CFLAGS		= -fno-strict-aliasing -I\/home\/xtra\/work\/ftm-50s\/rootfs\/apps\/devtools\/include -Ulinux -Dlinux=linux $/;"	m
+CFLAGS	agent/Makefile	/^CFLAGS		= -fno-strict-aliasing -I\/home\/xtra\/work\/ftm-50s\/rootfs\/apps\/devtools\/include -Ulinux -Dlinux=linux $/;"	m
+CFLAGS	agent/helpers/Makefile	/^CFLAGS		= -fno-strict-aliasing -I\/home\/xtra\/work\/ftm-50s\/rootfs\/apps\/devtools\/include -Ulinux -Dlinux=linux $/;"	m
+CFLAGS	agent/mibgroup/Makefile	/^CFLAGS		= -fno-strict-aliasing -I\/home\/xtra\/work\/ftm-50s\/rootfs\/apps\/devtools\/include -Ulinux -Dlinux=linux $/;"	m
+CFLAGS	apps/Makefile	/^CFLAGS		= -fno-strict-aliasing -I\/home\/xtra\/work\/ftm-50s\/rootfs\/apps\/devtools\/include -Ulinux -Dlinux=linux $/;"	m
+CFLAGS	apps/snmpnetstat/Makefile	/^CFLAGS		= -fno-strict-aliasing -I\/home\/xtra\/work\/ftm-50s\/rootfs\/apps\/devtools\/include -Ulinux -Dlinux=linux $/;"	m
+CFLAGS	local/Makefile	/^CFLAGS		= -fno-strict-aliasing -I\/home\/xtra\/work\/ftm-50s\/rootfs\/apps\/devtools\/include -Ulinux -Dlinux=linux $/;"	m
+CFLAGS	man/Makefile	/^CFLAGS		= -fno-strict-aliasing -I\/home\/xtra\/work\/ftm-50s\/rootfs\/apps\/devtools\/include -Ulinux -Dlinux=linux $/;"	m
+CFLAGS	mibs/Makefile	/^CFLAGS		= -fno-strict-aliasing -I\/home\/xtra\/work\/ftm-50s\/rootfs\/apps\/devtools\/include -Ulinux -Dlinux=linux $/;"	m
+CFLAGS	snmplib/Makefile	/^CFLAGS		= -fno-strict-aliasing -I\/home\/xtra\/work\/ftm-50s\/rootfs\/apps\/devtools\/include -Ulinux -Dlinux=linux $/;"	m
+CFLAGS	testing/Makefile	/^CFLAGS		= -fno-strict-aliasing -I\/home\/xtra\/work\/ftm-50s\/rootfs\/apps\/devtools\/include -Ulinux -Dlinux=linux $/;"	m
 CHECK	testing/fulltests/support/simple_eval_tools.sh	/^CHECK() {$/;"	f
 CHECKAGENT	testing/fulltests/support/simple_eval_tools.sh	/^CHECKAGENT() {$/;"	f
 CHECKAGENTCOUNT	testing/fulltests/support/simple_eval_tools.sh	/^CHECKAGENTCOUNT() {$/;"	f
@@ -825,8 +824,6 @@ CHR_UP_YEAR	apps/snmptrapd_log.c	/^    CHR_UP_YEAR = 'Y',          \/* uptime ye
 CHR_UP_YEAR	targets/i686-pc-linux-gnu/apps/snmptrapd_log.c	/^    CHR_UP_YEAR = 'Y',          \/* uptime year *\/$/;"	e	enum:__anon31	file:
 CLEAR	perl/SNMP/SNMP.pm	/^sub CLEAR { undef %{$_[0]}; } # clear the cache$/;"	s
 CLEAR	perl/SNMP/SNMP.pm	/^sub CLEAR {$/;"	s
-CLEAR	perl/SNMP/blib/lib/SNMP.pm	/^sub CLEAR { undef %{$_[0]}; } # clear the cache$/;"	s
-CLEAR	perl/SNMP/blib/lib/SNMP.pm	/^sub CLEAR {$/;"	s
 CLEAR_SNMP_STRIKE_FLAGS	include/net-snmp/library/snmp_api.h	173;"	d
 CLEAR_SNMP_STRIKE_FLAGS	targets/i686-pc-linux-gnu/include/net-snmp/library/snmp_api.h	173;"	d
 CLR	agent/mibgroup/disman/ping/pingCtlTable.h	360;"	d
@@ -2060,10 +2057,6 @@ DELETE	perl/SNMP/SNMP.pm	/^sub DELETE { SNMP::_dump_packet(0); ${$_[0]} = 0; }$/
 DELETE	perl/SNMP/SNMP.pm	/^sub DELETE { SNMP::_mib_toggle_options(0); ${$_[0]} = ''; }$/;"	s
 DELETE	perl/SNMP/SNMP.pm	/^sub DELETE { SNMP::_set_save_descriptions(0); ${$_[0]} = 0; }$/;"	s
 DELETE	perl/SNMP/SNMP.pm	/^sub DELETE {$/;"	s
-DELETE	perl/SNMP/blib/lib/SNMP.pm	/^sub DELETE { SNMP::_dump_packet(0); ${$_[0]} = 0; }$/;"	s
-DELETE	perl/SNMP/blib/lib/SNMP.pm	/^sub DELETE { SNMP::_mib_toggle_options(0); ${$_[0]} = ''; }$/;"	s
-DELETE	perl/SNMP/blib/lib/SNMP.pm	/^sub DELETE { SNMP::_set_save_descriptions(0); ${$_[0]} = 0; }$/;"	s
-DELETE	perl/SNMP/blib/lib/SNMP.pm	/^sub DELETE {$/;"	s
 DELIVERBYNOTIFY_H	agent/mibgroup/deliver/deliverByNotify.h	2;"	d
 DEPRECATED	snmplib/parse.c	224;"	d	file:
 DESCR2_FIELD	agent/mibgroup/hardware/cpu/cpu_linux.c	17;"	d	file:
@@ -2141,21 +2134,16 @@ DEV_FILENAME_LEN	agent/mibgroup/ip-mib/data_access/systemstats_linux.c	574;"	d	f
 DEV_SNMP6_DIRNAME	agent/mibgroup/ip-mib/data_access/systemstats_linux.c	572;"	d	file:
 DH_USM_OID_LEN	apps/snmpusm.c	94;"	d	file:
 DH_USM_OID_LEN	targets/i686-pc-linux-gnu/apps/snmpusm.c	94;"	d	file:
-DICOUNT	agent/mibgroup/futuretek/ftm50s.c	68;"	d	file:
-DICOUNT	local/ftm50s.c	67;"	d	file:
+DICOUNT	agent/mibgroup/futuretek/ftm50s.c	63;"	d	file:
 DIE	testing/RUNFULLTESTS	/^sub DIE {$/;"	s
 DIE	testing/fulltests/support/NetSNMPTest.pm	/^sub DIE {$/;"	s
 DIEHERE	snmplib/transports/snmpDTLSUDPDomain.c	207;"	d	file:
 DIFFTIMEVAL	include/net-snmp/library/tools.h	152;"	d
 DIFFTIMEVAL	targets/i686-pc-linux-gnu/include/net-snmp/library/tools.h	152;"	d
-DIID	agent/mibgroup/futuretek/ftm50s.c	132;"	d	file:
-DIID	local/ftm50s.c	131;"	d	file:
-DILASTTIME	agent/mibgroup/futuretek/ftm50s.c	153;"	d	file:
-DILASTTIME	local/ftm50s.c	152;"	d	file:
-DILASTVALUE	agent/mibgroup/futuretek/ftm50s.c	150;"	d	file:
-DILASTVALUE	local/ftm50s.c	149;"	d	file:
-DINAME	agent/mibgroup/futuretek/ftm50s.c	138;"	d	file:
-DINAME	local/ftm50s.c	137;"	d	file:
+DIID	agent/mibgroup/futuretek/ftm50s.c	154;"	d	file:
+DILASTTIME	agent/mibgroup/futuretek/ftm50s.c	175;"	d	file:
+DILASTVALUE	agent/mibgroup/futuretek/ftm50s.c	172;"	d	file:
+DINAME	agent/mibgroup/futuretek/ftm50s.c	160;"	d	file:
 DIR	include/net-snmp/library/system.h	/^    } DIR;$/;"	t	typeref:struct:_dir_struc
 DIR	targets/i686-pc-linux-gnu/include/net-snmp/library/system.h	/^    } DIR;$/;"	t	typeref:struct:_dir_struc
 DISABLE_DES	acconfig.h	809;"	d
@@ -2221,19 +2209,14 @@ DISKUSEDHIGH	agent/mibgroup/ucd-snmp/disk_hw.h	30;"	d
 DISKUSEDLOW	agent/mibgroup/ucd-snmp/disk.h	28;"	d
 DISKUSEDLOW	agent/mibgroup/ucd-snmp/disk_hw.h	29;"	d
 DISK_INCR	agent/mibgroup/ucd-snmp/diskio.c	873;"	d	file:
-DISN	agent/mibgroup/futuretek/ftm50s.c	141;"	d	file:
-DISN	local/ftm50s.c	140;"	d	file:
+DISN	agent/mibgroup/futuretek/ftm50s.c	163;"	d	file:
 DISPLAYHINT	snmplib/parse.c	258;"	d	file:
 DISPLAY_MSG	include/net-snmp/library/winservice.h	40;"	d
 DISPLAY_MSG	targets/i686-pc-linux-gnu/include/net-snmp/library/winservice.h	40;"	d
-DISTATE	agent/mibgroup/futuretek/ftm50s.c	144;"	d	file:
-DISTATE	local/ftm50s.c	143;"	d	file:
-DITYPE	agent/mibgroup/futuretek/ftm50s.c	135;"	d	file:
-DITYPE	local/ftm50s.c	134;"	d	file:
-DIUPDATEINTERVAL	agent/mibgroup/futuretek/ftm50s.c	156;"	d	file:
-DIUPDATEINTERVAL	local/ftm50s.c	155;"	d	file:
-DIVALUE	agent/mibgroup/futuretek/ftm50s.c	147;"	d	file:
-DIVALUE	local/ftm50s.c	146;"	d	file:
+DISTATE	agent/mibgroup/futuretek/ftm50s.c	166;"	d	file:
+DITYPE	agent/mibgroup/futuretek/ftm50s.c	157;"	d	file:
+DIUPDATEINTERVAL	agent/mibgroup/futuretek/ftm50s.c	178;"	d	file:
+DIVALUE	agent/mibgroup/futuretek/ftm50s.c	169;"	d	file:
 DKTYPENAMES	agent/mibgroup/host/hr_disk.c	60;"	d	file:
 DLFLAGS	agent/mibgroup/Makefile	/^DLFLAGS=-fPIC -shared$/;"	m
 DLMODENTRY_NAME_LENGTH	agent/mibgroup/ucd-snmp/dlmod.c	466;"	d	file:
@@ -2259,16 +2242,11 @@ DNS	snmplib/mib.c	/^    DNS = 16$/;"	e	enum:inet_address_type	file:
 DO	perl/manager/setupauth	/^sub DO {$/;"	s
 DO	perl/manager/setupdb	/^sub DO {$/;"	s
 DO	perl/manager/setupuser	/^sub DO {$/;"	s
-DOCOUNT	agent/mibgroup/futuretek/ftm50s.c	71;"	d	file:
-DOCOUNT	local/ftm50s.c	70;"	d	file:
-DOID	agent/mibgroup/futuretek/ftm50s.c	159;"	d	file:
-DOID	local/ftm50s.c	158;"	d	file:
-DOLASTTIME	agent/mibgroup/futuretek/ftm50s.c	180;"	d	file:
-DOLASTTIME	local/ftm50s.c	179;"	d	file:
-DOLASTVALUE	agent/mibgroup/futuretek/ftm50s.c	177;"	d	file:
-DOLASTVALUE	local/ftm50s.c	176;"	d	file:
-DONAME	agent/mibgroup/futuretek/ftm50s.c	165;"	d	file:
-DONAME	local/ftm50s.c	164;"	d	file:
+DOCOUNT	agent/mibgroup/futuretek/ftm50s.c	66;"	d	file:
+DOID	agent/mibgroup/futuretek/ftm50s.c	181;"	d	file:
+DOLASTTIME	agent/mibgroup/futuretek/ftm50s.c	202;"	d	file:
+DOLASTVALUE	agent/mibgroup/futuretek/ftm50s.c	199;"	d	file:
+DONAME	agent/mibgroup/futuretek/ftm50s.c	187;"	d	file:
 DONE	local/net-snmp-cert	/^ DONE:$/;"	l
 DONT_INITIALIZE	include/net-snmp/agent/mib_modules.h	9;"	d
 DONT_INITIALIZE	targets/i686-pc-linux-gnu/include/net-snmp/agent/mib_modules.h	9;"	d
@@ -2276,10 +2254,8 @@ DONT_SHARE_ERROR_WITH_OTHER_THREADS	win32/net-snmp/net-snmp-config.h	1629;"	d
 DONT_USE_NLIST	acconfig.h	817;"	d
 DONT_USE_NLIST	include/net-snmp/net-snmp-config.h	2429;"	d
 DONT_USE_NLIST	targets/i686-pc-linux-gnu/acconfig.h	817;"	d
-DOSN	agent/mibgroup/futuretek/ftm50s.c	168;"	d	file:
-DOSN	local/ftm50s.c	167;"	d	file:
-DOSTATE	agent/mibgroup/futuretek/ftm50s.c	171;"	d	file:
-DOSTATE	local/ftm50s.c	170;"	d	file:
+DOSN	agent/mibgroup/futuretek/ftm50s.c	190;"	d	file:
+DOSTATE	agent/mibgroup/futuretek/ftm50s.c	193;"	d	file:
 DOT3STATSALIGNMENTERRORS	agent/mibgroup/etherlike-mib/dot3StatsTable/ioctl_imp_common.h	51;"	d
 DOT3STATSDUPLEXSTATUS_ENUMS	agent/mibgroup/etherlike-mib/dot3StatsTable/dot3StatsTable_enums.h	42;"	d
 DOT3STATSDUPLEXSTATUS_FULLDUPLEX	agent/mibgroup/etherlike-mib/dot3StatsTable/dot3StatsTable_enums.h	46;"	d
@@ -2304,12 +2280,9 @@ DOT3STATSTABLE_MAX_COL	agent/mibgroup/etherlike-mib/dot3StatsTable/dot3StatsTabl
 DOT3STATSTABLE_MIN_COL	agent/mibgroup/etherlike-mib/dot3StatsTable/dot3StatsTable_oids.h	75;"	d
 DOT3STATSTABLE_OID	agent/mibgroup/etherlike-mib/dot3StatsTable/dot3StatsTable_oids.h	18;"	d
 DOT3STATSTABLE_OIDS_H	agent/mibgroup/etherlike-mib/dot3StatsTable/dot3StatsTable_oids.h	8;"	d
-DOTYPE	agent/mibgroup/futuretek/ftm50s.c	162;"	d	file:
-DOTYPE	local/ftm50s.c	161;"	d	file:
-DOUPDATEINTERVAL	agent/mibgroup/futuretek/ftm50s.c	183;"	d	file:
-DOUPDATEINTERVAL	local/ftm50s.c	182;"	d	file:
-DOVALUE	agent/mibgroup/futuretek/ftm50s.c	174;"	d	file:
-DOVALUE	local/ftm50s.c	173;"	d	file:
+DOTYPE	agent/mibgroup/futuretek/ftm50s.c	184;"	d	file:
+DOUPDATEINTERVAL	agent/mibgroup/futuretek/ftm50s.c	205;"	d	file:
+DOVALUE	agent/mibgroup/futuretek/ftm50s.c	196;"	d	file:
 DO_INITIALIZE	include/net-snmp/agent/mib_modules.h	8;"	d
 DO_INITIALIZE	targets/i686-pc-linux-gnu/include/net-snmp/agent/mib_modules.h	8;"	d
 DP_C_LDOUBLE	snmplib/snprintf.c	125;"	d	file:
@@ -2581,8 +2554,6 @@ EXEEXT	snmplib/Makefile	/^EXEEXT		= $/;"	m
 EXEEXT	testing/Makefile	/^EXEEXT		= $/;"	m
 EXISTS	perl/SNMP/SNMP.pm	/^sub EXISTS { exists $_[0]->{$_[1]} || $_[0]->FETCH($_[1]); }$/;"	s
 EXISTS	perl/SNMP/SNMP.pm	/^sub EXISTS { exists($node_elements{$_[1]}); }$/;"	s
-EXISTS	perl/SNMP/blib/lib/SNMP.pm	/^sub EXISTS { exists $_[0]->{$_[1]} || $_[0]->FETCH($_[1]); }$/;"	s
-EXISTS	perl/SNMP/blib/lib/SNMP.pm	/^sub EXISTS { exists($node_elements{$_[1]}); }$/;"	s
 EXPDISCID_DATETIME	agent/mibgroup/disman/expr/exp_enum.h	35;"	d
 EXPDISCID_TIMESTAMP	agent/mibgroup/disman/expr/exp_enum.h	34;"	d
 EXPDISCID_TIMETICKS	agent/mibgroup/disman/expr/exp_enum.h	33;"	d
@@ -2853,8 +2824,6 @@ FEATUREPROCESS	snmplib/Makefile	/^FEATUREPROCESS	= $(top_srcdir)\/local\/minimal
 FEATUREPROCESS	testing/Makefile	/^FEATUREPROCESS	= $(top_srcdir)\/local\/minimalist\/feature-remove$/;"	m
 FETCH	perl/SNMP/SNMP.pm	/^sub FETCH { ${$_[0]}; }$/;"	s
 FETCH	perl/SNMP/SNMP.pm	/^sub FETCH {$/;"	s
-FETCH	perl/SNMP/blib/lib/SNMP.pm	/^sub FETCH { ${$_[0]}; }$/;"	s
-FETCH	perl/SNMP/blib/lib/SNMP.pm	/^sub FETCH {$/;"	s
 FILENAMELEN	agent/mibgroup/mibII/mta_sendmail.c	199;"	d	file:
 FILE_ERROR	agent/mibgroup/ucd-snmp/file.h	35;"	d
 FILE_ERROR_MSG	agent/mibgroup/ucd-snmp/file.h	29;"	d
@@ -2887,8 +2856,6 @@ FIPS_SHA_SIZE_T	snmplib/openssl/openssl_sha.h	73;"	d
 FIPS_SHA_SIZE_T	targets/i686-pc-linux-gnu/include/net-snmp/library/openssl_sha.h	73;"	d
 FIRSTKEY	perl/SNMP/SNMP.pm	/^sub FIRSTKEY { my $k = keys %node_elements; (each(%node_elements))[0]; }$/;"	s
 FIRSTKEY	perl/SNMP/SNMP.pm	/^sub FIRSTKEY { return '.1'; } # this should actually start at .0 but$/;"	s
-FIRSTKEY	perl/SNMP/blib/lib/SNMP.pm	/^sub FIRSTKEY { my $k = keys %node_elements; (each(%node_elements))[0]; }$/;"	s
-FIRSTKEY	perl/SNMP/blib/lib/SNMP.pm	/^sub FIRSTKEY { return '.1'; } # this should actually start at .0 but$/;"	s
 FIRST_PASS	include/net-snmp/library/snmp_impl.h	135;"	d
 FIRST_PASS	targets/i686-pc-linux-gnu/include/net-snmp/library/snmp_impl.h	135;"	d
 FIX_TO_DBL	agent/mibgroup/ucd-snmp/loadave.c	277;"	d	file:
@@ -2906,7 +2873,6 @@ FSWDEVT_SYMBOL	include/net-snmp/system/generic.h	37;"	d
 FSWDEVT_SYMBOL	include/net-snmp/system/hpux.h	42;"	d
 FTAGENTOBJS	agent/Makefile	/^FTAGENTOBJS=snmpd.ft $/;"	m
 FTM50S_H	agent/mibgroup/futuretek/ftm50s.h	6;"	d
-FTM50S_H	local/ftm50s.h	6;"	d
 FTMIBOBJS	agent/Makefile	/^FTMIBOBJS	= $(mibgroup_list_ft) mib_modules.ft auto_nlist.ft$/;"	m
 FTOBJS	agent/Makefile	/^FTOBJS		= $(LLIBAGENTFTS) $(FTAGENTOBJS) mib_modules.ft auto_nlist.ft$/;"	m
 FTOBJS	agent/mibgroup/Makefile	/^FTOBJS = $(mib_module_list_ft)$/;"	m
@@ -2921,6 +2887,7 @@ FULLY_QUALIFIED_INSTANCE	targets/i686-pc-linux-gnu/include/net-snmp/agent/var_st
 FULL_DUMP	agent/mibgroup/host/hr_filesys.c	201;"	d	file:
 FULL_DUMP	agent/mibgroup/host/hrh_filesys.c	77;"	d	file:
 FULL_UNROLL	snmplib/openssl/openssl_aes_local.h	85;"	d
+FUTURETEK_H	agent/mibgroup/futuretek/futuretek.h	6;"	d
 F_00_19	snmplib/openssl/openssl_sha_local.h	147;"	d
 F_20_39	snmplib/openssl/openssl_sha_local.h	148;"	d
 F_40_59	snmplib/openssl/openssl_sha_local.h	149;"	d
@@ -3673,26 +3640,16 @@ HRS_TYPE_SWAP	agent/mibgroup/host/hrh_storage.h	20;"	d
 HRS_index	agent/mibgroup/host/hr_storage.c	/^static int      HRS_index;$/;"	v	file:
 HRS_index	agent/mibgroup/host/hrh_storage.c	/^static int      HRS_index;$/;"	v	file:
 HR_number_disk_types	agent/mibgroup/host/hr_disk.c	/^static int      HR_number_disk_types = 0;$/;"	v	file:
-HUMICOUNT	agent/mibgroup/futuretek/ftm50s.c	65;"	d	file:
-HUMICOUNT	local/ftm50s.c	64;"	d	file:
-HUMIID	agent/mibgroup/futuretek/ftm50s.c	105;"	d	file:
-HUMIID	local/ftm50s.c	104;"	d	file:
-HUMILASTTIME	agent/mibgroup/futuretek/ftm50s.c	126;"	d	file:
-HUMILASTTIME	local/ftm50s.c	125;"	d	file:
-HUMILASTVALUE	agent/mibgroup/futuretek/ftm50s.c	123;"	d	file:
-HUMILASTVALUE	local/ftm50s.c	122;"	d	file:
-HUMINAME	agent/mibgroup/futuretek/ftm50s.c	111;"	d	file:
-HUMINAME	local/ftm50s.c	110;"	d	file:
-HUMISN	agent/mibgroup/futuretek/ftm50s.c	114;"	d	file:
-HUMISN	local/ftm50s.c	113;"	d	file:
-HUMISTATE	agent/mibgroup/futuretek/ftm50s.c	117;"	d	file:
-HUMISTATE	local/ftm50s.c	116;"	d	file:
-HUMITYPE	agent/mibgroup/futuretek/ftm50s.c	108;"	d	file:
-HUMITYPE	local/ftm50s.c	107;"	d	file:
-HUMIUPDATEINTERVAL	agent/mibgroup/futuretek/ftm50s.c	129;"	d	file:
-HUMIUPDATEINTERVAL	local/ftm50s.c	128;"	d	file:
-HUMIVALUE	agent/mibgroup/futuretek/ftm50s.c	120;"	d	file:
-HUMIVALUE	local/ftm50s.c	119;"	d	file:
+HUMICOUNT	agent/mibgroup/futuretek/ftm50s.c	60;"	d	file:
+HUMIID	agent/mibgroup/futuretek/ftm50s.c	127;"	d	file:
+HUMILASTTIME	agent/mibgroup/futuretek/ftm50s.c	148;"	d	file:
+HUMILASTVALUE	agent/mibgroup/futuretek/ftm50s.c	145;"	d	file:
+HUMINAME	agent/mibgroup/futuretek/ftm50s.c	133;"	d	file:
+HUMISN	agent/mibgroup/futuretek/ftm50s.c	136;"	d	file:
+HUMISTATE	agent/mibgroup/futuretek/ftm50s.c	139;"	d	file:
+HUMITYPE	agent/mibgroup/futuretek/ftm50s.c	130;"	d	file:
+HUMIUPDATEINTERVAL	agent/mibgroup/futuretek/ftm50s.c	151;"	d	file:
+HUMIVALUE	agent/mibgroup/futuretek/ftm50s.c	142;"	d	file:
 HUPAGENT	testing/fulltests/support/simple_eval_tools.sh	/^HUPAGENT() {$/;"	f
 HUPPROG	testing/fulltests/support/simple_eval_tools.sh	/^HUPPROG() {$/;"	f
 HUPTRAPD	testing/fulltests/support/simple_eval_tools.sh	/^HUPTRAPD() {$/;"	f
@@ -4980,17 +4937,17 @@ LAST_PASS	include/net-snmp/library/snmp_impl.h	136;"	d
 LAST_PASS	targets/i686-pc-linux-gnu/include/net-snmp/library/snmp_impl.h	136;"	d
 LCD_TIME_SYNC_OPT	include/net-snmp/library/lcd_time.h	16;"	d
 LCD_TIME_SYNC_OPT	targets/i686-pc-linux-gnu/include/net-snmp/library/lcd_time.h	16;"	d
-LDFLAGS	Makefile	/^LDFLAGS		=  $/;"	m
-LDFLAGS	agent/Makefile	/^LDFLAGS		=  $/;"	m
-LDFLAGS	agent/helpers/Makefile	/^LDFLAGS		=  $/;"	m
-LDFLAGS	agent/mibgroup/Makefile	/^LDFLAGS		=  $/;"	m
-LDFLAGS	apps/Makefile	/^LDFLAGS		=  $/;"	m
-LDFLAGS	apps/snmpnetstat/Makefile	/^LDFLAGS		=  $/;"	m
-LDFLAGS	local/Makefile	/^LDFLAGS		=  $/;"	m
-LDFLAGS	man/Makefile	/^LDFLAGS		=  $/;"	m
-LDFLAGS	mibs/Makefile	/^LDFLAGS		=  $/;"	m
-LDFLAGS	snmplib/Makefile	/^LDFLAGS		=  $/;"	m
-LDFLAGS	testing/Makefile	/^LDFLAGS		=  $/;"	m
+LDFLAGS	Makefile	/^LDFLAGS		= -L\/home\/xtra\/work\/ftm-50s\/rootfs\/apps\/devtools\/lib $/;"	m
+LDFLAGS	agent/Makefile	/^LDFLAGS		= -L\/home\/xtra\/work\/ftm-50s\/rootfs\/apps\/devtools\/lib $/;"	m
+LDFLAGS	agent/helpers/Makefile	/^LDFLAGS		= -L\/home\/xtra\/work\/ftm-50s\/rootfs\/apps\/devtools\/lib $/;"	m
+LDFLAGS	agent/mibgroup/Makefile	/^LDFLAGS		= -L\/home\/xtra\/work\/ftm-50s\/rootfs\/apps\/devtools\/lib $/;"	m
+LDFLAGS	apps/Makefile	/^LDFLAGS		= -L\/home\/xtra\/work\/ftm-50s\/rootfs\/apps\/devtools\/lib $/;"	m
+LDFLAGS	apps/snmpnetstat/Makefile	/^LDFLAGS		= -L\/home\/xtra\/work\/ftm-50s\/rootfs\/apps\/devtools\/lib $/;"	m
+LDFLAGS	local/Makefile	/^LDFLAGS		= -L\/home\/xtra\/work\/ftm-50s\/rootfs\/apps\/devtools\/lib $/;"	m
+LDFLAGS	man/Makefile	/^LDFLAGS		= -L\/home\/xtra\/work\/ftm-50s\/rootfs\/apps\/devtools\/lib $/;"	m
+LDFLAGS	mibs/Makefile	/^LDFLAGS		= -L\/home\/xtra\/work\/ftm-50s\/rootfs\/apps\/devtools\/lib $/;"	m
+LDFLAGS	snmplib/Makefile	/^LDFLAGS		= -L\/home\/xtra\/work\/ftm-50s\/rootfs\/apps\/devtools\/lib $/;"	m
+LDFLAGS	testing/Makefile	/^LDFLAGS		= -L\/home\/xtra\/work\/ftm-50s\/rootfs\/apps\/devtools\/lib $/;"	m
 LDOUBLE	snmplib/snprintf.c	73;"	d	file:
 LDOUBLE	snmplib/snprintf.c	75;"	d	file:
 LEAVE	snmplib/winservice.c	22;"	d	file:
@@ -5032,10 +4989,10 @@ LIBREVISION	man/Makefile	/^LIBREVISION = 2$/;"	m
 LIBREVISION	mibs/Makefile	/^LIBREVISION = 2$/;"	m
 LIBREVISION	snmplib/Makefile	/^LIBREVISION = 2$/;"	m
 LIBREVISION	testing/Makefile	/^LIBREVISION = 2$/;"	m
-LIBS	agent/Makefile	/^LIBS		= $(USELIBS) -lm  $(PERLLDOPTS_FOR_APPS) $(VAL_LIBS)$/;"	m
-LIBS	apps/Makefile	/^LIBS		= $(USELIBS) $(VAL_LIBS) -lm $/;"	m
-LIBS	apps/snmpnetstat/Makefile	/^LIBS=	 ..\/..\/snmplib\/libnetsnmp.$(LIB_EXTENSION)$(LIB_VERSION) $(VAL_LIBS) -lm $/;"	m
-LIBS	testing/Makefile	/^LIBS		= -L..\/snmplib $(CC_RUNTIME_ARG) -lsnmp -lm $/;"	m
+LIBS	agent/Makefile	/^LIBS		= $(USELIBS) -lm \/home\/xtra\/work\/ftm-50s\/rootfs\/apps\/devtools\/lib\/libconfig.so -lftsom $(PERLLDOPTS_FOR_APPS) $(VAL_LIBS)$/;"	m
+LIBS	apps/Makefile	/^LIBS		= $(USELIBS) $(VAL_LIBS) -lm \/home\/xtra\/work\/ftm-50s\/rootfs\/apps\/devtools\/lib\/libconfig.so -lftsom$/;"	m
+LIBS	apps/snmpnetstat/Makefile	/^LIBS=	 ..\/..\/snmplib\/libnetsnmp.$(LIB_EXTENSION)$(LIB_VERSION) $(VAL_LIBS) -lm \/home\/xtra\/work\/ftm-50s\/rootfs\/apps\/devtools\/lib\/libconfig.so -lftsom$/;"	m
+LIBS	testing/Makefile	/^LIBS		= -L..\/snmplib $(CC_RUNTIME_ARG) -lsnmp -lm \/home\/xtra\/work\/ftm-50s\/rootfs\/apps\/devtools\/lib\/libconfig.so -lftsom$/;"	m
 LIBTOOL	Makefile	/^LIBTOOL		= $(SHELL) $(top_builddir)\/libtool $/;"	m
 LIBTOOL	agent/Makefile	/^LIBTOOL		= $(SHELL) $(top_builddir)\/libtool $/;"	m
 LIBTOOL	agent/helpers/Makefile	/^LIBTOOL		= $(SHELL) $(top_builddir)\/libtool $/;"	m
@@ -6371,7 +6328,6 @@ M_Interface_Scan_Next	agent/mibgroup/host/hr_network.c	200;"	d	file:
 M_Interface_Scan_Next	agent/mibgroup/host/hr_network.c	204;"	d	file:
 M_Interface_Scan_Next	agent/mibgroup/host/hr_network.c	210;"	d	file:
 MainLoop	perl/SNMP/SNMP.pm	/^sub MainLoop {$/;"	s
-MainLoop	perl/SNMP/blib/lib/SNMP.pm	/^sub MainLoop {$/;"	s
 Mark_HRSW_token	agent/mibgroup/host/hr_swinst.c	/^Mark_HRSW_token(void)$/;"	f
 Mark_HRSW_token	agent/mibgroup/host/hr_swinst.c	153;"	d	file:
 Mib	local/snmpcheck.def	/^package Mib;$/;"	p
@@ -6406,14 +6362,12 @@ NETBSD1ID	acconfig.h	647;"	d
 NETBSD1ID	include/net-snmp/net-snmp-config.h	2259;"	d
 NETBSD1ID	targets/i686-pc-linux-gnu/acconfig.h	647;"	d
 NETBSD_STATS_VIA_SYSCTL	include/net-snmp/system/netbsd.h	70;"	d
-NETGATEWAYIP	agent/mibgroup/futuretek/ftm50s.c	59;"	d	file:
-NETGATEWAYIP	local/ftm50s.c	58;"	d	file:
-NETIP	agent/mibgroup/futuretek/ftm50s.c	53;"	d	file:
-NETIP	local/ftm50s.c	52;"	d	file:
-NETMAC	agent/mibgroup/futuretek/ftm50s.c	50;"	d	file:
-NETMAC	local/ftm50s.c	49;"	d	file:
-NETMASK	agent/mibgroup/futuretek/ftm50s.c	56;"	d	file:
-NETMASK	local/ftm50s.c	55;"	d	file:
+NETCOUNT	agent/mibgroup/futuretek/ftm50s.c	48;"	d	file:
+NETGATEWAYIP	agent/mibgroup/futuretek/ftm50s.c	51;"	d	file:
+NETID	agent/mibgroup/futuretek/ftm50s.c	73;"	d	file:
+NETIP	agent/mibgroup/futuretek/ftm50s.c	82;"	d	file:
+NETMAC	agent/mibgroup/futuretek/ftm50s.c	79;"	d	file:
+NETMASK	agent/mibgroup/futuretek/ftm50s.c	85;"	d	file:
 NETSNMPHOSTADDRESSTYPE_DNS	agent/mibgroup/examples/netSnmpHostsTable_enums.h	16;"	d
 NETSNMPHOSTADDRESSTYPE_IPV4	agent/mibgroup/examples/netSnmpHostsTable_enums.h	12;"	d
 NETSNMPHOSTADDRESSTYPE_IPV4Z	agent/mibgroup/examples/netSnmpHostsTable_enums.h	14;"	d
@@ -7847,8 +7801,7 @@ NETSNMP_WIN32ID	targets/i686-pc-linux-gnu/acconfig.h	211;"	d
 NETSNMP_WIN32ID	win32/net-snmp/net-snmp-config.h	1200;"	d
 NETSNMP_WITH_OPAQUE_SPECIAL_TYPES	include/net-snmp/net-snmp-config.h	1438;"	d
 NETSNMP_WITH_OPAQUE_SPECIAL_TYPES	win32/net-snmp/net-snmp-config.h	76;"	d
-NETTYPE	agent/mibgroup/futuretek/ftm50s.c	47;"	d	file:
-NETTYPE	local/ftm50s.c	46;"	d	file:
+NETTYPE	agent/mibgroup/futuretek/ftm50s.c	76;"	d	file:
 NETW_FN	apps/snmpnetstat/winstub.c	51;"	d	file:
 NETW_FN	targets/i686-pc-linux-gnu/apps/snmpnetstat/winstub.c	51;"	d	file:
 NET_SNMP_AGENT_INCLUDES_H	include/net-snmp/agent/net-snmp-agent-includes.h	7;"	d
@@ -7891,8 +7844,6 @@ NEW_MIB_COMPLIANT	include/net-snmp/system/solaris.h	43;"	d
 NEXTED_PTR_T	agent/mibgroup/Rmon/row_api.h	/^} NEXTED_PTR_T;$/;"	t	typeref:struct:nexted_void_t
 NEXTKEY	perl/SNMP/SNMP.pm	/^sub NEXTKEY { # this could be sped up by using an XS __get_next_oid maybe$/;"	s
 NEXTKEY	perl/SNMP/SNMP.pm	/^sub NEXTKEY { (each(%node_elements))[0]; }$/;"	s
-NEXTKEY	perl/SNMP/blib/lib/SNMP.pm	/^sub NEXTKEY { # this could be sped up by using an XS __get_next_oid maybe$/;"	s
-NEXTKEY	perl/SNMP/blib/lib/SNMP.pm	/^sub NEXTKEY { (each(%node_elements))[0]; }$/;"	s
 NFDBITS	agent/mibgroup/disman/traceroute/traceRouteCtlTable.h	523;"	d
 NFDBITS	agent/snmpd.c	129;"	d	file:
 NFDBITS	apps/snmptrapd.c	135;"	d	file:
@@ -8591,6 +8542,11 @@ PM_SAVE_EVERYTHING	include/net-snmp/library/text_utils.h	18;"	d
 PM_SAVE_EVERYTHING	targets/i686-pc-linux-gnu/include/net-snmp/library/text_utils.h	18;"	d
 PM_USER_FUNCTION	include/net-snmp/library/text_utils.h	20;"	d
 PM_USER_FUNCTION	targets/i686-pc-linux-gnu/include/net-snmp/library/text_utils.h	20;"	d
+POINTCOUNT	agent/mibgroup/futuretek/ftm50s.c	54;"	d	file:
+POINTGROUPCOUNT	agent/mibgroup/futuretek/ftm50s.c	94;"	d	file:
+POINTGROUPID	agent/mibgroup/futuretek/ftm50s.c	88;"	d	file:
+POINTGROUPTYPE	agent/mibgroup/futuretek/ftm50s.c	91;"	d	file:
+POINTTGROUPOID	agent/mibgroup/futuretek/ftm50s.c	97;"	d	file:
 POLL_INTERVAL	agent/mibgroup/ucd-snmp/vmstat_aix4.h	34;"	d
 POLL_INTERVAL	agent/mibgroup/ucd-snmp/vmstat_dynix.h	32;"	d
 POLL_INTERVAL	agent/mibgroup/ucd-snmp/vmstat_hpux.h	36;"	d
@@ -8651,19 +8607,13 @@ PROC_SYS_NET_IPVx_BASE_REACHABLE_TIME_MS	agent/mibgroup/if-mib/data_access/inter
 PROC_SYS_NET_IPVx_NEIGH_RETRANS_TIME	agent/mibgroup/if-mib/data_access/interface_linux.c	91;"	d	file:
 PROC_SYS_NET_IPVx_NEIGH_RETRANS_TIME_MS	agent/mibgroup/if-mib/data_access/interface_linux.c	90;"	d	file:
 PROC_VAL_COOKIE_LIFE	agent/mibgroup/sctp-mib/sctpScalars_linux.c	14;"	d	file:
-PRODDESCRIPTION	agent/mibgroup/futuretek/ftm50s.c	44;"	d	file:
-PRODDESCRIPTION	local/ftm50s.c	43;"	d	file:
-PRODHWVER	agent/mibgroup/futuretek/ftm50s.c	38;"	d	file:
-PRODHWVER	local/ftm50s.c	37;"	d	file:
-PRODID	agent/mibgroup/futuretek/ftm50s.c	29;"	d	file:
-PRODID	local/ftm50s.c	28;"	d	file:
-PRODMODEL	agent/mibgroup/futuretek/ftm50s.c	32;"	d	file:
-PRODMODEL	local/ftm50s.c	31;"	d	file:
+PRODDESCRIPTION	agent/mibgroup/futuretek/ftm50s.c	45;"	d	file:
+PRODHWVER	agent/mibgroup/futuretek/ftm50s.c	39;"	d	file:
+PRODID	agent/mibgroup/futuretek/ftm50s.c	30;"	d	file:
+PRODMODEL	agent/mibgroup/futuretek/ftm50s.c	33;"	d	file:
 PRODREL	snmplib/parse.c	272;"	d	file:
-PRODSWVER	agent/mibgroup/futuretek/ftm50s.c	41;"	d	file:
-PRODSWVER	local/ftm50s.c	40;"	d	file:
-PRODVENDOR	agent/mibgroup/futuretek/ftm50s.c	35;"	d	file:
-PRODVENDOR	local/ftm50s.c	34;"	d	file:
+PRODSWVER	agent/mibgroup/futuretek/ftm50s.c	42;"	d	file:
+PRODVENDOR	agent/mibgroup/futuretek/ftm50s.c	36;"	d	file:
 PROPER_AES_IV_SIZE	snmplib/snmpusm.c	743;"	d	file:
 PROT_FN	apps/snmpnetstat/winstub.c	44;"	d	file:
 PROT_FN	apps/snmpnetstat/winstub.c	47;"	d	file:
@@ -8835,26 +8785,16 @@ RIP2PEERLASTUPDATE	agent/mibgroup/smux/snmp_rip2.h	32;"	d
 RIP2PEERRCVBADPKTS	agent/mibgroup/smux/snmp_rip2.h	34;"	d
 RIP2PEERRCVBADROUTES	agent/mibgroup/smux/snmp_rip2.h	35;"	d
 RIP2PEERVERSION	agent/mibgroup/smux/snmp_rip2.h	33;"	d
-RLCOUNT	agent/mibgroup/futuretek/ftm50s.c	74;"	d	file:
-RLCOUNT	local/ftm50s.c	73;"	d	file:
-RLID	agent/mibgroup/futuretek/ftm50s.c	186;"	d	file:
-RLID	local/ftm50s.c	185;"	d	file:
-RLLASTTIME	agent/mibgroup/futuretek/ftm50s.c	207;"	d	file:
-RLLASTTIME	local/ftm50s.c	206;"	d	file:
-RLLASTVALUE	agent/mibgroup/futuretek/ftm50s.c	204;"	d	file:
-RLLASTVALUE	local/ftm50s.c	203;"	d	file:
-RLNAME	agent/mibgroup/futuretek/ftm50s.c	192;"	d	file:
-RLNAME	local/ftm50s.c	191;"	d	file:
-RLSN	agent/mibgroup/futuretek/ftm50s.c	195;"	d	file:
-RLSN	local/ftm50s.c	194;"	d	file:
-RLSTATE	agent/mibgroup/futuretek/ftm50s.c	198;"	d	file:
-RLSTATE	local/ftm50s.c	197;"	d	file:
-RLTYPE	agent/mibgroup/futuretek/ftm50s.c	189;"	d	file:
-RLTYPE	local/ftm50s.c	188;"	d	file:
-RLUPDATEINTERVAL	agent/mibgroup/futuretek/ftm50s.c	210;"	d	file:
-RLUPDATEINTERVAL	local/ftm50s.c	209;"	d	file:
-RLVALUE	agent/mibgroup/futuretek/ftm50s.c	201;"	d	file:
-RLVALUE	local/ftm50s.c	200;"	d	file:
+RLCOUNT	agent/mibgroup/futuretek/ftm50s.c	69;"	d	file:
+RLID	agent/mibgroup/futuretek/ftm50s.c	208;"	d	file:
+RLLASTTIME	agent/mibgroup/futuretek/ftm50s.c	229;"	d	file:
+RLLASTVALUE	agent/mibgroup/futuretek/ftm50s.c	226;"	d	file:
+RLNAME	agent/mibgroup/futuretek/ftm50s.c	214;"	d	file:
+RLSN	agent/mibgroup/futuretek/ftm50s.c	217;"	d	file:
+RLSTATE	agent/mibgroup/futuretek/ftm50s.c	220;"	d	file:
+RLTYPE	agent/mibgroup/futuretek/ftm50s.c	211;"	d	file:
+RLUPDATEINTERVAL	agent/mibgroup/futuretek/ftm50s.c	232;"	d	file:
+RLVALUE	agent/mibgroup/futuretek/ftm50s.c	223;"	d	file:
 RMON1_ENTRY_CREATE_REQUEST	agent/mibgroup/Rmon/alarmTable.c	/^    RMON1_ENTRY_CREATE_REQUEST,$/;"	e	enum:__anon54	file:
 RMON1_ENTRY_CREATE_REQUEST	agent/mibgroup/Rmon/row_api.h	/^    RMON1_ENTRY_CREATE_REQUEST,$/;"	e	enum:__anon64
 RMON1_ENTRY_INVALID	agent/mibgroup/Rmon/alarmTable.c	/^    RMON1_ENTRY_INVALID$/;"	e	enum:__anon54	file:
@@ -9356,31 +9296,18 @@ SMUX_SOUT	agent/mibgroup/smux/smux.h	22;"	d
 SMUX_TRAP	agent/mibgroup/smux/smux.h	28;"	d
 SNDBUF_SIZE	agent/mibgroup/ip-mib/data_access/defaultrouter_linux.c	25;"	d	file:
 SNMP	perl/SNMP/SNMP.pm	/^package SNMP;$/;"	p
-SNMP	perl/SNMP/blib/lib/SNMP.pm	/^package SNMP;$/;"	p
 SNMP::DEBUGGING	perl/SNMP/SNMP.pm	/^package SNMP::DEBUGGING;$/;"	p
-SNMP::DEBUGGING	perl/SNMP/blib/lib/SNMP.pm	/^package SNMP::DEBUGGING;$/;"	p
 SNMP::DEBUG_INTERNALS	perl/SNMP/SNMP.pm	/^package SNMP::DEBUG_INTERNALS;		# Controls SNMP.xs debugging.$/;"	p
-SNMP::DEBUG_INTERNALS	perl/SNMP/blib/lib/SNMP.pm	/^package SNMP::DEBUG_INTERNALS;		# Controls SNMP.xs debugging.$/;"	p
 SNMP::DUMP_PACKET	perl/SNMP/SNMP.pm	/^package SNMP::DUMP_PACKET;$/;"	p
-SNMP::DUMP_PACKET	perl/SNMP/blib/lib/SNMP.pm	/^package SNMP::DUMP_PACKET;$/;"	p
 SNMP::MIB	perl/SNMP/SNMP.pm	/^package SNMP::MIB;$/;"	p
-SNMP::MIB	perl/SNMP/blib/lib/SNMP.pm	/^package SNMP::MIB;$/;"	p
 SNMP::MIB::MIB_OPTIONS	perl/SNMP/SNMP.pm	/^package SNMP::MIB::MIB_OPTIONS;$/;"	p
-SNMP::MIB::MIB_OPTIONS	perl/SNMP/blib/lib/SNMP.pm	/^package SNMP::MIB::MIB_OPTIONS;$/;"	p
 SNMP::MIB::NODE	perl/SNMP/SNMP.pm	/^package SNMP::MIB::NODE;$/;"	p
-SNMP::MIB::NODE	perl/SNMP/blib/lib/SNMP.pm	/^package SNMP::MIB::NODE;$/;"	p
 SNMP::MIB::REPLACE_NEWER	perl/SNMP/SNMP.pm	/^package SNMP::MIB::REPLACE_NEWER;               # Controls MIB parsing$/;"	p
-SNMP::MIB::REPLACE_NEWER	perl/SNMP/blib/lib/SNMP.pm	/^package SNMP::MIB::REPLACE_NEWER;               # Controls MIB parsing$/;"	p
 SNMP::MIB::SAVE_DESCR	perl/SNMP/SNMP.pm	/^package SNMP::MIB::SAVE_DESCR;$/;"	p
-SNMP::MIB::SAVE_DESCR	perl/SNMP/blib/lib/SNMP.pm	/^package SNMP::MIB::SAVE_DESCR;$/;"	p
 SNMP::Session	perl/SNMP/SNMP.pm	/^package SNMP::Session;$/;"	p
-SNMP::Session	perl/SNMP/blib/lib/SNMP.pm	/^package SNMP::Session;$/;"	p
 SNMP::TrapSession	perl/SNMP/SNMP.pm	/^package SNMP::TrapSession;$/;"	p
-SNMP::TrapSession	perl/SNMP/blib/lib/SNMP.pm	/^package SNMP::TrapSession;$/;"	p
 SNMP::VarList	perl/SNMP/SNMP.pm	/^package SNMP::VarList;$/;"	p
-SNMP::VarList	perl/SNMP/blib/lib/SNMP.pm	/^package SNMP::VarList;$/;"	p
 SNMP::Varbind	perl/SNMP/SNMP.pm	/^package SNMP::Varbind;$/;"	p
-SNMP::Varbind	perl/SNMP/blib/lib/SNMP.pm	/^package SNMP::Varbind;$/;"	p
 SNMPADMINLENGTH	include/net-snmp/library/snmp.h	329;"	d
 SNMPADMINLENGTH	targets/i686-pc-linux-gnu/include/net-snmp/library/snmp.h	329;"	d
 SNMPAPI	win32/Snmp-winExtDLL.h	/^typedef INT SNMPAPI;$/;"	t
@@ -9393,7 +9320,7 @@ SNMPBLOCK	include/net-snmp/net-snmp-config.h	2307;"	d
 SNMPBLOCK	targets/i686-pc-linux-gnu/acconfig.h	695;"	d
 SNMPCONFPATH	acconfig.h	144;"	d
 SNMPCONFPATH	include/net-snmp/net-snmp-config.h	1756;"	d
-SNMPCONFPATH	local/Makefile	/^SNMPCONFPATH=\/usr\/local\/etc\/snmp$/;"	m
+SNMPCONFPATH	local/Makefile	/^SNMPCONFPATH=\/usr\/etc\/snmp$/;"	m
 SNMPCONFPATH	targets/i686-pc-linux-gnu/acconfig.h	144;"	d
 SNMPCONFPATH	win32/net-snmp/net-snmp-config.h	144;"	d
 SNMPCallback	include/net-snmp/library/callback.h	/^    typedef int     (SNMPCallback) (int majorID, int minorID,$/;"	t
@@ -10665,10 +10592,6 @@ STORE	perl/SNMP/SNMP.pm	/^sub STORE { SNMP::_dump_packet($_[1]); ${$_[0]} = $_[1
 STORE	perl/SNMP/SNMP.pm	/^sub STORE { SNMP::_mib_toggle_options($_[1]); ${$_[0]} = $_[1]; }$/;"	s
 STORE	perl/SNMP/SNMP.pm	/^sub STORE { SNMP::_set_save_descriptions($_[1]); ${$_[0]} = $_[1]; }$/;"	s
 STORE	perl/SNMP/SNMP.pm	/^sub STORE {$/;"	s
-STORE	perl/SNMP/blib/lib/SNMP.pm	/^sub STORE { SNMP::_dump_packet($_[1]); ${$_[0]} = $_[1]; }$/;"	s
-STORE	perl/SNMP/blib/lib/SNMP.pm	/^sub STORE { SNMP::_mib_toggle_options($_[1]); ${$_[0]} = $_[1]; }$/;"	s
-STORE	perl/SNMP/blib/lib/SNMP.pm	/^sub STORE { SNMP::_set_save_descriptions($_[1]); ${$_[0]} = $_[1]; }$/;"	s
-STORE	perl/SNMP/blib/lib/SNMP.pm	/^sub STORE {$/;"	s
 STORE_AND_COMPARE	testing/fulltests/unit-tests/T004snmp_enum_clib.c	9;"	d	file:
 STR	python/netsnmp/client.py	/^def STR(obj):$/;"	f
 STREAM_DEV	agent/mibgroup/kernel_sunos5.c	207;"	d	file:
@@ -10932,7 +10855,7 @@ TABLE_ITERATOR_NAME	targets/i686-pc-linux-gnu/include/net-snmp/agent/table_itera
 TABLE_ITERATOR_NOTAGAIN	agent/helpers/table_iterator.c	437;"	d	file:
 TABLE_NEXT	agent/mibgroup/util_funcs.c	849;"	d	file:
 TABLE_ROW_DATA	agent/helpers/table_row.c	8;"	d	file:
-TABLE_SIZE	agent/mibgroup/futuretek/ftm50s.h	9;"	d
+TABLE_SIZE	agent/mibgroup/futuretek/ftm50s.c	11;"	d	file:
 TABLE_START	agent/mibgroup/util_funcs.c	848;"	d	file:
 TABLE_TDATA_NAME	include/net-snmp/agent/table_tdata.h	19;"	d
 TABLE_TDATA_NAME	targets/i686-pc-linux-gnu/include/net-snmp/agent/table_tdata.h	19;"	d
@@ -11105,26 +11028,16 @@ TDATA_FLAG_NO_CONTAINER	include/net-snmp/agent/table_tdata.h	24;"	d
 TDATA_FLAG_NO_CONTAINER	targets/i686-pc-linux-gnu/include/net-snmp/agent/table_tdata.h	24;"	d
 TDATA_FLAG_NO_STORE_INDEXES	include/net-snmp/agent/table_tdata.h	23;"	d
 TDATA_FLAG_NO_STORE_INDEXES	targets/i686-pc-linux-gnu/include/net-snmp/agent/table_tdata.h	23;"	d
-TEMPCOUNT	agent/mibgroup/futuretek/ftm50s.c	62;"	d	file:
-TEMPCOUNT	local/ftm50s.c	61;"	d	file:
-TEMPID	agent/mibgroup/futuretek/ftm50s.c	78;"	d	file:
-TEMPID	local/ftm50s.c	77;"	d	file:
-TEMPLASTTIME	agent/mibgroup/futuretek/ftm50s.c	99;"	d	file:
-TEMPLASTTIME	local/ftm50s.c	98;"	d	file:
-TEMPLASTVALUE	agent/mibgroup/futuretek/ftm50s.c	96;"	d	file:
-TEMPLASTVALUE	local/ftm50s.c	95;"	d	file:
-TEMPNAME	agent/mibgroup/futuretek/ftm50s.c	84;"	d	file:
-TEMPNAME	local/ftm50s.c	83;"	d	file:
-TEMPSN	agent/mibgroup/futuretek/ftm50s.c	87;"	d	file:
-TEMPSN	local/ftm50s.c	86;"	d	file:
-TEMPSTATE	agent/mibgroup/futuretek/ftm50s.c	90;"	d	file:
-TEMPSTATE	local/ftm50s.c	89;"	d	file:
-TEMPTYPE	agent/mibgroup/futuretek/ftm50s.c	81;"	d	file:
-TEMPTYPE	local/ftm50s.c	80;"	d	file:
-TEMPUPDATEINTERVAL	agent/mibgroup/futuretek/ftm50s.c	102;"	d	file:
-TEMPUPDATEINTERVAL	local/ftm50s.c	101;"	d	file:
-TEMPVALUE	agent/mibgroup/futuretek/ftm50s.c	93;"	d	file:
-TEMPVALUE	local/ftm50s.c	92;"	d	file:
+TEMPCOUNT	agent/mibgroup/futuretek/ftm50s.c	57;"	d	file:
+TEMPID	agent/mibgroup/futuretek/ftm50s.c	100;"	d	file:
+TEMPLASTTIME	agent/mibgroup/futuretek/ftm50s.c	121;"	d	file:
+TEMPLASTVALUE	agent/mibgroup/futuretek/ftm50s.c	118;"	d	file:
+TEMPNAME	agent/mibgroup/futuretek/ftm50s.c	106;"	d	file:
+TEMPSN	agent/mibgroup/futuretek/ftm50s.c	109;"	d	file:
+TEMPSTATE	agent/mibgroup/futuretek/ftm50s.c	112;"	d	file:
+TEMPTYPE	agent/mibgroup/futuretek/ftm50s.c	103;"	d	file:
+TEMPUPDATEINTERVAL	agent/mibgroup/futuretek/ftm50s.c	124;"	d	file:
+TEMPVALUE	agent/mibgroup/futuretek/ftm50s.c	115;"	d	file:
 TEMP_TYPE	agent/mibgroup/ucd-snmp/lmSensors.c	102;"	d	file:
 TESTDIRS	Makefile	/^TESTDIRS	= testing$/;"	m
 TESTHANDLER_SET_NAME	agent/mibgroup/testhandler.c	319;"	d	file:
@@ -11133,9 +11046,7 @@ TEST_INTERNAL_API	testing/fulltests/unit-tests/T018read_config_capp.c	19;"	d	fil
 TICKET_CLIENT	snmplib/snmpksm.c	60;"	d	file:
 TICKET_CLIENT	snmplib/snmpksm.c	65;"	d	file:
 TIEHASH	perl/SNMP/SNMP.pm	/^sub TIEHASH {$/;"	s
-TIEHASH	perl/SNMP/blib/lib/SNMP.pm	/^sub TIEHASH {$/;"	s
 TIESCALAR	perl/SNMP/SNMP.pm	/^sub TIESCALAR { my $class = shift; my $val; bless \\$val, $class; }$/;"	s
-TIESCALAR	perl/SNMP/blib/lib/SNMP.pm	/^sub TIESCALAR { my $class = shift; my $val; bless \\$val, $class; }$/;"	s
 TIMETICK	agent/snmpd.c	178;"	d	file:
 TIMETICKS	snmplib/parse.c	191;"	d	file:
 TIME_WITH_SYS_TIME	include/net-snmp/net-snmp-config.h	1522;"	d
@@ -11218,7 +11129,7 @@ TRANSPORT_DOMAIN_TLS_TCP_IP	targets/i686-pc-linux-gnu/include/net-snmp/library/s
 TRANSPORT_DOMAIN_UDP_IPV6	include/net-snmp/library/snmpUDPIPv6Domain.h	22;"	d
 TRANSPORT_DOMAIN_UDP_IPV6	targets/i686-pc-linux-gnu/include/net-snmp/library/snmpUDPIPv6Domain.h	22;"	d
 TRAPAGENT	agent/mibgroup/ucd-snmp/hpux.h	12;"	d
-TRAPDWITHAGENT	apps/Makefile	/^TRAPDWITHAGENT  = $(USETRAPLIBS) $(MYSQL_LIBS) $(VAL_LIBS) -lm $/;"	m
+TRAPDWITHAGENT	apps/Makefile	/^TRAPDWITHAGENT  = $(USETRAPLIBS) $(MYSQL_LIBS) $(VAL_LIBS) -lm \/home\/xtra\/work\/ftm-50s\/rootfs\/apps\/devtools\/lib\/libconfig.so -lftsom$/;"	m
 TRAPDWITHOUTAGENT	apps/Makefile	/^TRAPDWITHOUTAGENT = $(LIBS) $(MYSQL_LIBS) $(VAL_LIBS)$/;"	m
 TRAPD_OBJECTS	apps/Makefile	/^TRAPD_OBJECTS   = snmptrapd.$(OSUFFIX) $/;"	m
 TRAPEVENT	agent/mibgroup/winExtDLL.c	287;"	d	file:
@@ -11609,235 +11520,236 @@ USING_AGENTX_MASTER_ADMIN_MODULE	include/net-snmp/agent/agent_module_config.h	27
 USING_AGENTX_MASTER_ADMIN_MODULE	win32/net-snmp/agent/agent_module_config.h	20;"	d
 USING_AGENTX_MASTER_MODULE	include/net-snmp/agent/agent_module_config.h	6;"	d
 USING_AGENTX_MASTER_MODULE	win32/net-snmp/agent/agent_module_config.h	8;"	d
-USING_AGENTX_MODULE	include/net-snmp/agent/mib_module_config.h	30;"	d
+USING_AGENTX_MODULE	include/net-snmp/agent/mib_module_config.h	33;"	d
 USING_AGENTX_MODULE	win32/net-snmp/net-snmp-config.h	1769;"	d
 USING_AGENTX_PROTOCOL_MODULE	include/net-snmp/agent/agent_module_config.h	21;"	d
 USING_AGENTX_PROTOCOL_MODULE	win32/net-snmp/agent/agent_module_config.h	14;"	d
 USING_AGENTX_SUBAGENT_MODULE	include/net-snmp/agent/agent_module_config.h	9;"	d
 USING_AGENTX_SUBAGENT_MODULE	win32/net-snmp/agent/agent_module_config.h	11;"	d
-USING_AGENT_EXTEND_MODULE	include/net-snmp/agent/mib_module_config.h	123;"	d
+USING_AGENT_EXTEND_MODULE	include/net-snmp/agent/mib_module_config.h	126;"	d
 USING_AGENT_EXTEND_MODULE	win32/net-snmp/agent/mib_module_config.h	111;"	d
-USING_AGENT_MIBS_MODULE	include/net-snmp/agent/mib_module_config.h	27;"	d
+USING_AGENT_MIBS_MODULE	include/net-snmp/agent/mib_module_config.h	30;"	d
 USING_AGENT_MIBS_MODULE	win32/net-snmp/agent/mib_module_config.h	36;"	d
 USING_AGENT_MIBS_MODULE	win32/net-snmp/agent/mib_module_config.h	39;"	d
-USING_AGENT_NSCACHE_MODULE	include/net-snmp/agent/mib_module_config.h	177;"	d
+USING_AGENT_NSCACHE_MODULE	include/net-snmp/agent/mib_module_config.h	180;"	d
 USING_AGENT_NSCACHE_MODULE	win32/net-snmp/agent/mib_module_config.h	176;"	d
 USING_AGENT_NSDEBUG_MODULE	win32/net-snmp/agent/mib_module_config.h	173;"	d
-USING_AGENT_NSLOGGING_MODULE	include/net-snmp/agent/mib_module_config.h	180;"	d
+USING_AGENT_NSLOGGING_MODULE	include/net-snmp/agent/mib_module_config.h	183;"	d
 USING_AGENT_NSLOGGING_MODULE	win32/net-snmp/agent/mib_module_config.h	179;"	d
-USING_AGENT_NSMODULETABLE_MODULE	include/net-snmp/agent/mib_module_config.h	174;"	d
+USING_AGENT_NSMODULETABLE_MODULE	include/net-snmp/agent/mib_module_config.h	177;"	d
 USING_AGENT_NSMODULETABLE_MODULE	win32/net-snmp/agent/mib_module_config.h	170;"	d
-USING_AGENT_NSTRANSACTIONTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	171;"	d
+USING_AGENT_NSTRANSACTIONTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	174;"	d
 USING_AGENT_NSTRANSACTIONTABLE_MODULE	win32/net-snmp/agent/mib_module_config.h	167;"	d
-USING_AGENT_NSVACMACCESSTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	183;"	d
-USING_DEFAULT_MODULES_MODULE	include/net-snmp/agent/mib_module_config.h	6;"	d
+USING_AGENT_NSVACMACCESSTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	186;"	d
+USING_DEFAULT_MODULES_MODULE	include/net-snmp/agent/mib_module_config.h	9;"	d
 USING_DISMAN_EVENT_MIB_MODULE	win32/net-snmp/net-snmp-config.h	1778;"	d
-USING_DISMAN_EVENT_MODULE	include/net-snmp/agent/mib_module_config.h	33;"	d
+USING_DISMAN_EVENT_MODULE	include/net-snmp/agent/mib_module_config.h	36;"	d
 USING_DISMAN_EVENT_MODULE	win32/net-snmp/agent/mib_module_config.h	19;"	d
-USING_DISMAN_EVENT_MTEEVENTCONF_MODULE	include/net-snmp/agent/mib_module_config.h	222;"	d
+USING_DISMAN_EVENT_MTEEVENTCONF_MODULE	include/net-snmp/agent/mib_module_config.h	225;"	d
 USING_DISMAN_EVENT_MTEEVENTCONF_MODULE	win32/net-snmp/agent/mib_module_config.h	288;"	d
-USING_DISMAN_EVENT_MTEEVENTNOTIFICATIONTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	219;"	d
+USING_DISMAN_EVENT_MTEEVENTNOTIFICATIONTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	222;"	d
 USING_DISMAN_EVENT_MTEEVENTNOTIFICATIONTABLE_MODULE	win32/net-snmp/agent/mib_module_config.h	285;"	d
-USING_DISMAN_EVENT_MTEEVENTSETTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	216;"	d
+USING_DISMAN_EVENT_MTEEVENTSETTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	219;"	d
 USING_DISMAN_EVENT_MTEEVENTSETTABLE_MODULE	win32/net-snmp/agent/mib_module_config.h	282;"	d
-USING_DISMAN_EVENT_MTEEVENTTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	213;"	d
+USING_DISMAN_EVENT_MTEEVENTTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	216;"	d
 USING_DISMAN_EVENT_MTEEVENTTABLE_MODULE	win32/net-snmp/agent/mib_module_config.h	279;"	d
-USING_DISMAN_EVENT_MTEEVENT_MODULE	include/net-snmp/agent/mib_module_config.h	210;"	d
+USING_DISMAN_EVENT_MTEEVENT_MODULE	include/net-snmp/agent/mib_module_config.h	213;"	d
 USING_DISMAN_EVENT_MTEEVENT_MODULE	win32/net-snmp/agent/mib_module_config.h	276;"	d
-USING_DISMAN_EVENT_MTEOBJECTSCONF_MODULE	include/net-snmp/agent/mib_module_config.h	231;"	d
+USING_DISMAN_EVENT_MTEOBJECTSCONF_MODULE	include/net-snmp/agent/mib_module_config.h	234;"	d
 USING_DISMAN_EVENT_MTEOBJECTSCONF_MODULE	win32/net-snmp/agent/mib_module_config.h	297;"	d
-USING_DISMAN_EVENT_MTEOBJECTSTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	228;"	d
+USING_DISMAN_EVENT_MTEOBJECTSTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	231;"	d
 USING_DISMAN_EVENT_MTEOBJECTSTABLE_MODULE	win32/net-snmp/agent/mib_module_config.h	294;"	d
-USING_DISMAN_EVENT_MTEOBJECTS_MODULE	include/net-snmp/agent/mib_module_config.h	225;"	d
+USING_DISMAN_EVENT_MTEOBJECTS_MODULE	include/net-snmp/agent/mib_module_config.h	228;"	d
 USING_DISMAN_EVENT_MTEOBJECTS_MODULE	win32/net-snmp/agent/mib_module_config.h	291;"	d
-USING_DISMAN_EVENT_MTESCALARS_MODULE	include/net-snmp/agent/mib_module_config.h	186;"	d
+USING_DISMAN_EVENT_MTESCALARS_MODULE	include/net-snmp/agent/mib_module_config.h	189;"	d
 USING_DISMAN_EVENT_MTESCALARS_MODULE	win32/net-snmp/agent/mib_module_config.h	252;"	d
-USING_DISMAN_EVENT_MTETRIGGERBOOLEANTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	201;"	d
+USING_DISMAN_EVENT_MTETRIGGERBOOLEANTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	204;"	d
 USING_DISMAN_EVENT_MTETRIGGERBOOLEANTABLE_MODULE	win32/net-snmp/agent/mib_module_config.h	267;"	d
-USING_DISMAN_EVENT_MTETRIGGERCONF_MODULE	include/net-snmp/agent/mib_module_config.h	207;"	d
+USING_DISMAN_EVENT_MTETRIGGERCONF_MODULE	include/net-snmp/agent/mib_module_config.h	210;"	d
 USING_DISMAN_EVENT_MTETRIGGERCONF_MODULE	win32/net-snmp/agent/mib_module_config.h	273;"	d
-USING_DISMAN_EVENT_MTETRIGGERDELTATABLE_MODULE	include/net-snmp/agent/mib_module_config.h	195;"	d
+USING_DISMAN_EVENT_MTETRIGGERDELTATABLE_MODULE	include/net-snmp/agent/mib_module_config.h	198;"	d
 USING_DISMAN_EVENT_MTETRIGGERDELTATABLE_MODULE	win32/net-snmp/agent/mib_module_config.h	261;"	d
-USING_DISMAN_EVENT_MTETRIGGEREXISTENCETABLE_MODULE	include/net-snmp/agent/mib_module_config.h	198;"	d
+USING_DISMAN_EVENT_MTETRIGGEREXISTENCETABLE_MODULE	include/net-snmp/agent/mib_module_config.h	201;"	d
 USING_DISMAN_EVENT_MTETRIGGEREXISTENCETABLE_MODULE	win32/net-snmp/agent/mib_module_config.h	264;"	d
-USING_DISMAN_EVENT_MTETRIGGERTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	192;"	d
+USING_DISMAN_EVENT_MTETRIGGERTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	195;"	d
 USING_DISMAN_EVENT_MTETRIGGERTABLE_MODULE	win32/net-snmp/agent/mib_module_config.h	258;"	d
-USING_DISMAN_EVENT_MTETRIGGERTHRESHOLDTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	204;"	d
+USING_DISMAN_EVENT_MTETRIGGERTHRESHOLDTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	207;"	d
 USING_DISMAN_EVENT_MTETRIGGERTHRESHOLDTABLE_MODULE	win32/net-snmp/agent/mib_module_config.h	270;"	d
-USING_DISMAN_EVENT_MTETRIGGER_MODULE	include/net-snmp/agent/mib_module_config.h	189;"	d
+USING_DISMAN_EVENT_MTETRIGGER_MODULE	include/net-snmp/agent/mib_module_config.h	192;"	d
 USING_DISMAN_EVENT_MTETRIGGER_MODULE	win32/net-snmp/agent/mib_module_config.h	255;"	d
-USING_DISMAN_SCHEDULE_MODULE	include/net-snmp/agent/mib_module_config.h	36;"	d
-USING_DISMAN_SCHEDULE_SCHEDCONF_MODULE	include/net-snmp/agent/mib_module_config.h	237;"	d
-USING_DISMAN_SCHEDULE_SCHEDCORE_MODULE	include/net-snmp/agent/mib_module_config.h	234;"	d
-USING_DISMAN_SCHEDULE_SCHEDTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	240;"	d
+USING_DISMAN_SCHEDULE_MODULE	include/net-snmp/agent/mib_module_config.h	39;"	d
+USING_DISMAN_SCHEDULE_SCHEDCONF_MODULE	include/net-snmp/agent/mib_module_config.h	240;"	d
+USING_DISMAN_SCHEDULE_SCHEDCORE_MODULE	include/net-snmp/agent/mib_module_config.h	237;"	d
+USING_DISMAN_SCHEDULE_SCHEDTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	243;"	d
 USING_EXAMPLES_EXAMPLE_MODULE	win32/net-snmp/agent/mib_module_config.h	33;"	d
 USING_EXAMPLES_UCDDEMOPUBLIC_MODULE	win32/net-snmp/agent/mib_module_config.h	30;"	d
 USING_FUTURETEK_FTM50S_MODULE	include/net-snmp/agent/mib_module_config.h	3;"	d
-USING_HARDWARE_CPU_CPU_LINUX_MODULE	include/net-snmp/agent/mib_module_config.h	477;"	d
-USING_HARDWARE_CPU_CPU_MODULE	include/net-snmp/agent/mib_module_config.h	474;"	d
-USING_HARDWARE_CPU_MODULE	include/net-snmp/agent/mib_module_config.h	372;"	d
-USING_HARDWARE_FSYS_FSYS_MNTENT_MODULE	include/net-snmp/agent/mib_module_config.h	465;"	d
-USING_HARDWARE_FSYS_HW_FSYS_MODULE	include/net-snmp/agent/mib_module_config.h	462;"	d
-USING_HARDWARE_FSYS_MODULE	include/net-snmp/agent/mib_module_config.h	360;"	d
-USING_HARDWARE_MEMORY_HW_MEM_MODULE	include/net-snmp/agent/mib_module_config.h	468;"	d
-USING_HARDWARE_MEMORY_MEMORY_LINUX_MODULE	include/net-snmp/agent/mib_module_config.h	471;"	d
-USING_HARDWARE_MEMORY_MODULE	include/net-snmp/agent/mib_module_config.h	369;"	d
-USING_HEADER_COMPLEX_MODULE	include/net-snmp/agent/mib_module_config.h	375;"	d
+USING_FUTURETEK_FUTURETEK_MODULE	include/net-snmp/agent/mib_module_config.h	6;"	d
+USING_HARDWARE_CPU_CPU_LINUX_MODULE	include/net-snmp/agent/mib_module_config.h	480;"	d
+USING_HARDWARE_CPU_CPU_MODULE	include/net-snmp/agent/mib_module_config.h	477;"	d
+USING_HARDWARE_CPU_MODULE	include/net-snmp/agent/mib_module_config.h	375;"	d
+USING_HARDWARE_FSYS_FSYS_MNTENT_MODULE	include/net-snmp/agent/mib_module_config.h	468;"	d
+USING_HARDWARE_FSYS_HW_FSYS_MODULE	include/net-snmp/agent/mib_module_config.h	465;"	d
+USING_HARDWARE_FSYS_MODULE	include/net-snmp/agent/mib_module_config.h	363;"	d
+USING_HARDWARE_MEMORY_HW_MEM_MODULE	include/net-snmp/agent/mib_module_config.h	471;"	d
+USING_HARDWARE_MEMORY_MEMORY_LINUX_MODULE	include/net-snmp/agent/mib_module_config.h	474;"	d
+USING_HARDWARE_MEMORY_MODULE	include/net-snmp/agent/mib_module_config.h	372;"	d
+USING_HEADER_COMPLEX_MODULE	include/net-snmp/agent/mib_module_config.h	378;"	d
 USING_HEADER_COMPLEX_MODULE	win32/net-snmp/agent/mib_module_config.h	331;"	d
-USING_HOST_DATA_ACCESS_SWINST_APT_MODULE	include/net-snmp/agent/mib_module_config.h	486;"	d
-USING_HOST_DATA_ACCESS_SWINST_MODULE	include/net-snmp/agent/mib_module_config.h	381;"	d
-USING_HOST_DATA_ACCESS_SWRUN_MODULE	include/net-snmp/agent/mib_module_config.h	384;"	d
-USING_HOST_DATA_ACCESS_SWRUN_PROCFS_STATUS_MODULE	include/net-snmp/agent/mib_module_config.h	489;"	d
-USING_HOST_HRH_FILESYS_MODULE	include/net-snmp/agent/mib_module_config.h	249;"	d
-USING_HOST_HRH_STORAGE_MODULE	include/net-snmp/agent/mib_module_config.h	246;"	d
-USING_HOST_HRSWINSTALLEDTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	252;"	d
-USING_HOST_HRSWRUNPERFTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	387;"	d
-USING_HOST_HRSWRUNTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	255;"	d
-USING_HOST_HR_DEVICE_MODULE	include/net-snmp/agent/mib_module_config.h	261;"	d
+USING_HOST_DATA_ACCESS_SWINST_APT_MODULE	include/net-snmp/agent/mib_module_config.h	489;"	d
+USING_HOST_DATA_ACCESS_SWINST_MODULE	include/net-snmp/agent/mib_module_config.h	384;"	d
+USING_HOST_DATA_ACCESS_SWRUN_MODULE	include/net-snmp/agent/mib_module_config.h	387;"	d
+USING_HOST_DATA_ACCESS_SWRUN_PROCFS_STATUS_MODULE	include/net-snmp/agent/mib_module_config.h	492;"	d
+USING_HOST_HRH_FILESYS_MODULE	include/net-snmp/agent/mib_module_config.h	252;"	d
+USING_HOST_HRH_STORAGE_MODULE	include/net-snmp/agent/mib_module_config.h	249;"	d
+USING_HOST_HRSWINSTALLEDTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	255;"	d
+USING_HOST_HRSWRUNPERFTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	390;"	d
+USING_HOST_HRSWRUNTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	258;"	d
+USING_HOST_HR_DEVICE_MODULE	include/net-snmp/agent/mib_module_config.h	264;"	d
 USING_HOST_HR_DEVICE_MODULE	win32/net-snmp/agent/mib_module_config.h	194;"	d
-USING_HOST_HR_DISK_MODULE	include/net-snmp/agent/mib_module_config.h	276;"	d
+USING_HOST_HR_DISK_MODULE	include/net-snmp/agent/mib_module_config.h	279;"	d
 USING_HOST_HR_DISK_MODULE	win32/net-snmp/agent/mib_module_config.h	209;"	d
 USING_HOST_HR_FILESYS_MODULE	win32/net-snmp/agent/mib_module_config.h	215;"	d
-USING_HOST_HR_NETWORK_MODULE	include/net-snmp/agent/mib_module_config.h	270;"	d
+USING_HOST_HR_NETWORK_MODULE	include/net-snmp/agent/mib_module_config.h	273;"	d
 USING_HOST_HR_NETWORK_MODULE	win32/net-snmp/agent/mib_module_config.h	203;"	d
-USING_HOST_HR_OTHER_MODULE	include/net-snmp/agent/mib_module_config.h	264;"	d
+USING_HOST_HR_OTHER_MODULE	include/net-snmp/agent/mib_module_config.h	267;"	d
 USING_HOST_HR_OTHER_MODULE	win32/net-snmp/agent/mib_module_config.h	197;"	d
-USING_HOST_HR_PARTITION_MODULE	include/net-snmp/agent/mib_module_config.h	279;"	d
+USING_HOST_HR_PARTITION_MODULE	include/net-snmp/agent/mib_module_config.h	282;"	d
 USING_HOST_HR_PARTITION_MODULE	win32/net-snmp/agent/mib_module_config.h	212;"	d
-USING_HOST_HR_PRINT_MODULE	include/net-snmp/agent/mib_module_config.h	273;"	d
+USING_HOST_HR_PRINT_MODULE	include/net-snmp/agent/mib_module_config.h	276;"	d
 USING_HOST_HR_PRINT_MODULE	win32/net-snmp/agent/mib_module_config.h	206;"	d
-USING_HOST_HR_PROC_MODULE	include/net-snmp/agent/mib_module_config.h	267;"	d
+USING_HOST_HR_PROC_MODULE	include/net-snmp/agent/mib_module_config.h	270;"	d
 USING_HOST_HR_PROC_MODULE	win32/net-snmp/agent/mib_module_config.h	200;"	d
 USING_HOST_HR_STORAGE_MODULE	win32/net-snmp/agent/mib_module_config.h	191;"	d
 USING_HOST_HR_SWINST_MODULE	win32/net-snmp/agent/mib_module_config.h	221;"	d
 USING_HOST_HR_SWRUN_MODULE	win32/net-snmp/agent/mib_module_config.h	218;"	d
-USING_HOST_HR_SYSTEM_MODULE	include/net-snmp/agent/mib_module_config.h	258;"	d
+USING_HOST_HR_SYSTEM_MODULE	include/net-snmp/agent/mib_module_config.h	261;"	d
 USING_HOST_HR_SYSTEM_MODULE	win32/net-snmp/agent/mib_module_config.h	188;"	d
-USING_HOST_MODULE	include/net-snmp/agent/mib_module_config.h	42;"	d
-USING_IF_MIB_DATA_ACCESS_INTERFACE_IOCTL_MODULE	include/net-snmp/agent/mib_module_config.h	609;"	d
-USING_IF_MIB_DATA_ACCESS_INTERFACE_LINUX_MODULE	include/net-snmp/agent/mib_module_config.h	606;"	d
-USING_IF_MIB_DATA_ACCESS_INTERFACE_MODULE	include/net-snmp/agent/mib_module_config.h	492;"	d
-USING_IF_MIB_IFTABLE_IFTABLE_DATA_ACCESS_MODULE	include/net-snmp/agent/mib_module_config.h	498;"	d
-USING_IF_MIB_IFTABLE_IFTABLE_INTERFACE_MODULE	include/net-snmp/agent/mib_module_config.h	495;"	d
-USING_IF_MIB_IFTABLE_IFTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	390;"	d
-USING_IF_MIB_IFTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	291;"	d
-USING_IF_MIB_IFXTABLE_IFXTABLE_DATA_ACCESS_MODULE	include/net-snmp/agent/mib_module_config.h	504;"	d
-USING_IF_MIB_IFXTABLE_IFXTABLE_INTERFACE_MODULE	include/net-snmp/agent/mib_module_config.h	501;"	d
-USING_IF_MIB_IFXTABLE_IFXTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	393;"	d
-USING_IF_MIB_IFXTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	315;"	d
-USING_IF_MIB_MODULE	include/net-snmp/agent/mib_module_config.h	90;"	d
-USING_IP_FORWARD_MIB_DATA_ACCESS_ROUTE_COMMON_MODULE	include/net-snmp/agent/mib_module_config.h	630;"	d
-USING_IP_FORWARD_MIB_DATA_ACCESS_ROUTE_IOCTL_MODULE	include/net-snmp/agent/mib_module_config.h	636;"	d
-USING_IP_FORWARD_MIB_DATA_ACCESS_ROUTE_LINUX_MODULE	include/net-snmp/agent/mib_module_config.h	633;"	d
-USING_IP_FORWARD_MIB_DATA_ACCESS_ROUTE_MODULE	include/net-snmp/agent/mib_module_config.h	561;"	d
-USING_IP_FORWARD_MIB_INETCIDRROUTETABLE_INETCIDRROUTETABLE_DATA_ACCESS_MODULE	include/net-snmp/agent/mib_module_config.h	573;"	d
-USING_IP_FORWARD_MIB_INETCIDRROUTETABLE_INETCIDRROUTETABLE_INTERFACE_MODULE	include/net-snmp/agent/mib_module_config.h	570;"	d
-USING_IP_FORWARD_MIB_INETCIDRROUTETABLE_INETCIDRROUTETABLE_MODULE	include/net-snmp/agent/mib_module_config.h	447;"	d
-USING_IP_FORWARD_MIB_INETCIDRROUTETABLE_MODULE	include/net-snmp/agent/mib_module_config.h	345;"	d
-USING_IP_FORWARD_MIB_IPCIDRROUTETABLE_IPCIDRROUTETABLE_DATA_ACCESS_MODULE	include/net-snmp/agent/mib_module_config.h	567;"	d
-USING_IP_FORWARD_MIB_IPCIDRROUTETABLE_IPCIDRROUTETABLE_INTERFACE_MODULE	include/net-snmp/agent/mib_module_config.h	564;"	d
-USING_IP_FORWARD_MIB_IPCIDRROUTETABLE_IPCIDRROUTETABLE_MODULE	include/net-snmp/agent/mib_module_config.h	444;"	d
-USING_IP_FORWARD_MIB_IPCIDRROUTETABLE_MODULE	include/net-snmp/agent/mib_module_config.h	342;"	d
-USING_IP_FORWARD_MIB_MODULE	include/net-snmp/agent/mib_module_config.h	96;"	d
-USING_IP_MIB_DATA_ACCESS_ARP_COMMON_MODULE	include/net-snmp/agent/mib_module_config.h	534;"	d
-USING_IP_MIB_DATA_ACCESS_ARP_MODULE	include/net-snmp/agent/mib_module_config.h	405;"	d
-USING_IP_MIB_DATA_ACCESS_ARP_NETLINK_MODULE	include/net-snmp/agent/mib_module_config.h	537;"	d
-USING_IP_MIB_DATA_ACCESS_DEFAULTROUTER_COMMON_MODULE	include/net-snmp/agent/mib_module_config.h	618;"	d
-USING_IP_MIB_DATA_ACCESS_DEFAULTROUTER_LINUX_MODULE	include/net-snmp/agent/mib_module_config.h	621;"	d
-USING_IP_MIB_DATA_ACCESS_DEFAULTROUTER_MODULE	include/net-snmp/agent/mib_module_config.h	522;"	d
-USING_IP_MIB_DATA_ACCESS_IPADDRESS_COMMON_MODULE	include/net-snmp/agent/mib_module_config.h	612;"	d
-USING_IP_MIB_DATA_ACCESS_IPADDRESS_IOCTL_MODULE	include/net-snmp/agent/mib_module_config.h	645;"	d
-USING_IP_MIB_DATA_ACCESS_IPADDRESS_LINUX_MODULE	include/net-snmp/agent/mib_module_config.h	615;"	d
-USING_IP_MIB_DATA_ACCESS_IPADDRESS_MODULE	include/net-snmp/agent/mib_module_config.h	507;"	d
-USING_IP_MIB_DATA_ACCESS_IPV6SCOPEZONE_COMMON_MODULE	include/net-snmp/agent/mib_module_config.h	624;"	d
-USING_IP_MIB_DATA_ACCESS_IPV6SCOPEZONE_LINUX_MODULE	include/net-snmp/agent/mib_module_config.h	627;"	d
-USING_IP_MIB_DATA_ACCESS_IPV6SCOPEZONE_MODULE	include/net-snmp/agent/mib_module_config.h	549;"	d
-USING_IP_MIB_DATA_ACCESS_SCALARS_COMMON_MODULE	include/net-snmp/agent/mib_module_config.h	429;"	d
-USING_IP_MIB_DATA_ACCESS_SCALARS_LINUX_MODULE	include/net-snmp/agent/mib_module_config.h	546;"	d
-USING_IP_MIB_DATA_ACCESS_SYSTEMSTATS_COMMON_MODULE	include/net-snmp/agent/mib_module_config.h	540;"	d
-USING_IP_MIB_DATA_ACCESS_SYSTEMSTATS_LINUX_MODULE	include/net-snmp/agent/mib_module_config.h	543;"	d
-USING_IP_MIB_DATA_ACCESS_SYSTEMSTATS_MODULE	include/net-snmp/agent/mib_module_config.h	417;"	d
-USING_IP_MIB_INETNETTOMEDIATABLE_INETNETTOMEDIATABLE_DATA_ACCESS_MODULE	include/net-snmp/agent/mib_module_config.h	414;"	d
-USING_IP_MIB_INETNETTOMEDIATABLE_INETNETTOMEDIATABLE_INTERFACE_MODULE	include/net-snmp/agent/mib_module_config.h	411;"	d
-USING_IP_MIB_INETNETTOMEDIATABLE_INETNETTOMEDIATABLE_MODULE	include/net-snmp/agent/mib_module_config.h	408;"	d
-USING_IP_MIB_INETNETTOMEDIATABLE_MODULE	include/net-snmp/agent/mib_module_config.h	327;"	d
-USING_IP_MIB_IPADDRESSPREFIXTABLE_IPADDRESSPREFIXTABLE_DATA_ACCESS_MODULE	include/net-snmp/agent/mib_module_config.h	519;"	d
-USING_IP_MIB_IPADDRESSPREFIXTABLE_IPADDRESSPREFIXTABLE_INTERFACE_MODULE	include/net-snmp/agent/mib_module_config.h	516;"	d
-USING_IP_MIB_IPADDRESSPREFIXTABLE_IPADDRESSPREFIXTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	399;"	d
-USING_IP_MIB_IPADDRESSPREFIXTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	321;"	d
-USING_IP_MIB_IPADDRESSTABLE_IPADDRESSTABLE_DATA_ACCESS_MODULE	include/net-snmp/agent/mib_module_config.h	513;"	d
-USING_IP_MIB_IPADDRESSTABLE_IPADDRESSTABLE_INTERFACE_MODULE	include/net-snmp/agent/mib_module_config.h	510;"	d
-USING_IP_MIB_IPADDRESSTABLE_IPADDRESSTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	396;"	d
-USING_IP_MIB_IPADDRESSTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	318;"	d
-USING_IP_MIB_IPDEFAULTROUTERTABLE_IPDEFAULTROUTERTABLE_DATA_ACCESS_MODULE	include/net-snmp/agent/mib_module_config.h	528;"	d
-USING_IP_MIB_IPDEFAULTROUTERTABLE_IPDEFAULTROUTERTABLE_DATA_GET_MODULE	include/net-snmp/agent/mib_module_config.h	531;"	d
-USING_IP_MIB_IPDEFAULTROUTERTABLE_IPDEFAULTROUTERTABLE_INTERFACE_MODULE	include/net-snmp/agent/mib_module_config.h	525;"	d
-USING_IP_MIB_IPDEFAULTROUTERTABLE_IPDEFAULTROUTERTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	402;"	d
-USING_IP_MIB_IPDEFAULTROUTERTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	324;"	d
-USING_IP_MIB_IPIFSTATSTABLE_IPIFSTATSTABLE_DATA_ACCESS_MODULE	include/net-snmp/agent/mib_module_config.h	441;"	d
-USING_IP_MIB_IPIFSTATSTABLE_IPIFSTATSTABLE_DATA_GET_MODULE	include/net-snmp/agent/mib_module_config.h	558;"	d
-USING_IP_MIB_IPIFSTATSTABLE_IPIFSTATSTABLE_INTERFACE_MODULE	include/net-snmp/agent/mib_module_config.h	438;"	d
-USING_IP_MIB_IPIFSTATSTABLE_IPIFSTATSTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	435;"	d
-USING_IP_MIB_IPIFSTATSTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	339;"	d
-USING_IP_MIB_IPSYSTEMSTATSTABLE_IPSYSTEMSTATSTABLE_DATA_ACCESS_MODULE	include/net-snmp/agent/mib_module_config.h	426;"	d
-USING_IP_MIB_IPSYSTEMSTATSTABLE_IPSYSTEMSTATSTABLE_INTERFACE_MODULE	include/net-snmp/agent/mib_module_config.h	423;"	d
-USING_IP_MIB_IPSYSTEMSTATSTABLE_IPSYSTEMSTATSTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	420;"	d
-USING_IP_MIB_IPSYSTEMSTATSTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	330;"	d
-USING_IP_MIB_IPV6SCOPEZONEINDEXTABLE_IPV6SCOPEZONEINDEXTABLE_DATA_ACCESS_MODULE	include/net-snmp/agent/mib_module_config.h	555;"	d
-USING_IP_MIB_IPV6SCOPEZONEINDEXTABLE_IPV6SCOPEZONEINDEXTABLE_INTERFACE_MODULE	include/net-snmp/agent/mib_module_config.h	552;"	d
-USING_IP_MIB_IPV6SCOPEZONEINDEXTABLE_IPV6SCOPEZONEINDEXTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	432;"	d
-USING_IP_MIB_IPV6SCOPEZONEINDEXTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	336;"	d
-USING_IP_MIB_IP_SCALARS_MODULE	include/net-snmp/agent/mib_module_config.h	333;"	d
-USING_IP_MIB_MODULE	include/net-snmp/agent/mib_module_config.h	93;"	d
-USING_MIBII_AT_MODULE	include/net-snmp/agent/mib_module_config.h	66;"	d
+USING_HOST_MODULE	include/net-snmp/agent/mib_module_config.h	45;"	d
+USING_IF_MIB_DATA_ACCESS_INTERFACE_IOCTL_MODULE	include/net-snmp/agent/mib_module_config.h	612;"	d
+USING_IF_MIB_DATA_ACCESS_INTERFACE_LINUX_MODULE	include/net-snmp/agent/mib_module_config.h	609;"	d
+USING_IF_MIB_DATA_ACCESS_INTERFACE_MODULE	include/net-snmp/agent/mib_module_config.h	495;"	d
+USING_IF_MIB_IFTABLE_IFTABLE_DATA_ACCESS_MODULE	include/net-snmp/agent/mib_module_config.h	501;"	d
+USING_IF_MIB_IFTABLE_IFTABLE_INTERFACE_MODULE	include/net-snmp/agent/mib_module_config.h	498;"	d
+USING_IF_MIB_IFTABLE_IFTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	393;"	d
+USING_IF_MIB_IFTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	294;"	d
+USING_IF_MIB_IFXTABLE_IFXTABLE_DATA_ACCESS_MODULE	include/net-snmp/agent/mib_module_config.h	507;"	d
+USING_IF_MIB_IFXTABLE_IFXTABLE_INTERFACE_MODULE	include/net-snmp/agent/mib_module_config.h	504;"	d
+USING_IF_MIB_IFXTABLE_IFXTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	396;"	d
+USING_IF_MIB_IFXTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	318;"	d
+USING_IF_MIB_MODULE	include/net-snmp/agent/mib_module_config.h	93;"	d
+USING_IP_FORWARD_MIB_DATA_ACCESS_ROUTE_COMMON_MODULE	include/net-snmp/agent/mib_module_config.h	633;"	d
+USING_IP_FORWARD_MIB_DATA_ACCESS_ROUTE_IOCTL_MODULE	include/net-snmp/agent/mib_module_config.h	639;"	d
+USING_IP_FORWARD_MIB_DATA_ACCESS_ROUTE_LINUX_MODULE	include/net-snmp/agent/mib_module_config.h	636;"	d
+USING_IP_FORWARD_MIB_DATA_ACCESS_ROUTE_MODULE	include/net-snmp/agent/mib_module_config.h	564;"	d
+USING_IP_FORWARD_MIB_INETCIDRROUTETABLE_INETCIDRROUTETABLE_DATA_ACCESS_MODULE	include/net-snmp/agent/mib_module_config.h	576;"	d
+USING_IP_FORWARD_MIB_INETCIDRROUTETABLE_INETCIDRROUTETABLE_INTERFACE_MODULE	include/net-snmp/agent/mib_module_config.h	573;"	d
+USING_IP_FORWARD_MIB_INETCIDRROUTETABLE_INETCIDRROUTETABLE_MODULE	include/net-snmp/agent/mib_module_config.h	450;"	d
+USING_IP_FORWARD_MIB_INETCIDRROUTETABLE_MODULE	include/net-snmp/agent/mib_module_config.h	348;"	d
+USING_IP_FORWARD_MIB_IPCIDRROUTETABLE_IPCIDRROUTETABLE_DATA_ACCESS_MODULE	include/net-snmp/agent/mib_module_config.h	570;"	d
+USING_IP_FORWARD_MIB_IPCIDRROUTETABLE_IPCIDRROUTETABLE_INTERFACE_MODULE	include/net-snmp/agent/mib_module_config.h	567;"	d
+USING_IP_FORWARD_MIB_IPCIDRROUTETABLE_IPCIDRROUTETABLE_MODULE	include/net-snmp/agent/mib_module_config.h	447;"	d
+USING_IP_FORWARD_MIB_IPCIDRROUTETABLE_MODULE	include/net-snmp/agent/mib_module_config.h	345;"	d
+USING_IP_FORWARD_MIB_MODULE	include/net-snmp/agent/mib_module_config.h	99;"	d
+USING_IP_MIB_DATA_ACCESS_ARP_COMMON_MODULE	include/net-snmp/agent/mib_module_config.h	537;"	d
+USING_IP_MIB_DATA_ACCESS_ARP_MODULE	include/net-snmp/agent/mib_module_config.h	408;"	d
+USING_IP_MIB_DATA_ACCESS_ARP_NETLINK_MODULE	include/net-snmp/agent/mib_module_config.h	540;"	d
+USING_IP_MIB_DATA_ACCESS_DEFAULTROUTER_COMMON_MODULE	include/net-snmp/agent/mib_module_config.h	621;"	d
+USING_IP_MIB_DATA_ACCESS_DEFAULTROUTER_LINUX_MODULE	include/net-snmp/agent/mib_module_config.h	624;"	d
+USING_IP_MIB_DATA_ACCESS_DEFAULTROUTER_MODULE	include/net-snmp/agent/mib_module_config.h	525;"	d
+USING_IP_MIB_DATA_ACCESS_IPADDRESS_COMMON_MODULE	include/net-snmp/agent/mib_module_config.h	615;"	d
+USING_IP_MIB_DATA_ACCESS_IPADDRESS_IOCTL_MODULE	include/net-snmp/agent/mib_module_config.h	648;"	d
+USING_IP_MIB_DATA_ACCESS_IPADDRESS_LINUX_MODULE	include/net-snmp/agent/mib_module_config.h	618;"	d
+USING_IP_MIB_DATA_ACCESS_IPADDRESS_MODULE	include/net-snmp/agent/mib_module_config.h	510;"	d
+USING_IP_MIB_DATA_ACCESS_IPV6SCOPEZONE_COMMON_MODULE	include/net-snmp/agent/mib_module_config.h	627;"	d
+USING_IP_MIB_DATA_ACCESS_IPV6SCOPEZONE_LINUX_MODULE	include/net-snmp/agent/mib_module_config.h	630;"	d
+USING_IP_MIB_DATA_ACCESS_IPV6SCOPEZONE_MODULE	include/net-snmp/agent/mib_module_config.h	552;"	d
+USING_IP_MIB_DATA_ACCESS_SCALARS_COMMON_MODULE	include/net-snmp/agent/mib_module_config.h	432;"	d
+USING_IP_MIB_DATA_ACCESS_SCALARS_LINUX_MODULE	include/net-snmp/agent/mib_module_config.h	549;"	d
+USING_IP_MIB_DATA_ACCESS_SYSTEMSTATS_COMMON_MODULE	include/net-snmp/agent/mib_module_config.h	543;"	d
+USING_IP_MIB_DATA_ACCESS_SYSTEMSTATS_LINUX_MODULE	include/net-snmp/agent/mib_module_config.h	546;"	d
+USING_IP_MIB_DATA_ACCESS_SYSTEMSTATS_MODULE	include/net-snmp/agent/mib_module_config.h	420;"	d
+USING_IP_MIB_INETNETTOMEDIATABLE_INETNETTOMEDIATABLE_DATA_ACCESS_MODULE	include/net-snmp/agent/mib_module_config.h	417;"	d
+USING_IP_MIB_INETNETTOMEDIATABLE_INETNETTOMEDIATABLE_INTERFACE_MODULE	include/net-snmp/agent/mib_module_config.h	414;"	d
+USING_IP_MIB_INETNETTOMEDIATABLE_INETNETTOMEDIATABLE_MODULE	include/net-snmp/agent/mib_module_config.h	411;"	d
+USING_IP_MIB_INETNETTOMEDIATABLE_MODULE	include/net-snmp/agent/mib_module_config.h	330;"	d
+USING_IP_MIB_IPADDRESSPREFIXTABLE_IPADDRESSPREFIXTABLE_DATA_ACCESS_MODULE	include/net-snmp/agent/mib_module_config.h	522;"	d
+USING_IP_MIB_IPADDRESSPREFIXTABLE_IPADDRESSPREFIXTABLE_INTERFACE_MODULE	include/net-snmp/agent/mib_module_config.h	519;"	d
+USING_IP_MIB_IPADDRESSPREFIXTABLE_IPADDRESSPREFIXTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	402;"	d
+USING_IP_MIB_IPADDRESSPREFIXTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	324;"	d
+USING_IP_MIB_IPADDRESSTABLE_IPADDRESSTABLE_DATA_ACCESS_MODULE	include/net-snmp/agent/mib_module_config.h	516;"	d
+USING_IP_MIB_IPADDRESSTABLE_IPADDRESSTABLE_INTERFACE_MODULE	include/net-snmp/agent/mib_module_config.h	513;"	d
+USING_IP_MIB_IPADDRESSTABLE_IPADDRESSTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	399;"	d
+USING_IP_MIB_IPADDRESSTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	321;"	d
+USING_IP_MIB_IPDEFAULTROUTERTABLE_IPDEFAULTROUTERTABLE_DATA_ACCESS_MODULE	include/net-snmp/agent/mib_module_config.h	531;"	d
+USING_IP_MIB_IPDEFAULTROUTERTABLE_IPDEFAULTROUTERTABLE_DATA_GET_MODULE	include/net-snmp/agent/mib_module_config.h	534;"	d
+USING_IP_MIB_IPDEFAULTROUTERTABLE_IPDEFAULTROUTERTABLE_INTERFACE_MODULE	include/net-snmp/agent/mib_module_config.h	528;"	d
+USING_IP_MIB_IPDEFAULTROUTERTABLE_IPDEFAULTROUTERTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	405;"	d
+USING_IP_MIB_IPDEFAULTROUTERTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	327;"	d
+USING_IP_MIB_IPIFSTATSTABLE_IPIFSTATSTABLE_DATA_ACCESS_MODULE	include/net-snmp/agent/mib_module_config.h	444;"	d
+USING_IP_MIB_IPIFSTATSTABLE_IPIFSTATSTABLE_DATA_GET_MODULE	include/net-snmp/agent/mib_module_config.h	561;"	d
+USING_IP_MIB_IPIFSTATSTABLE_IPIFSTATSTABLE_INTERFACE_MODULE	include/net-snmp/agent/mib_module_config.h	441;"	d
+USING_IP_MIB_IPIFSTATSTABLE_IPIFSTATSTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	438;"	d
+USING_IP_MIB_IPIFSTATSTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	342;"	d
+USING_IP_MIB_IPSYSTEMSTATSTABLE_IPSYSTEMSTATSTABLE_DATA_ACCESS_MODULE	include/net-snmp/agent/mib_module_config.h	429;"	d
+USING_IP_MIB_IPSYSTEMSTATSTABLE_IPSYSTEMSTATSTABLE_INTERFACE_MODULE	include/net-snmp/agent/mib_module_config.h	426;"	d
+USING_IP_MIB_IPSYSTEMSTATSTABLE_IPSYSTEMSTATSTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	423;"	d
+USING_IP_MIB_IPSYSTEMSTATSTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	333;"	d
+USING_IP_MIB_IPV6SCOPEZONEINDEXTABLE_IPV6SCOPEZONEINDEXTABLE_DATA_ACCESS_MODULE	include/net-snmp/agent/mib_module_config.h	558;"	d
+USING_IP_MIB_IPV6SCOPEZONEINDEXTABLE_IPV6SCOPEZONEINDEXTABLE_INTERFACE_MODULE	include/net-snmp/agent/mib_module_config.h	555;"	d
+USING_IP_MIB_IPV6SCOPEZONEINDEXTABLE_IPV6SCOPEZONEINDEXTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	435;"	d
+USING_IP_MIB_IPV6SCOPEZONEINDEXTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	339;"	d
+USING_IP_MIB_IP_SCALARS_MODULE	include/net-snmp/agent/mib_module_config.h	336;"	d
+USING_IP_MIB_MODULE	include/net-snmp/agent/mib_module_config.h	96;"	d
+USING_MIBII_AT_MODULE	include/net-snmp/agent/mib_module_config.h	69;"	d
 USING_MIBII_AT_MODULE	win32/net-snmp/agent/mib_module_config.h	54;"	d
-USING_MIBII_ICMP_MODULE	include/net-snmp/agent/mib_module_config.h	78;"	d
+USING_MIBII_ICMP_MODULE	include/net-snmp/agent/mib_module_config.h	81;"	d
 USING_MIBII_ICMP_MODULE	win32/net-snmp/agent/mib_module_config.h	66;"	d
-USING_MIBII_IFTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	69;"	d
+USING_MIBII_IFTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	72;"	d
 USING_MIBII_INTERFACES_MODULE	win32/net-snmp/agent/mib_module_config.h	57;"	d
-USING_MIBII_IPADDR_MODULE	include/net-snmp/agent/mib_module_config.h	297;"	d
+USING_MIBII_IPADDR_MODULE	include/net-snmp/agent/mib_module_config.h	300;"	d
 USING_MIBII_IPADDR_MODULE	win32/net-snmp/agent/mib_module_config.h	322;"	d
-USING_MIBII_IP_MODULE	include/net-snmp/agent/mib_module_config.h	72;"	d
+USING_MIBII_IP_MODULE	include/net-snmp/agent/mib_module_config.h	75;"	d
 USING_MIBII_IP_MODULE	win32/net-snmp/agent/mib_module_config.h	69;"	d
-USING_MIBII_KERNEL_LINUX_MODULE	include/net-snmp/agent/mib_module_config.h	294;"	d
-USING_MIBII_MODULE	include/net-snmp/agent/mib_module_config.h	12;"	d
+USING_MIBII_KERNEL_LINUX_MODULE	include/net-snmp/agent/mib_module_config.h	297;"	d
+USING_MIBII_MODULE	include/net-snmp/agent/mib_module_config.h	15;"	d
 USING_MIBII_MODULE	win32/net-snmp/agent/mib_module_config.h	7;"	d
-USING_MIBII_ROUTE_WRITE_MODULE	include/net-snmp/agent/mib_module_config.h	303;"	d
+USING_MIBII_ROUTE_WRITE_MODULE	include/net-snmp/agent/mib_module_config.h	306;"	d
 USING_MIBII_ROUTE_WRITE_MODULE	win32/net-snmp/agent/mib_module_config.h	313;"	d
-USING_MIBII_SETSERIALNO_MODULE	include/net-snmp/agent/mib_module_config.h	87;"	d
+USING_MIBII_SETSERIALNO_MODULE	include/net-snmp/agent/mib_module_config.h	90;"	d
 USING_MIBII_SETSERIALNO_MODULE	win32/net-snmp/agent/mib_module_config.h	78;"	d
-USING_MIBII_SNMP_MIB_5_5_MODULE	include/net-snmp/agent/mib_module_config.h	57;"	d
+USING_MIBII_SNMP_MIB_5_5_MODULE	include/net-snmp/agent/mib_module_config.h	60;"	d
 USING_MIBII_SNMP_MIB_MODULE	win32/net-snmp/agent/mib_module_config.h	60;"	d
-USING_MIBII_SYSORTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	63;"	d
+USING_MIBII_SYSORTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	66;"	d
 USING_MIBII_SYSORTABLE_MODULE	win32/net-snmp/agent/mib_module_config.h	51;"	d
-USING_MIBII_SYSTEM_MIB_MODULE	include/net-snmp/agent/mib_module_config.h	60;"	d
+USING_MIBII_SYSTEM_MIB_MODULE	include/net-snmp/agent/mib_module_config.h	63;"	d
 USING_MIBII_SYSTEM_MIB_MODULE	win32/net-snmp/agent/mib_module_config.h	48;"	d
-USING_MIBII_TCPTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	306;"	d
+USING_MIBII_TCPTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	309;"	d
 USING_MIBII_TCPTABLE_MODULE	win32/net-snmp/agent/mib_module_config.h	319;"	d
-USING_MIBII_TCP_MODULE	include/net-snmp/agent/mib_module_config.h	75;"	d
+USING_MIBII_TCP_MODULE	include/net-snmp/agent/mib_module_config.h	78;"	d
 USING_MIBII_TCP_MODULE	win32/net-snmp/agent/mib_module_config.h	63;"	d
-USING_MIBII_UDPTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	309;"	d
+USING_MIBII_UDPTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	312;"	d
 USING_MIBII_UDPTABLE_MODULE	win32/net-snmp/agent/mib_module_config.h	325;"	d
-USING_MIBII_UDP_MODULE	include/net-snmp/agent/mib_module_config.h	81;"	d
+USING_MIBII_UDP_MODULE	include/net-snmp/agent/mib_module_config.h	84;"	d
 USING_MIBII_UDP_MODULE	win32/net-snmp/agent/mib_module_config.h	72;"	d
-USING_MIBII_UPDATES_MODULE	include/net-snmp/agent/mib_module_config.h	285;"	d
+USING_MIBII_UPDATES_MODULE	include/net-snmp/agent/mib_module_config.h	288;"	d
 USING_MIBII_VACM_CONF_MODULE	include/net-snmp/agent/agent_module_config.h	18;"	d
 USING_MIBII_VACM_CONF_MODULE	win32/net-snmp/agent/agent_module_config.h	28;"	d
-USING_MIBII_VACM_CONTEXT_MODULE	include/net-snmp/agent/mib_module_config.h	312;"	d
+USING_MIBII_VACM_CONTEXT_MODULE	include/net-snmp/agent/mib_module_config.h	315;"	d
 USING_MIBII_VACM_CONTEXT_MODULE	win32/net-snmp/agent/mib_module_config.h	328;"	d
-USING_MIBII_VACM_VARS_MODULE	include/net-snmp/agent/mib_module_config.h	84;"	d
+USING_MIBII_VACM_VARS_MODULE	include/net-snmp/agent/mib_module_config.h	87;"	d
 USING_MIBII_VACM_VARS_MODULE	win32/net-snmp/agent/mib_module_config.h	75;"	d
-USING_MIBII_VAR_ROUTE_MODULE	include/net-snmp/agent/mib_module_config.h	300;"	d
+USING_MIBII_VAR_ROUTE_MODULE	include/net-snmp/agent/mib_module_config.h	303;"	d
 USING_MIBII_VAR_ROUTE_MODULE	win32/net-snmp/agent/mib_module_config.h	310;"	d
-USING_NOTIFICATION_LOG_MIB_MODULE	include/net-snmp/agent/mib_module_config.h	21;"	d
-USING_NOTIFICATION_LOG_MIB_NOTIFICATION_LOG_MODULE	include/net-snmp/agent/mib_module_config.h	156;"	d
+USING_NOTIFICATION_LOG_MIB_MODULE	include/net-snmp/agent/mib_module_config.h	24;"	d
+USING_NOTIFICATION_LOG_MIB_NOTIFICATION_LOG_MODULE	include/net-snmp/agent/mib_module_config.h	159;"	d
 USING_NOTIFICATION_LOG_MIB_NOTIFICATION_LOG_MODULE	win32/net-snmp/agent/mib_module_config.h	23;"	d
-USING_NOTIFICATION_MODULE	include/net-snmp/agent/mib_module_config.h	18;"	d
+USING_NOTIFICATION_MODULE	include/net-snmp/agent/mib_module_config.h	21;"	d
 USING_NOTIFICATION_MODULE	win32/net-snmp/agent/mib_module_config.h	16;"	d
-USING_NOTIFICATION_SNMPNOTIFYFILTERPROFILETABLE_MODULE	include/net-snmp/agent/mib_module_config.h	153;"	d
+USING_NOTIFICATION_SNMPNOTIFYFILTERPROFILETABLE_MODULE	include/net-snmp/agent/mib_module_config.h	156;"	d
 USING_NOTIFICATION_SNMPNOTIFYFILTERPROFILETABLE_MODULE	win32/net-snmp/agent/mib_module_config.h	152;"	d
 USING_NOTIFICATION_SNMPNOTIFYFILTERTABLE_MODULE	win32/net-snmp/agent/mib_module_config.h	149;"	d
-USING_NOTIFICATION_SNMPNOTIFYTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	147;"	d
+USING_NOTIFICATION_SNMPNOTIFYTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	150;"	d
 USING_NOTIFICATION_SNMPNOTIFYTABLE_MODULE	win32/net-snmp/agent/mib_module_config.h	146;"	d
 USING_RMON_AGUTIL_MODULE	win32/net-snmp/agent/mib_module_config.h	232;"	d
 USING_RMON_ALARM_MODULE	win32/net-snmp/agent/mib_module_config.h	238;"	d
@@ -11846,96 +11758,96 @@ USING_RMON_HISTORY_MODULE	win32/net-snmp/agent/mib_module_config.h	241;"	d
 USING_RMON_ROWS_MODULE	win32/net-snmp/agent/mib_module_config.h	229;"	d
 USING_RMON_STATISTICS_MODULE	win32/net-snmp/agent/mib_module_config.h	235;"	d
 USING_SMUX_SMUX_MODULE	win32/net-snmp/agent/mib_module_config.h	304;"	d
-USING_SNMPV3MIBS_MODULE	include/net-snmp/agent/mib_module_config.h	9;"	d
+USING_SNMPV3MIBS_MODULE	include/net-snmp/agent/mib_module_config.h	12;"	d
 USING_SNMPV3MIBS_MODULE	win32/net-snmp/agent/mib_module_config.h	13;"	d
-USING_SNMPV3_SNMPENGINE_MODULE	include/net-snmp/agent/mib_module_config.h	51;"	d
+USING_SNMPV3_SNMPENGINE_MODULE	include/net-snmp/agent/mib_module_config.h	54;"	d
 USING_SNMPV3_SNMPENGINE_MODULE	win32/net-snmp/agent/mib_module_config.h	134;"	d
-USING_SNMPV3_SNMPMPDSTATS_5_5_MODULE	include/net-snmp/agent/mib_module_config.h	45;"	d
+USING_SNMPV3_SNMPMPDSTATS_5_5_MODULE	include/net-snmp/agent/mib_module_config.h	48;"	d
 USING_SNMPV3_SNMPMPDSTATS_MODULE	win32/net-snmp/agent/mib_module_config.h	137;"	d
 USING_SNMPV3_USMCONF_MODULE	include/net-snmp/agent/agent_module_config.h	3;"	d
 USING_SNMPV3_USMCONF_MODULE	win32/net-snmp/agent/agent_module_config.h	3;"	d
-USING_SNMPV3_USMSTATS_5_5_MODULE	include/net-snmp/agent/mib_module_config.h	48;"	d
+USING_SNMPV3_USMSTATS_5_5_MODULE	include/net-snmp/agent/mib_module_config.h	51;"	d
 USING_SNMPV3_USMSTATS_MODULE	win32/net-snmp/agent/mib_module_config.h	140;"	d
-USING_SNMPV3_USMUSER_MODULE	include/net-snmp/agent/mib_module_config.h	54;"	d
+USING_SNMPV3_USMUSER_MODULE	include/net-snmp/agent/mib_module_config.h	57;"	d
 USING_SNMPV3_USMUSER_MODULE	win32/net-snmp/agent/mib_module_config.h	143;"	d
-USING_SNMP_NOTIFICATION_MIB_SNMPNOTIFYFILTERTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	150;"	d
-USING_SNMP_NOTIFICATION_MIB_SNMPNOTIFYFILTERTABLE_SNMPNOTIFYFILTERTABLE_DATA_ACCESS_MODULE	include/net-snmp/agent/mib_module_config.h	483;"	d
-USING_SNMP_NOTIFICATION_MIB_SNMPNOTIFYFILTERTABLE_SNMPNOTIFYFILTERTABLE_INTERFACE_MODULE	include/net-snmp/agent/mib_module_config.h	480;"	d
-USING_SNMP_NOTIFICATION_MIB_SNMPNOTIFYFILTERTABLE_SNMPNOTIFYFILTERTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	378;"	d
-USING_TARGET_MODULE	include/net-snmp/agent/mib_module_config.h	24;"	d
+USING_SNMP_NOTIFICATION_MIB_SNMPNOTIFYFILTERTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	153;"	d
+USING_SNMP_NOTIFICATION_MIB_SNMPNOTIFYFILTERTABLE_SNMPNOTIFYFILTERTABLE_DATA_ACCESS_MODULE	include/net-snmp/agent/mib_module_config.h	486;"	d
+USING_SNMP_NOTIFICATION_MIB_SNMPNOTIFYFILTERTABLE_SNMPNOTIFYFILTERTABLE_INTERFACE_MODULE	include/net-snmp/agent/mib_module_config.h	483;"	d
+USING_SNMP_NOTIFICATION_MIB_SNMPNOTIFYFILTERTABLE_SNMPNOTIFYFILTERTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	381;"	d
+USING_TARGET_MODULE	include/net-snmp/agent/mib_module_config.h	27;"	d
 USING_TARGET_MODULE	win32/net-snmp/agent/mib_module_config.h	27;"	d
-USING_TARGET_SNMPTARGETADDRENTRY_MODULE	include/net-snmp/agent/mib_module_config.h	162;"	d
+USING_TARGET_SNMPTARGETADDRENTRY_MODULE	include/net-snmp/agent/mib_module_config.h	165;"	d
 USING_TARGET_SNMPTARGETADDRENTRY_MODULE	win32/net-snmp/agent/mib_module_config.h	155;"	d
-USING_TARGET_SNMPTARGETPARAMSENTRY_MODULE	include/net-snmp/agent/mib_module_config.h	165;"	d
+USING_TARGET_SNMPTARGETPARAMSENTRY_MODULE	include/net-snmp/agent/mib_module_config.h	168;"	d
 USING_TARGET_SNMPTARGETPARAMSENTRY_MODULE	win32/net-snmp/agent/mib_module_config.h	158;"	d
-USING_TARGET_TARGET_COUNTERS_5_5_MODULE	include/net-snmp/agent/mib_module_config.h	159;"	d
+USING_TARGET_TARGET_COUNTERS_5_5_MODULE	include/net-snmp/agent/mib_module_config.h	162;"	d
 USING_TARGET_TARGET_COUNTERS_MODULE	win32/net-snmp/agent/mib_module_config.h	164;"	d
-USING_TARGET_TARGET_MODULE	include/net-snmp/agent/mib_module_config.h	168;"	d
+USING_TARGET_TARGET_MODULE	include/net-snmp/agent/mib_module_config.h	171;"	d
 USING_TARGET_TARGET_MODULE	win32/net-snmp/agent/mib_module_config.h	161;"	d
-USING_TCP_MIB_DATA_ACCESS_TCPCONN_COMMON_MODULE	include/net-snmp/agent/mib_module_config.h	576;"	d
-USING_TCP_MIB_DATA_ACCESS_TCPCONN_LINUX_MODULE	include/net-snmp/agent/mib_module_config.h	579;"	d
-USING_TCP_MIB_DATA_ACCESS_TCPCONN_MODULE	include/net-snmp/agent/mib_module_config.h	450;"	d
-USING_TCP_MIB_MODULE	include/net-snmp/agent/mib_module_config.h	99;"	d
-USING_TCP_MIB_TCPCONNECTIONTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	348;"	d
-USING_TCP_MIB_TCPCONNECTIONTABLE_TCPCONNECTIONTABLE_DATA_ACCESS_MODULE	include/net-snmp/agent/mib_module_config.h	588;"	d
-USING_TCP_MIB_TCPCONNECTIONTABLE_TCPCONNECTIONTABLE_INTERFACE_MODULE	include/net-snmp/agent/mib_module_config.h	585;"	d
-USING_TCP_MIB_TCPCONNECTIONTABLE_TCPCONNECTIONTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	453;"	d
-USING_TCP_MIB_TCPLISTENERTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	351;"	d
-USING_TCP_MIB_TCPLISTENERTABLE_TCPLISTENERTABLE_DATA_ACCESS_MODULE	include/net-snmp/agent/mib_module_config.h	594;"	d
-USING_TCP_MIB_TCPLISTENERTABLE_TCPLISTENERTABLE_INTERFACE_MODULE	include/net-snmp/agent/mib_module_config.h	591;"	d
-USING_TCP_MIB_TCPLISTENERTABLE_TCPLISTENERTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	456;"	d
-USING_UCD_SNMP_DISK_HW_MODULE	include/net-snmp/agent/mib_module_config.h	105;"	d
+USING_TCP_MIB_DATA_ACCESS_TCPCONN_COMMON_MODULE	include/net-snmp/agent/mib_module_config.h	579;"	d
+USING_TCP_MIB_DATA_ACCESS_TCPCONN_LINUX_MODULE	include/net-snmp/agent/mib_module_config.h	582;"	d
+USING_TCP_MIB_DATA_ACCESS_TCPCONN_MODULE	include/net-snmp/agent/mib_module_config.h	453;"	d
+USING_TCP_MIB_MODULE	include/net-snmp/agent/mib_module_config.h	102;"	d
+USING_TCP_MIB_TCPCONNECTIONTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	351;"	d
+USING_TCP_MIB_TCPCONNECTIONTABLE_TCPCONNECTIONTABLE_DATA_ACCESS_MODULE	include/net-snmp/agent/mib_module_config.h	591;"	d
+USING_TCP_MIB_TCPCONNECTIONTABLE_TCPCONNECTIONTABLE_INTERFACE_MODULE	include/net-snmp/agent/mib_module_config.h	588;"	d
+USING_TCP_MIB_TCPCONNECTIONTABLE_TCPCONNECTIONTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	456;"	d
+USING_TCP_MIB_TCPLISTENERTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	354;"	d
+USING_TCP_MIB_TCPLISTENERTABLE_TCPLISTENERTABLE_DATA_ACCESS_MODULE	include/net-snmp/agent/mib_module_config.h	597;"	d
+USING_TCP_MIB_TCPLISTENERTABLE_TCPLISTENERTABLE_INTERFACE_MODULE	include/net-snmp/agent/mib_module_config.h	594;"	d
+USING_TCP_MIB_TCPLISTENERTABLE_TCPLISTENERTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	459;"	d
+USING_UCD_SNMP_DISK_HW_MODULE	include/net-snmp/agent/mib_module_config.h	108;"	d
 USING_UCD_SNMP_DISK_MODULE	win32/net-snmp/agent/mib_module_config.h	102;"	d
-USING_UCD_SNMP_DLMOD_MODULE	include/net-snmp/agent/mib_module_config.h	132;"	d
+USING_UCD_SNMP_DLMOD_MODULE	include/net-snmp/agent/mib_module_config.h	135;"	d
 USING_UCD_SNMP_DLMOD_MODULE	win32/net-snmp/agent/mib_module_config.h	120;"	d
-USING_UCD_SNMP_ERRORMIB_MODULE	include/net-snmp/agent/mib_module_config.h	126;"	d
+USING_UCD_SNMP_ERRORMIB_MODULE	include/net-snmp/agent/mib_module_config.h	129;"	d
 USING_UCD_SNMP_ERRORMIB_MODULE	win32/net-snmp/agent/mib_module_config.h	114;"	d
 USING_UCD_SNMP_EXTENSIBLE_MODULE	win32/net-snmp/agent/mib_module_config.h	108;"	d
-USING_UCD_SNMP_FILE_MODULE	include/net-snmp/agent/mib_module_config.h	129;"	d
+USING_UCD_SNMP_FILE_MODULE	include/net-snmp/agent/mib_module_config.h	132;"	d
 USING_UCD_SNMP_FILE_MODULE	win32/net-snmp/agent/mib_module_config.h	117;"	d
-USING_UCD_SNMP_LOADAVE_MODULE	include/net-snmp/agent/mib_module_config.h	120;"	d
+USING_UCD_SNMP_LOADAVE_MODULE	include/net-snmp/agent/mib_module_config.h	123;"	d
 USING_UCD_SNMP_LOADAVE_MODULE	win32/net-snmp/agent/mib_module_config.h	105;"	d
-USING_UCD_SNMP_LOGMATCH_MODULE	include/net-snmp/agent/mib_module_config.h	138;"	d
+USING_UCD_SNMP_LOGMATCH_MODULE	include/net-snmp/agent/mib_module_config.h	141;"	d
 USING_UCD_SNMP_LOGMATCH_MODULE	win32/net-snmp/agent/mib_module_config.h	130;"	d
-USING_UCD_SNMP_MEMORY_MODULE	include/net-snmp/agent/mib_module_config.h	141;"	d
+USING_UCD_SNMP_MEMORY_MODULE	include/net-snmp/agent/mib_module_config.h	144;"	d
 USING_UCD_SNMP_MEMORY_MODULE	win32/net-snmp/agent/mib_module_config.h	84;"	d
-USING_UCD_SNMP_MODULE	include/net-snmp/agent/mib_module_config.h	15;"	d
+USING_UCD_SNMP_MODULE	include/net-snmp/agent/mib_module_config.h	18;"	d
 USING_UCD_SNMP_MODULE	win32/net-snmp/agent/mib_module_config.h	10;"	d
 USING_UCD_SNMP_MODULE	win32/net-snmp/net-snmp-config.h	1766;"	d
-USING_UCD_SNMP_PASS_COMMON_MODULE	include/net-snmp/agent/mib_module_config.h	366;"	d
-USING_UCD_SNMP_PASS_MODULE	include/net-snmp/agent/mib_module_config.h	114;"	d
+USING_UCD_SNMP_PASS_COMMON_MODULE	include/net-snmp/agent/mib_module_config.h	369;"	d
+USING_UCD_SNMP_PASS_MODULE	include/net-snmp/agent/mib_module_config.h	117;"	d
 USING_UCD_SNMP_PASS_MODULE	win32/net-snmp/agent/mib_module_config.h	96;"	d
-USING_UCD_SNMP_PASS_PERSIST_MODULE	include/net-snmp/agent/mib_module_config.h	117;"	d
+USING_UCD_SNMP_PASS_PERSIST_MODULE	include/net-snmp/agent/mib_module_config.h	120;"	d
 USING_UCD_SNMP_PASS_PERSIST_MODULE	win32/net-snmp/agent/mib_module_config.h	99;"	d
-USING_UCD_SNMP_PROC_MODULE	include/net-snmp/agent/mib_module_config.h	108;"	d
+USING_UCD_SNMP_PROC_MODULE	include/net-snmp/agent/mib_module_config.h	111;"	d
 USING_UCD_SNMP_PROC_MODULE	win32/net-snmp/agent/mib_module_config.h	90;"	d
-USING_UCD_SNMP_PROXY_MODULE	include/net-snmp/agent/mib_module_config.h	135;"	d
+USING_UCD_SNMP_PROXY_MODULE	include/net-snmp/agent/mib_module_config.h	138;"	d
 USING_UCD_SNMP_PROXY_MODULE	win32/net-snmp/agent/mib_module_config.h	123;"	d
-USING_UCD_SNMP_VERSIONINFO_MODULE	include/net-snmp/agent/mib_module_config.h	111;"	d
+USING_UCD_SNMP_VERSIONINFO_MODULE	include/net-snmp/agent/mib_module_config.h	114;"	d
 USING_UCD_SNMP_VERSIONINFO_MODULE	win32/net-snmp/agent/mib_module_config.h	93;"	d
-USING_UCD_SNMP_VMSTAT_MODULE	include/net-snmp/agent/mib_module_config.h	144;"	d
+USING_UCD_SNMP_VMSTAT_MODULE	include/net-snmp/agent/mib_module_config.h	147;"	d
 USING_UCD_SNMP_VMSTAT_MODULE	win32/net-snmp/agent/mib_module_config.h	87;"	d
-USING_UDP_MIB_DATA_ACCESS_UDP_ENDPOINT_COMMON_MODULE	include/net-snmp/agent/mib_module_config.h	639;"	d
-USING_UDP_MIB_DATA_ACCESS_UDP_ENDPOINT_LINUX_MODULE	include/net-snmp/agent/mib_module_config.h	642;"	d
-USING_UDP_MIB_DATA_ACCESS_UDP_ENDPOINT_MODULE	include/net-snmp/agent/mib_module_config.h	597;"	d
-USING_UDP_MIB_MODULE	include/net-snmp/agent/mib_module_config.h	102;"	d
-USING_UDP_MIB_UDPENDPOINTTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	354;"	d
-USING_UDP_MIB_UDPENDPOINTTABLE_UDPENDPOINTTABLE_DATA_ACCESS_MODULE	include/net-snmp/agent/mib_module_config.h	603;"	d
-USING_UDP_MIB_UDPENDPOINTTABLE_UDPENDPOINTTABLE_INTERFACE_MODULE	include/net-snmp/agent/mib_module_config.h	600;"	d
-USING_UDP_MIB_UDPENDPOINTTABLE_UDPENDPOINTTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	459;"	d
+USING_UDP_MIB_DATA_ACCESS_UDP_ENDPOINT_COMMON_MODULE	include/net-snmp/agent/mib_module_config.h	642;"	d
+USING_UDP_MIB_DATA_ACCESS_UDP_ENDPOINT_LINUX_MODULE	include/net-snmp/agent/mib_module_config.h	645;"	d
+USING_UDP_MIB_DATA_ACCESS_UDP_ENDPOINT_MODULE	include/net-snmp/agent/mib_module_config.h	600;"	d
+USING_UDP_MIB_MODULE	include/net-snmp/agent/mib_module_config.h	105;"	d
+USING_UDP_MIB_UDPENDPOINTTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	357;"	d
+USING_UDP_MIB_UDPENDPOINTTABLE_UDPENDPOINTTABLE_DATA_ACCESS_MODULE	include/net-snmp/agent/mib_module_config.h	606;"	d
+USING_UDP_MIB_UDPENDPOINTTABLE_UDPENDPOINTTABLE_INTERFACE_MODULE	include/net-snmp/agent/mib_module_config.h	603;"	d
+USING_UDP_MIB_UDPENDPOINTTABLE_UDPENDPOINTTABLE_MODULE	include/net-snmp/agent/mib_module_config.h	462;"	d
 USING_UTILITIES_EXECUTE_MODULE	include/net-snmp/agent/agent_module_config.h	12;"	d
 USING_UTILITIES_EXECUTE_MODULE	win32/net-snmp/agent/agent_module_config.h	31;"	d
 USING_UTILITIES_IQUERY_MODULE	include/net-snmp/agent/agent_module_config.h	15;"	d
-USING_UTILITIES_MODULE	include/net-snmp/agent/mib_module_config.h	39;"	d
+USING_UTILITIES_MODULE	include/net-snmp/agent/mib_module_config.h	42;"	d
 USING_UTILITIES_MODULE	win32/net-snmp/agent/mib_module_config.h	42;"	d
-USING_UTILITIES_OVERRIDE_MODULE	include/net-snmp/agent/mib_module_config.h	243;"	d
+USING_UTILITIES_OVERRIDE_MODULE	include/net-snmp/agent/mib_module_config.h	246;"	d
 USING_UTILITIES_OVERRIDE_MODULE	win32/net-snmp/agent/mib_module_config.h	182;"	d
-USING_UTIL_FUNCS_GET_PID_FROM_INODE_MODULE	include/net-snmp/agent/mib_module_config.h	582;"	d
-USING_UTIL_FUNCS_HEADER_GENERIC_MODULE	include/net-snmp/agent/mib_module_config.h	282;"	d
-USING_UTIL_FUNCS_HEADER_SIMPLE_TABLE_MODULE	include/net-snmp/agent/mib_module_config.h	357;"	d
-USING_UTIL_FUNCS_MODULE	include/net-snmp/agent/mib_module_config.h	288;"	d
+USING_UTIL_FUNCS_GET_PID_FROM_INODE_MODULE	include/net-snmp/agent/mib_module_config.h	585;"	d
+USING_UTIL_FUNCS_HEADER_GENERIC_MODULE	include/net-snmp/agent/mib_module_config.h	285;"	d
+USING_UTIL_FUNCS_HEADER_SIMPLE_TABLE_MODULE	include/net-snmp/agent/mib_module_config.h	360;"	d
+USING_UTIL_FUNCS_MODULE	include/net-snmp/agent/mib_module_config.h	291;"	d
 USING_UTIL_FUNCS_MODULE	win32/net-snmp/agent/mib_module_config.h	316;"	d
-USING_UTIL_FUNCS_RESTART_MODULE	include/net-snmp/agent/mib_module_config.h	363;"	d
+USING_UTIL_FUNCS_RESTART_MODULE	include/net-snmp/agent/mib_module_config.h	366;"	d
 USMDHPARAMETERS_H	agent/mibgroup/snmp-usm-dh-objects-mib/usmDHParameters.h	2;"	d
 USMDHPARAMETERS_H	agent/mibgroup/snmp-usm-dh-objects-mib/usmDHParameters/usmDHParameters.h	6;"	d
 USMDHUSERKEYTABLE_CACHE_TIMEOUT	agent/mibgroup/snmp-usm-dh-objects-mib/usmDHUserKeyTable/usmDHUserKeyTable_data_access.h	47;"	d
@@ -12121,11 +12033,11 @@ VACM_VIEW_WRITE_BIT	include/net-snmp/library/vacm.h	81;"	d
 VACM_VIEW_WRITE_BIT	targets/i686-pc-linux-gnu/include/net-snmp/library/vacm.h	81;"	d
 VAL2HEX	include/net-snmp/library/tools.h	101;"	d
 VAL2HEX	targets/i686-pc-linux-gnu/include/net-snmp/library/tools.h	101;"	d
-VALUE	agent/mibgroup/futuretek/ftm50s.h	8;"	d
+VALUE	agent/mibgroup/futuretek/ftm50s.c	324;"	d	file:
 VAL_LIBS	agent/Makefile	/^VAL_LIBS	= $/;"	m
 VAL_LIBS	apps/Makefile	/^VAL_LIBS	= $/;"	m
 VAL_LIBS	apps/snmpnetstat/Makefile	/^VAL_LIBS	= $/;"	m
-VAR	agent/mibgroup/futuretek/ftm50s.c	/^int	VAR;$/;"	v
+VAR	agent/mibgroup/futuretek/ftm50s.c	/^ int	VAR;$/;"	v
 VARBIND_ALIASES	man/Makefile	/^VARBIND_ALIASES = fprint_value.3 fprint_variable.3	\\$/;"	m
 VARBIND_IID_F	python/netsnmp/client_intf.c	30;"	d	file:
 VARBIND_TAG_F	python/netsnmp/client_intf.c	29;"	d	file:
@@ -13049,9 +12961,7 @@ _get_v4addr	agent/mibgroup/if-mib/data_access/interface_solaris2.c	/^_get_v4addr
 _get_v6addr	agent/mibgroup/if-mib/data_access/interface_solaris2.c	/^_get_v6addr(mib2_ifEntry_t *ife, mib2_ipv6AddrEntry_t *ipv6e)$/;"	f	file:
 _get_vb_num	snmplib/snmp_client.c	/^_get_vb_num(netsnmp_variable_list *vars, int index)$/;"	f	file:
 _gettable_do_it	perl/SNMP/SNMP.pm	/^sub _gettable_do_it() {$/;"	s
-_gettable_do_it	perl/SNMP/blib/lib/SNMP.pm	/^sub _gettable_do_it() {$/;"	s
 _gettable_end_routine	perl/SNMP/SNMP.pm	/^sub _gettable_end_routine {$/;"	s
-_gettable_end_routine	perl/SNMP/blib/lib/SNMP.pm	/^sub _gettable_end_routine {$/;"	s
 _hash	agent/mibgroup/util_funcs/get_pid_from_inode.c	/^_hash(uint64_t key)$/;"	f	file:
 _hash_type	apps/snmptls.c	/^static int           _storage_type = ST_NONE, _hash_type = NS_HASH_NONE;$/;"	v	file:
 _hash_type	targets/i686-pc-linux-gnu/apps/snmptls.c	/^static int           _storage_type = ST_NONE, _hash_type = NS_HASH_NONE;$/;"	v	file:
@@ -13902,7 +13812,6 @@ _tcpListenerTable_get_column	agent/mibgroup/tcp-mib/tcpListenerTable/tcpListener
 _tcpListenerTable_initialize_interface	agent/mibgroup/tcp-mib/tcpListenerTable/tcpListenerTable_interface.c	/^_tcpListenerTable_initialize_interface(tcpListenerTable_registration *$/;"	f
 _tcpListenerTable_shutdown_interface	agent/mibgroup/tcp-mib/tcpListenerTable/tcpListenerTable_interface.c	/^_tcpListenerTable_shutdown_interface(tcpListenerTable_registration *$/;"	f
 _tie	perl/SNMP/SNMP.pm	/^sub _tie {$/;"	s
-_tie	perl/SNMP/blib/lib/SNMP.pm	/^sub _tie {$/;"	s
 _time_filter	snmplib/cert_util.c	/^_time_filter(netsnmp_file *f, struct stat *idx)$/;"	f	file:
 _timer_reload	agent/helpers/cache_handler.c	/^_timer_reload(unsigned int regNo, void *clientargs)$/;"	f	file:
 _tlstmAddr	snmplib/cert_util.c	/^static netsnmp_container *_tlstmAddr = NULL;$/;"	v	file:
@@ -14049,9 +13958,7 @@ add	apps/snmpdf.c	/^add(netsnmp_pdu *pdu, const char *mibnodename,$/;"	f
 add	perl/OID/OID.pm	/^sub add {$/;"	s
 add	targets/i686-pc-linux-gnu/apps/snmpdf.c	/^add(netsnmp_pdu *pdu, const char *mibnodename,$/;"	f
 addMibDirs	perl/SNMP/SNMP.pm	/^sub addMibDirs {$/;"	s
-addMibDirs	perl/SNMP/blib/lib/SNMP.pm	/^sub addMibDirs {$/;"	s
 addMibFiles	perl/SNMP/SNMP.pm	/^sub addMibFiles {$/;"	s
-addMibFiles	perl/SNMP/blib/lib/SNMP.pm	/^sub addMibFiles {$/;"	s
 addMibOID	local/tkmib	/^sub addMibOID {$/;"	s
 addRoute	agent/mibgroup/mibII/route_write.c	/^addRoute(u_long dstip, u_long gwip, u_long iff, u_short flags)$/;"	f
 addToLog	local/snmpcheck.def	/^sub addToLog {$/;"	s
@@ -14537,7 +14444,6 @@ build_valuetable	agent/mibgroup/disman/expression/expValueTable.c	/^build_valuet
 bulkcache	include/net-snmp/agent/snmp_agent.h	/^        netsnmp_variable_list **bulkcache;$/;"	m	struct:netsnmp_agent_session_s
 bulkcache	targets/i686-pc-linux-gnu/include/net-snmp/agent/snmp_agent.h	/^        netsnmp_variable_list **bulkcache;$/;"	m	struct:netsnmp_agent_session_s
 bulkwalk	perl/SNMP/SNMP.pm	/^sub bulkwalk {$/;"	s
-bulkwalk	perl/SNMP/blib/lib/SNMP.pm	/^sub bulkwalk {$/;"	s
 c	snmplib/container_iterator.c	/^   netsnmp_container c;$/;"	m	struct:iterator_info_s	file:
 c	snmplib/container_list_ssll.c	/^   netsnmp_container          c;$/;"	m	struct:sl_container_s	file:
 c	testing/fulltests/unit-tests/T012binary_array_oid_clib.c	/^CONTAINER_FREE(c);$/;"	v
@@ -14731,7 +14637,6 @@ check_setup	local/mib2c-update	/^check_setup()$/;"	f
 check_subtree	include/net-snmp/agent/agent_registry.h	/^    int             check_subtree;$/;"	m	struct:view_parameters
 check_subtree	targets/i686-pc-linux-gnu/include/net-snmp/agent/agent_registry.h	/^    int             check_subtree;$/;"	m	struct:view_parameters
 check_timeout	perl/SNMP/SNMP.pm	/^sub check_timeout {$/;"	s
-check_timeout	perl/SNMP/blib/lib/SNMP.pm	/^sub check_timeout {$/;"	s
 check_utc	snmplib/parse.c	/^check_utc(const char *utc)$/;"	f	file:
 checkhost	perl/manager/manager.pm	/^sub checkhost {$/;"	s
 checkifdef	local/minimalist/removeifdefcode.pl	/^sub checkifdef {$/;"	s
@@ -16384,9 +16289,7 @@ fetch_hits_n_rules	local/ipf-mod.pl	/^sub fetch_hits_n_rules {$/;"	s
 fetch_var_val	agent/mibgroup/Rmon/alarm.c	/^fetch_var_val(oid * name, size_t namelen, u_long * new_value)$/;"	f	file:
 ff	snmplib/md5.c	103;"	d	file:
 fget	perl/SNMP/SNMP.pm	/^sub fget {$/;"	s
-fget	perl/SNMP/blib/lib/SNMP.pm	/^sub fget {$/;"	s
 fgetnext	perl/SNMP/SNMP.pm	/^sub fgetnext {$/;"	s
-fgetnext	perl/SNMP/blib/lib/SNMP.pm	/^sub fgetnext {$/;"	s
 field_separator	apps/snmptable.c	/^static char    *field_separator = NULL;$/;"	v	file:
 field_separator	targets/i686-pc-linux-gnu/apps/snmptable.c	/^static char    *field_separator = NULL;$/;"	v	file:
 fields	apps/snmptable.c	/^static int      fields;$/;"	v	file:
@@ -16488,7 +16391,6 @@ fingerprint_len	include/net-snmp/library/cert_util.h	/^        u_char        fin
 fingerprint_len	targets/i686-pc-linux-gnu/include/net-snmp/library/cert_util.h	/^        u_char        fingerprint_len;$/;"	m	struct:snmpTlstmParams_s
 finish	agent/mibgroup/disman/ping/pingCtlTable.c	/^finish(int options, char *hostname, int interval, int timing, int *rtt,$/;"	f
 finish	perl/SNMP/SNMP.pm	/^sub finish {$/;"	s
-finish	perl/SNMP/blib/lib/SNMP.pm	/^sub finish {$/;"	s
 finish_db_entry	local/fixproc	/^sub finish_db_entry$/;"	s
 first	agent/mibgroup/Rmon/row_api.h	/^    RMON_ENTRY_T   *first;$/;"	m	struct:__anon65
 first	include/net-snmp/library/container.h	/^       netsnmp_iterator_rtn          *first;$/;"	m	struct:netsnmp_iterator_s
@@ -16586,7 +16488,6 @@ floatize_version	local/Version-Munge.pl	/^sub floatize_version {$/;"	s
 floatize_version	perl/Makefile.subs.pl	/^sub floatize_version {$/;"	s
 fmt	apps/snmptable.c	/^    char           *fmt;$/;"	m	struct:column	file:
 fmt	perl/SNMP/SNMP.pm	/^sub fmt {$/;"	s
-fmt	perl/SNMP/blib/lib/SNMP.pm	/^sub fmt {$/;"	s
 fmt	targets/i686-pc-linux-gnu/apps/snmptable.c	/^    char           *fmt;$/;"	m	struct:column	file:
 fmtfp	snmplib/snprintf.c	/^fmtfp(char *buffer, size_t * currlen, size_t maxlen,$/;"	f	file:
 fmtint	snmplib/snprintf.c	/^fmtint(char *buffer, size_t * currlen, size_t maxlen,$/;"	f	file:
@@ -16705,9 +16606,7 @@ fsys_type_id	agent/mibgroup/host/hrh_filesys.c	/^oid             fsys_type_id[] 
 fsys_type_len	agent/mibgroup/host/hr_filesys.c	/^int             fsys_type_len =$/;"	v
 fsys_type_len	agent/mibgroup/host/hrh_filesys.c	/^int             fsys_type_len =$/;"	v
 ftm50s_variables	agent/mibgroup/futuretek/ftm50s.c	/^struct variable4 ftm50s_variables[] = {$/;"	v	typeref:struct:variable4
-ftm50s_variables	local/ftm50s.c	/^struct variable4 ftm50s_variables[] = {$/;"	v	typeref:struct:variable4
 ftm50s_variables_oid	agent/mibgroup/futuretek/ftm50s.c	/^oid ftm50s_variables_oid[] = { 1,3,6,1,4,1,42251,2 };$/;"	v
-ftm50s_variables_oid	local/ftm50s.c	/^oid ftm50s_variables_oid[] = { 1,3,6,1,4,1,42251,2 };$/;"	v
 ftype	snmplib/default_store.c	/^  char           *ftype;$/;"	m	struct:netsnmp_ds_read_config_s	file:
 func_append	config.status	/^func_append ()\\$/;"	f
 func_append	configure	/^func_append ()\\$/;"	f
@@ -17143,6 +17042,8 @@ func_xform	libtool	/^func_xform ()$/;"	f
 func_xform	ltmain.sh	/^func_xform ()$/;"	f
 func_xform	targets/i686-pc-linux-gnu/configure	/^func_xform ()\\$/;"	f
 func_xform	targets/i686-pc-linux-gnu/ltmain.sh	/^func_xform ()$/;"	f
+futuretek_variables	agent/mibgroup/futuretek/futuretek.c	/^struct variable4 futuretek_variables[] = {$/;"	v	typeref:struct:variable4
+futuretek_variables_oid	agent/mibgroup/futuretek/futuretek.c	/^oid futuretek_variables_oid[] = { 1,3,6,1,4,1,42251 };$/;"	v
 g	snmplib/md5.c	99;"	d	file:
 gLoop	snmplib/parse.c	/^int gMibError = 0,gLoop = 0;$/;"	v
 gMibError	snmplib/parse.c	/^int gMibError = 0,gLoop = 0;$/;"	v
@@ -17165,7 +17066,6 @@ generation	agent/mibgroup/ip-mib/inetNetToMediaTable/inetNetToMediaTable_data_ac
 generation	include/net-snmp/data_access/arp.h	/^    unsigned generation;$/;"	m	struct:netsnmp_arp_access_s
 generation	include/net-snmp/data_access/arp.h	/^   unsigned  generation;$/;"	m	struct:netsnmp_arp_s
 get	perl/SNMP/SNMP.pm	/^sub get {$/;"	s
-get	perl/SNMP/blib/lib/SNMP.pm	/^sub get {$/;"	s
 get	python/netsnmp/client.py	/^    def get(self, varlist):$/;"	m	class:Session
 getColumnar	perl/agent/Support/Support.pm	/^sub getColumnar {$/;"	s
 getFreeReal	agent/mibgroup/ucd-snmp/memory_aix4.c	/^getFreeReal(void)$/;"	f	file:
@@ -17202,7 +17102,6 @@ getTunnelByIfIndex	agent/mibgroup/tunnel/tunnel.c	/^getTunnelByIfIndex(int index
 getTunnelParm	agent/mibgroup/tunnel/tunnel.c	/^getTunnelParm(char *ifname)$/;"	f	file:
 getType	agent/mibgroup/tunnel/tunnel.c	/^getType(int index)$/;"	f	file:
 getType	perl/SNMP/SNMP.pm	/^sub getType {$/;"	s
-getType	perl/SNMP/blib/lib/SNMP.pm	/^sub getType {$/;"	s
 getValues	perl/manager/getValues.pm	/^sub getValues {$/;"	s
 getVarbinds	snmplib/parse.c	/^getVarbinds(FILE * fp, struct varbind_list **retp)$/;"	f	file:
 get_FilterProfileName	agent/mibgroup/notification/snmpNotifyFilterProfileTable.c	/^get_FilterProfileName(const char *paramName, size_t paramName_len,$/;"	f
@@ -17363,7 +17262,6 @@ get_wild_node	snmplib/mib.c	/^get_wild_node(const char *name, oid * objid, size_
 get_yn_maybe	local/snmpconf	/^sub get_yn_maybe {$/;"	s
 getarrays	perl/manager/manager.pm	/^sub getarrays {$/;"	s
 getbulk	perl/SNMP/SNMP.pm	/^sub getbulk {$/;"	s
-getbulk	perl/SNMP/blib/lib/SNMP.pm	/^sub getbulk {$/;"	s
 getbulk	python/netsnmp/client.py	/^    def getbulk(self, nonrepeaters, maxrepetitions, varlist):$/;"	m	class:Session
 getbulk_handler	include/net-snmp/agent/multiplexer.h	/^    netsnmp_mib_handler *getbulk_handler;$/;"	m	struct:netsnmp_mib_handler_methods_s
 getbulk_handler	targets/i686-pc-linux-gnu/include/net-snmp/agent/multiplexer.h	/^    netsnmp_mib_handler *getbulk_handler;$/;"	m	struct:netsnmp_mib_handler_methods_s
@@ -17375,7 +17273,6 @@ getdtablesize	apps/snmptrapd.c	/^getdtablesize(void)$/;"	f
 getdtablesize	targets/i686-pc-linux-gnu/apps/snmptrapd.c	/^getdtablesize(void)$/;"	f
 getentry	agent/mibgroup/kernel_sunos5.c	/^getentry(req_e req_type, void *bufaddr, size_t len,$/;"	f	file:
 getenv	perl/SNMP/SNMP.pm	/^sub getenv {$/;"	s
-getenv	perl/SNMP/blib/lib/SNMP.pm	/^sub getenv {$/;"	s
 getexpr	perl/manager/snmptosql	/^sub getexpr {$/;"	s
 getflags	agent/mibgroup/misc/ipfwacc.c	/^getflags(void)$/;"	f	file:
 getgroupsforhost	perl/manager/snmptosql	/^sub getgroupsforhost {$/;"	s
@@ -17386,18 +17283,13 @@ gethostent	targets/i686-pc-linux-gnu/apps/snmpnetstat/winstub.c	/^gethostent(voi
 gethostinfo	agent/mibgroup/disman/traceroute/traceRouteCtlTable.c	/^gethostinfo(register char *hostname)$/;"	f
 gethostsforgroup	perl/manager/manager.pm	/^sub gethostsforgroup {$/;"	s
 getif	agent/mibgroup/kernel_sunos5.c	/^getif(mib2_ifEntry_t *ifbuf, size_t size, req_e req_type,$/;"	f	file:
-getimports	futuretek/mib2def.awk	/^function getimports() {$/;"	f
 getmib	agent/mibgroup/kernel_sunos5.c	/^getmib(int groupname, int subgroupname, void **statbuf, size_t *size,$/;"	f	file:
-getmibindex	futuretek/mib2def.awk	/^function getmibindex() {$/;"	f
 getmibnum	local/snmpcheck.def	/^sub getmibnum {$/;"	s
-getmibparent	futuretek/mib2def.awk	/^function getmibparent() {$/;"	f
-getmibtype	futuretek/mib2def.awk	/^function getmibtype() {$/;"	f
 getnetbyaddr	apps/snmpnetstat/winstub.c	/^getnetbyaddr(long net, int type)$/;"	f
 getnetbyaddr	targets/i686-pc-linux-gnu/apps/snmpnetstat/winstub.c	/^getnetbyaddr(long net, int type)$/;"	f
 getnetent	apps/snmpnetstat/winstub.c	/^getnetent(void)$/;"	f
 getnetent	targets/i686-pc-linux-gnu/apps/snmpnetstat/winstub.c	/^getnetent(void)$/;"	f
 getnext	perl/SNMP/SNMP.pm	/^sub getnext {$/;"	s
-getnext	perl/SNMP/blib/lib/SNMP.pm	/^sub getnext {$/;"	s
 getnext	python/netsnmp/client.py	/^    def getnext(self, varlist):$/;"	m	class:Session
 getnext_handler	include/net-snmp/agent/multiplexer.h	/^    netsnmp_mib_handler *getnext_handler;$/;"	m	struct:netsnmp_mib_handler_methods_s
 getnext_handler	targets/i686-pc-linux-gnu/include/net-snmp/agent/multiplexer.h	/^    netsnmp_mib_handler *getnext_handler;$/;"	m	struct:netsnmp_mib_handler_methods_s
@@ -17417,9 +17309,7 @@ getstat	agent/mibgroup/ucd-snmp/vmstat_linux.c	/^getstat(unsigned long *cuse, un
 getstats	agent/mibgroup/ucd-snmp/diskio.c	/^getstats(void)$/;"	f	file:
 getstruct	agent/mibgroup/ucd-snmp/proc.c	/^getstruct(off_t loc, char *name, off_t dest, int size)$/;"	f	file:
 gettable	perl/SNMP/SNMP.pm	/^sub gettable {$/;"	s
-gettable	perl/SNMP/blib/lib/SNMP.pm	/^sub gettable {$/;"	s
 gettimeofday	snmplib/gettimeofday.c	/^gettimeofday(struct timeval *tv, struct timezone *tz)$/;"	f
-gettrapvars	futuretek/mib2def.awk	/^function gettrapvars() {$/;"	f
 getulongfromsysclassnetstatistics	agent/mibgroup/etherlike-mib/data_access/dot3stats_linux.c	/^getulongfromsysclassnetstatistics(const char *ifname, const char *ctrname, u_long *valuep)$/;"	f	file:
 getuptime	agent/mibgroup/ucd-snmp/vmstat_bsdi4.c	/^getuptime(void)$/;"	f
 getuptime	agent/mibgroup/ucd-snmp/vmstat_darwin7.c	/^getuptime(void)$/;"	f
@@ -18304,7 +18194,6 @@ iftot	targets/i686-pc-linux-gnu/apps/snmpnetstat/if.c	/^struct	iftot {$/;"	s	fil
 ifu_broadaddr	agent/mibgroup/mibII/interfaces.h	/^         struct sockaddr ifu_broadaddr; \/* broadcast address *\/$/;"	m	struct:ifnet	typeref:struct:ifnet::sockaddr
 ii	snmplib/md5.c	106;"	d	file:
 iid	perl/SNMP/SNMP.pm	/^sub iid {$/;"	s
-iid	perl/SNMP/blib/lib/SNMP.pm	/^sub iid {$/;"	s
 iinfo	agent/helpers/table_iterator.c	/^   netsnmp_iterator_info *iinfo;$/;"	m	struct:ti_cache_info_s	file:
 ilabel	include/net-snmp/library/parse.h	/^        char           *ilabel;$/;"	m	struct:index_list
 ilabel	targets/i686-pc-linux-gnu/include/net-snmp/library/parse.h	/^        char           *ilabel;$/;"	m	struct:index_list
@@ -18406,7 +18295,6 @@ indexes_template	include/net-snmp/agent/table_data.h	/^        netsnmp_variable_
 indexes_template	include/net-snmp/agent/table_tdata.h	/^        netsnmp_variable_list *indexes_template;        \/* containing only types *\/$/;"	m	struct:netsnmp_tdata_s
 indexes_template	targets/i686-pc-linux-gnu/include/net-snmp/agent/table_data.h	/^        netsnmp_variable_list *indexes_template;        \/* containing only types *\/$/;"	m	struct:netsnmp_table_data_s
 indexes_template	targets/i686-pc-linux-gnu/include/net-snmp/agent/table_tdata.h	/^        netsnmp_variable_list *indexes_template;        \/* containing only types *\/$/;"	m	struct:netsnmp_tdata_s
-indextype	futuretek/def2c.awk	/^function indextype(type) {$/;"	f
 indices	agent/mibgroup/ucd-snmp/diskio.c	/^    linux_diskio* indices;$/;"	m	struct:linux_diskio_header	file:
 indices	agent/mibgroup/ucd-snmp/diskio.c	/^    linux_diskio_la * indices;   $/;"	m	struct:linux_diskio_la_header	file:
 indices	apps/snmptable.c	/^static char   **indices = NULL;$/;"	v	file:
@@ -18611,7 +18499,6 @@ info_oid	apps/snmpdelta.c	/^    oid            *info_oid;$/;"	m	struct:varInfo	f
 info_oid	targets/i686-pc-linux-gnu/apps/snmpdelta.c	/^    oid            *info_oid;$/;"	m	struct:varInfo	file:
 inform	apps/snmptrap.c	/^int             inform = 0;$/;"	v
 inform	perl/SNMP/SNMP.pm	/^sub inform {$/;"	s
-inform	perl/SNMP/blib/lib/SNMP.pm	/^sub inform {$/;"	s
 inform	targets/i686-pc-linux-gnu/apps/snmptrap.c	/^int             inform = 0;$/;"	v
 inherit	local/net-snmp-cert	/^sub inherit {$/;"	s
 init	include/net-snmp/library/container.h	/^       netsnmp_container_rc    *init;$/;"	m	struct:netsnmp_container_s
@@ -18620,7 +18507,6 @@ init	targets/i686-pc-linux-gnu/include/net-snmp/library/container.h	/^       net
 init	testing/fulltests/support/NetSNMPTest.pm	/^sub init {$/;"	s
 initCanvas	local/tkmib	/^sub initCanvas {$/;"	s
 initMib	perl/SNMP/SNMP.pm	/^sub initMib {$/;"	s
-initMib	perl/SNMP/blib/lib/SNMP.pm	/^sub initMib {$/;"	s
 initOpts	local/net-snmp-cert	/^sub initOpts {$/;"	s
 initTable	local/tkmib	/^sub initTable {$/;"	s
 initText	local/tkmib	/^sub initText {$/;"	s
@@ -18670,7 +18556,7 @@ init_extend	agent/mibgroup/agent/extend.c	/^void init_extend( void )$/;"	f
 init_extensible	agent/mibgroup/ucd-snmp/extensible.c	/^init_extensible(void)$/;"	f
 init_file	agent/mibgroup/ucd-snmp/file.c	/^init_file(void)$/;"	f
 init_ftm50s	agent/mibgroup/futuretek/ftm50s.c	/^init_ftm50s(void)$/;"	f
-init_ftm50s	local/ftm50s.c	/^init_ftm50s(void)$/;"	f
+init_futuretek	agent/mibgroup/futuretek/futuretek.c	/^init_futuretek(void)$/;"	f
 init_history	agent/mibgroup/Rmon/history.c	/^init_history(void)$/;"	f
 init_hrSWInstalledTable	agent/mibgroup/host/hrSWInstalledTable.c	/^init_hrSWInstalledTable(void)$/;"	f
 init_hrSWRunPerfTable	agent/mibgroup/host/hrSWRunPerfTable.c	/^init_hrSWRunPerfTable(void)$/;"	f
@@ -20099,7 +19985,6 @@ lmVoltSensorsTable_oid	agent/mibgroup/ucd-snmp/lmsensorsMib.c	/^static const oid
 loadAllHosts	local/snmpcheck.def	/^sub loadAllHosts {$/;"	s
 loadIt	local/tkmib	/^sub loadIt {$/;"	s
 loadModules	perl/SNMP/SNMP.pm	/^sub loadModules {$/;"	s
-loadModules	perl/SNMP/blib/lib/SNMP.pm	/^sub loadModules {$/;"	s
 loadNewMibFile	local/tkmib	/^sub loadNewMibFile {$/;"	s
 loadNewMibModule	local/tkmib	/^sub loadNewMibModule {$/;"	s
 load_assoc	agent/mibgroup/sctp-mib/sctpTables_linux.c	/^load_assoc(sctpTables_containers * containers)$/;"	f	file:
@@ -20403,7 +20288,6 @@ mandir	mibs/Makefile	/^mandir		= ${datarootdir}\/man$/;"	m
 mandir	snmplib/Makefile	/^mandir		= ${datarootdir}\/man$/;"	m
 mandir	testing/Makefile	/^mandir		= ${datarootdir}\/man$/;"	m
 mapEnum	perl/SNMP/SNMP.pm	/^sub mapEnum {$/;"	s
-mapEnum	perl/SNMP/blib/lib/SNMP.pm	/^sub mapEnum {$/;"	s
 mapTcpState	agent/mibgroup/mibII/ipv6.c	/^static int mapTcpState( int val)$/;"	f	file:
 mapType	agent/mibgroup/tlstm-mib/snmpTlstmCertToTSNTable/snmpTlstmCertToTSNTable.c	/^    int             mapType;$/;"	m	struct:certToTSN_entry_s	file:
 mapType	agent/mibgroup/tlstm-mib/snmpTlstmCertToTSNTable/snmpTlstmCertToTSNTable.c	/^    int             mapType;$/;"	m	struct:certToTSN_undo_s	file:
@@ -21025,7 +20909,6 @@ name	include/net-snmp/library/snmp_transport.h	/^    const oid      *name;$/;"	m
 name	include/net-snmp/library/snmpusm.h	/^        char           *name;$/;"	m	struct:usmUser
 name	include/net-snmp/types.h	/^   oid            *name;   $/;"	m	struct:variable_list
 name	perl/SNMP/SNMP.pm	/^sub name {$/;"	s
-name	perl/SNMP/blib/lib/SNMP.pm	/^sub name {$/;"	s
 name	perl/TrapReceiver/ppport.h	/^char *name;$/;"	v
 name	snmplib/container.c	/^   const char                 *name;$/;"	m	struct:container_type_s	file:
 name	snmplib/parse.c	/^    char           *name;$/;"	m	struct:objgroup	file:
@@ -23202,7 +23085,6 @@ new	perl/AnyData_SNMP/Storage.pm	/^sub new {$/;"	s
 new	perl/AnyData_SNMP/netsh	/^	sub new {$/;"	s
 new	perl/OID/OID.pm	/^sub new {$/;"	s
 new	perl/SNMP/SNMP.pm	/^sub new {$/;"	s
-new	perl/SNMP/blib/lib/SNMP.pm	/^sub new {$/;"	s
 new	perl/agent/agent.pm	/^sub new {$/;"	s
 new	testing/fulltests/support/NetSNMPTest.pm	/^sub new {$/;"	s
 newCacheRTE	agent/mibgroup/mibII/route_write.c	/^newCacheRTE(void)$/;"	f
@@ -23381,7 +23263,6 @@ nextproc	agent/mibgroup/host/hr_swrun.c	/^pid_t           nextproc;$/;"	v
 nextt	apps/snmptrapd_handlers.h	/^     netsnmp_trapd_handler *nextt;$/;"	m	struct:netsnmp_trapd_handler_s
 nextt	perl/TrapReceiver/perl_snmptrapd.h	/^     netsnmp_trapd_handler *nextt;$/;"	m	struct:netsnmp_trapd_handler_s
 nextt	targets/i686-pc-linux-gnu/apps/snmptrapd_handlers.h	/^     netsnmp_trapd_handler *nextt;$/;"	m	struct:netsnmp_trapd_handler_s
-nextword	futuretek/mib2def.awk	/^function nextword() {$/;"	f
 nfds_t	include/net-snmp/types.h	/^typedef unsigned long int nfds_t;$/;"	t
 nfds_t	targets/i686-pc-linux-gnu/include/net-snmp/types.h	/^typedef unsigned long int nfds_t;$/;"	t
 nfiles	include/net-snmp/library/system.h	/^        long            nfiles; \/* number if filenames in table *\/$/;"	m	struct:_dir_struc
@@ -24169,8 +24050,6 @@ parse_trapd_address	apps/snmptrapd.c	/^parse_trapd_address(const char *token, ch
 parse_trapd_address	targets/i686-pc-linux-gnu/apps/snmptrapd.c	/^parse_trapd_address(const char *token, char *cptr)$/;"	f
 parsedirectory	local/minimalist/removeifdefcode.pl	/^sub parsedirectory {$/;"	s
 parsefile	local/minimalist/removeifdefcode.pl	/^sub parsefile {$/;"	s
-parsesyntax	futuretek/def2mib.awk	/^function parsesyntax(object) {$/;"	f
-parsetype	futuretek/def2mib.awk	/^function parsetype(type) {$/;"	f
 pass_compare	agent/mibgroup/ucd-snmp/pass.c	/^pass_compare(const void *a, const void *b)$/;"	f
 pass_free_config	agent/mibgroup/ucd-snmp/pass.c	/^pass_free_config(void)$/;"	f
 pass_parse_config	agent/mibgroup/ucd-snmp/pass.c	/^pass_parse_config(const char *token, char *cptr)$/;"	f
@@ -24446,19 +24325,19 @@ pre_request	include/net-snmp/agent/baby_steps.h	/^   Netsnmp_Node_Handler *pre_r
 pre_request	targets/i686-pc-linux-gnu/include/net-snmp/agent/baby_steps.h	/^   Netsnmp_Node_Handler *pre_request;$/;"	m	struct:netsnmp_baby_steps_access_methods_s
 precision	apps/snmptrapd_log.c	/^    int             precision;  \/* the field's precision *\/$/;"	m	struct:__anon3	file:
 precision	targets/i686-pc-linux-gnu/apps/snmptrapd_log.c	/^    int             precision;  \/* the field's precision *\/$/;"	m	struct:__anon30	file:
-prefix	Makefile	/^prefix		= \/usr\/local$/;"	m
-prefix	agent/Makefile	/^prefix		= \/usr\/local$/;"	m
-prefix	agent/helpers/Makefile	/^prefix		= \/usr\/local$/;"	m
-prefix	agent/mibgroup/Makefile	/^prefix		= \/usr\/local$/;"	m
-prefix	apps/Makefile	/^prefix		= \/usr\/local$/;"	m
-prefix	apps/snmpnetstat/Makefile	/^prefix		= \/usr\/local$/;"	m
+prefix	Makefile	/^prefix		= \/usr$/;"	m
+prefix	agent/Makefile	/^prefix		= \/usr$/;"	m
+prefix	agent/helpers/Makefile	/^prefix		= \/usr$/;"	m
+prefix	agent/mibgroup/Makefile	/^prefix		= \/usr$/;"	m
+prefix	apps/Makefile	/^prefix		= \/usr$/;"	m
+prefix	apps/snmpnetstat/Makefile	/^prefix		= \/usr$/;"	m
 prefix	include/net-snmp/library/snmp_transport.h	/^    const char    **prefix;$/;"	m	struct:netsnmp_tdomain_s
-prefix	local/Makefile	/^prefix		= \/usr\/local$/;"	m
-prefix	man/Makefile	/^prefix		= \/usr\/local$/;"	m
-prefix	mibs/Makefile	/^prefix		= \/usr\/local$/;"	m
-prefix	snmplib/Makefile	/^prefix		= \/usr\/local$/;"	m
+prefix	local/Makefile	/^prefix		= \/usr$/;"	m
+prefix	man/Makefile	/^prefix		= \/usr$/;"	m
+prefix	mibs/Makefile	/^prefix		= \/usr$/;"	m
+prefix	snmplib/Makefile	/^prefix		= \/usr$/;"	m
 prefix	targets/i686-pc-linux-gnu/include/net-snmp/library/snmp_transport.h	/^    const char    **prefix;$/;"	m	struct:netsnmp_tdomain_s
-prefix	testing/Makefile	/^prefix		= \/usr\/local$/;"	m
+prefix	testing/Makefile	/^prefix		= \/usr$/;"	m
 prefix_cbx	agent/mibgroup/util_funcs.h	/^}prefix_cbx;$/;"	t	typeref:struct:prefix_info
 prefix_head_list	agent/mibgroup/if-mib/data_access/interface_linux.c	/^prefix_cbx *prefix_head_list = NULL;$/;"	v
 prefix_info	agent/mibgroup/util_funcs.h	/^typedef struct prefix_info$/;"	s
@@ -24555,15 +24434,11 @@ printer_errors	agent/mibgroup/host/hr_print.c	/^printer_errors(int idx)$/;"	f
 printer_status	agent/mibgroup/host/hr_print.c	/^printer_status(int idx)$/;"	f
 printmax	apps/snmpdelta.c	/^    0, printmax = 0;$/;"	v
 printmax	targets/i686-pc-linux-gnu/apps/snmpdelta.c	/^    0, printmax = 0;$/;"	v
-printmib	futuretek/def2c.awk	/^function printmib() {$/;"	f
-printmib	futuretek/mib2def.awk	/^function printmib() {$/;"	f
 printomat	include/net-snmp/library/parse.h	/^        int             (*printomat) (u_char **, size_t *, size_t *, int,$/;"	m	struct:tree
 printomat	targets/i686-pc-linux-gnu/include/net-snmp/library/parse.h	/^        int             (*printomat) (u_char **, size_t *, size_t *, int,$/;"	m	struct:tree
 printproto	apps/snmpnetstat/main.c	/^printproto(struct protox *tp, const char *name)$/;"	f	file:
 printproto	targets/i686-pc-linux-gnu/apps/snmpnetstat/main.c	/^printproto(struct protox *tp, const char *name)$/;"	f	file:
 printredgreen	perl/manager/manager.pm	/^sub printredgreen {$/;"	s
-printtrap	futuretek/mib2def.awk	/^function printtrap(v) {$/;"	f
-printvarbind	futuretek/def2c.awk	/^function printvarbind(varbind) {$/;"	f
 priority	agent/mibgroup/disman/expression/expValueTable.c	/^priority(char operater)$/;"	f
 priority	agent/object_monitor.c	/^    int             priority;$/;"	m	struct:monitor_info_s	file:
 priority	include/net-snmp/agent/agent_handler.h	/^        int             priority;$/;"	m	struct:netsnmp_handler_registration_s
@@ -24926,7 +24801,6 @@ register_cb	agent/mibgroup/mibII/sysORTable.c	/^register_cb(int major, int minor
 register_config_handler	snmplib/read_config.c	/^register_config_handler(const char *type,$/;"	f
 register_const_config_handler	snmplib/read_config.c	/^register_const_config_handler(const char *type,$/;"	f
 register_debug_tokens	perl/SNMP/SNMP.pm	/^sub register_debug_tokens {$/;"	s
-register_debug_tokens	perl/SNMP/blib/lib/SNMP.pm	/^sub register_debug_tokens {$/;"	s
 register_default_handlers	snmplib/snmp_api.c	/^register_default_handlers(void)$/;"	f	file:
 register_exceptfd	snmplib/fd_event_manager.c	/^register_exceptfd(int fd, void (*func) (int, void *), void *data)$/;"	f
 register_foreach	agent/mibgroup/mibII/sysORTable.c	/^register_foreach(const struct sysORTable* data, void* dummy)$/;"	f	file:
@@ -25008,7 +24882,6 @@ repeat	snmplib/mib.c	/^    int repeat;$/;"	m	struct:parse_hints	file:
 repeat	targets/i686-pc-linux-gnu/include/net-snmp/agent/snmp_agent.h	/^        int             repeat;$/;"	m	struct:netsnmp_request_info_s
 replace_old	agent/mibgroup/if-mib/ifTable/ifTable_data_access.c	/^static int replace_old = 0;$/;"	v	file:
 reply_cb	perl/SNMP/SNMP.pm	/^sub reply_cb {$/;"	s
-reply_cb	perl/SNMP/blib/lib/SNMP.pm	/^sub reply_cb {$/;"	s
 reported	include/net-snmp/library/parse.h	/^        int             reported;       \/* 1=report started in print_subtree... *\/$/;"	m	struct:tree
 reported	targets/i686-pc-linux-gnu/include/net-snmp/library/parse.h	/^        int             reported;       \/* 1=report started in print_subtree... *\/$/;"	m	struct:tree
 reps	apps/snmpbulkwalk.c	/^int             reps = 10, non_reps = 0;$/;"	v
@@ -25835,7 +25708,6 @@ seek	perl/AnyData_SNMP/Storage.pm	/^sub seek {$/;"	s
 seek_first_record	perl/AnyData_SNMP/Format.pm	/^sub seek_first_record {$/;"	s
 seenall	local/snmpcheck.def	/^sub seenall {$/;"	s
 select_info	perl/SNMP/SNMP.pm	/^sub select_info {$/;"	s
-select_info	perl/SNMP/blib/lib/SNMP.pm	/^sub select_info {$/;"	s
 selectitem	local/snmpcheck.def	/^sub selectitem {$/;"	s
 selectme	local/snmpcheck.def	/^sub selectme {$/;"	s
 send_agentx_error	agent/mibgroup/agentx/subagent.c	/^send_agentx_error(netsnmp_session *session, netsnmp_pdu *pdu, int errstat, int errindex)$/;"	f	file:
@@ -25929,14 +25801,12 @@ session_setup	targets/i686-pc-linux-gnu/include/net-snmp/library/snmp_secmod.h	/
 sessp	apps/agentxtrap.c	/^static void        *sessp = NULL; \/**<< The current communication session *\/$/;"	v	file:
 sessp	targets/i686-pc-linux-gnu/apps/agentxtrap.c	/^static void        *sessp = NULL; \/**<< The current communication session *\/$/;"	v	file:
 set	perl/SNMP/SNMP.pm	/^sub set {$/;"	s
-set	perl/SNMP/blib/lib/SNMP.pm	/^sub set {$/;"	s
 set	python/netsnmp/client.py	/^    def set(self, varlist):$/;"	m	class:Session
 setCleanupFlags	include/net-snmp/agent/set_helper.h	/^    int             setCleanupFlags;    \/* XXX: client sets this to: *\/$/;"	m	struct:netsnmp_set_info_s
 setCleanupFlags	include/net-snmp/agent/snmp_agent.h	/^        int             setCleanupFlags;$/;"	m	struct:netsnmp_set_info_s
 setCleanupFlags	targets/i686-pc-linux-gnu/include/net-snmp/agent/set_helper.h	/^    int             setCleanupFlags;    \/* XXX: client sets this to: *\/$/;"	m	struct:netsnmp_set_info_s
 setCleanupFlags	targets/i686-pc-linux-gnu/include/net-snmp/agent/snmp_agent.h	/^        int             setCleanupFlags;$/;"	m	struct:netsnmp_set_info_s
 setMib	perl/SNMP/SNMP.pm	/^sub setMib {$/;"	s
-setMib	perl/SNMP/blib/lib/SNMP.pm	/^sub setMib {$/;"	s
 setOidElement	perl/agent/Support/Support.pm	/^sub setOidElement {$/;"	s
 setPass	agent/mibgroup/ucd-snmp/pass.c	/^setPass(int action, u_char * var_val, u_char var_val_type,$/;"	f
 setPass	agent/mibgroup/ucd-snmp/pass.h	/^WriteMethod     setPass;$/;"	v
@@ -26003,7 +25873,6 @@ set_undo	targets/i686-pc-linux-gnu/include/net-snmp/agent/table_array.h	/^      
 set_values	include/net-snmp/agent/baby_steps.h	/^   Netsnmp_Node_Handler *set_values;$/;"	m	struct:netsnmp_baby_steps_access_methods_s
 set_values	targets/i686-pc-linux-gnu/include/net-snmp/agent/baby_steps.h	/^   Netsnmp_Node_Handler *set_values;$/;"	m	struct:netsnmp_baby_steps_access_methods_s
 setenv	perl/SNMP/SNMP.pm	/^sub setenv {$/;"	s
-setenv	perl/SNMP/blib/lib/SNMP.pm	/^sub setenv {$/;"	s
 setenv	snmplib/system.c	/^setenv(const char *name, const char *value, int overwrite)$/;"	f
 seterrorstatus	agent/mibgroup/ucd-snmp/errormib.c	/^seterrorstatus(const char *to, int prior)$/;"	f
 sethostent	apps/snmpnetstat/winstub.c	/^sethostent(int stay_open)$/;"	f
@@ -26514,7 +26383,6 @@ snmp_gen_callback	include/net-snmp/library/callback.h	/^    struct snmp_gen_call
 snmp_gen_callback	targets/i686-pc-linux-gnu/include/net-snmp/library/callback.h	/^    struct snmp_gen_callback {$/;"	s
 snmp_get	local/snmpcheck.def	/^sub snmp_get {$/;"	s
 snmp_get	perl/SNMP/SNMP.pm	/^sub snmp_get {$/;"	s
-snmp_get	perl/SNMP/blib/lib/SNMP.pm	/^sub snmp_get {$/;"	s
 snmp_get_and_print	apps/snmpbulkwalk.c	/^snmp_get_and_print(netsnmp_session * ss, oid * theoid, size_t theoid_len)$/;"	f	file:
 snmp_get_and_print	apps/snmpwalk.c	/^snmp_get_and_print(netsnmp_session * ss, oid * theoid, size_t theoid_len)$/;"	f
 snmp_get_and_print	targets/i686-pc-linux-gnu/apps/snmpbulkwalk.c	/^snmp_get_and_print(netsnmp_session * ss, oid * theoid, size_t theoid_len)$/;"	f	file:
@@ -26532,7 +26400,6 @@ snmp_get_random_access	snmplib/ucd_compat.c	/^snmp_get_random_access(void)$/;"	f
 snmp_get_statistic	snmplib/snmp_api.c	/^snmp_get_statistic(int which)$/;"	f
 snmp_get_suffix_only	snmplib/ucd_compat.c	/^snmp_get_suffix_only(void)$/;"	f
 snmp_getnext	perl/SNMP/SNMP.pm	/^sub snmp_getnext {$/;"	s
-snmp_getnext	perl/SNMP/blib/lib/SNMP.pm	/^sub snmp_getnext {$/;"	s
 snmp_getpassphrase	apps/encode_keychange.c	/^snmp_getpassphrase(const char *prompt, int bvisible)$/;"	f
 snmp_getpassphrase	targets/i686-pc-linux-gnu/apps/encode_keychange.c	/^snmp_getpassphrase(const char *prompt, int bvisible)$/;"	f
 snmp_hex_to_binary	snmplib/tools.c	/^snmp_hex_to_binary(u_char ** buf, size_t * buf_len, size_t * offset,$/;"	f
@@ -26649,7 +26516,6 @@ snmp_session	include/net-snmp/types.h	/^struct snmp_session {$/;"	s
 snmp_session	targets/i686-pc-linux-gnu/include/net-snmp/types.h	/^struct snmp_session {$/;"	s
 snmp_set	local/snmpcheck.def	/^sub snmp_set {$/;"	s
 snmp_set	perl/SNMP/SNMP.pm	/^sub snmp_set {$/;"	s
-snmp_set	perl/SNMP/blib/lib/SNMP.pm	/^sub snmp_set {$/;"	s
 snmp_set_detail	snmplib/snmp_api.c	/^snmp_set_detail(const char *detail_string)$/;"	f
 snmp_set_do_debugging	include/net-snmp/library/libsnmp.h	155;"	d
 snmp_set_do_debugging	snmplib/snmp_debug.c	/^snmp_set_do_debugging(int val UNUSED)$/;"	f
@@ -26693,7 +26559,6 @@ snmp_synch_response_cb	snmplib/snmp_client.c	/^snmp_synch_response_cb(netsnmp_se
 snmp_synch_setup	snmplib/ucd_compat.c	/^snmp_synch_setup(netsnmp_session * notused)$/;"	f
 snmp_timeout	snmplib/snmp_api.c	/^snmp_timeout(void)$/;"	f
 snmp_trap	perl/SNMP/SNMP.pm	/^sub snmp_trap {$/;"	s
-snmp_trap	perl/SNMP/blib/lib/SNMP.pm	/^sub snmp_trap {$/;"	s
 snmp_trapcommunity	agent/agent_trap.c	/^char           *snmp_trapcommunity = NULL;$/;"	v
 snmp_ttyecho	apps/encode_keychange.c	/^snmp_ttyecho(const int fd, const int echo)$/;"	f
 snmp_ttyecho	targets/i686-pc-linux-gnu/apps/encode_keychange.c	/^snmp_ttyecho(const int fd, const int echo)$/;"	f
@@ -26842,7 +26707,6 @@ speed	include/net-snmp/data_access/interface.h	/^    u_int   speed;$/;"	m	struct
 speed	include/net-snmp/data_access/interface.h	/^    uint64_t speed;$/;"	m	struct:_conf_if_list
 speed_high	include/net-snmp/data_access/interface.h	/^    u_int   speed_high;$/;"	m	struct:netsnmp_interface_entry_s
 split_vars	perl/SNMP/SNMP.pm	/^sub split_vars {$/;"	s
-split_vars	perl/SNMP/blib/lib/SNMP.pm	/^sub split_vars {$/;"	s
 spoiled	apps/snmpdelta.c	/^    int             spoiled;$/;"	m	struct:varInfo	file:
 spoiled	targets/i686-pc-linux-gnu/apps/snmpdelta.c	/^    int             spoiled;$/;"	m	struct:varInfo	file:
 sprint_char	snmplib/mib.c	/^sprint_char(char *buf, const u_char ch)$/;"	f	file:
@@ -27175,7 +27039,6 @@ string_it	perl/AnyData_SNMP/netsh	/^	sub string_it {$/;"	s
 stringfun	apps/snmpnetstat/main.c	/^typedef void (stringfun)(const char*);$/;"	t	file:
 stringfun	targets/i686-pc-linux-gnu/apps/snmpnetstat/main.c	/^typedef void (stringfun)(const char*);$/;"	t	file:
 strip_session_params	perl/SNMP/SNMP.pm	/^sub strip_session_params {$/;"	s
-strip_session_params	perl/SNMP/blib/lib/SNMP.pm	/^sub strip_session_params {$/;"	s
 strlcat	snmplib/strlcat.c	/^strlcat(char * __restrict dst, const char * __restrict src, size_t siz)$/;"	f
 strlcpy	snmplib/strlcpy.c	/^strlcpy(char *dest, const char *src, size_t len) $/;"	f
 strncasecmp	snmplib/system.c	/^strncasecmp(const char *s1, const char *s2, size_t nch)$/;"	f
@@ -27432,7 +27295,6 @@ table_set	agent/mibgroup/examples/data_set.c	/^static netsnmp_table_data_set *ta
 tad	agent/helpers/table_array.c	/^    table_container_data *tad;$/;"	m	struct:set_context_s	file:
 tag	include/net-snmp/library/parse.h	/^        const char     *tag;    \/* NULL implies unconditional replacement,$/;"	m	struct:module_compatability
 tag	perl/SNMP/SNMP.pm	/^sub tag {$/;"	s
-tag	perl/SNMP/blib/lib/SNMP.pm	/^sub tag {$/;"	s
 tag	targets/i686-pc-linux-gnu/include/net-snmp/library/parse.h	/^        const char     *tag;    \/* NULL implies unconditional replacement,$/;"	m	struct:module_compatability
 tagEntry	agent/mibgroup/Rmon/row_api.h	/^typedef struct tagEntry {$/;"	s
 tagList	agent/mibgroup/target/snmpTargetAddrEntry.h	/^         char           *tagList;$/;"	m	struct:targetAddrTable_struct
@@ -27667,6 +27529,8 @@ tcpstates	apps/snmpnetstat/inet.c	/^const char     *tcpstates[] = {$/;"	v
 tcpstates	targets/i686-pc-linux-gnu/apps/snmpnetstat/inet.c	/^const char     *tcpstates[] = {$/;"	v
 tds	testing/fulltests/unit-tests/T005table_dataset_cagentlib.c	/^netsnmp_delete_table_data_set(tds);$/;"	v
 tds	testing/fulltests/unit-tests/T005table_dataset_cagentlib.c	/^netsnmp_table_data_set* tds;$/;"	v
+tempTable	agent/mibgroup/futuretek/ftm50s.c	/^static  netsnmp_table_data_set *tempTable;$/;"	v	file:
+temp_table_oid	agent/mibgroup/futuretek/ftm50s.c	/^ oid   temp_table_oid[] = { 1, 3, 6, 1, 4, 1, 42251, 2, 3, 256, 2 };$/;"	v
 term_handler	apps/snmptrapd.c	/^term_handler(int sig)$/;"	f
 term_handler	targets/i686-pc-linux-gnu/apps/snmptrapd.c	/^term_handler(int sig)$/;"	f
 term_tunnel	agent/mibgroup/tunnel/tunnel.c	/^term_tunnel(int majorID, int minorID, void *serverarg, void *clientarg)$/;"	f
@@ -28348,7 +28212,6 @@ transform_type_input	targets/i686-pc-linux-gnu/apps/encode_keychange.c	/^char   
 transid	include/net-snmp/types.h	/^    long            transid;$/;"	m	struct:snmp_pdu
 transid	targets/i686-pc-linux-gnu/include/net-snmp/types.h	/^    long            transid;$/;"	m	struct:snmp_pdu
 translateObj	perl/SNMP/SNMP.pm	/^sub translateObj {$/;"	s
-translateObj	perl/SNMP/blib/lib/SNMP.pm	/^sub translateObj {$/;"	s
 translate_path	testing/fulltests/support/simple_TESTCONF.sh	/^translate_path() {$/;"	f
 translation_table	snmplib/parse.c	/^static int      translation_table[256];$/;"	v	file:
 transport	apps/snmptrapd_sql.c	/^    char      *transport;$/;"	m	struct:sql_buf_t	file:
@@ -28372,7 +28235,6 @@ transport_data_length	targets/i686-pc-linux-gnu/include/net-snmp/types.h	/^    i
 transport_len	apps/snmptrapd_sql.c	/^    u_long     transport_len;$/;"	m	struct:sql_buf_t	file:
 transport_len	targets/i686-pc-linux-gnu/apps/snmptrapd_sql.c	/^    u_long     transport_len;$/;"	m	struct:sql_buf_t	file:
 trap	perl/SNMP/SNMP.pm	/^sub trap {$/;"	s
-trap	perl/SNMP/blib/lib/SNMP.pm	/^sub trap {$/;"	s
 trap1_fmt_str_remember	apps/snmptrapd.c	/^char           *trap1_fmt_str_remember = NULL;$/;"	v
 trap1_fmt_str_remember	targets/i686-pc-linux-gnu/apps/snmptrapd.c	/^char           *trap1_fmt_str_remember = NULL;$/;"	v
 trap1_std_str	apps/snmptrapd_handlers.c	/^const char     *trap1_std_str = "%.4y-%.2m-%.2l %.2h:%.2j:%.2k %B [%b] (via %A [%a]): %N\\n\\t%W Trap (%q) Uptime: %#T\\n%v\\n";$/;"	v
@@ -28478,7 +28340,6 @@ type	include/net-snmp/library/parse.h	/^        int             type;   \/* This
 type	include/net-snmp/library/snmp_logging.h	/^        int	type;$/;"	m	struct:netsnmp_log_handler_s
 type	include/net-snmp/types.h	/^   u_char          type;   $/;"	m	struct:variable_list
 type	perl/SNMP/SNMP.pm	/^sub type {$/;"	s
-type	perl/SNMP/blib/lib/SNMP.pm	/^sub type {$/;"	s
 type	snmplib/default_store.c	/^  u_char          type;$/;"	m	struct:netsnmp_ds_read_config_s	file:
 type	snmplib/parse.c	/^    int             type;$/;"	m	struct:tc	file:
 type	targets/i686-pc-linux-gnu/apps/snmpdelta.c	/^    int             type;$/;"	m	struct:varInfo	file:
@@ -28696,7 +28557,6 @@ unix_socket_end	snmplib/transports/snmpSSHDomain.c	/^    struct sockaddr_un unix
 unlink_tbucket	snmplib/parse.c	/^unlink_tbucket(struct tree *tp)$/;"	f	file:
 unlink_tree	snmplib/parse.c	/^unlink_tree(struct tree *tp)$/;"	f	file:
 unloadModules	perl/SNMP/SNMP.pm	/^sub unloadModules {$/;"	s
-unloadModules	perl/SNMP/blib/lib/SNMP.pm	/^sub unloadModules {$/;"	s
 unload_all_mibs	snmplib/parse.c	/^unload_all_mibs(void)$/;"	f
 unload_module	snmplib/parse.c	/^unload_module(const char *name)$/;"	f
 unload_module_by_ID	snmplib/parse.c	/^unload_module_by_ID(int modID, struct tree *tree_top)$/;"	f
@@ -28731,7 +28591,6 @@ unused	agent/kernel.c	/^int unused;	\/* Suppress "empty translation unit" warnin
 unused	apps/snmptrapd_sql.c	/^int unused;	\/* Suppress "empty translation unit" warning *\/$/;"	v
 unused	targets/i686-pc-linux-gnu/apps/snmptrapd_sql.c	/^int unused;	\/* Suppress "empty translation unit" warning *\/$/;"	v
 update	perl/SNMP/SNMP.pm	/^sub update {$/;"	s
-update	perl/SNMP/blib/lib/SNMP.pm	/^sub update {$/;"	s
 updateFile	agent/mibgroup/ucd-snmp/file.c	/^updateFile(int iindex)$/;"	f
 updateGraph	local/tkmib	/^sub updateGraph() {$/;"	s
 updateInfo	local/tkmib	/^sub updateInfo {$/;"	s
@@ -29201,7 +29060,6 @@ val	include/net-snmp/library/types.h	/^    size_t          val;$/;"	m	struct:net
 val	include/net-snmp/library/types.h	/^    void           *val;$/;"	m	struct:netsnmp_ref_void
 val	include/net-snmp/types.h	/^    netsnmp_vardata val;$/;"	m	struct:variable_list
 val	perl/SNMP/SNMP.pm	/^sub val {$/;"	s
-val	perl/SNMP/blib/lib/SNMP.pm	/^sub val {$/;"	s
 val	targets/i686-pc-linux-gnu/apps/snmptrapd_sql.c	/^    u_char    *val;$/;"	m	struct:sql_vb_buf_t	file:
 val	targets/i686-pc-linux-gnu/include/net-snmp/library/types.h	/^    size_t          val;$/;"	m	struct:netsnmp_ref_size_t_s
 val	targets/i686-pc-linux-gnu/include/net-snmp/library/types.h	/^    void           *val;$/;"	m	struct:netsnmp_ref_void
@@ -29259,16 +29117,12 @@ var_atEntry	agent/mibgroup/mibII/at.c	/^var_atEntry(struct variable *vp,$/;"	f
 var_bgp	agent/mibgroup/smux/snmp_bgp.c	/^var_bgp(struct variable *vp,$/;"	f
 var_diTable	agent/mibgroup/futuretek/ftm50s.c	/^var_diTable(struct variable *vp,$/;"	f
 var_diTable	agent/mibgroup/futuretek/ftm50s.h	/^FindVarMethod var_diTable;$/;"	v
-var_diTable	local/ftm50s.c	/^var_diTable(struct variable *vp,$/;"	f
-var_diTable	local/ftm50s.h	/^FindVarMethod var_diTable;$/;"	v
 var_diskio	agent/mibgroup/ucd-snmp/diskio.c	/^var_diskio(struct variable * vp,$/;"	f
 var_diskio	agent/mibgroup/ucd-snmp/diskio.h	/^     FindVarMethod   var_diskio;$/;"	v
 var_dlmod	agent/mibgroup/ucd-snmp/dlmod.c	/^var_dlmod(struct variable * vp,$/;"	f	file:
 var_dlmodEntry	agent/mibgroup/ucd-snmp/dlmod.c	/^var_dlmodEntry(struct variable * vp,$/;"	f	file:
 var_doTable	agent/mibgroup/futuretek/ftm50s.c	/^var_doTable(struct variable *vp,$/;"	f
 var_doTable	agent/mibgroup/futuretek/ftm50s.h	/^FindVarMethod var_doTable;$/;"	v
-var_doTable	local/ftm50s.c	/^var_doTable(struct variable *vp,$/;"	f
-var_doTable	local/ftm50s.h	/^FindVarMethod var_doTable;$/;"	v
 var_etherHistoryTable	agent/mibgroup/Rmon/history.c	/^var_etherHistoryTable(struct variable *vp,$/;"	f
 var_etherStats2Entry	agent/mibgroup/Rmon/statistics.c	/^var_etherStats2Entry(struct variable * vp, oid * name, size_t * length,$/;"	f
 var_etherStatsEntry	agent/mibgroup/Rmon/statistics.c	/^var_etherStatsEntry(struct variable * vp, oid * name, size_t * length,$/;"	f
@@ -29331,8 +29185,8 @@ var_extensible_vmstat	agent/mibgroup/ucd-snmp/vmstat_solaris2.c	/^var_extensible
 var_file_table	agent/mibgroup/ucd-snmp/file.c	/^var_file_table(struct variable *vp,$/;"	f
 var_ftm50s	agent/mibgroup/futuretek/ftm50s.c	/^var_ftm50s(struct variable *vp, $/;"	f
 var_ftm50s	agent/mibgroup/futuretek/ftm50s.h	/^FindVarMethod var_ftm50s;$/;"	v
-var_ftm50s	local/ftm50s.c	/^var_ftm50s(struct variable *vp, $/;"	f
-var_ftm50s	local/ftm50s.h	/^FindVarMethod var_ftm50s;$/;"	v
+var_futuretek	agent/mibgroup/futuretek/futuretek.c	/^var_futuretek(struct variable *vp, $/;"	f
+var_futuretek	agent/mibgroup/futuretek/futuretek.h	/^FindVarMethod var_futuretek;$/;"	v
 var_historyControlTable	agent/mibgroup/Rmon/history.c	/^var_historyControlTable(struct variable *vp,$/;"	f
 var_hp	agent/mibgroup/ucd-snmp/hpux.c	/^var_hp(struct variable *vp,$/;"	f
 var_hp	agent/mibgroup/ucd-snmp/hpux.h	/^FindVarMethod   var_hp;$/;"	v
@@ -29351,8 +29205,6 @@ var_hrswrun	agent/mibgroup/host/hr_swrun.c	/^var_hrswrun(struct variable * vp,$/
 var_hrsys	agent/mibgroup/host/hr_system.c	/^var_hrsys(struct variable * vp,$/;"	f
 var_humiTable	agent/mibgroup/futuretek/ftm50s.c	/^var_humiTable(struct variable *vp,$/;"	f
 var_humiTable	agent/mibgroup/futuretek/ftm50s.h	/^FindVarMethod var_humiTable;$/;"	v
-var_humiTable	local/ftm50s.c	/^var_humiTable(struct variable *vp,$/;"	f
-var_humiTable	local/ftm50s.h	/^FindVarMethod var_humiTable;$/;"	v
 var_icmpv6Entry	agent/mibgroup/mibII/ipv6.c	/^var_icmpv6Entry(register struct variable * vp,$/;"	f
 var_ifEntry	agent/mibgroup/mibII/interfaces.c	/^var_ifEntry(struct variable * vp,$/;"	f
 var_ifEntry	agent/mibgroup/mibII/interfaces.c	/^var_ifEntry(struct variable *vp,$/;"	f
@@ -29390,6 +29242,8 @@ var_mteTriggerTable	agent/mibgroup/disman/mteTriggerTable.h	/^     FindVarMethod
 var_mteTriggerThresholdTable	agent/mibgroup/disman/mteTriggerThresholdTable.c	/^var_mteTriggerThresholdTable(struct variable *vp,$/;"	f
 var_mteTriggerThresholdTable	agent/mibgroup/disman/mteTriggerThresholdTable.h	/^     FindVarMethod   var_mteTriggerThresholdTable;$/;"	v
 var_name	agent/mibgroup/Rmon/alarm.c	/^             var_name;$/;"	m	struct:__anon62	file:
+var_netTable	agent/mibgroup/futuretek/ftm50s.c	/^var_netTable(struct variable *vp,$/;"	f
+var_netTable	agent/mibgroup/futuretek/ftm50s.h	/^FindVarMethod var_netTable;$/;"	v
 var_ospf	agent/mibgroup/smux/snmp_ospf.c	/^var_ospf(struct variable *vp,$/;"	f
 var_pingCtlTable	agent/mibgroup/disman/ping/pingCtlTable.c	/^var_pingCtlTable(struct variable *vp,$/;"	f
 var_pingCtlTable	agent/mibgroup/disman/ping/pingCtlTable.h	/^FindVarMethod   var_pingCtlTable;$/;"	v
@@ -29397,11 +29251,11 @@ var_pingProbeHistoryTable	agent/mibgroup/disman/ping/pingProbeHistoryTable.c	/^v
 var_pingProbeHistoryTable	agent/mibgroup/disman/ping/pingProbeHistoryTable.h	/^FindVarMethod   var_pingProbeHistoryTable;$/;"	v
 var_pingResultsTable	agent/mibgroup/disman/ping/pingResultsTable.c	/^var_pingResultsTable(struct variable *vp,$/;"	f
 var_pingResultsTable	agent/mibgroup/disman/ping/pingResultsTable.h	/^FindVarMethod   var_pingResultsTable;$/;"	v
+var_pointTable	agent/mibgroup/futuretek/ftm50s.c	/^var_pointTable(struct variable *vp,$/;"	f
+var_pointTable	agent/mibgroup/futuretek/ftm50s.h	/^FindVarMethod var_pointTable;$/;"	v
 var_rip2	agent/mibgroup/smux/snmp_rip2.c	/^var_rip2(struct variable *vp,$/;"	f
 var_rlTable	agent/mibgroup/futuretek/ftm50s.c	/^var_rlTable(struct variable *vp,$/;"	f
 var_rlTable	agent/mibgroup/futuretek/ftm50s.h	/^FindVarMethod var_rlTable;$/;"	v
-var_rlTable	local/ftm50s.c	/^var_rlTable(struct variable *vp,$/;"	f
-var_rlTable	local/ftm50s.h	/^FindVarMethod var_rlTable;$/;"	v
 var_smux	agent/mibgroup/smux/smux.c	/^var_smux(struct variable * vp,$/;"	f
 var_smux_write	agent/mibgroup/smux/smux.c	/^var_smux_write(int action,$/;"	f
 var_snmpEngine	agent/mibgroup/snmpv3/snmpEngine.c	/^var_snmpEngine(struct variable *vp,$/;"	f
@@ -29418,8 +29272,6 @@ var_targetSpinLock	agent/mibgroup/target/snmpTargetAddrEntry.h	/^     FindVarMet
 var_tcp6	agent/mibgroup/mibII/ipv6.c	/^var_tcp6(register struct variable * vp,$/;"	f
 var_tempTable	agent/mibgroup/futuretek/ftm50s.c	/^var_tempTable(struct variable *vp,$/;"	f
 var_tempTable	agent/mibgroup/futuretek/ftm50s.h	/^FindVarMethod var_tempTable;$/;"	v
-var_tempTable	local/ftm50s.c	/^var_tempTable(struct variable *vp,$/;"	f
-var_tempTable	local/ftm50s.h	/^FindVarMethod var_tempTable;$/;"	v
 var_traceRouteCtlTable	agent/mibgroup/disman/traceroute/traceRouteCtlTable.c	/^var_traceRouteCtlTable(struct variable *vp,$/;"	f
 var_traceRouteCtlTable	agent/mibgroup/disman/traceroute/traceRouteCtlTable.h	/^FindVarMethod   var_traceRouteCtlTable;$/;"	v
 var_traceRouteHopsTable	agent/mibgroup/disman/traceroute/traceRouteHopsTable.c	/^var_traceRouteHopsTable(struct variable *vp,$/;"	f
@@ -29629,31 +29481,19 @@ write_cache	snmplib/transports/snmpDTLSUDPDomain.c	/^   char *write_cache;$/;"	m
 write_cache_len	snmplib/transports/snmpDTLSUDPDomain.c	/^   size_t write_cache_len;$/;"	m	struct:bio_cache_s	file:
 write_diName	agent/mibgroup/futuretek/ftm50s.c	/^write_diName(int      action,$/;"	f
 write_diName	agent/mibgroup/futuretek/ftm50s.h	/^    WriteMethod write_diName;$/;"	v
-write_diName	local/ftm50s.c	/^write_diName(int      action,$/;"	f
-write_diName	local/ftm50s.h	/^    WriteMethod write_diName;$/;"	v
 write_diState	agent/mibgroup/futuretek/ftm50s.c	/^write_diState(int      action,$/;"	f
 write_diState	agent/mibgroup/futuretek/ftm50s.h	/^    WriteMethod write_diState;$/;"	v
-write_diState	local/ftm50s.c	/^write_diState(int      action,$/;"	f
-write_diState	local/ftm50s.h	/^    WriteMethod write_diState;$/;"	v
 write_diUpdateInterval	agent/mibgroup/futuretek/ftm50s.c	/^write_diUpdateInterval(int      action,$/;"	f
 write_diUpdateInterval	agent/mibgroup/futuretek/ftm50s.h	/^    WriteMethod write_diUpdateInterval;$/;"	v
-write_diUpdateInterval	local/ftm50s.c	/^write_diUpdateInterval(int      action,$/;"	f
-write_diUpdateInterval	local/ftm50s.h	/^    WriteMethod write_diUpdateInterval;$/;"	v
 write_dlmodName	agent/mibgroup/ucd-snmp/dlmod.c	/^write_dlmodName(int action,$/;"	f	file:
 write_dlmodPath	agent/mibgroup/ucd-snmp/dlmod.c	/^write_dlmodPath(int action,$/;"	f	file:
 write_dlmodStatus	agent/mibgroup/ucd-snmp/dlmod.c	/^write_dlmodStatus(int action,$/;"	f	file:
 write_doName	agent/mibgroup/futuretek/ftm50s.c	/^write_doName(int      action,$/;"	f
 write_doName	agent/mibgroup/futuretek/ftm50s.h	/^    WriteMethod write_doName;$/;"	v
-write_doName	local/ftm50s.c	/^write_doName(int      action,$/;"	f
-write_doName	local/ftm50s.h	/^    WriteMethod write_doName;$/;"	v
 write_doState	agent/mibgroup/futuretek/ftm50s.c	/^write_doState(int      action,$/;"	f
 write_doState	agent/mibgroup/futuretek/ftm50s.h	/^    WriteMethod write_doState;$/;"	v
-write_doState	local/ftm50s.c	/^write_doState(int      action,$/;"	f
-write_doState	local/ftm50s.h	/^    WriteMethod write_doState;$/;"	v
 write_doUpdateInterval	agent/mibgroup/futuretek/ftm50s.c	/^write_doUpdateInterval(int      action,$/;"	f
 write_doUpdateInterval	agent/mibgroup/futuretek/ftm50s.h	/^    WriteMethod write_doUpdateInterval;$/;"	v
-write_doUpdateInterval	local/ftm50s.c	/^write_doUpdateInterval(int      action,$/;"	f
-write_doUpdateInterval	local/ftm50s.h	/^    WriteMethod write_doUpdateInterval;$/;"	v
 write_engineBoots	agent/mibgroup/snmpv3/snmpEngine.c	/^write_engineBoots(int action,$/;"	f
 write_engineTime	agent/mibgroup/snmpv3/snmpEngine.c	/^write_engineTime(int action,$/;"	f
 write_etherStatsEntry	agent/mibgroup/Rmon/statistics.c	/^write_etherStatsEntry(int action, u_char * var_val, u_char var_val_type,$/;"	f	file:
@@ -29696,16 +29536,10 @@ write_fields	perl/AnyData_SNMP/Format.pm	/^sub write_fields {$/;"	s
 write_historyControl	agent/mibgroup/Rmon/history.c	/^write_historyControl(int action, u_char * var_val, u_char var_val_type,$/;"	f	file:
 write_humiName	agent/mibgroup/futuretek/ftm50s.c	/^write_humiName(int      action,$/;"	f
 write_humiName	agent/mibgroup/futuretek/ftm50s.h	/^    WriteMethod write_humiName;$/;"	v
-write_humiName	local/ftm50s.c	/^write_humiName(int      action,$/;"	f
-write_humiName	local/ftm50s.h	/^    WriteMethod write_humiName;$/;"	v
 write_humiState	agent/mibgroup/futuretek/ftm50s.c	/^write_humiState(int      action,$/;"	f
 write_humiState	agent/mibgroup/futuretek/ftm50s.h	/^    WriteMethod write_humiState;$/;"	v
-write_humiState	local/ftm50s.c	/^write_humiState(int      action,$/;"	f
-write_humiState	local/ftm50s.h	/^    WriteMethod write_humiState;$/;"	v
 write_humiUpdateInterval	agent/mibgroup/futuretek/ftm50s.c	/^write_humiUpdateInterval(int      action,$/;"	f
 write_humiUpdateInterval	agent/mibgroup/futuretek/ftm50s.h	/^    WriteMethod write_humiUpdateInterval;$/;"	v
-write_humiUpdateInterval	local/ftm50s.c	/^write_humiUpdateInterval(int      action,$/;"	f
-write_humiUpdateInterval	local/ftm50s.h	/^    WriteMethod write_humiUpdateInterval;$/;"	v
 write_laConfig	agent/mibgroup/ucd-snmp/loadave.c	/^write_laConfig(int action,$/;"	f	file:
 write_lookupCtlRowStatus	agent/mibgroup/disman/nslookup/lookupCtlTable.c	/^write_lookupCtlRowStatus(int action,$/;"	f
 write_lookupCtlRowStatus	agent/mibgroup/disman/nslookup/lookupCtlTable.h	/^WriteMethod     write_lookupCtlRowStatus;$/;"	v
@@ -29809,6 +29643,8 @@ write_mteTriggerValueID	agent/mibgroup/disman/mteTriggerTable.c	/^write_mteTrigg
 write_mteTriggerValueID	agent/mibgroup/disman/mteTriggerTable.h	/^     WriteMethod     write_mteTriggerValueID;$/;"	v
 write_mteTriggerValueIDWildcard	agent/mibgroup/disman/mteTriggerTable.c	/^write_mteTriggerValueIDWildcard(int action,$/;"	f
 write_mteTriggerValueIDWildcard	agent/mibgroup/disman/mteTriggerTable.h	/^     WriteMethod     write_mteTriggerValueIDWildcard;$/;"	v
+write_netIP	agent/mibgroup/futuretek/ftm50s.c	/^write_netIP(int      action,$/;"	f
+write_netIP	agent/mibgroup/futuretek/ftm50s.h	/^    WriteMethod write_netIP;$/;"	v
 write_persist_pipe	agent/mibgroup/ucd-snmp/pass_persist.c	/^write_persist_pipe(int iindex, const char *data)$/;"	f	file:
 write_pingCtlAdminStatus	agent/mibgroup/disman/ping/pingCtlTable.c	/^write_pingCtlAdminStatus(int action,$/;"	f
 write_pingCtlAdminStatus	agent/mibgroup/disman/ping/pingCtlTable.h	/^WriteMethod     write_pingCtlAdminStatus;$/;"	v
@@ -29854,20 +29690,12 @@ write_pingCtlType	agent/mibgroup/disman/ping/pingCtlTable.c	/^write_pingCtlType(
 write_pingCtlType	agent/mibgroup/disman/ping/pingCtlTable.h	/^WriteMethod     write_pingCtlType;$/;"	v
 write_prodDescription	agent/mibgroup/futuretek/ftm50s.c	/^write_prodDescription(int      action,$/;"	f
 write_prodDescription	agent/mibgroup/futuretek/ftm50s.h	/^    WriteMethod write_prodDescription;$/;"	v
-write_prodDescription	local/ftm50s.c	/^write_prodDescription(int      action,$/;"	f
-write_prodDescription	local/ftm50s.h	/^    WriteMethod write_prodDescription;$/;"	v
 write_rlName	agent/mibgroup/futuretek/ftm50s.c	/^write_rlName(int      action,$/;"	f
 write_rlName	agent/mibgroup/futuretek/ftm50s.h	/^    WriteMethod write_rlName;$/;"	v
-write_rlName	local/ftm50s.c	/^write_rlName(int      action,$/;"	f
-write_rlName	local/ftm50s.h	/^    WriteMethod write_rlName;$/;"	v
 write_rlState	agent/mibgroup/futuretek/ftm50s.c	/^write_rlState(int      action,$/;"	f
 write_rlState	agent/mibgroup/futuretek/ftm50s.h	/^    WriteMethod write_rlState;$/;"	v
-write_rlState	local/ftm50s.c	/^write_rlState(int      action,$/;"	f
-write_rlState	local/ftm50s.h	/^    WriteMethod write_rlState;$/;"	v
 write_rlUpdateInterval	agent/mibgroup/futuretek/ftm50s.c	/^write_rlUpdateInterval(int      action,$/;"	f
 write_rlUpdateInterval	agent/mibgroup/futuretek/ftm50s.h	/^    WriteMethod write_rlUpdateInterval;$/;"	v
-write_rlUpdateInterval	local/ftm50s.c	/^write_rlUpdateInterval(int      action,$/;"	f
-write_rlUpdateInterval	local/ftm50s.h	/^    WriteMethod write_rlUpdateInterval;$/;"	v
 write_rte	agent/mibgroup/mibII/route_write.c	/^write_rte(int action,$/;"	f
 write_rte	agent/mibgroup/mibII/route_write.h	/^     WriteMethod     write_rte;$/;"	v
 write_snmpNotifyFilterProfileName	agent/mibgroup/notification/snmpNotifyFilterProfileTable.c	/^write_snmpNotifyFilterProfileName(int action,$/;"	f
@@ -29916,16 +29744,10 @@ write_targetSpinLock	agent/mibgroup/target/snmpTargetAddrEntry.c	/^write_targetS
 write_targetSpinLock	agent/mibgroup/target/snmpTargetAddrEntry.h	/^     WriteMethod     write_targetSpinLock;$/;"	v
 write_tempName	agent/mibgroup/futuretek/ftm50s.c	/^write_tempName(int      action,$/;"	f
 write_tempName	agent/mibgroup/futuretek/ftm50s.h	/^    WriteMethod write_tempName;$/;"	v
-write_tempName	local/ftm50s.c	/^write_tempName(int      action,$/;"	f
-write_tempName	local/ftm50s.h	/^    WriteMethod write_tempName;$/;"	v
 write_tempState	agent/mibgroup/futuretek/ftm50s.c	/^write_tempState(int      action,$/;"	f
 write_tempState	agent/mibgroup/futuretek/ftm50s.h	/^    WriteMethod write_tempState;$/;"	v
-write_tempState	local/ftm50s.c	/^write_tempState(int      action,$/;"	f
-write_tempState	local/ftm50s.h	/^    WriteMethod write_tempState;$/;"	v
 write_tempUpdateInterval	agent/mibgroup/futuretek/ftm50s.c	/^write_tempUpdateInterval(int      action,$/;"	f
 write_tempUpdateInterval	agent/mibgroup/futuretek/ftm50s.h	/^    WriteMethod write_tempUpdateInterval;$/;"	v
-write_tempUpdateInterval	local/ftm50s.c	/^write_tempUpdateInterval(int      action,$/;"	f
-write_tempUpdateInterval	local/ftm50s.h	/^    WriteMethod write_tempUpdateInterval;$/;"	v
 write_traceRouteCtlAdminStatus	agent/mibgroup/disman/traceroute/traceRouteCtlTable.c	/^write_traceRouteCtlAdminStatus(int action,$/;"	f
 write_traceRouteCtlAdminStatus	agent/mibgroup/disman/traceroute/traceRouteCtlTable.h	/^WriteMethod     write_traceRouteCtlAdminStatus;$/;"	v
 write_traceRouteCtlByPassRouteTable	agent/mibgroup/disman/traceroute/traceRouteCtlTable.c	/^write_traceRouteCtlByPassRouteTable(int action,$/;"	f

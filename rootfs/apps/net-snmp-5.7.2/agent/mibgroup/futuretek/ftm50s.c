@@ -10,6 +10,7 @@
 #include "libconfig.h"
 #define	TABLE_SIZE	10
 
+#define	DEBUGMSGTL(x)	printf x
 /* 
  * ftm50s_variables_oid:
  *   this is the top level oid that we want to register under.  This
@@ -25,7 +26,7 @@ oid ftm50s_variables_oid[] = { 1,3,6,1,4,1,42251,2 };
  *   for the ftm50s mib section 
  */
 
-struct variable4 ftm50s_variables[] = {
+struct variable5 ftm50s_variables[] = {
 /*  magic number        , variable type , ro/rw , callback fn  , L, oidsuffix */
 #define PRODID		1
 {PRODID,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
@@ -99,139 +100,139 @@ struct variable4 ftm50s_variables[] = {
  var_pointTable, 5,  { 3,1,2 , 1, 4 }},
 #define TEMPID		1
 {TEMPID,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
- var_tempTable, 5,  { 3,256,2 , 1, 1 }},
+ var_sensorTable, 5,  { 3,256,2 , 1, 1 }},
 #define TEMPTYPE		2
 {TEMPTYPE,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
- var_tempTable, 5,  { 3,256,2 , 1, 2 }},
+ var_sensorTable, 5,  { 3,256,2 , 1, 2 }},
 #define TEMPNAME		3
 {TEMPNAME,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RWRITE,
- var_tempTable, 5,  { 3,256,2 , 1, 3 }},
+ var_sensorTable, 5,  { 3,256,2 , 1, 3 }},
 #define TEMPSN		4
 {TEMPSN,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
- var_tempTable, 5,  { 3,256,2 , 1, 4 }},
+ var_sensorTable, 5,  { 3,256,2 , 1, 4 }},
 #define TEMPSTATE		5
 {TEMPSTATE,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RWRITE,
- var_tempTable, 5,  { 3,256,2 , 1, 5 }},
+ var_sensorTable, 5,  { 3,256,2 , 1, 5 }},
 #define TEMPVALUE		6
 {TEMPVALUE,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
- var_tempTable, 5,  { 3,256,2 , 1, 6 }},
+ var_sensorTable, 5,  { 3,256,2 , 1, 6 }},
 #define TEMPLASTVALUE		7
 {TEMPLASTVALUE,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
- var_tempTable, 5,  { 3,256,2 , 1, 7 }},
+ var_sensorTable, 5,  { 3,256,2 , 1, 7 }},
 #define TEMPLASTTIME		8
 {TEMPLASTTIME,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
- var_tempTable, 5,  { 3,256,2 , 1, 8 }},
+ var_sensorTable, 5,  { 3,256,2 , 1, 8 }},
 #define TEMPUPDATEINTERVAL		9
 {TEMPUPDATEINTERVAL,  ASN_INTEGER,  NETSNMP_OLDAPI_RWRITE,
- var_tempTable, 5,  { 3,256,2 , 1, 9 }},
+ var_sensorTable, 5,  { 3,256,2 , 1, 9 }},
 #define HUMIID		1
 {HUMIID,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
- var_humiTable, 5,  { 3,512,2 , 1, 1 }},
+ var_sensorTable, 5,  { 3,512,2 , 1, 1 }},
 #define HUMITYPE		2
 {HUMITYPE,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
- var_humiTable, 5,  { 3,512,2 , 1, 2 }},
+ var_sensorTable, 5,  { 3,512,2 , 1, 2 }},
 #define HUMINAME		3
 {HUMINAME,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RWRITE,
- var_humiTable, 5,  { 3,512,2 , 1, 3 }},
+ var_sensorTable, 5,  { 3,512,2 , 1, 3 }},
 #define HUMISN		4
 {HUMISN,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
- var_humiTable, 5,  { 3,512,2 , 1, 4 }},
+ var_sensorTable, 5,  { 3,512,2 , 1, 4 }},
 #define HUMISTATE		5
 {HUMISTATE,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RWRITE,
- var_humiTable, 5,  { 3,512,2 , 1, 5 }},
+ var_sensorTable, 5,  { 3,512,2 , 1, 5 }},
 #define HUMIVALUE		6
 {HUMIVALUE,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
- var_humiTable, 5,  { 3,512,2 , 1, 6 }},
+ var_sensorTable, 5,  { 3,512,2 , 1, 6 }},
 #define HUMILASTVALUE		7
 {HUMILASTVALUE,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
- var_humiTable, 5,  { 3,512,2 , 1, 7 }},
+ var_sensorTable, 5,  { 3,512,2 , 1, 7 }},
 #define HUMILASTTIME		8
 {HUMILASTTIME,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
- var_humiTable, 5,  { 3,512,2 , 1, 8 }},
+ var_sensorTable, 5,  { 3,512,2 , 1, 8 }},
 #define HUMIUPDATEINTERVAL		9
 {HUMIUPDATEINTERVAL,  ASN_INTEGER,  NETSNMP_OLDAPI_RWRITE,
- var_humiTable, 5,  { 3,512,2 , 1, 9 }},
+ var_sensorTable, 5,  { 3,512,2 , 1, 9 }},
 #define DIID		1
 {DIID,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
- var_diTable, 5,  { 3,1281,2 , 1, 1 }},
+ var_sensorTable, 5,  { 3,1281,2 , 1, 1 }},
 #define DITYPE		2
 {DITYPE,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
- var_diTable, 5,  { 3,1281,2 , 1, 2 }},
+ var_sensorTable, 5,  { 3,1281,2 , 1, 2 }},
 #define DINAME		3
 {DINAME,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RWRITE,
- var_diTable, 5,  { 3,1281,2 , 1, 3 }},
+ var_sensorTable, 5,  { 3,1281,2 , 1, 3 }},
 #define DISN		4
 {DISN,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
- var_diTable, 5,  { 3,1281,2 , 1, 4 }},
+ var_sensorTable, 5,  { 3,1281,2 , 1, 4 }},
 #define DISTATE		5
 {DISTATE,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RWRITE,
- var_diTable, 5,  { 3,1281,2 , 1, 5 }},
+ var_sensorTable, 5,  { 3,1281,2 , 1, 5 }},
 #define DIVALUE		6
 {DIVALUE,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
- var_diTable, 5,  { 3,1281,2 , 1, 6 }},
+ var_sensorTable, 5,  { 3,1281,2 , 1, 6 }},
 #define DILASTVALUE		7
 {DILASTVALUE,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
- var_diTable, 5,  { 3,1281,2 , 1, 7 }},
+ var_sensorTable, 5,  { 3,1281,2 , 1, 7 }},
 #define DILASTTIME		8
 {DILASTTIME,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
- var_diTable, 5,  { 3,1281,2 , 1, 8 }},
+ var_sensorTable, 5,  { 3,1281,2 , 1, 8 }},
 #define DIUPDATEINTERVAL		9
 {DIUPDATEINTERVAL,  ASN_INTEGER,  NETSNMP_OLDAPI_RWRITE,
- var_diTable, 5,  { 3,1281,2 , 1, 9 }},
+ var_sensorTable, 5,  { 3,1281,2 , 1, 9 }},
 #define DOID		1
 {DOID,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
- var_doTable, 5,  { 3,1537,2 , 1, 1 }},
+ var_sensorTable, 5,  { 3,1537,2 , 1, 1 }},
 #define DOTYPE		2
 {DOTYPE,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
- var_doTable, 5,  { 3,1537,2 , 1, 2 }},
+ var_sensorTable, 5,  { 3,1537,2 , 1, 2 }},
 #define DONAME		3
 {DONAME,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RWRITE,
- var_doTable, 5,  { 3,1537,2 , 1, 3 }},
+ var_sensorTable, 5,  { 3,1537,2 , 1, 3 }},
 #define DOSN		4
 {DOSN,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
- var_doTable, 5,  { 3,1537,2 , 1, 4 }},
+ var_sensorTable, 5,  { 3,1537,2 , 1, 4 }},
 #define DOSTATE		5
 {DOSTATE,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RWRITE,
- var_doTable, 5,  { 3,1537,2 , 1, 5 }},
+ var_sensorTable, 5,  { 3,1537,2 , 1, 5 }},
 #define DOVALUE		6
 {DOVALUE,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
- var_doTable, 5,  { 3,1537,2 , 1, 6 }},
+ var_sensorTable, 5,  { 3,1537,2 , 1, 6 }},
 #define DOLASTVALUE		7
 {DOLASTVALUE,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
- var_doTable, 5,  { 3,1537,2 , 1, 7 }},
+ var_sensorTable, 5,  { 3,1537,2 , 1, 7 }},
 #define DOLASTTIME		8
 {DOLASTTIME,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
- var_doTable, 5,  { 3,1537,2 , 1, 8 }},
+ var_sensorTable, 5,  { 3,1537,2 , 1, 8 }},
 #define DOUPDATEINTERVAL		9
 {DOUPDATEINTERVAL,  ASN_INTEGER,  NETSNMP_OLDAPI_RWRITE,
- var_doTable, 5,  { 3,1537,2 , 1, 9 }},
+ var_sensorTable, 5,  { 3,1537,2 , 1, 9 }},
 #define RLID		1
 {RLID,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
- var_rlTable, 5,  { 3,1538,2 , 1, 1 }},
+ var_sensorTable, 5,  { 3,1538,2 , 1, 1 }},
 #define RLTYPE		2
 {RLTYPE,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
- var_rlTable, 5,  { 3,1538,2 , 1, 2 }},
+ var_sensorTable, 5,  { 3,1538,2 , 1, 2 }},
 #define RLNAME		3
 {RLNAME,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RWRITE,
- var_rlTable, 5,  { 3,1538,2 , 1, 3 }},
+ var_sensorTable, 5,  { 3,1538,2 , 1, 3 }},
 #define RLSN		4
 {RLSN,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
- var_rlTable, 5,  { 3,1538,2 , 1, 4 }},
+ var_sensorTable, 5,  { 3,1538,2 , 1, 4 }},
 #define RLSTATE		5
 {RLSTATE,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RWRITE,
- var_rlTable, 5,  { 3,1538,2 , 1, 5 }},
+ var_sensorTable, 5,  { 3,1538,2 , 1, 5 }},
 #define RLVALUE		6
 {RLVALUE,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
- var_rlTable, 5,  { 3,1538,2 , 1, 6 }},
+ var_sensorTable, 5,  { 3,1538,2 , 1, 6 }},
 #define RLLASTVALUE		7
 {RLLASTVALUE,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
- var_rlTable, 5,  { 3,1538,2 , 1, 7 }},
+ var_sensorTable, 5,  { 3,1538,2 , 1, 7 }},
 #define RLLASTTIME		8
 {RLLASTTIME,  ASN_OCTET_STR,  NETSNMP_OLDAPI_RONLY,
- var_rlTable, 5,  { 3,1538,2 , 1, 8 }},
+ var_sensorTable, 5,  { 3,1538,2 , 1, 8 }},
 #define RLUPDATEINTERVAL		9
 {RLUPDATEINTERVAL,  ASN_INTEGER,  NETSNMP_OLDAPI_RWRITE,
- var_rlTable, 5,  { 3,1538,2 , 1, 9 }},
+ var_sensorTable, 5,  { 3,1538,2 , 1, 9 }},
 };
 /*    (L = length of the oidsuffix) */
 
@@ -240,16 +241,18 @@ void
 init_ftm50s(void)
 {
 	static config_t	cfg;
-
+	netsnmp_table_row *row;
+	int		value = 0;
+	int		value_len = 4;
     DEBUGMSGTL(("ftm50s", "Initializing\n"));
 
     /* register ourselves with the agent to handle our mib tree */
-    REGISTER_MIB("ftm50s", ftm50s_variables, variable4,
+    REGISTER_MIB("ftm50s", ftm50s_variables, variable5,
                ftm50s_variables_oid);
 
     /* place any other initialization junk you need here */
 	ft_som_init(NULL);
-  }
+}
 
 /*
  * var_ftm50s():
@@ -517,12 +520,12 @@ var_pointTable(struct variable *vp,
     return NULL;
 }
 /*
- * var_tempTable():
+ * var_sensorTable():
  *   Handle this table separately from the scalar value case.
  *   The workings of this are basically the same as for var_ftm50s above.
  */
 unsigned char *
-var_tempTable(struct variable *vp,
+var_sensorTable(struct variable *vp,
     	    oid     *name,
     	    size_t  *length,
     	    int     exact,
@@ -530,359 +533,118 @@ var_tempTable(struct variable *vp,
     	    WriteMethod **write_method)
 {
     /* variables we may use later */
+	int		i, table_size = 0;
+	unsigned long	type, id;
     static long long_ret;
     static u_long ulong_ret;
     static unsigned char string[SPRINT_MAX_LEN];
     static oid objid[MAX_OID_LEN];
     static struct counter64 c64;
+	
+	if (index < 12)
+	{
+		return	NULL;	
+	}
 
+	type = (unsigned long)name[9] << 16;
+	table_size = ft_som_obj_count(type);
     /* 
-   * This assumes that the table is a 'simple' table.
-   *	See the implementation documentation for the meaning of this.
-   *	You will need to provide the correct value for the TABLE_SIZE parameter
-   *
-   * If this table does not meet the requirements for a simple table,
-   *	you will need to provide the replacement code yourself.
-   *	Mib2c is not smart enough to write this for you.
-   *    Again, see the implementation documentation for what is required.
-   */
-    if (header_simple_table(vp,name,length,exact,var_len,write_method, TABLE_SIZE)
-                                                == MATCH_FAILED )
-    return NULL;
+   	* This assumes that the table is a 'simple' table.
+   	*	See the implementation documentation for the meaning of this.
+   	*	You will need to provide the correct value for the TABLE_SIZE parameter
+   	*
+   	* If this table does not meet the requirements for a simple table,
+   	*	you will need to provide the replacement code yourself.
+   	*	Mib2c is not smart enough to write this for you.
+   	*    Again, see the implementation documentation for what is required.
+   	*/
+   	if (header_simple_table(vp,name,length,exact,var_len,write_method, table_size) == MATCH_FAILED )
+   	{
+		printf("match_failed[table_size = %d]\n", __func__, table_size);
+		return NULL;
+	}
 
-    /* 
-   * this is where we do the value assignments for the mib results.
-   */
+	id = ((unsigned long)name[9] << 16) | name[13];
+	if (ft_som_obj_is_exist(id) == 0)
+	{
+		printf("obj(%08x) not found\n", __func__, id);
+		return	NULL;	
+	}
+
+	printf("vp->magic %08x\n",vp->magic);
     switch(vp->magic) {
     case TEMPID:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
+		vp->type = ASN_OCTET_STR;
+		sprintf(string, "%08x", id);
+    	*var_len = strlen(string);
+        return string;
+
     case TEMPTYPE:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
+		vp->type = ASN_OCTET_STR;
+		if (ft_som_obj_type_get(id, string, sizeof(string)) < 0)
+		{
+			return	NULL;	
+		}
+    	*var_len = strlen(string);
+        return string;
+
     case TEMPNAME:
         *write_method = write_tempName;
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
+		if (ft_som_obj_name_get(id, string, sizeof(string)) < 0)
+		{
+			return	NULL;	
+		}
+    	*var_len = strlen(string);
+        return string;
+
     case TEMPSN:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
+		if (ft_som_obj_sn_get(id, string, sizeof(string)) < 0)
+		{
+			return	NULL;	
+		}
+    	*var_len = strlen(string);
+        return string;
+
     case TEMPSTATE:
-        *write_method = write_tempState;
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
+		sprintf(string, "Enable");
+    	*var_len = strlen(string);
+        return string;
+
     case TEMPVALUE:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
+		if (ft_som_obj_value_get(id, string, sizeof(string)) != 0)
+		{
+			return	NULL;	
+		}
+    	*var_len = strlen(string);
+        return string;
+
     case TEMPLASTVALUE:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
+		if (ft_som_obj_last_value_get(id, string, sizeof(string)) != 0)
+		{
+			return	NULL;	
+		}
+    	*var_len = strlen(string);
+        return string;
+
     case TEMPLASTTIME:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
+		if (ft_som_obj_last_time_get(id, string, sizeof(string)) != 0)
+		{
+			return	NULL;	
+		}
+    	*var_len = strlen(string);
+        return string;
+
+
     case TEMPUPDATEINTERVAL:
         *write_method = write_tempUpdateInterval;
         VAR = VALUE;	/* XXX */
         return (u_char*) &VAR;
+
     default:
       ERROR_MSG("");
     }
     return NULL;
 }
-/*
- * var_humiTable():
- *   Handle this table separately from the scalar value case.
- *   The workings of this are basically the same as for var_ftm50s above.
- */
-unsigned char *
-var_humiTable(struct variable *vp,
-    	    oid     *name,
-    	    size_t  *length,
-    	    int     exact,
-    	    size_t  *var_len,
-    	    WriteMethod **write_method)
-{
-    /* variables we may use later */
-    static long long_ret;
-    static u_long ulong_ret;
-    static unsigned char string[SPRINT_MAX_LEN];
-    static oid objid[MAX_OID_LEN];
-    static struct counter64 c64;
-
-    /* 
-   * This assumes that the table is a 'simple' table.
-   *	See the implementation documentation for the meaning of this.
-   *	You will need to provide the correct value for the TABLE_SIZE parameter
-   *
-   * If this table does not meet the requirements for a simple table,
-   *	you will need to provide the replacement code yourself.
-   *	Mib2c is not smart enough to write this for you.
-   *    Again, see the implementation documentation for what is required.
-   */
-    if (header_simple_table(vp,name,length,exact,var_len,write_method, TABLE_SIZE)
-                                                == MATCH_FAILED )
-    return NULL;
-
-    /* 
-   * this is where we do the value assignments for the mib results.
-   */
-    switch(vp->magic) {
-    case HUMIID:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    case HUMITYPE:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    case HUMINAME:
-        *write_method = write_humiName;
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    case HUMISN:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    case HUMISTATE:
-        *write_method = write_humiState;
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    case HUMIVALUE:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    case HUMILASTVALUE:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    case HUMILASTTIME:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    case HUMIUPDATEINTERVAL:
-        *write_method = write_humiUpdateInterval;
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    default:
-      ERROR_MSG("");
-    }
-    return NULL;
-}
-/*
- * var_diTable():
- *   Handle this table separately from the scalar value case.
- *   The workings of this are basically the same as for var_ftm50s above.
- */
-unsigned char *
-var_diTable(struct variable *vp,
-    	    oid     *name,
-    	    size_t  *length,
-    	    int     exact,
-    	    size_t  *var_len,
-    	    WriteMethod **write_method)
-{
-    /* variables we may use later */
-    static long long_ret;
-    static u_long ulong_ret;
-    static unsigned char string[SPRINT_MAX_LEN];
-    static oid objid[MAX_OID_LEN];
-    static struct counter64 c64;
-
-    /* 
-   * This assumes that the table is a 'simple' table.
-   *	See the implementation documentation for the meaning of this.
-   *	You will need to provide the correct value for the TABLE_SIZE parameter
-   *
-   * If this table does not meet the requirements for a simple table,
-   *	you will need to provide the replacement code yourself.
-   *	Mib2c is not smart enough to write this for you.
-   *    Again, see the implementation documentation for what is required.
-   */
-    if (header_simple_table(vp,name,length,exact,var_len,write_method, TABLE_SIZE)
-                                                == MATCH_FAILED )
-    return NULL;
-
-    /* 
-   * this is where we do the value assignments for the mib results.
-   */
-    switch(vp->magic) {
-    case DIID:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    case DITYPE:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    case DINAME:
-        *write_method = write_diName;
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    case DISN:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    case DISTATE:
-        *write_method = write_diState;
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    case DIVALUE:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    case DILASTVALUE:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    case DILASTTIME:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    case DIUPDATEINTERVAL:
-        *write_method = write_diUpdateInterval;
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    default:
-      ERROR_MSG("");
-    }
-    return NULL;
-}
-/*
- * var_doTable():
- *   Handle this table separately from the scalar value case.
- *   The workings of this are basically the same as for var_ftm50s above.
- */
-unsigned char *
-var_doTable(struct variable *vp,
-    	    oid     *name,
-    	    size_t  *length,
-    	    int     exact,
-    	    size_t  *var_len,
-    	    WriteMethod **write_method)
-{
-    /* variables we may use later */
-    static long long_ret;
-    static u_long ulong_ret;
-    static unsigned char string[SPRINT_MAX_LEN];
-    static oid objid[MAX_OID_LEN];
-    static struct counter64 c64;
-
-    /* 
-   * This assumes that the table is a 'simple' table.
-   *	See the implementation documentation for the meaning of this.
-   *	You will need to provide the correct value for the TABLE_SIZE parameter
-   *
-   * If this table does not meet the requirements for a simple table,
-   *	you will need to provide the replacement code yourself.
-   *	Mib2c is not smart enough to write this for you.
-   *    Again, see the implementation documentation for what is required.
-   */
-    if (header_simple_table(vp,name,length,exact,var_len,write_method, TABLE_SIZE)
-                                                == MATCH_FAILED )
-    return NULL;
-
-    /* 
-   * this is where we do the value assignments for the mib results.
-   */
-    switch(vp->magic) {
-    case DOID:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    case DOTYPE:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    case DONAME:
-        *write_method = write_doName;
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    case DOSN:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    case DOSTATE:
-        *write_method = write_doState;
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    case DOVALUE:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    case DOLASTVALUE:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    case DOLASTTIME:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    case DOUPDATEINTERVAL:
-        *write_method = write_doUpdateInterval;
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    default:
-      ERROR_MSG("");
-    }
-    return NULL;
-}
-/*
- * var_rlTable():
- *   Handle this table separately from the scalar value case.
- *   The workings of this are basically the same as for var_ftm50s above.
- */
-unsigned char *
-var_rlTable(struct variable *vp,
-    	    oid     *name,
-    	    size_t  *length,
-    	    int     exact,
-    	    size_t  *var_len,
-    	    WriteMethod **write_method)
-{
-    /* variables we may use later */
-    static long long_ret;
-    static u_long ulong_ret;
-    static unsigned char string[SPRINT_MAX_LEN];
-    static oid objid[MAX_OID_LEN];
-    static struct counter64 c64;
-
-    /* 
-   * This assumes that the table is a 'simple' table.
-   *	See the implementation documentation for the meaning of this.
-   *	You will need to provide the correct value for the TABLE_SIZE parameter
-   *
-   * If this table does not meet the requirements for a simple table,
-   *	you will need to provide the replacement code yourself.
-   *	Mib2c is not smart enough to write this for you.
-   *    Again, see the implementation documentation for what is required.
-   */
-    if (header_simple_table(vp,name,length,exact,var_len,write_method, TABLE_SIZE)
-                                                == MATCH_FAILED )
-    return NULL;
-
-    /* 
-   * this is where we do the value assignments for the mib results.
-   */
-    switch(vp->magic) {
-    case RLID:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    case RLTYPE:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    case RLNAME:
-        *write_method = write_rlName;
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    case RLSN:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    case RLSTATE:
-        *write_method = write_rlState;
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    case RLVALUE:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    case RLLASTVALUE:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    case RLLASTTIME:
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    case RLUPDATEINTERVAL:
-        *write_method = write_rlUpdateInterval;
-        VAR = VALUE;	/* XXX */
-        return (u_char*) &VAR;
-    default:
-      ERROR_MSG("");
-    }
-    return NULL;
-}
-
-
 
 int
 write_prodDescription(int      action,
@@ -996,7 +758,63 @@ write_netIP(int      action,
     return SNMP_ERR_NOERROR;
 }
 int
-write_tempName(int      action,
+write_sensorName(int      action,
+            u_char   *var_val,
+            u_char   var_val_type,
+            size_t   var_val_len,
+            u_char   *statP,
+            oid      *name,
+            size_t   name_len)
+{
+    char value;
+    int size;
+
+    switch ( action ) {
+        case RESERVE1:
+          if (var_val_type != ASN_OCTET_STR) {
+              fprintf(stderr, "write to ftm50s not ASN_OCTET_STR\n");
+              return SNMP_ERR_WRONGTYPE;
+          }
+          if (var_val_len > sizeof(char)) {
+              fprintf(stderr,"write to ftm50s: bad length\n");
+              return SNMP_ERR_WRONGLENGTH;
+          }
+          break;
+
+        case RESERVE2:
+          size  = var_val_len;
+          value = * (char *) var_val;
+
+          break;
+
+        case FREE:
+             /* Release any resources that have been allocated */
+          break;
+
+        case ACTION:
+             /*
+              * The variable has been stored in 'value' for you to use,
+              * and you have just been asked to do something with it.
+              * Note that anything done here must be reversable in the UNDO case
+              */
+          break;
+
+        case UNDO:
+             /* Back out any changes made in the ACTION case */
+          break;
+
+        case COMMIT:
+             /*
+              * Things are working well, so it's now safe to make the change
+              * permanently.  Make sure that anything done here can't fail!
+              */
+          break;
+    }
+    return SNMP_ERR_NOERROR;
+}
+
+int
+write_sensorState(int      action,
             u_char   *var_val,
             u_char   var_val_type,
             size_t   var_val_len,
@@ -1051,62 +869,7 @@ write_tempName(int      action,
     return SNMP_ERR_NOERROR;
 }
 int
-write_tempState(int      action,
-            u_char   *var_val,
-            u_char   var_val_type,
-            size_t   var_val_len,
-            u_char   *statP,
-            oid      *name,
-            size_t   name_len)
-{
-    char value;
-    int size;
-
-    switch ( action ) {
-        case RESERVE1:
-          if (var_val_type != ASN_OCTET_STR) {
-              fprintf(stderr, "write to ftm50s not ASN_OCTET_STR\n");
-              return SNMP_ERR_WRONGTYPE;
-          }
-          if (var_val_len > sizeof(char)) {
-              fprintf(stderr,"write to ftm50s: bad length\n");
-              return SNMP_ERR_WRONGLENGTH;
-          }
-          break;
-
-        case RESERVE2:
-          size  = var_val_len;
-          value = * (char *) var_val;
-
-          break;
-
-        case FREE:
-             /* Release any resources that have been allocated */
-          break;
-
-        case ACTION:
-             /*
-              * The variable has been stored in 'value' for you to use,
-              * and you have just been asked to do something with it.
-              * Note that anything done here must be reversable in the UNDO case
-              */
-          break;
-
-        case UNDO:
-             /* Back out any changes made in the ACTION case */
-          break;
-
-        case COMMIT:
-             /*
-              * Things are working well, so it's now safe to make the change
-              * permanently.  Make sure that anything done here can't fail!
-              */
-          break;
-    }
-    return SNMP_ERR_NOERROR;
-}
-int
-write_tempUpdateInterval(int      action,
+write_sensorUpdateInterval(int      action,
             u_char   *var_val,
             u_char   var_val_type,
             size_t   var_val_len,
@@ -1160,663 +923,4 @@ write_tempUpdateInterval(int      action,
     }
     return SNMP_ERR_NOERROR;
 }
-int
-write_humiName(int      action,
-            u_char   *var_val,
-            u_char   var_val_type,
-            size_t   var_val_len,
-            u_char   *statP,
-            oid      *name,
-            size_t   name_len)
-{
-    char value;
-    int size;
 
-    switch ( action ) {
-        case RESERVE1:
-          if (var_val_type != ASN_OCTET_STR) {
-              fprintf(stderr, "write to ftm50s not ASN_OCTET_STR\n");
-              return SNMP_ERR_WRONGTYPE;
-          }
-          if (var_val_len > sizeof(char)) {
-              fprintf(stderr,"write to ftm50s: bad length\n");
-              return SNMP_ERR_WRONGLENGTH;
-          }
-          break;
-
-        case RESERVE2:
-          size  = var_val_len;
-          value = * (char *) var_val;
-
-          break;
-
-        case FREE:
-             /* Release any resources that have been allocated */
-          break;
-
-        case ACTION:
-             /*
-              * The variable has been stored in 'value' for you to use,
-              * and you have just been asked to do something with it.
-              * Note that anything done here must be reversable in the UNDO case
-              */
-          break;
-
-        case UNDO:
-             /* Back out any changes made in the ACTION case */
-          break;
-
-        case COMMIT:
-             /*
-              * Things are working well, so it's now safe to make the change
-              * permanently.  Make sure that anything done here can't fail!
-              */
-          break;
-    }
-    return SNMP_ERR_NOERROR;
-}
-int
-write_humiState(int      action,
-            u_char   *var_val,
-            u_char   var_val_type,
-            size_t   var_val_len,
-            u_char   *statP,
-            oid      *name,
-            size_t   name_len)
-{
-    char value;
-    int size;
-
-    switch ( action ) {
-        case RESERVE1:
-          if (var_val_type != ASN_OCTET_STR) {
-              fprintf(stderr, "write to ftm50s not ASN_OCTET_STR\n");
-              return SNMP_ERR_WRONGTYPE;
-          }
-          if (var_val_len > sizeof(char)) {
-              fprintf(stderr,"write to ftm50s: bad length\n");
-              return SNMP_ERR_WRONGLENGTH;
-          }
-          break;
-
-        case RESERVE2:
-          size  = var_val_len;
-          value = * (char *) var_val;
-
-          break;
-
-        case FREE:
-             /* Release any resources that have been allocated */
-          break;
-
-        case ACTION:
-             /*
-              * The variable has been stored in 'value' for you to use,
-              * and you have just been asked to do something with it.
-              * Note that anything done here must be reversable in the UNDO case
-              */
-          break;
-
-        case UNDO:
-             /* Back out any changes made in the ACTION case */
-          break;
-
-        case COMMIT:
-             /*
-              * Things are working well, so it's now safe to make the change
-              * permanently.  Make sure that anything done here can't fail!
-              */
-          break;
-    }
-    return SNMP_ERR_NOERROR;
-}
-int
-write_humiUpdateInterval(int      action,
-            u_char   *var_val,
-            u_char   var_val_type,
-            size_t   var_val_len,
-            u_char   *statP,
-            oid      *name,
-            size_t   name_len)
-{
-    long value;
-    int size;
-
-    switch ( action ) {
-        case RESERVE1:
-          if (var_val_type != ASN_INTEGER) {
-              fprintf(stderr, "write to ftm50s not ASN_INTEGER\n");
-              return SNMP_ERR_WRONGTYPE;
-          }
-          if (var_val_len > sizeof(long)) {
-              fprintf(stderr,"write to ftm50s: bad length\n");
-              return SNMP_ERR_WRONGLENGTH;
-          }
-          break;
-
-        case RESERVE2:
-          size  = var_val_len;
-          value = * (long *) var_val;
-
-          break;
-
-        case FREE:
-             /* Release any resources that have been allocated */
-          break;
-
-        case ACTION:
-             /*
-              * The variable has been stored in 'value' for you to use,
-              * and you have just been asked to do something with it.
-              * Note that anything done here must be reversable in the UNDO case
-              */
-          break;
-
-        case UNDO:
-             /* Back out any changes made in the ACTION case */
-          break;
-
-        case COMMIT:
-             /*
-              * Things are working well, so it's now safe to make the change
-              * permanently.  Make sure that anything done here can't fail!
-              */
-          break;
-    }
-    return SNMP_ERR_NOERROR;
-}
-int
-write_diName(int      action,
-            u_char   *var_val,
-            u_char   var_val_type,
-            size_t   var_val_len,
-            u_char   *statP,
-            oid      *name,
-            size_t   name_len)
-{
-    char value;
-    int size;
-
-    switch ( action ) {
-        case RESERVE1:
-          if (var_val_type != ASN_OCTET_STR) {
-              fprintf(stderr, "write to ftm50s not ASN_OCTET_STR\n");
-              return SNMP_ERR_WRONGTYPE;
-          }
-          if (var_val_len > sizeof(char)) {
-              fprintf(stderr,"write to ftm50s: bad length\n");
-              return SNMP_ERR_WRONGLENGTH;
-          }
-          break;
-
-        case RESERVE2:
-          size  = var_val_len;
-          value = * (char *) var_val;
-
-          break;
-
-        case FREE:
-             /* Release any resources that have been allocated */
-          break;
-
-        case ACTION:
-             /*
-              * The variable has been stored in 'value' for you to use,
-              * and you have just been asked to do something with it.
-              * Note that anything done here must be reversable in the UNDO case
-              */
-          break;
-
-        case UNDO:
-             /* Back out any changes made in the ACTION case */
-          break;
-
-        case COMMIT:
-             /*
-              * Things are working well, so it's now safe to make the change
-              * permanently.  Make sure that anything done here can't fail!
-              */
-          break;
-    }
-    return SNMP_ERR_NOERROR;
-}
-int
-write_diState(int      action,
-            u_char   *var_val,
-            u_char   var_val_type,
-            size_t   var_val_len,
-            u_char   *statP,
-            oid      *name,
-            size_t   name_len)
-{
-    char value;
-    int size;
-
-    switch ( action ) {
-        case RESERVE1:
-          if (var_val_type != ASN_OCTET_STR) {
-              fprintf(stderr, "write to ftm50s not ASN_OCTET_STR\n");
-              return SNMP_ERR_WRONGTYPE;
-          }
-          if (var_val_len > sizeof(char)) {
-              fprintf(stderr,"write to ftm50s: bad length\n");
-              return SNMP_ERR_WRONGLENGTH;
-          }
-          break;
-
-        case RESERVE2:
-          size  = var_val_len;
-          value = * (char *) var_val;
-
-          break;
-
-        case FREE:
-             /* Release any resources that have been allocated */
-          break;
-
-        case ACTION:
-             /*
-              * The variable has been stored in 'value' for you to use,
-              * and you have just been asked to do something with it.
-              * Note that anything done here must be reversable in the UNDO case
-              */
-          break;
-
-        case UNDO:
-             /* Back out any changes made in the ACTION case */
-          break;
-
-        case COMMIT:
-             /*
-              * Things are working well, so it's now safe to make the change
-              * permanently.  Make sure that anything done here can't fail!
-              */
-          break;
-    }
-    return SNMP_ERR_NOERROR;
-}
-int
-write_diUpdateInterval(int      action,
-            u_char   *var_val,
-            u_char   var_val_type,
-            size_t   var_val_len,
-            u_char   *statP,
-            oid      *name,
-            size_t   name_len)
-{
-    long value;
-    int size;
-
-    switch ( action ) {
-        case RESERVE1:
-          if (var_val_type != ASN_INTEGER) {
-              fprintf(stderr, "write to ftm50s not ASN_INTEGER\n");
-              return SNMP_ERR_WRONGTYPE;
-          }
-          if (var_val_len > sizeof(long)) {
-              fprintf(stderr,"write to ftm50s: bad length\n");
-              return SNMP_ERR_WRONGLENGTH;
-          }
-          break;
-
-        case RESERVE2:
-          size  = var_val_len;
-          value = * (long *) var_val;
-
-          break;
-
-        case FREE:
-             /* Release any resources that have been allocated */
-          break;
-
-        case ACTION:
-             /*
-              * The variable has been stored in 'value' for you to use,
-              * and you have just been asked to do something with it.
-              * Note that anything done here must be reversable in the UNDO case
-              */
-          break;
-
-        case UNDO:
-             /* Back out any changes made in the ACTION case */
-          break;
-
-        case COMMIT:
-             /*
-              * Things are working well, so it's now safe to make the change
-              * permanently.  Make sure that anything done here can't fail!
-              */
-          break;
-    }
-    return SNMP_ERR_NOERROR;
-}
-int
-write_doName(int      action,
-            u_char   *var_val,
-            u_char   var_val_type,
-            size_t   var_val_len,
-            u_char   *statP,
-            oid      *name,
-            size_t   name_len)
-{
-    char value;
-    int size;
-
-    switch ( action ) {
-        case RESERVE1:
-          if (var_val_type != ASN_OCTET_STR) {
-              fprintf(stderr, "write to ftm50s not ASN_OCTET_STR\n");
-              return SNMP_ERR_WRONGTYPE;
-          }
-          if (var_val_len > sizeof(char)) {
-              fprintf(stderr,"write to ftm50s: bad length\n");
-              return SNMP_ERR_WRONGLENGTH;
-          }
-          break;
-
-        case RESERVE2:
-          size  = var_val_len;
-          value = * (char *) var_val;
-
-          break;
-
-        case FREE:
-             /* Release any resources that have been allocated */
-          break;
-
-        case ACTION:
-             /*
-              * The variable has been stored in 'value' for you to use,
-              * and you have just been asked to do something with it.
-              * Note that anything done here must be reversable in the UNDO case
-              */
-          break;
-
-        case UNDO:
-             /* Back out any changes made in the ACTION case */
-          break;
-
-        case COMMIT:
-             /*
-              * Things are working well, so it's now safe to make the change
-              * permanently.  Make sure that anything done here can't fail!
-              */
-          break;
-    }
-    return SNMP_ERR_NOERROR;
-}
-int
-write_doState(int      action,
-            u_char   *var_val,
-            u_char   var_val_type,
-            size_t   var_val_len,
-            u_char   *statP,
-            oid      *name,
-            size_t   name_len)
-{
-    char value;
-    int size;
-
-    switch ( action ) {
-        case RESERVE1:
-          if (var_val_type != ASN_OCTET_STR) {
-              fprintf(stderr, "write to ftm50s not ASN_OCTET_STR\n");
-              return SNMP_ERR_WRONGTYPE;
-          }
-          if (var_val_len > sizeof(char)) {
-              fprintf(stderr,"write to ftm50s: bad length\n");
-              return SNMP_ERR_WRONGLENGTH;
-          }
-          break;
-
-        case RESERVE2:
-          size  = var_val_len;
-          value = * (char *) var_val;
-
-          break;
-
-        case FREE:
-             /* Release any resources that have been allocated */
-          break;
-
-        case ACTION:
-             /*
-              * The variable has been stored in 'value' for you to use,
-              * and you have just been asked to do something with it.
-              * Note that anything done here must be reversable in the UNDO case
-              */
-          break;
-
-        case UNDO:
-             /* Back out any changes made in the ACTION case */
-          break;
-
-        case COMMIT:
-             /*
-              * Things are working well, so it's now safe to make the change
-              * permanently.  Make sure that anything done here can't fail!
-              */
-          break;
-    }
-    return SNMP_ERR_NOERROR;
-}
-int
-write_doUpdateInterval(int      action,
-            u_char   *var_val,
-            u_char   var_val_type,
-            size_t   var_val_len,
-            u_char   *statP,
-            oid      *name,
-            size_t   name_len)
-{
-    long value;
-    int size;
-
-    switch ( action ) {
-        case RESERVE1:
-          if (var_val_type != ASN_INTEGER) {
-              fprintf(stderr, "write to ftm50s not ASN_INTEGER\n");
-              return SNMP_ERR_WRONGTYPE;
-          }
-          if (var_val_len > sizeof(long)) {
-              fprintf(stderr,"write to ftm50s: bad length\n");
-              return SNMP_ERR_WRONGLENGTH;
-          }
-          break;
-
-        case RESERVE2:
-          size  = var_val_len;
-          value = * (long *) var_val;
-
-          break;
-
-        case FREE:
-             /* Release any resources that have been allocated */
-          break;
-
-        case ACTION:
-             /*
-              * The variable has been stored in 'value' for you to use,
-              * and you have just been asked to do something with it.
-              * Note that anything done here must be reversable in the UNDO case
-              */
-          break;
-
-        case UNDO:
-             /* Back out any changes made in the ACTION case */
-          break;
-
-        case COMMIT:
-             /*
-              * Things are working well, so it's now safe to make the change
-              * permanently.  Make sure that anything done here can't fail!
-              */
-          break;
-    }
-    return SNMP_ERR_NOERROR;
-}
-int
-write_rlName(int      action,
-            u_char   *var_val,
-            u_char   var_val_type,
-            size_t   var_val_len,
-            u_char   *statP,
-            oid      *name,
-            size_t   name_len)
-{
-    char value;
-    int size;
-
-    switch ( action ) {
-        case RESERVE1:
-          if (var_val_type != ASN_OCTET_STR) {
-              fprintf(stderr, "write to ftm50s not ASN_OCTET_STR\n");
-              return SNMP_ERR_WRONGTYPE;
-          }
-          if (var_val_len > sizeof(char)) {
-              fprintf(stderr,"write to ftm50s: bad length\n");
-              return SNMP_ERR_WRONGLENGTH;
-          }
-          break;
-
-        case RESERVE2:
-          size  = var_val_len;
-          value = * (char *) var_val;
-
-          break;
-
-        case FREE:
-             /* Release any resources that have been allocated */
-          break;
-
-        case ACTION:
-             /*
-              * The variable has been stored in 'value' for you to use,
-              * and you have just been asked to do something with it.
-              * Note that anything done here must be reversable in the UNDO case
-              */
-          break;
-
-        case UNDO:
-             /* Back out any changes made in the ACTION case */
-          break;
-
-        case COMMIT:
-             /*
-              * Things are working well, so it's now safe to make the change
-              * permanently.  Make sure that anything done here can't fail!
-              */
-          break;
-    }
-    return SNMP_ERR_NOERROR;
-}
-int
-write_rlState(int      action,
-            u_char   *var_val,
-            u_char   var_val_type,
-            size_t   var_val_len,
-            u_char   *statP,
-            oid      *name,
-            size_t   name_len)
-{
-    char value;
-    int size;
-
-    switch ( action ) {
-        case RESERVE1:
-          if (var_val_type != ASN_OCTET_STR) {
-              fprintf(stderr, "write to ftm50s not ASN_OCTET_STR\n");
-              return SNMP_ERR_WRONGTYPE;
-          }
-          if (var_val_len > sizeof(char)) {
-              fprintf(stderr,"write to ftm50s: bad length\n");
-              return SNMP_ERR_WRONGLENGTH;
-          }
-          break;
-
-        case RESERVE2:
-          size  = var_val_len;
-          value = * (char *) var_val;
-
-          break;
-
-        case FREE:
-             /* Release any resources that have been allocated */
-          break;
-
-        case ACTION:
-             /*
-              * The variable has been stored in 'value' for you to use,
-              * and you have just been asked to do something with it.
-              * Note that anything done here must be reversable in the UNDO case
-              */
-          break;
-
-        case UNDO:
-             /* Back out any changes made in the ACTION case */
-          break;
-
-        case COMMIT:
-             /*
-              * Things are working well, so it's now safe to make the change
-              * permanently.  Make sure that anything done here can't fail!
-              */
-          break;
-    }
-    return SNMP_ERR_NOERROR;
-}
-int
-write_rlUpdateInterval(int      action,
-            u_char   *var_val,
-            u_char   var_val_type,
-            size_t   var_val_len,
-            u_char   *statP,
-            oid      *name,
-            size_t   name_len)
-{
-    long value;
-    int size;
-
-    switch ( action ) {
-        case RESERVE1:
-          if (var_val_type != ASN_INTEGER) {
-              fprintf(stderr, "write to ftm50s not ASN_INTEGER\n");
-              return SNMP_ERR_WRONGTYPE;
-          }
-          if (var_val_len > sizeof(long)) {
-              fprintf(stderr,"write to ftm50s: bad length\n");
-              return SNMP_ERR_WRONGLENGTH;
-          }
-          break;
-
-        case RESERVE2:
-          size  = var_val_len;
-          value = * (long *) var_val;
-
-          break;
-
-        case FREE:
-             /* Release any resources that have been allocated */
-          break;
-
-        case ACTION:
-             /*
-              * The variable has been stored in 'value' for you to use,
-              * and you have just been asked to do something with it.
-              * Note that anything done here must be reversable in the UNDO case
-              */
-          break;
-
-        case UNDO:
-             /* Back out any changes made in the ACTION case */
-          break;
-
-        case COMMIT:
-             /*
-              * Things are working well, so it's now safe to make the change
-              * permanently.  Make sure that anything done here can't fail!
-              */
-          break;
-    }
-    return SNMP_ERR_NOERROR;
-}

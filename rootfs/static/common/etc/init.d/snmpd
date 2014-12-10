@@ -1,0 +1,52 @@
+#!/bin/sh
+
+export MIBS='all'
+
+snmpd_start()
+{
+	if pidof snmpd | sed "s/$$\$//" | grep -q [0-9]
+	then
+		echo 'snmpd is already running'
+	else
+		snmpd -c /etc/snmp/snmpd.conf -p /var/run/snmpd.pid &
+	fi	
+}
+
+snmpd_stop()
+{
+	if pidof snmpd | sed "s/$$\$//" | grep -q [0-9]
+	then
+		PID=`cat /var/run/snmpd.pid`
+		kill -9 $PID
+	else
+		killall snmpd 
+	fi
+}
+
+case "$1" in
+	"start") 
+		snmpd_start
+		;;
+
+	"stop") 
+		snmpd_stop
+		;;
+
+	"restart")
+		snmpd_stop
+		snmpd_start
+		;;
+
+	"status")
+		if pidof snmpd | sed "s/$$\$//" | grep -q [0-9]
+		then
+			echo "running"
+		else
+			echo "stopped"
+		fi
+		;;
+
+	*)
+		echo $"Usage: $0 {start|stop|restart|reload}"
+		;;
+esac

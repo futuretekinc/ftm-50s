@@ -5,6 +5,7 @@
 
 #define	FT_SOM_TYPE_LEN		32
 #define	FT_SOM_NAME_LEN		32	
+#define	FT_SOM_SN_LEN		32	
 #define	FT_SOM_VALUE_LEN	32
 #define	FT_SOM_TIME_LEN		32
 
@@ -22,9 +23,12 @@ typedef	struct _ft_som_obj
 	FT_OBJECT_ID	id;
 	char			type[FT_SOM_TYPE_LEN + 1];
 	char			name[FT_SOM_NAME_LEN + 1];
+	char			sn[FT_SOM_SN_LEN + 1];
 	char			value[FT_SOM_VALUE_LEN + 1];
+	char			time[FT_SOM_TIME_LEN + 1];
 	char			last_value[FT_SOM_VALUE_LEN + 1];
 	char			last_time[FT_SOM_TIME_LEN + 1];
+	unsigned long	interval;
 }	FT_SOM_OBJ;
 
 typedef	struct _ft_som_data
@@ -36,17 +40,27 @@ typedef	struct _ft_som_data
 
 int		ft_som_create(void);
 key_t 	ft_som_init(char *key_file);
+int		ft_som_reset(void);
 int		ft_som_get_devid(char *buff, int len);
 int		ft_som_set_devid(char *devid);
 int		ft_som_get_model(char *buff, int len);
 int		ft_som_set_model(char *model);
 int		ft_som_obj_is_exist(FT_OBJECT_ID id);
-int		ft_som_obj_add(FT_OBJECT_ID id);
+int		ft_som_obj_add(FT_OBJECT_ID id, char *type, char *name, char *sn);
 int		ft_som_obj_count(unsigned long type);
 int		ft_som_obj_type_set(FT_OBJECT_ID id, char *type);
 int		ft_som_obj_type_get(FT_OBJECT_ID id, char *type, int type_len);
 int		ft_som_obj_name_set(FT_OBJECT_ID id, char *name);
 int		ft_som_obj_name_get(FT_OBJECT_ID id, char *name, int name_len);
+int		ft_som_obj_sn_set(FT_OBJECT_ID id, char *sn);
+int		ft_som_obj_sn_get(FT_OBJECT_ID id, char *sn, int sn_len);
+int		ft_som_obj_value_set(FT_OBJECT_ID id, char *buff);
+int		ft_som_obj_time_set(FT_OBJECT_ID id, char *buff);
+int		ft_som_obj_last_value_get(FT_OBJECT_ID id, char *buff, int buff_len);
+int		ft_som_obj_last_time_get(FT_OBJECT_ID id, char *buff, int buff_len);
+int		ft_som_obj_interval_set(FT_OBJECT_ID id, unsigned long interval);
+int		ft_som_obj_interval_get(FT_OBJECT_ID id, unsigned long *interval);
+
 int		ft_som_value_get(FT_OBJECT_ID id, char *buff, int buff_len, char *time, int time_len);
 int		ft_som_value_set(FT_OBJECT_ID id, char *value, char *time);
 int		ft_som_print(void);

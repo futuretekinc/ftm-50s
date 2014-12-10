@@ -16,7 +16,7 @@ LIB_SRCS= xshared.c debug.c ftsom.c
 LIB_OBJS=$(LIB_SRCS:.c=.o)
 
 
-all: $(TARGET) $(LIB_TARGET)
+all: $(LIB_TARGET) $(TARGET)
 
 install: $(TARGET)
 	cp $(TARGET) ../target/bin

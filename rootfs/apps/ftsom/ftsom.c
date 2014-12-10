@@ -66,6 +66,18 @@ int ft_som_destroy(key_t key)
 	return	0;
 }
 
+int	ft_som_reset(void)
+{
+	if (pdata != 0)
+	{
+		memset(pdata->objs, 0, sizeof(pdata->objs));
+		pdata->obj_count = 0;
+		return	0;
+	}
+
+	return	-1;
+}
+
 int	ft_som_get_devid(char* buff, int len)
 {
 	if (pdata != 0)
@@ -148,23 +160,42 @@ FT_SOM_OBJ* ft_som_obj_get(FT_OBJECT_ID id)
 	return	NULL;	
 }
 
-int		ft_som_obj_add(FT_OBJECT_ID id)
+int		ft_som_obj_add(FT_OBJECT_ID id, char *type, char *name, char *sn)
 {
-	if (0 != pdata)
+	int	i;
+
+	FT_SOM_OBJ *obj = ft_som_obj_get(id);
+	if ((NULL != obj) || (0 == pdata))
 	{
-		int	i;
+		return	-1;
+	}
 
-		for(i = 0 ; i < FT_SOM_OBJ_MAX; i++)
+
+	for(i = 0 ; i < FT_SOM_OBJ_MAX; i++)
+	{
+		if (0 == pdata->objs[i].id)
 		{
-			if (0 == pdata->objs[i].id)
-			{
-				pdata->objs[i].id = id;
-				printf("%08x, %08x\n", id, pdata->objs[i].id);
-				strcpy(pdata->objs[i].name, "NONAME");
-				pdata->obj_count++;
+			memset(&pdata->objs[i], 0, sizeof(pdata->objs[i]));
 
-				return	0;
+			pdata->objs[i].id = id;
+			if (type != NULL)
+			{
+				strncpy(pdata->objs[i].type, type, sizeof(pdata->objs[i].type) - 1);
 			}
+
+			if (name != NULL)
+			{
+				strncpy(pdata->objs[i].name, name, sizeof(pdata->objs[i].name) - 1);
+			}
+
+			if (sn != NULL)
+			{
+				strncpy(pdata->objs[i].sn, 	 sn, sizeof(pdata->objs[i].sn) - 1);
+			}
+
+			pdata->obj_count++;
+
+			return	0;
 		}
 	}
 
@@ -173,9 +204,11 @@ int		ft_som_obj_add(FT_OBJECT_ID id)
 
 int		ft_som_obj_count(unsigned long type)
 {
+	int	count = 0;
+
 	if (0 != pdata)
 	{
-		int	i, count = 0;
+		int	i;
 
 		for(i = 0 ; i < FT_SOM_OBJ_MAX; i++)
 		{
@@ -185,10 +218,9 @@ int		ft_som_obj_count(unsigned long type)
 			}
 		}
 
-		return	count;
 	}
 
-	return	-1;
+	return	count;
 }
 
 int		ft_som_obj_type_set(FT_OBJECT_ID id, char *type)
@@ -242,28 +274,120 @@ int		ft_som_obj_name_get(FT_OBJECT_ID id, char *name, int name_len)
 	return	0;
 }
 
-int		ft_som_value_get(FT_OBJECT_ID id, char *value, int value_len, char *time, int time_len)
+int		ft_som_obj_sn_set(FT_OBJECT_ID id, char *sn)
 {
-	if (0 != pdata)
+	FT_SOM_OBJ *obj = ft_som_obj_get(id);
+	if (NULL == obj)
 	{
-		int	i;
-
-		for(i = 0 ; i < pdata->obj_count; i++)
-		{
-			if (pdata->objs[i].id == id)
-			{
-				strncpy(value, pdata->objs[i].value, value_len -1);
-				if (NULL != time)
-				{
-					strncpy(time, pdata->objs[i].last_time, time_len);
-				}
-
-				return	0;
-			}
-		}
+		return	-1;
 	}
 
-	return	-1;	
+	strncpy(obj->sn, sn, sizeof(obj->sn));
+
+	return	0;
+}
+
+int		ft_som_obj_sn_get(FT_OBJECT_ID id, char *sn, int sn_len)
+{
+	FT_SOM_OBJ *obj = ft_som_obj_get(id);
+	if (NULL == obj)
+	{
+		return	-1;
+	}
+
+	strncpy(sn, obj->sn, sn_len);
+	return	0;
+}
+
+int		ft_som_obj_value_set(FT_OBJECT_ID id, char *value)
+{
+	FT_SOM_OBJ *obj = ft_som_obj_get(id);
+	if (NULL == obj)
+	{
+		return	-1;
+	}
+
+	strncpy(obj->value, value, sizeof(obj->value));
+
+	return	0;
+}
+
+int		ft_som_obj_value_get(FT_OBJECT_ID id, char *buff, int buff_len)
+{
+	FT_SOM_OBJ *obj = ft_som_obj_get(id);
+	if (NULL == obj)
+	{
+		return	-1;
+	}
+
+	strncpy(buff, obj->value, buff_len -1);
+
+	return	0;
+}
+
+int		ft_som_obj_time_get(FT_OBJECT_ID id, char *buff, int buff_len)
+{
+	FT_SOM_OBJ *obj = ft_som_obj_get(id);
+	if (NULL == obj)
+	{
+		return	-1;
+	}
+
+	strncpy(buff, obj->time, buff_len -1);
+
+	return	0;
+}
+
+int		ft_som_obj_last_value_get(FT_OBJECT_ID id, char *buff, int buff_len)
+{
+	FT_SOM_OBJ *obj = ft_som_obj_get(id);
+	if (NULL == obj)
+	{
+		return	-1;
+	}
+
+	strncpy(buff, obj->last_value, buff_len -1);
+
+	return	0;
+}
+
+int		ft_som_obj_last_time_get(FT_OBJECT_ID id, char *buff, int buff_len)
+{
+	FT_SOM_OBJ *obj = ft_som_obj_get(id);
+	if (NULL == obj)
+	{
+		return	-1;
+	}
+
+	strncpy(buff, obj->last_time, buff_len -1);
+
+	return	0;
+}
+
+int		ft_som_obj_interval_set(FT_OBJECT_ID id, unsigned long interval)
+{
+	FT_SOM_OBJ *obj = ft_som_obj_get(id);
+	if (NULL == obj)
+	{
+		return	-1;
+	}
+
+	obj->interval = interval;
+
+	return	0;
+
+}
+
+int		ft_som_obj_interval_get(FT_OBJECT_ID id, unsigned long *interval)
+{
+	FT_SOM_OBJ *obj = ft_som_obj_get(id);
+	if (NULL == obj)
+	{
+		return	-1;
+	}
+
+	*interval = obj->interval;
+	return	0;
 }
 
 int		ft_som_value_set(FT_OBJECT_ID id, char *value, char *time)
@@ -290,6 +414,30 @@ int		ft_som_value_set(FT_OBJECT_ID id, char *value, char *time)
 	return	-1;	
 }
 
+int		ft_som_value_get(FT_OBJECT_ID id, char *value, int value_len, char *time, int time_len)
+{
+	if (0 != pdata)
+	{
+		int	i;
+
+		for(i = 0 ; i < pdata->obj_count; i++)
+		{
+			if (pdata->objs[i].id == id)
+			{
+				strncpy(value, pdata->objs[i].value, value_len -1);
+				if (NULL != time)
+				{
+					strncpy(time, pdata->objs[i].last_time, time_len);
+				}
+
+				return	0;
+			}
+		}
+	}
+
+	return	-1;	
+}
+
 int	ft_som_print(void)
 {
 	if (NULL != pdata)
@@ -303,7 +451,7 @@ int	ft_som_print(void)
 		for(i = 0 ; i < pdata->obj_count ; i++)
 		{
 			printf("%08x %15s %16s %16s\n", 
-				pdata->objs[i].id, 
+				(unsigned int)pdata->objs[i].id, 
 				pdata->objs[i].type, 
 				pdata->objs[i].name, 
 				pdata->objs[i].value);

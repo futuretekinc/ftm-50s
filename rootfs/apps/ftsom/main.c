@@ -18,9 +18,11 @@
 typedef	enum _FT_SOM_CMD
 {
 	FT_SOM_CMD_UNKNOWN 	= 0,
+	FT_SOM_CMD_INIT,
 	FT_SOM_CMD_ADD,
 	FT_SOM_CMD_GET,
 	FT_SOM_CMD_SET,
+	FT_SOM_CMD_RESET,
 	FT_SOM_CMD_PRINT
 }	FT_SOM_CMD;
 
@@ -43,7 +45,7 @@ int main(int argc, char *argv[])
 	char	*time = 0;
 	key_t	key = 0x1233;
 
-	while((opt = getopt_long(argc, argv, "ac: gi: n: psT: t: v: V", long_options, &opt_idx)) != -1)
+	while((opt = getopt_long(argc, argv, "ac: gIi: n: pRsT: t: v: V", long_options, &opt_idx)) != -1)
 	{
 		switch(opt)
 		{
@@ -88,6 +90,14 @@ int main(int argc, char *argv[])
 			cmd = FT_SOM_CMD_SET;
 			break;
 
+		case	'I':
+			cmd = FT_SOM_CMD_INIT;
+			break;
+
+		case	'R':
+			cmd = FT_SOM_CMD_RESET;
+			break;
+
 		case	'T':
 			type = optarg;
 			break;
@@ -121,6 +131,13 @@ int main(int argc, char *argv[])
 
 	switch(cmd)
 	{
+	case	FT_SOM_CMD_INIT:
+		{
+			config_t	cfg;
+			cfg_load(&cfg, cfg_filename);
+		}
+		break;
+
 	case	FT_SOM_CMD_ADD:
 		{
 			if (!id)
@@ -131,18 +148,8 @@ int main(int argc, char *argv[])
 			{
 				if (!ft_som_obj_is_exist(id))
 				{
-					printf("add new object : %08x\n", id);
-					ft_som_obj_add(id);
-
-					if (0 != type)
-					{
-						ft_som_obj_type_set(id, type);
-					}
-
-					if (0 != name)
-					{
-						ft_som_obj_name_set(id, name);
-					}
+					printf("add new object : %08x\n", (unsigned long)id);
+					ft_som_obj_add(id, type, name, NULL);
 
 					printf("OK\n");
 				}
@@ -187,6 +194,13 @@ int main(int argc, char *argv[])
 			}
 		}
 		break;
+
+	case	FT_SOM_CMD_RESET:
+		{
+			ft_som_reset();
+		}	
+		break;
+
 	case	FT_SOM_CMD_PRINT:
 	default:
 		{
@@ -229,6 +243,7 @@ int		cfg_load(config_t *cfg, char *filename)
 		FT_OBJECT_ID		id;
 		const char*			type;
 		const char*		  	name;
+		const char*		  	sn;
 		
 		point = config_setting_get_elem(points, i);
 		if (NULL == point)
@@ -240,12 +255,10 @@ int		cfg_load(config_t *cfg, char *filename)
 		id = strtoul(value, NULL, 16);
 		type	= config_setting_get_string_elem(point, 1);
 		name 	= config_setting_get_string_elem(point, 2);
+		sn      = config_setting_get_string_elem(point, 3);
 
-		if( !ft_som_obj_add(id))
-		{
-			ft_som_obj_name_set(id, (char *)type);
-			ft_som_obj_name_set(id, (char *)name);
-		}
+		ft_som_obj_add(id, type, name, sn);
+		ft_som_value_set(id, value, "2014-12-10");
 	}
 
 	return	0;

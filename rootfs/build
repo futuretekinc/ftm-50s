@@ -1,6 +1,7 @@
 #!/bin/bash 
 
-TARGET='FTM-50S'
+#TARGET='FTM-50S'
+TARGET='FTM-50L'
 #TARGET='FTM-50S+FS'		#FTM-50S + Future Systems	
 #TARGET='FTM-50S+TP'	#FTM-50S + Daliworks ThingPlus
 
@@ -19,6 +20,7 @@ INCLUDE_VSFTPD=1
 INCLUDE_TELNETD=1
 INCLUDE_XINETD=1
 INCLUDE_SER2NET=1
+INCLUDE_SQLITE3=1
 
 ISC_DHCPD=1
 
@@ -719,6 +721,16 @@ fi
 	mkdir -p	rc.d
 )
 
+if [ $INCLUDE_SQLITE3 -eq 1 ]
+then
+(
+	copy usr/bin sqlite3
+	copy usr/lib libsqlite3.so.0.8.6 libsqlite3.so.0 libsqlite3.so
+
+)
+
+fi
+
 (
 	
 	$CP -rf static/common/* "$ROOT/"
@@ -782,6 +794,21 @@ fi
 			$CP -rf www/*.html 		"$ROOT/www/"
 
 			echo $BRIAGE > "$ROOT/etc/configs/bridge"	
+			;;
+
+		'FTM-50L')				
+			$CP -rf static/50L/* "$ROOT/"
+
+			mkdir -p www
+			$CP -rf www/cgi-bin/*  	"$ROOT/www/cgi-bin/."
+			$CP -rf www/contents/* 	"$ROOT/www/contents/."
+			$CP -rf www/images/*   	"$ROOT/www/images/."
+			$CP -rf www/scripts/*  	"$ROOT/www/scripts/."
+			$CP -rf www/styles/*   	"$ROOT/www/styles/."
+			$CP -rf www/*.html 		"$ROOT/www/"
+
+			echo 'eth0' > "$ROOT/etc/configs/wan"	
+			echo 0 > "$ROOT/etc/configs/bridge"	
 			;;
 
 		*)
