@@ -845,7 +845,7 @@ fi
 			mkimage -n 'RootFS-1.0.6.0-FTM-50S' -A arm -O linux -T Ramdisk -C gzip -d root.squashfs rootfs.img
 			rm tmpfile.0 tmpfile.1 tmpfile.2 
 
-			$CP -rf rootfs.img /tftpboot/ftm-50s-future/rootfs.img
+			$CP -rf rootfs.img /tftpboot/ftm-50s-new/rootfs.img
 			;;
 
 		'ext2')
@@ -855,7 +855,7 @@ fi
 
 			gzip -f9 rootfs.ext2
 			mkimage -n 'Ramdisk v1.0.6' -A arm -O linux -T ramdisk -C gzip -a 0x00a00000 -d rootfs.ext2.gz ramdisk.img
-			$CP -rf ramdisk.img /tftpboot/ftm-50s-future
+			$CP -rf ramdisk.img /tftpboot/ftm-50s-new
 			;;
 	esac
 
