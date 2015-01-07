@@ -1,9 +1,9 @@
 #!/bin/bash 
 
-#TARGET='FTM-50S'
-#TARGET='FTM-50L'
+#TARGET='FTM-50S' 		# 3g
+TARGET='FTM-50L'		# not 3g
 #TARGET='FTM-50S+FS'		#FTM-50S + Future Systems	
-TARGET='FTM-50S+TP'	#FTM-50S + Daliworks ThingPlus
+#TARGET='FTM-50S+TP'	#FTM-50S + Daliworks ThingPlus
 
 FSTYPE='squashfs'
 VERSION=`date`
@@ -107,6 +107,9 @@ fi
 	mkdir -p var # var/run var/lock var/log var/lib var/ftp var/empty
 	mkdir -p etc
 	mkdir -p rom
+	mkdir -p tmp
+	mkdir -p overlay
+	mkdir -p root
 
 	echo $VERSION > etc/version
 
