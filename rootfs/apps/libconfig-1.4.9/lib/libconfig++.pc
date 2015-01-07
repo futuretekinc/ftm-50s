@@ -1,4 +1,4 @@
-prefix=/usr/local
+prefix=/home/xtra/work/ftm-50s/rootfs
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include

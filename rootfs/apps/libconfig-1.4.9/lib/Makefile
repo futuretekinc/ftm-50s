@@ -35,13 +35,13 @@ NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = i686-pc-linux-gnu
-host_triplet = i686-pc-linux-gnu
-target_triplet = i686-pc-linux-gnu
-#am__append_1 = libconfig++.la
+host_triplet = arm-unknown-none
+target_triplet = arm-unknown-none
+am__append_1 = libconfig++.la
 #am__append_2 = -DLIBCONFIG_EXPORTS
 #am__append_3 = -DLIBCONFIGXX_EXPORTS -DLIBCONFIG_STATIC
-#am__append_4 = $(libinc_cpp)
-#am__append_5 = libconfig++.pc
+am__append_4 = $(libinc_cpp)
+am__append_5 = libconfig++.pc
 subdir = lib
 DIST_COMMON = $(am__include_HEADERS_DIST) $(srcdir)/Makefile.am \
 	$(srcdir)/Makefile.in $(srcdir)/libconfig++.pc.in \
@@ -88,7 +88,7 @@ libconfig___la_OBJECTS = $(am_libconfig___la_OBJECTS)
 libconfig___la_LINK = $(LIBTOOL) --tag=CXX $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(AM_CXXFLAGS) \
 	$(CXXFLAGS) $(libconfig___la_LDFLAGS) $(LDFLAGS) -o $@
-#am_libconfig___la_rpath = -rpath $(libdir)
+am_libconfig___la_rpath = -rpath $(libdir)
 libconfig_la_LIBADD =
 am__objects_3 = libconfig_la-libconfig.lo libconfig_la-scanner.lo \
 	libconfig_la-grammar.lo libconfig_la-scanctx.lo \
@@ -143,21 +143,21 @@ AUTOCONF = ${SHELL} /home/xtra/work/ftm-50s/rootfs/apps/libconfig-1.4.9/aux-buil
 AUTOHEADER = ${SHELL} /home/xtra/work/ftm-50s/rootfs/apps/libconfig-1.4.9/aux-build/missing --run autoheader
 AUTOMAKE = ${SHELL} /home/xtra/work/ftm-50s/rootfs/apps/libconfig-1.4.9/aux-build/missing --run automake-1.11
 AWK = mawk
-CC = gcc
+CC = armv5-linux-gcc
 CCDEPMODE = depmode=gcc3
-CFLAGS = -g -O2 -Wall -Wshadow -Wextra -Wdeclaration-after-statement -Wno-unused-parameter
-CPP = gcc -E
+CFLAGS = -g -O2
+CPP = armv5-linux-gcc -E
 CPPFLAGS = 
-CXX = g++
-CXXCPP = 
-CXXDEPMODE = depmode=none
-CXXFLAGS =  -Wall -Wshadow -Wextra -Wno-unused-parameter
+CXX = armv5-linux-g++
+CXXCPP = armv5-linux-g++ -E
+CXXDEPMODE = depmode=gcc3
+CXXFLAGS = -g -O2
 CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
 DLLTOOL = false
 DSYMUTIL = 
-DUMPBIN = 
+DUMPBIN = :
 ECHO_C = 
 ECHO_N = -n
 ECHO_T = 
@@ -170,7 +170,7 @@ INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
-LD = /usr/bin/ld
+LD = /opt/STM/STLinux-2.4/devkit/armv5/arm-926ejs-linux-gnueabi/bin/ld
 LDFLAGS = 
 LEX = ${SHELL} /home/xtra/work/ftm-50s/rootfs/apps/libconfig-1.4.9/aux-build/missing --run flex
 LEXLIB = 
@@ -184,7 +184,7 @@ LTLIBOBJS =
 MAKEINFO = ${SHELL} /home/xtra/work/ftm-50s/rootfs/apps/libconfig-1.4.9/aux-build/missing --run makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /bin/mkdir -p
-NM = /usr/bin/nm -B
+NM = nm
 NMEDIT = 
 OBJDUMP = objdump
 OBJEXT = o
@@ -211,9 +211,9 @@ abs_srcdir = /home/xtra/work/ftm-50s/rootfs/apps/libconfig-1.4.9/lib
 abs_top_builddir = /home/xtra/work/ftm-50s/rootfs/apps/libconfig-1.4.9
 abs_top_srcdir = /home/xtra/work/ftm-50s/rootfs/apps/libconfig-1.4.9
 ac_ct_AR = ar
-ac_ct_CC = gcc
+ac_ct_CC = 
 ac_ct_CXX = 
-ac_ct_DUMPBIN = 
+ac_ct_DUMPBIN = link -dump
 am__include = include
 am__leading_dot = .
 am__quote = 
@@ -231,11 +231,11 @@ datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
-host = i686-pc-linux-gnu
-host_alias = 
-host_cpu = i686
-host_os = linux-gnu
-host_vendor = pc
+host = arm-unknown-none
+host_alias = arm
+host_cpu = arm
+host_os = none
+host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
@@ -248,18 +248,18 @@ mandir = ${datarootdir}/man
 mkdir_p = /bin/mkdir -p
 oldincludedir = /usr/include
 pdfdir = ${docdir}
-prefix = /usr/local
+prefix = /home/xtra/work/ftm-50s/rootfs
 program_transform_name = s,x,x,
 psdir = ${docdir}
 sbindir = ${exec_prefix}/sbin
 sharedstatedir = ${prefix}/com
 srcdir = .
 sysconfdir = ${prefix}/etc
-target = i686-pc-linux-gnu
+target = arm-unknown-none
 target_alias = 
-target_cpu = i686
-target_os = linux-gnu
-target_vendor = pc
+target_cpu = arm
+target_os = none
+target_vendor = unknown
 top_build_prefix = ../
 top_builddir = ..
 top_srcdir = ..
@@ -500,32 +500,32 @@ libconfig_la-strbuf.lo: strbuf.c
 #	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libconfig_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libconfig_la-strbuf.lo `test -f 'strbuf.c' || echo '$(srcdir)/'`strbuf.c
 
 .c++.o:
-#	$(CXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
-#	$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
-	source='$<' object='$@' libtool=no \
-	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-	$(CXXCOMPILE) -c -o $@ $<
+	$(CXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
+	$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
+#	source='$<' object='$@' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(CXXCOMPILE) -c -o $@ $<
 
 .c++.obj:
-#	$(CXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ `$(CYGPATH_W) '$<'`
-#	$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
-	source='$<' object='$@' libtool=no \
-	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-	$(CXXCOMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
+	$(CXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ `$(CYGPATH_W) '$<'`
+	$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
+#	source='$<' object='$@' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(CXXCOMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
 
 .c++.lo:
-#	$(LTCXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
-#	$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Plo
-	source='$<' object='$@' libtool=yes \
-	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-	$(LTCXXCOMPILE) -c -o $@ $<
+	$(LTCXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
+	$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Plo
+#	source='$<' object='$@' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(LTCXXCOMPILE) -c -o $@ $<
 
 libconfig___la-libconfigcpp.lo: libconfigcpp.c++
-#	$(LIBTOOL)  --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libconfig___la_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT libconfig___la-libconfigcpp.lo -MD -MP -MF $(DEPDIR)/libconfig___la-libconfigcpp.Tpo -c -o libconfig___la-libconfigcpp.lo `test -f 'libconfigcpp.c++' || echo '$(srcdir)/'`libconfigcpp.c++
-#	$(am__mv) $(DEPDIR)/libconfig___la-libconfigcpp.Tpo $(DEPDIR)/libconfig___la-libconfigcpp.Plo
-	source='libconfigcpp.c++' object='libconfig___la-libconfigcpp.lo' libtool=yes \
-	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-	$(LIBTOOL)  --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libconfig___la_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o libconfig___la-libconfigcpp.lo `test -f 'libconfigcpp.c++' || echo '$(srcdir)/'`libconfigcpp.c++
+	$(LIBTOOL)  --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libconfig___la_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT libconfig___la-libconfigcpp.lo -MD -MP -MF $(DEPDIR)/libconfig___la-libconfigcpp.Tpo -c -o libconfig___la-libconfigcpp.lo `test -f 'libconfigcpp.c++' || echo '$(srcdir)/'`libconfigcpp.c++
+	$(am__mv) $(DEPDIR)/libconfig___la-libconfigcpp.Tpo $(DEPDIR)/libconfig___la-libconfigcpp.Plo
+#	source='libconfigcpp.c++' object='libconfig___la-libconfigcpp.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(LIBTOOL)  --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libconfig___la_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o libconfig___la-libconfigcpp.lo `test -f 'libconfigcpp.c++' || echo '$(srcdir)/'`libconfigcpp.c++
 
 .l.c:
 	$(am__skiplex) $(SHELL) $(YLWRAP) $< $(LEX_OUTPUT_ROOT).c $@ -- $(LEXCOMPILE)

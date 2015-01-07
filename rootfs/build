@@ -1,9 +1,9 @@
 #!/bin/bash 
 
 #TARGET='FTM-50S'
-TARGET='FTM-50L'
+#TARGET='FTM-50L'
 #TARGET='FTM-50S+FS'		#FTM-50S + Future Systems	
-#TARGET='FTM-50S+TP'	#FTM-50S + Daliworks ThingPlus
+TARGET='FTM-50S+TP'	#FTM-50S + Daliworks ThingPlus
 
 FSTYPE='squashfs'
 VERSION=`date`
@@ -842,7 +842,14 @@ fi
 			mkimage -n 'RootFS-1.0.6.0-FTM-50S' -A arm -O linux -T Ramdisk -C gzip -d root.squashfs rootfs.img
 			rm tmpfile.0 tmpfile.1 tmpfile.2 
 
-			$CP -rf rootfs.img /tftpboot/ftm-50s-new/rootfs.img
+			case $TARGET in
+				'FTM-50S+TP')
+					$CP -rf rootfs.img /tftpboot/ftm-50s-tp/rootfs.img
+				;;
+				*)
+					$CP -rf rootfs.img /tftpboot/ftm-50s-new/rootfs.img
+				;;
+			esac
 			;;
 
 		'ext2')
