@@ -40,10 +40,14 @@
 #define PLGPIO_IO_35	0xb3000038
 #define PLGPIO_SEL_36	0xb3000028
 #define PLGPIO_IO_36	0xb3000038
+#define PLGPIO_SEL_39	0xb3000028
+#define PLGPIO_IO_39	0xb3000038
 #define PLGPIO_SEL_41	0xb3000028
 #define PLGPIO_IO_41	0xb3000038
 #define PLGPIO_SEL_42	0xb3000028
 #define PLGPIO_IO_42	0xb3000038
+#define PLGPIO_SEL_46	0xb3000028
+#define PLGPIO_IO_46	0xb3000038
 #define PLGPIO_SEL_69	0xb300002C
 #define PLGPIO_IO_69	0xb300003C
 #define PLGPIO_SEL_70	0xb300002C
@@ -104,7 +108,6 @@ static void telit_init(void)
 int	telit_stat(void)
 {
 	static int stat = 0;
-	printf("%08x %08x\n", readl(PLGPIO_IO_35), readl(PLGPIO_SEL_35));
 	if (stat)
 	{
 		writel(readl(PLGPIO_IO_35) | PLGPIO_35, PLGPIO_IO_35);
@@ -119,11 +122,19 @@ int	telit_stat(void)
 	stat = !stat;
 }
 
+
 int board_init(void)
 {
 	writel(readl(0xB300000C) & ~(1 << 11), 0xB300000C);
 	writel(readl(0xB3000024) | (1 << 7), 0xB3000024);
 	writel(readl(0xB3000044) | (1 << 7), 0xB3000044);
+
+	writel(readl(0xB3000028) | (1 << 7), 0xB3000028);
+	writel(readl(0xB3000048) | (1 << 7), 0xB3000048);
+	writel(readl(0xB3000028) | (1 << 14), 0xB3000028);
+	writel(readl(0xB3000038) & !(1 << 14), 0xB3000038);
+	writel(readl(0xB3000048) & !(1 << 14), 0xB3000048);
+
 	GPS_reset();
 	phy_reset();
 	NF_write_protect_off();
@@ -142,6 +153,7 @@ int board_init(void)
 int board_nand_init(struct nand_chip *nand)
 {
 #if defined(CONFIG_NAND_FSMC)
+	int	ret;
 	struct misc_regs *const misc_regs_p =
 	    (struct misc_regs *)CONFIG_SPEAR_MISCBASE;
 
@@ -150,7 +162,11 @@ int board_nand_init(struct nand_chip *nand)
 	    ((readl(&misc_regs_p->auto_cfg_reg) & MISC_SOCCFGMSK) ==
 	     MISC_SOCCFG31)) {
 
-		return fsmc_nand_init(nand);
+		board_power_hold(1);
+		ret = fsmc_nand_init(nand);
+		board_power_hold(0);
+
+		return	ret;
 	}
 #endif
 	return -1;
@@ -205,4 +221,19 @@ int board_eth_init(bd_t *bis)
 		miiphy_write("macb0", 0, 31, 0x0000);
 	}
 	return ret;
+}
+
+int board_power_hold(int on)
+{
+	if (on)
+	{
+		writel(readl(0xB3000038) | (1 << 14), 0xB3000038);
+	}
+	else
+	{
+		writel(readl(0xB3000038) & ~(1 << 14), 0xB3000038);
+	}
+
+	return	0;
+	
 }

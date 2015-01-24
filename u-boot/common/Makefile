@@ -167,6 +167,7 @@ COBJS-$(CONFIG_UPDATE_TFTP) += update.o
 COBJS-$(CONFIG_USB_KEYBOARD) += usb_kbd.o
 
 COBJS-$(CONFIG_CMD_RECOVERY) += cmd_recovery.o
+COBJS-$(CONFIG_CMD_POWER) += cmd_power.o
 
 
 COBJS	:= $(sort $(COBJS-y))
