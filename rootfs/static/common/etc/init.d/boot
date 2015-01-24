@@ -48,6 +48,8 @@ boot_setgpio()
 	create_gpio 78 mdm_power_on 	out high	off 
 	create_gpio 49 mdm_on			out low		on
 	create_gpio 50 mdm_reset		out low		on
+	create_gpio 54 power_hold		out high	on
+	create_gpio 47 sw_state			in  low		
 }
 
 boot_setconfig()
