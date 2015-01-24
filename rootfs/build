@@ -103,7 +103,7 @@ fi
 
 	mkdir -p bin boot sbin lib
 	mkdir -p dev 
-	mkdir -p usr usr/bin usr/sbin usr/lib usr/share
+	mkdir -p usr usr/bin usr/sbin usr/lib usr/share usr/share/snmp usr/share/snmp/mibs
 	mkdir -p var # var/run var/lock var/log var/lib var/ftp var/empty
 	mkdir -p etc
 	mkdir -p rom
@@ -328,6 +328,7 @@ fi
 	copy lib libutil-2.10.2.so libutil.so.1
 
 	copy usr/lib libcurl.so.4.2.0 libcurl.so.4
+
 	#copy usr/lib libnetsnmp.so.30.0.2 libnetsnmp.so.30
 	#copy usr/lib libnetsnmpmibs.so.30.0.2 libnetsnmpmibs.so.30
 	#copy usr/lib libnetsnmptrapd.so.30.0.2 libnetsnmptrapd.so.30
@@ -729,9 +730,9 @@ then
 (
 	copy usr/bin sqlite3
 	copy usr/lib libsqlite3.so.0.8.6 libsqlite3.so.0 libsqlite3.so
-
+	copy usr/lib libreadline.so libreadline.so.5 libreadline.so.5.1
+	copy usr/lib libtermcap.so libtermcap.so.2 libtermcap.so.2.0.8
 )
-
 fi
 
 (

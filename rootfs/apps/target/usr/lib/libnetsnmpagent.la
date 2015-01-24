@@ -17,7 +17,7 @@ old_library='libnetsnmpagent.a'
 inherited_linker_flags=''
 
 # Libraries that this one depends upon.
-dependency_libs=' /usr/lib/libnetsnmp.la -L/home/xtra/work/ftm-50s/rootfs/apps/devtools/lib -lrt -lm -lftsom'
+dependency_libs=' /usr/lib/libnetsnmp.la -L/home/xtra/work/ftm-50s/rootfs/apps/devtools/lib -L/home/xtra/work/ftgm/lib -L/home/xtra/work/ftgm/ftdm -L/home/xtra/work/ftgm/ftnm -lrt -lm -lftm -lftnmc'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''
