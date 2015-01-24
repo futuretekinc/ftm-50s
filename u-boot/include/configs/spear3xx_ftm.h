@@ -272,6 +272,7 @@
 #undef	CONFIG_NFSBOOTCOMMAND
 
 #undef	CONFIG_BOOTCOMMAND
-#define	CONFIG_BOOTCOMMAND	"recovery;run setbootargs;bootm $(kernel_loc)"
+#define	CONFIG_BOOTCOMMAND	"recovery;run setbootargs;power hold;bootm $(kernel_loc)"
+
 
 #endif  /* __CONFIG_H */

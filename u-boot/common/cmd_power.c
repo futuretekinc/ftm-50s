@@ -39,11 +39,11 @@ int do_power(cmd_tbl_t * cmdtp, int flag, int argc, char *argv[])
 		goto error;
 	}
 
-	if (strcmp(argv[1], "on") == 0)
+	if (strcmp(argv[1], "hold") == 0)
 	{
 		board_power_hold(1);
 	}
-	else if (strcmp(argv[1], "off") == 0)
+	else if (strcmp(argv[1], "release") == 0)
 	{
 		board_power_hold(0);
 	}

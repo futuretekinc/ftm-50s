@@ -70,15 +70,20 @@ static void mem_dump(void *addr, int len);
 
 
 extern int nand_curr_device;
+extern int board_power_hold(int on);
 
 int do_recovery(cmd_tbl_t * cmdtp, int flag, int argc, char *argv[])
 {
+	board_power_hold(1);	
 	kernel_check_and_recovery();
 	rootfs_check_and_recovery();
+	board_power_hold(0);	
 }
 
 int do_savefs(cmd_tbl_t * cmdtp, int flag, int argc, char *argv[])
 {
+	int	ret;
+
 	if (argc < 3)
 	{
 		goto error;
@@ -117,7 +122,10 @@ int do_savefs(cmd_tbl_t * cmdtp, int flag, int argc, char *argv[])
 			goto error;	
 		}
 
-		if (save_rootfs(cmdtp, flag, index, addr, len) != 0)
+		board_power_hold(1);	
+		ret = save_rootfs(cmdtp, flag, index, addr, len);
+		board_power_hold(0);	
+		if (ret  != 0)
 		{
 			goto error;	
 		}
