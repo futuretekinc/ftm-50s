@@ -802,6 +802,7 @@ fi
 
 		'FTM-50L')				
 			$CP -rf static/50L/* "$ROOT/"
+			$CP -rf apps/mosquitto/* "$ROOT/"
 
 			mkdir -p www
 			$CP -rf www/cgi-bin/*  	"$ROOT/www/cgi-bin/."
@@ -848,10 +849,10 @@ fi
 
 			case $TARGET in
 				'FTM-50S+TP')
-					$CP -rf rootfs.img /tftpboot/ftm-50s-tp/rootfs.img
+					$CP -rf rootfs.img /tftpboot/ftm-50s-battery/rootfs.img
 				;;
 				*)
-					$CP -rf rootfs.img /tftpboot/ftm-50s-new/rootfs.img
+					$CP -rf rootfs.img /tftpboot/ftm-50s-battery/rootfs.img
 				;;
 			esac
 			;;
@@ -863,7 +864,7 @@ fi
 
 			gzip -f9 rootfs.ext2
 			mkimage -n 'Ramdisk v1.0.6' -A arm -O linux -T ramdisk -C gzip -a 0x00a00000 -d rootfs.ext2.gz ramdisk.img
-			$CP -rf ramdisk.img /tftpboot/ftm-50s-new
+			$CP -rf ramdisk.img /tftpboot/ftm-50s-battery
 			;;
 	esac
 
