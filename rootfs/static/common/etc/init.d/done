@@ -21,6 +21,7 @@ case "$1" in
 		echo "    Kernel version : `uname -v`"
 		echo ""
 		echo " ---------------------------------------------"
+		/bin/power_dmon &
 		;;
 esac
 
