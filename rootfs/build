@@ -1,11 +1,12 @@
 #!/bin/bash 
 
 #TARGET='FTM-50S' 		# 3g
-TARGET='FTM-50L'		# not 3g
+#TARGET='FTM-50L'		# not 3g
 #TARGET='FTM-50S+FS'		#FTM-50S + Future Systems	
-#TARGET='FTM-50S+TP'	#FTM-50S + Daliworks ThingPlus
+TARGET='FTM-50S+TP'	#FTM-50S + Daliworks ThingPlus
 
 FSTYPE='squashfs'
+#FSTYPE='ext2'
 VERSION=`date`
 ROOT=$PWD/target
 STL=/opt/STM/STLinux-2.4/devkit/armv5/target
@@ -19,8 +20,8 @@ INCLUDE_THTTPD=0
 INCLUDE_VSFTPD=1
 INCLUDE_TELNETD=1
 INCLUDE_XINETD=1
-INCLUDE_SER2NET=1
-INCLUDE_SQLITE3=1
+INCLUDE_SER2NET=0
+INCLUDE_SQLITE3=0
 
 ISC_DHCPD=1
 
@@ -279,7 +280,7 @@ fi
 	link busybox	touch 
 	link busybox	true 
 	link busybox	umount 
-	link busybox	uname 
+#	link busybox	uname 
 	link busybox	usleep 
 	link busybox	vi
 	link busybox	watch 
