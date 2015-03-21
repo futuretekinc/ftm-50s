@@ -1,0 +1,7 @@
+MODEL="ftm-50"
+#RSYNC_SERVER="rsync.thingbine.com"
+RSYNC_SERVER="210.183.185.4"
+RSYNC_USER="futuretek"
+RSYNC_PASSWORD="future123"
+RSYNC_SIZE_ONLY_OPTION="true"
+DEST_DIR="/home/xtra/work/ftm-50s/rootfs/static/tpgw/opt"

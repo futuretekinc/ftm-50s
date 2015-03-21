@@ -1,19 +1,7 @@
 #!/bin/sh
 
-tpgw_init()
+sys_init()
 {
-	if [ -e /opt/thingplus-gateway ]
-	then
-		echo "/opt/thingplus-gateway exists."
-		if [ ! -e /mnt/mtd/log ]
-		then
-			mkdir /mnt/mtd/log
-			cp /opt/thingplus-gateway/config /mnt/mtd/log
-		fi
-	else
-		echo "/opt/thingplus-gateway not exists."
-	fi	
-
 	if [ ! -e /etc/initialized ]
 	then
 		echo 'done' > /etc/initialized
@@ -25,5 +13,5 @@ tpgw_init()
 }
 
 case "$1" in
-	start) tpgw_init;;
+	start) sys_init;;
 esac
