@@ -3075,6 +3075,9 @@ spear320_ftm_usbtty_config \
 spear320_ftm_usbtty_nand_config :	unconfig
 	@$(MKCONFIG) -n $@ -t $(@:_config=) spear3xx_ftm arm arm926ejs spear320_ftm spear spear
 
+spear320_ftm2_config : unconfig
+	@$(MKCONFIG) -n $@ -t $(@:_config=) spear3xx_ftm2 arm arm926ejs spear320_ftm2 spear spear
+
 spear600_config \
 spear600_nand_config \
 spear600_usbtty_config \
