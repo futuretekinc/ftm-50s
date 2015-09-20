@@ -1,0 +1,153 @@
+#!/bin/bash
+
+ROOTFS_DIR=target
+
+dd if=/dev/zero of=ramdisk bs=1k count=32768
+mke2fs -F ramdisk
+
+sudo mount -o loop ramdisk target
+
+(
+	cd 	$ROOTFS_DIR
+	echo	"Create sub directories"
+
+	mkdir -p bin boot dev etc sbin usr var/log var/lock tmp
+	mkdir -p usr/bin usr/sbin usr/lib etc/init.d etc/rc.d etc/sysconfig/network
+
+	cd	dev
+	sudo mknod ram0	   	b 	1 	0	# all on needs is ram0
+	sudo mknod ram1	   	b 	1 	1
+
+	sudo mknod hda     	b 	3 	0	# compact flash
+	sudo mknod hda1    	b 	3 	1
+	sudo mknod hda2    	b 	3 	2
+	sudo mknod hda3    	b 	3 	3
+	sudo mknod hda4    	b 	3 	4
+
+	sudo mknod mem     	c 	1 	1
+	sudo mknod kmem    	c 	1 	2
+	sudo mknod null    	c 	1 	3
+	sudo mknod port    	c 	1 	4
+	sudo mknod zero    	c 	1 	5
+	sudo mknod core    	c 	1 	6
+	sudo mknod full    	c 	1 	7
+	sudo mknod random  	c 	1 	8 	# used by dropbear to generate keys
+	sudo mknod urandom 	c 	1 	9 	# used by dropbear to generate keys
+	sudo mknod vsys    	c 	1 	10
+
+	sudo mknod ptyp0   	c 	2 	0 	# pseudo terminal devices for dropbear
+	sudo mknod ptyp1   	c 	2 	1
+	sudo mknod ptyp2   	c 	2	2
+	sudo mknod ptyp3   	c 	2 	3
+	sudo mknod ptyp4   	c 	2 	4
+
+	sudo mknod ttyp0   	c 	3 	0 	# pseudo terminal devices for telnet
+	sudo mknod ttyp1   	c 	3 	1
+	sudo mknod ttyp2   	c 	3 	2
+	sudo mknod ttyp3   	c 	3 	3
+	sudo mknod ttyp4   	c 	3 	4
+
+	sudo mknod ttyS0   	c 	4 	64 	# console port
+	sudo mknod ttyS1   	c 	4 	65 	# used for kgdb
+
+	sudo mknod tty0    	c 	4 	0
+	sudo mknod tty1    	c 	4 	1 	# not needed
+	sudo mknod tty2    	c 	4 	2 	# not needed
+	sudo mknod tty3    	c 	4 	3 	# not needed
+	sudo mknod tty4    	c 	4 	4 	# not needed
+
+	sudo mknod tty     	c 	5 	0
+	sudo mknod console 	c 	5 	1
+	sudo mknod ptmx    	c 	5 	2 	# dropbear sshd
+
+	sudo mknod watchdog	c	10 	130 # watchdog in SC1100
+
+	sudo mknod ppp     	c	108	0 	# Point-to-Point Protocol
+
+	ln -s ram0				ramdisk
+	ln -s urandom 			random  # used by dropbear workaround, 1,8 was dead
+	ln -s ../proc/self/fd/0 stdin 	# process i/o
+	ln -s ../proc/self/fd/1 stdout
+	ln -s ../proc/self/fd/2 stderr
+	ln -s ../proc/kcore     kcore
+
+	exit	3
+)
+
+(
+    cd $ROOTFS_DIR/usr/bin
+    cp /opt/STM/STLinux-2.4/devkit/armv5/target/usr/sbin/mkfs.jffs2 .
+    cp /opt/STM/STLinux-2.4/devkit/armv5/target/usr/sbin/flash_erase .
+
+    exit    3
+)
+
+(
+    cd $ROOTFS_DIR/usr/lib
+    cp /opt/STM/STLinux-2.4/devkit/armv5/target/usr/lib/libz.so.1.2.5 .
+    ln -s libz.so.1.2.5 libz.so.1
+    cp /opt/STM/STLinux-2.4/devkit/armv5/target/usr/lib/liblzo2.so.2.0.0 .
+    ln -s liblzow.so.2.0.0 liblzo2.so.2
+
+    exit    3
+)
+
+(
+	mkdir -p $ROOTFS_DIR/etc/rc3.d
+	rm -rf $ROOTFS_DIR/etc/rc3.d/*
+
+	ln -sf ../init.d/watchdog   $ROOTFS_DIR/etc/rc3.d/S10watchdog
+#	ln -sf ../init.d/gpio       $ROOTFS_DIR/etc/rc3.d/S11gpio
+
+#	ln -sf ../init.d/network    $ROOTFS_DIR/etc/rc3.d/S21network
+#	ln -sf ../init.d/syslogd    $ROOTFS_DIR/etc/rc3.d/S22syslogd
+#	ln -sf ../init.d/firewall   $ROOTFS_DIR/etc/rc3.d/S23firewall
+#	ln -sf ../init.d/tc         $ROOTFS_DIR/etc/rc3.d/S23tc
+
+#	ln -sf ../init.d/hostapd    $ROOTFS_DIR/etc/rc3.d/S30hostapd 
+#	ln -sf ../init.d/ntpd       $ROOTFS_DIR/etc/rc3.d/S31ntpd
+#	ln -sf ../init.d/dnsmasq    $ROOTFS_DIR/etc/rc3.d/S32dnsmasq
+
+#	ln -sf ../init.d/dropbear   $ROOTFS_DIR/etc/rc3.d/S40dropbear
+#	ln -sf ../init.d/mini_httpd $ROOTFS_DIR/etc/rc3.d/S41mini_httpd
+
+#	ln -sf ../init.d/l2tpd      $ROOTFS_DIR/etc/rc3.d/S50l2tpd
+#	ln -sf ../init.d/racoon     $ROOTFS_DIR/etc/rc3.d/S52racoon
+
+#	ln -sf ../init.d/l2tpd      $ROOTFS_DIR/etc/rc3.d/K10l2tpd
+#	ln -sf ../init.d/racoon     $ROOTFS_DIR/etc/rc3.d/K11racoon
+
+#	ln -sf ../init.d/mini_httpd $ROOTFS_DIR/etc/rc3.d/K20mini_httpd
+#	ln -sf ../init.d/dropbear   $ROOTFS_DIR/etc/rc3.d/K21dropbear
+
+#	ln -sf ../init.d/dnsmasq    $ROOTFS_DIR/etc/rc3.d/K30dnsmasq
+#	ln -sf ../init.d/ntpd       $ROOTFS_DIR/etc/rc3.d/K31ntpd
+	ln -sf ../init.d/hostapd    $ROOTFS_DIR/etc/rc3.d/K32hostapd 
+
+#	ln -sf ../init.d/tc         $ROOTFS_DIR/etc/rc3.d/K40tc 
+#	ln -sf ../init.d/firewall   $ROOTFS_DIR/etc/rc3.d/K41firewall
+#	ln -sf ../init.d/syslogd    $ROOTFS_DIR/etc/rc3.d/K42syslogd
+#	ln -sf ../init.d/network    $ROOTFS_DIR/etc/rc3.d/K43network
+#	ln -sf ../init.d/gpio       $ROOTFS_DIR/etc/rc3.d/K44gpio
+
+    exit    3
+)
+
+(
+	cp -rf static/* target/
+	cp -rf apps/target/* target/
+	cp -rf apps/target/bin/* target/bin/
+
+
+	sudo umount target
+
+	gzip -f9 ramdisk
+	mkimage -n Ramdisk -A arm -O linux -T ramdisk -C gzip -a 0x00a00000 -d ramdisk.gz ramdisk.img
+	cp ramdisk.img /tftpboot/ftm-50s-xtra/rootfs.img
+
+#	for dir in $(SUBDIRS); do \
+#		$(MAKE) -C $$dir; \
+#	done
+    
+    exit    3
+)

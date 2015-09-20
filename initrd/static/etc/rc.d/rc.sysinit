@@ -1,0 +1,216 @@
+#!/bin/ash
+
+if [ "${RCINIT}" != "done" ]; then
+#   ---------------------------------------------
+#   Common settings
+#   ---------------------------------------------
+HOSTNAME=FTM
+VERSION=V1.0.0.0
+
+hostname $HOSTNAME
+
+#   ---------------------------------------------
+#   Prints execution status.
+#
+#   arg1 : Execution status
+#   arg2 : Continue (0) or Abort (1) on error
+#   ---------------------------------------------
+status ()
+{
+       if [ $1 -eq 0 ] ; then
+               echo "[SUCCESS]"
+       else
+               echo "[FAILED]"
+
+               if [ $2 -eq 1 ] ; then
+                       echo "... System init aborted."
+                       exit 1
+               fi
+       fi
+
+}
+
+#   ---------------------------------------------
+#   Create GPIO Control Device
+#   arg1 : GPIO Port Number
+#   arg2 : Device Name
+#   arg3 : Direction
+#   ---------------------------------------------
+create_gpio()
+{
+    case $3 in
+    in )    echo $1 > /sys/class/gpio/export
+            echo in > /sys/class/gpio/gpio$1/direction
+            ln -s /sys/class/gpio/gpio$1/value /dev/$2;;
+    out )   echo $1 > /sys/class/gpio/export
+            echo out > /sys/class/gpio/gpio$1/direction
+            echo $4 > /sys/class/gpio/gpio$1/value
+            ln -s /sys/class/gpio/gpio$1/value /dev/$2;;
+    esac
+}
+
+#   ---------------------------------------------
+#   Get verbose
+#   ---------------------------------------------
+echo ""
+echo "    System initialization..."
+echo ""
+echo "    Hostname       : $HOSTNAME"
+echo "    Filesystem     : $VERSION"
+echo ""
+echo ""
+echo "    Kernel release : `uname -s` `uname -r`"
+echo "    Kernel version : `uname -v`"
+echo ""
+
+
+#   ---------------------------------------------
+#   MDEV Support
+#   (Requires sysfs support in the kernel)
+#   ---------------------------------------------
+echo -n " Mounting /proc             : "
+mount -n -t proc /proc /proc
+status $? 1
+
+echo -n " Mounting /sys              : "
+mount -n -t sysfs sysfs /sys
+status $? 1
+
+echo -n " Mounting /dev              : "
+mount -n -t tmpfs mdev /dev
+status $? 1
+
+echo -n " Mounting /mnt              : "
+mount -n -t tmpfs tmpfs /mnt
+status $? 1
+
+echo -n " Mounting /dev/pts          : "
+mkdir /dev/pts
+mount -t devpts devpts /dev/pts
+status $? 1
+
+echo -n " Enabling hot-plug          : "
+echo "/sbin/mdev" > /proc/sys/kernel/hotplug
+status $? 0
+
+echo -n " Mounting /proc/bus/usb     : "
+mount -n -t usbfs usbfs /proc/bus/usb
+status $? 1
+
+echo -n " Populating /dev            : "
+mkdir /dev/input
+mkdir /dev/snd
+
+mdev -s
+status $? 0
+
+#   ---------------------------------------------
+#   Mount debugfs
+#   ---------------------------------------------
+cat /proc/filesystems | grep -q debugfs
+if [ $? -eq 0 ] ; then
+        echo -n " Mounting debugfs             : "
+	mkdir /dev/debug
+        mount -n -t debugfs debugfs /sys/kernel
+        status $? 1
+fi
+
+#   ---------------------------------------------
+#   Mount the default file systems
+#   ---------------------------------------------
+echo -n " Mounting other filesystems : "
+mount -a
+status $? 0
+
+#   ---------------------------------------------
+#   GPIO
+#   ---------------------------------------------
+
+create_gpio 15 fectory_reset in
+create_gpio 77 nf_wp out 1
+create_gpio 81 gps_rst out 1
+create_gpio 85 led_status  out 1
+
+#   ---------------------------------------------
+#   Mount User Space
+#   ---------------------------------------------
+cat /proc/mtd | grep mtd10 >& /dev/null
+if [ $? -eq 0 ] ; then
+    echo -n " Mounting User Space : "
+    mkdir /mnt/mtd
+    mount -t jffs2 /dev/mtdblock10 /mnt/mtd
+    echo "[SUCCESS]"
+else
+    echo "[FAILED]"
+fi 
+
+#   ---------------------------------------------
+#   Configuration User Space
+#   ---------------------------------------------
+
+#if [ -d /mnt/mtd/etc ] 
+#then
+#    echo    ""
+#else
+#    echo "Check 1"
+#    cd /mnt/mtd
+#    mkdir etc
+#    cp -rf /etc/* etc/
+#fi
+
+#mv /etc /etc.init
+#mkdir /etc
+#ln -s /mnt/mtd/etc /etc
+#/etc/rc.d/rc.sysinit
+   
+#export  RCINIT=done
+
+#else
+
+#   ---------------------------------------------
+#   Set PATH
+#   ---------------------------------------------
+export LD_LIBRARY_PATH=/lib:/usr/local/lib:/opt/lib:/opt/usr/lib
+export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/opt/bin:/opt/usr/bin:/opt/usr/local/sbin
+    
+    
+#   ---------------------------------------------
+#	Network Configuration
+#   ---------------------------------------------
+echo "ifup lo"
+ifup lo
+    
+echo "ifup eth0"
+ifup eth0
+    
+httpd -h /www
+snmpd
+    
+#   ---------------------------------------------
+#   Start the subsystems
+#   ---------------------------------------------
+# FAIL=0
+# for i in /etc/rc3.d/S* ; do
+# 	SERVICENAME=${ii#/etc/rc3.d/S??}
+# 	echo -n "Starting $SERVICENAME .."
+# 	if [ -f /etc/sysconfig/$SERVICENAME.conf ] ||
+# 		[ -d /etc/sysconfig/$SERVICENAME ] ; then
+# 		if $ii start; then
+# 			echo ""
+# 		else
+# 			echo " [FAIL]"
+# 			FAIL=1
+#		fi
+# 	else
+#		echo " [NO_CONF]"
+#	fi
+# done
+
+#   ---------------------------------------------
+#   Done!
+#   ---------------------------------------------
+echo ""
+echo "System initialization complete."
+fi
+
+

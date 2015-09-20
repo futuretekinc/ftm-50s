@@ -1,0 +1,2 @@
+/usr/sbin/pppd connect "/usr/sbin/chat -v -f /etc/ppp/net.scr" /dev/ttyS1 115200 defaultroute
+
