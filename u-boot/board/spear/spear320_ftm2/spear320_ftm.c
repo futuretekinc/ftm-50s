@@ -46,8 +46,18 @@
 #define PLGPIO_IO_41	0xb3000038
 #define PLGPIO_SEL_42	0xb3000028
 #define PLGPIO_IO_42	0xb3000038
+#define PLGPIO_SEL_43	0xb3000028
+#define PLGPIO_IO_43	0xb3000038
+#define PLGPIO_SEL_44	0xb3000028
+#define PLGPIO_IO_44	0xb3000038
+#define PLGPIO_SEL_45	0xb3000028
+#define PLGPIO_IO_45	0xb3000038
 #define PLGPIO_SEL_46	0xb3000028
 #define PLGPIO_IO_46	0xb3000038
+#define PLGPIO_SEL_51	0xb3000028
+#define PLGPIO_IO_51	0xb3000038
+#define PLGPIO_SEL_61	0xb3000028
+#define PLGPIO_IO_61	0xb3000038
 #define PLGPIO_SEL_69	0xb300002C
 #define PLGPIO_IO_69	0xb300003C
 #define PLGPIO_SEL_70	0xb300002C
@@ -56,26 +66,31 @@
 #define PLGPIO_IO_73	0xb300003C
 #define PLGPIO_SEL_76	0xb300002C
 #define PLGPIO_IO_76	0xb300003C
+#define PLGPIO_SEL_99	0xb3000030
+#define PLGPIO_IO_99	0xb3000040
+#define PLGPIO_SEL_101	0xb3000030
+#define PLGPIO_IO_101	0xb3000040
 #define PLGPIO_31	(0x1 << 31)
 #define PLGPIO_35	(0x1 << 3)
 #define PLGPIO_36	(0x1 << 4)
 #define PLGPIO_41	(0x1 << 9)
 #define PLGPIO_42	(0x1 << 10)
+#define PLGPIO_43	(0x1 << 11)
+#define PLGPIO_44	(0x1 << 12)
+#define PLGPIO_45	(0x1 << 13)
+#define PLGPIO_46	(0x1 << 14)
+#define PLGPIO_51	(0x1 << 19)
+#define PLGPIO_61	(0x1 << 29)
 #define PLGPIO_69	(0x1 << 5)
 #define PLGPIO_70	(0x1 << 6)
 #define PLGPIO_73	(0x1 << 9)
 #define PLGPIO_76	(0x1 << 12)
+#define PLGPIO_99	(0x1 << 3)
+#define PLGPIO_99	(0x1 << 3)
+#define PLGPIO_101	(0x1 << 5)
 #define PLGPIO_6_9	((0x1 << 6) | (0x1 << 9))
 
 #define	PORT_ID(x)	((x) + 8)
-
-static void GPS_reset(void)
-{
-	/* PLGPIO73 is used to reset GPS module */
-	writel(readl(PLGPIO_IO_73) & ~PLGPIO_73, PLGPIO_IO_73);
-	writel(readl(PLGPIO_SEL_73) | PLGPIO_73, PLGPIO_SEL_73);
-	writel(readl(PLGPIO_IO_73) | PLGPIO_73, PLGPIO_IO_73);
-}
 
 static void phy_reset(void)
 {
@@ -85,66 +100,18 @@ static void phy_reset(void)
 	writel(readl(PLGPIO_IO_6_9) | PLGPIO_6_9, PLGPIO_IO_6_9);
 }
 
-static void NF_write_protect_off(void)
-{
-	/* PLGPIO69 is used to write protection off of nand flash */
-	writel(readl(PLGPIO_IO_69) | PLGPIO_69, PLGPIO_IO_69);
-	writel(readl(PLGPIO_SEL_69) | PLGPIO_69, PLGPIO_SEL_69);
-}
-
-static void telit_init(void)
-{
-	writel(readl(PLGPIO_IO_35) & ~PLGPIO_35, PLGPIO_IO_35);
-	writel(readl(PLGPIO_SEL_35) | PLGPIO_35, PLGPIO_SEL_35);
-	writel(readl(PLGPIO_IO_36) | PLGPIO_36, PLGPIO_IO_36);
-	writel(readl(PLGPIO_SEL_36) | PLGPIO_36, PLGPIO_SEL_36);
-	writel(readl(PLGPIO_IO_41) | PLGPIO_41, PLGPIO_IO_41);
-	writel(readl(PLGPIO_SEL_41) | PLGPIO_41, PLGPIO_SEL_41);
-	writel(readl(PLGPIO_IO_42) | PLGPIO_42, PLGPIO_IO_42);
-	writel(readl(PLGPIO_SEL_42) | PLGPIO_42, PLGPIO_SEL_42);
-	writel(readl(PLGPIO_IO_70) & ~PLGPIO_70, PLGPIO_IO_70);
-	writel(readl(PLGPIO_SEL_70) | PLGPIO_70, PLGPIO_SEL_70);
-	
-}
-
-int	telit_stat(void)
-{
-	static int stat = 0;
-	if (stat)
-	{
-		writel(readl(PLGPIO_IO_35) | PLGPIO_35, PLGPIO_IO_35);
-		writel(readl(PLGPIO_SEL_35) | PLGPIO_35, PLGPIO_SEL_35);
-	}
-	else
-	{
-		writel(readl(PLGPIO_IO_35) & ~PLGPIO_35, PLGPIO_IO_35);
-		writel(readl(PLGPIO_SEL_35) | PLGPIO_35, PLGPIO_SEL_35);
-	}
-
-	stat = !stat;
-}
-
-int	mv88e6060_init(void)
-{
-
-}
-
 int board_init(void)
 {
 	writel(readl(0xB300000C) & ~(1 << 11), 0xB300000C);
+	writel(readl(0xB300000C) & ~(1 << 1), 0xB300000C);
+	writel(readl(0xB300000C) & ~(1 << 0), 0xB300000C);
 	writel(readl(0xB3000024) | (1 << 7), 0xB3000024);
 	writel(readl(0xB3000044) | (1 << 7), 0xB3000044);
 
 	writel(readl(0xB3000028) | (1 << 7), 0xB3000028);
 	writel(readl(0xB3000048) | (1 << 7), 0xB3000048);
-	writel(readl(0xB3000028) | (1 << 14), 0xB3000028);
-	writel(readl(0xB3000038) & !(1 << 14), 0xB3000038);
-	writel(readl(0xB3000048) & !(1 << 14), 0xB3000048);
 
-	GPS_reset();
 	phy_reset();
-	NF_write_protect_off();
-	telit_init();
 
 	return spear_board_init(MACH_TYPE_SPEAR320_FTM);
 }

@@ -101,7 +101,7 @@
 /*
  * USB/EHCI
  */
-#if !defined(CONFIG_SPEAR320_FTM)
+#if !defined(CONFIG_SPEAR320_FTM) && !defined(CONFIG_SPEAR320_FTM2)
 #if !defined(CONFIG_SPEAR_USBTTY)
 #define CONFIG_USB_EHCI				/* Enable EHCI USB support */
 #define CONFIG_USB_EHCI_SPEAR
@@ -198,7 +198,7 @@
 #define CONFIG_ENV_RANGE			0x10000
 #define CONFIG_FSMTDBLK				"/dev/mtdblock7 "
 
-#if defined(CONFIG_SPEAR310) || defined(CONFIG_SPEAR320_HMI) || defined(CONFIG_SPEAR320_FTM)
+#if defined(CONFIG_SPEAR310) || defined(CONFIG_SPEAR320_HMI) || defined(CONFIG_SPEAR320_FTM) || defined(CONFIG_SPEAR320_FTM2)
 #define CONFIG_OSBOOTOFF			"0x200000 "
 
 #else

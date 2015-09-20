@@ -95,8 +95,9 @@ static struct pmx_dev *pmx_devs[] = {
 	&spear320_pmx_uart1,
 	&spear320_pmx_uart2,
 	&spear320s_pmx_mii2,
-//	&spear320_pmx_pwm0_1[0],
-//	&spear320_pmx_pwm2[0],
+	&spear320_pmx_sdhci[1],
+	&spear320_pmx_pwm0_1[0],
+	&spear320_pmx_pwm2[0],
 };
 
 static struct amba_device *amba_devs[] __initdata = {
@@ -133,6 +134,7 @@ static struct platform_device *plat_devs[] __initdata = {
 	&spear320_phy_device,
 	&spear320_plgpio_device,
 	&spear320_pwm_device,
+	&spear320_sdhci_device
 };
 
 /* Currently no gpios are free on eval board so it is kept commented */
@@ -169,9 +171,20 @@ static struct spi_board_info __initdata spi_board_info[] = {
 #endif
 };
 
+/* sdhci board specific information */
+static struct sdhci_plat_data sdhci_plat_data = {
+	.card_power_gpio = PLGPIO_61,
+	.power_active_high = 0,
+	.power_always_enb = 1,
+	.card_int_gpio = -1,
+};
+
 static void __init spear320_ftm_init(void)
 {
 	unsigned int i;
+
+	/* set sdhci device platform data */
+	sdhci_set_plat_data(&spear320_sdhci_device, &sdhci_plat_data);
 
 	/* set nand device's plat data */
 	fsmc_nand_set_plat_data(&spear320_nand_device, NULL, 0,

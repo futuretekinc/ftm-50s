@@ -32,6 +32,12 @@ modules.builtin
 *.patch
 *.gcno
 
+System.map
+tags
+u-boot.lds
+u-boot.map
+u-boot.srec
+
 #
 # Top-level generic files
 #
@@ -81,3 +87,7 @@ GTAGS
 */arch/arm/boot/compressed/vmlinux
 download/
 
+linux-2.6.37/include/config/tristate.conf
+
+u-boot/u-boot.img
+u-boot/u-boot

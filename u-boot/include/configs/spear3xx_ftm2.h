@@ -40,7 +40,7 @@
 	#define CONFIG_SPEAR320_HMI		1
 	#elif defined(CONFIG_MK_ftm)
 	#define CONFIG_SPEAR3XX			1
-	#define CONFIG_SPEAR320_FTM		1
+	#define CONFIG_SPEAR320_FTM2	1
 	#else
 	#define CONFIG_SPEAR3XX			1
 	#define CONFIG_SPEAR320 		1
@@ -210,7 +210,7 @@
 	"loader_loc=0xf8010000\0"\
 	"kernel_name=uImage\0"\
 	"kernel_loc=0xf8050000\0"\
-	"kernel_size=0x003c0000\0"\
+	"kernel_size=0x002c0000\0"\
 	"rootfs_name=rootfs.img\0"\
 	"rootfs_loc=0xf8310000\0"\
 	"rootfs_size=0x004f0000\0"\
@@ -222,12 +222,12 @@
 	"rf_kernel=tftp $(flashfiles)$(kernel_name)\;"\
 			   "protect off 1:5-47\;"\
 	           "erase 1:5-47\;"\
-	           "cp.b $(fileaddr) $(kernel_loc) $(kernel_size)\;"\
+	           "cp.b $(fileaddr) $(kernel_loc) $(filesize)\;"\
 	           "protect on 1:5-47\0"\
 	"rf_rootfs=tftp $(flashfiles)$(rootfs_name)\;"\
 			   "protect off 1:49-127\;"\
 	           "erase 1:49-127\;"\
-	           "cp.b $(fileaddr) $(rootfs_loc) $(rootfs_size)\;"\
+	           "cp.b $(fileaddr) $(rootfs_loc) $(filesize)\;"\
 	           "protect on 1:5-47\0"\
 	"bootargs=console=ttyS0,115200 "\
 			   "mem=128M "\
