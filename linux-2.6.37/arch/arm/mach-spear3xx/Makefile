@@ -26,6 +26,7 @@ obj-$(CONFIG_CPU_SPEAR320) += spear320.o
 obj-$(CONFIG_MACH_SPEAR320_EVB) += spear320_evb.o
 obj-$(CONFIG_MACH_SPEAR320_HMI) += spear320_hmi.o
 obj-$(CONFIG_MACH_SPEAR320_FTM) += spear320_ftm.o
+obj-$(CONFIG_MACH_SPEAR320_FTM2) += spear320_ftm2.o
 
 # specific files
 obj-$(CONFIG_CPU_SPEAR310) += emi.o
