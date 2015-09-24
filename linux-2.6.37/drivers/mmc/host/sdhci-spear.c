@@ -32,9 +32,15 @@ struct spear_sdhci {
 	struct sdhci_plat_data *data;
 };
 
+static unsigned int sdhci_get_ro(struct sdhci_host *sdhci)
+{
+	return	0;
+}
+
 /* sdhci ops */
 static struct sdhci_ops sdhci_pltfm_ops = {
 	/* Nothing to do for now. */
+	.get_ro		= sdhci_get_ro
 };
 
 /* gpio card detection interrupt handler */

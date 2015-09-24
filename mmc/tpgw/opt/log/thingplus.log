@@ -1,0 +1,3428 @@
+[32m[1915-06-01 10:34:49.900] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[foscamSensor] [ 'FI9821WS' ]
+[32m[1915-06-01 10:34:50.029] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[foscamActuator] [ 'FI9821WA' ]
+[36m[1915-06-01 10:34:50.054] [DEBUG] Sensor - [39m[sensor/index.js] updated DRIVER_CFG { dht: [ 'dht11', 'dht22' ],
+  digitalLight: [ 'TSL2561', 'BH1750' ],
+  digitalCO2: [ 'X100' ],
+  digitalHumidity: [ 'HTU21D' ],
+  magneticSwitch: [ 'normallyClose', 'normallyOpen' ],
+  motionDetector: [ 'passiveInfrared' ],
+  foscamSensor: [ 'FI9821WS' ],
+  foscamActuator: [ 'FI9821WA' ] }
+[32m[1915-06-01 10:34:51.541] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[futureSensor] [ 'futureDi',
+  'futureTemp',
+  'futureHumi',
+  'futureGas',
+  'futurePower',
+  'futureDust',
+  'futureCount',
+  'futureCountEvent',
+  'futureVoltage',
+  'futureCurrent',
+  'futurePressure' ]
+[32m[1915-06-01 10:34:51.558] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[futureActuator] [ 'futureDo', 'futureTempCtrl' ]
+[36m[1915-06-01 10:34:51.569] [DEBUG] Sensor - [39m[sensor/index.js] updated DRIVER_CFG { dht: [ 'dht11', 'dht22' ],
+  digitalLight: [ 'TSL2561', 'BH1750' ],
+  digitalCO2: [ 'X100' ],
+  digitalHumidity: [ 'HTU21D' ],
+  magneticSwitch: [ 'normallyClose', 'normallyOpen' ],
+  motionDetector: [ 'passiveInfrared' ],
+  foscamSensor: [ 'FI9821WS' ],
+  foscamActuator: [ 'FI9821WA' ],
+  futureSensor: 
+   [ 'futureDi',
+     'futureTemp',
+     'futureHumi',
+     'futureGas',
+     'futurePower',
+     'futureDust',
+     'futureCount',
+     'futureCountEvent',
+     'futureVoltage',
+     'futureCurrent',
+     'futurePressure' ],
+  futureActuator: [ 'futureDo', 'futureTempCtrl' ] }
+[32m[1915-06-01 10:34:52.291] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[jsonrpcSensor] [ 'jsonrpcTemp',
+  'jsonrpcHumi',
+  'jsonrpcLight',
+  'jsonrpcNoise',
+  'jsonrpcDi',
+  'jsonrpcMotion',
+  'jsonrpcCo2',
+  'jsonrpcCo',
+  'jsonrpcVoc',
+  'jsonrpcPower',
+  'jsonrpcDust',
+  'jsonrpcCount',
+  'jsonrpcCountEvent',
+  'jsonrpcVoltage',
+  'jsonrpcWeight',
+  'jsonrpcColor',
+  'jsonrpcVibration',
+  'jsonrpcSpeed',
+  'jsonrpcAccelerometer',
+  'jsonrpcString',
+  'jsonrpcPressure' ]
+[32m[1915-06-01 10:34:52.311] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[jsonrpcActuator] [ 'jsonrpcDo', 'jsonrpcTempCtrl', 'jsonrpcServomotor' ]
+[36m[1915-06-01 10:34:52.321] [DEBUG] Sensor - [39m[sensor/index.js] updated DRIVER_CFG { dht: [ 'dht11', 'dht22' ],
+  digitalLight: [ 'TSL2561', 'BH1750' ],
+  digitalCO2: [ 'X100' ],
+  digitalHumidity: [ 'HTU21D' ],
+  magneticSwitch: [ 'normallyClose', 'normallyOpen' ],
+  motionDetector: [ 'passiveInfrared' ],
+  foscamSensor: [ 'FI9821WS' ],
+  foscamActuator: [ 'FI9821WA' ],
+  futureSensor: 
+   [ 'futureDi',
+     'futureTemp',
+     'futureHumi',
+     'futureGas',
+     'futurePower',
+     'futureDust',
+     'futureCount',
+     'futureCountEvent',
+     'futureVoltage',
+     'futureCurrent',
+     'futurePressure' ],
+  futureActuator: [ 'futureDo', 'futureTempCtrl' ],
+  jsonrpcSensor: 
+   [ 'jsonrpcTemp',
+     'jsonrpcHumi',
+     'jsonrpcLight',
+     'jsonrpcNoise',
+     'jsonrpcDi',
+     'jsonrpcMotion',
+     'jsonrpcCo2',
+     'jsonrpcCo',
+     'jsonrpcVoc',
+     'jsonrpcPower',
+     'jsonrpcDust',
+     'jsonrpcCount',
+     'jsonrpcCountEvent',
+     'jsonrpcVoltage',
+     'jsonrpcWeight',
+     'jsonrpcColor',
+     'jsonrpcVibration',
+     'jsonrpcSpeed',
+     'jsonrpcAccelerometer',
+     'jsonrpcString',
+     'jsonrpcPressure' ],
+  jsonrpcActuator: [ 'jsonrpcDo', 'jsonrpcTempCtrl', 'jsonrpcServomotor' ] }
+[32m[1915-06-01 10:34:52.589] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[visudreamSensor] [ 'visudreamSum',
+  'visudreamV',
+  'visudreamI',
+  'visudreamPf',
+  'visudreamFreq' ]
+[36m[1915-06-01 10:34:52.600] [DEBUG] Sensor - [39m[sensor/index.js] updated DRIVER_CFG { dht: [ 'dht11', 'dht22' ],
+  digitalLight: [ 'TSL2561', 'BH1750' ],
+  digitalCO2: [ 'X100' ],
+  digitalHumidity: [ 'HTU21D' ],
+  magneticSwitch: [ 'normallyClose', 'normallyOpen' ],
+  motionDetector: [ 'passiveInfrared' ],
+  foscamSensor: [ 'FI9821WS' ],
+  foscamActuator: [ 'FI9821WA' ],
+  futureSensor: 
+   [ 'futureDi',
+     'futureTemp',
+     'futureHumi',
+     'futureGas',
+     'futurePower',
+     'futureDust',
+     'futureCount',
+     'futureCountEvent',
+     'futureVoltage',
+     'futureCurrent',
+     'futurePressure' ],
+  futureActuator: [ 'futureDo', 'futureTempCtrl' ],
+  jsonrpcSensor: 
+   [ 'jsonrpcTemp',
+     'jsonrpcHumi',
+     'jsonrpcLight',
+     'jsonrpcNoise',
+     'jsonrpcDi',
+     'jsonrpcMotion',
+     'jsonrpcCo2',
+     'jsonrpcCo',
+     'jsonrpcVoc',
+     'jsonrpcPower',
+     'jsonrpcDust',
+     'jsonrpcCount',
+     'jsonrpcCountEvent',
+     'jsonrpcVoltage',
+     'jsonrpcWeight',
+     'jsonrpcColor',
+     'jsonrpcVibration',
+     'jsonrpcSpeed',
+     'jsonrpcAccelerometer',
+     'jsonrpcString',
+     'jsonrpcPressure' ],
+  jsonrpcActuator: [ 'jsonrpcDo', 'jsonrpcTempCtrl', 'jsonrpcServomotor' ],
+  visudreamSensor: 
+   [ 'visudreamSum',
+     'visudreamV',
+     'visudreamI',
+     'visudreamPf',
+     'visudreamFreq' ] }
+[1915-06-01 10:34:55.850] [INFO] Main - ... Starting [FTM] ...
+[1915-06-01 10:34:55.955] [WARN] Main - MODULES_NOT_SUPPORTED - memwatch
+[1915-06-01 10:34:56.038] [WARN] Main - MODULES_NOT_SUPPORTED - rgbLed
+[1915-06-01 10:35:04.200] [INFO] Main - 1. get mac
+[1915-06-01 10:35:04.382] [INFO] Main - discovery BOUND port=[28282]
+[1915-06-01 10:35:04.654] [INFO] Main - 2. store init
+[1915-06-01 10:35:04.800] [INFO] Store - Memory 17.021414876677607%[21454848/126046208] limit: 0%
+[1915-06-01 10:35:04.871] [INFO] Main - 3. mqtt init
+[1915-06-01 10:35:04.902] [INFO] MQTT - [mqtt-init] opts { clientId: '766420553510',
+  keepalive: 120,
+  clean: true,
+  autopuback: false,
+  logger: 
+   { category: 'MQTT',
+     _events: { log: [Function] },
+     level: { level: 20000, levelStr: 'INFO' } },
+  will: 
+   { topic: 'v/a/g/766420553510/mqtt/status',
+     payload: 'err',
+     retain: true } }
+[1915-06-01 10:35:05.043] [ERROR] Main - mqtt.init() Error: ENOENT, no such file or directory '/opt/config/cert.p12'
+    at Object.fs.openSync (fs.js:427:18)
+    at Object.fs.readFileSync (fs.js:284:15)
+    at Object.module.exports.createSecureClient (/opt/thingplus-gateway/device/node_modules/mqtt/lib/mqtt.js:89:39)
+    at g (/opt/thingplus-gateway/device/app.min.js:8:15685)
+    at new s (/opt/thingplus-gateway/device/app.min.js:8:16781)
+    at Object.a.exports.init (/opt/thingplus-gateway/device/app.min.js:8:12709)
+    at e.series.b.password (/opt/thingplus-gateway/device/app.min.js:8:4344)
+    at /opt/thingplus-gateway/device/node_modules/async/lib/async.js:610:21
+    at /opt/thingplus-gateway/device/node_modules/async/lib/async.js:249:17
+    at iterate (/opt/thingplus-gateway/device/node_modules/async/lib/async.js:149:13)
+[1915-06-01 10:35:05.048] [INFO] Main - 4. server init
+[1915-06-01 10:35:05.063] [WARN] Server - time: NOT IN SYNC
+[1915-06-01 10:35:05.072] [WARN] Server - error Sever.update on init [Error: need registration]
+Error: need registration
+    at Error (<anonymous>)
+    at Object.s.statusUpdate (/opt/thingplus-gateway/device/app.min.js:9:16921)
+    at Object.s.init (/opt/thingplus-gateway/device/app.min.js:9:14790)
+    at e.series.D (/opt/thingplus-gateway/device/app.min.js:8:4566)
+    at /opt/thingplus-gateway/device/node_modules/async/lib/async.js:610:21
+    at /opt/thingplus-gateway/device/node_modules/async/lib/async.js:249:17
+    at iterate (/opt/thingplus-gateway/device/node_modules/async/lib/async.js:149:13)
+    at /opt/thingplus-gateway/device/node_modules/async/lib/async.js:160:25
+    at /opt/thingplus-gateway/device/node_modules/async/lib/async.js:251:21
+    at /opt/thingplus-gateway/device/node_modules/async/lib/async.js:615:34
+[1915-06-01 10:35:05.090] [INFO] Main - 5. gateway init
+[1915-06-01 10:35:05.229] [INFO] Gateway - [Gateway.init] board= { macaddress: '766420553510' }
+[1915-06-01 10:35:06.205] [INFO] Store - Filesystem 7371194368/7819091968 > 10%
+[1915-06-01 10:35:06.740] [ERROR] Gateway - Gateway init, NOT IN SYNC, ignoring { [Error: socket hang up] code: 'ECONNRESET', sslError: undefined }
+Error: socket hang up
+    at SecurePair.error (tls.js:1013:23)
+    at EncryptedStream.CryptoStream._done (tls.js:705:22)
+    at CleartextStream.read [as _read] (tls.js:496:24)
+    at CleartextStream.Readable.read (_stream_readable.js:320:10)
+    at EncryptedStream.onCryptoStreamFinish (tls.js:301:47)
+    at EncryptedStream.g (events.js:180:16)
+    at EncryptedStream.EventEmitter.emit (events.js:117:20)
+    at finishMaybe (_stream_writable.js:360:12)
+    at endWritable (_stream_writable.js:367:3)
+    at EncryptedStream.Writable.end (_stream_writable.js:345:5)
+[1915-06-01 10:35:06.752] [INFO] Main - 6. sensor init
+[1915-06-01 10:35:06.770] [WARN] Sensors - ... Start gathering data - REPORT_INTERVAL(60000) ...
+[1915-06-01 10:35:06.821] [WARN] Main - ... Init done: Listening on port 80 ...
+[1915-06-01 10:35:07.369] [ERROR] Gateway - Gateway init, server sync err= { [Error: socket hang up] code: 'ECONNRESET', sslError: undefined }
+Error: socket hang up
+    at SecurePair.error (tls.js:1013:23)
+    at EncryptedStream.CryptoStream._done (tls.js:705:22)
+    at CleartextStream.read [as _read] (tls.js:496:24)
+    at CleartextStream.Readable.read (_stream_readable.js:320:10)
+    at EncryptedStream.onCryptoStreamFinish (tls.js:301:47)
+    at EncryptedStream.g (events.js:180:16)
+    at EncryptedStream.EventEmitter.emit (events.js:117:20)
+    at finishMaybe (_stream_writable.js:360:12)
+    at endWritable (_stream_writable.js:367:3)
+    at EncryptedStream.Writable.end (_stream_writable.js:345:5)
+[1915-06-01 10:35:07.382] [ERROR] Gateway - gateway.sync FAILURE, tries:[1] { [Error: socket hang up] code: 'ECONNRESET', sslError: undefined }
+Error: socket hang up
+    at SecurePair.error (tls.js:1013:23)
+    at EncryptedStream.CryptoStream._done (tls.js:705:22)
+    at CleartextStream.read [as _read] (tls.js:496:24)
+    at CleartextStream.Readable.read (_stream_readable.js:320:10)
+    at EncryptedStream.onCryptoStreamFinish (tls.js:301:47)
+    at EncryptedStream.g (events.js:180:16)
+    at EncryptedStream.EventEmitter.emit (events.js:117:20)
+    at finishMaybe (_stream_writable.js:360:12)
+    at endWritable (_stream_writable.js:367:3)
+    at EncryptedStream.Writable.end (_stream_writable.js:345:5)
+[1915-06-01 10:35:08.864] [ERROR] Gateway - Gateway init, server sync err= { [Error: socket hang up] code: 'ECONNRESET', sslError: undefined }
+Error: socket hang up
+    at SecurePair.error (tls.js:1013:23)
+    at EncryptedStream.CryptoStream._done (tls.js:705:22)
+    at CleartextStream.read [as _read] (tls.js:496:24)
+    at CleartextStream.Readable.read (_stream_readable.js:320:10)
+    at EncryptedStream.onCryptoStreamFinish (tls.js:301:47)
+    at EncryptedStream.g (events.js:180:16)
+    at EncryptedStream.EventEmitter.emit (events.js:117:20)
+    at finishMaybe (_stream_writable.js:360:12)
+    at endWritable (_stream_writable.js:367:3)
+    at EncryptedStream.Writable.end (_stream_writable.js:345:5)
+[1915-06-01 10:35:08.873] [ERROR] Gateway - gateway.sync FAILURE, tries:[2] { [Error: socket hang up] code: 'ECONNRESET', sslError: undefined }
+Error: socket hang up
+    at SecurePair.error (tls.js:1013:23)
+    at EncryptedStream.CryptoStream._done (tls.js:705:22)
+    at CleartextStream.read [as _read] (tls.js:496:24)
+    at CleartextStream.Readable.read (_stream_readable.js:320:10)
+    at EncryptedStream.onCryptoStreamFinish (tls.js:301:47)
+    at EncryptedStream.g (events.js:180:16)
+    at EncryptedStream.EventEmitter.emit (events.js:117:20)
+    at finishMaybe (_stream_writable.js:360:12)
+    at endWritable (_stream_writable.js:367:3)
+    at EncryptedStream.Writable.end (_stream_writable.js:345:5)
+[1915-06-01 10:35:11.329] [ERROR] Gateway - Gateway init, server sync err= { [Error: socket hang up] code: 'ECONNRESET', sslError: undefined }
+Error: socket hang up
+    at SecurePair.error (tls.js:1013:23)
+    at EncryptedStream.CryptoStream._done (tls.js:705:22)
+    at CleartextStream.read [as _read] (tls.js:496:24)
+    at CleartextStream.Readable.read (_stream_readable.js:320:10)
+    at EncryptedStream.onCryptoStreamFinish (tls.js:301:47)
+    at EncryptedStream.g (events.js:180:16)
+    at EncryptedStream.EventEmitter.emit (events.js:117:20)
+    at finishMaybe (_stream_writable.js:360:12)
+    at endWritable (_stream_writable.js:367:3)
+    at EncryptedStream.Writable.end (_stream_writable.js:345:5)
+[1915-06-01 10:35:11.335] [ERROR] Gateway - gateway.sync FAILURE, tries:[3] { [Error: socket hang up] code: 'ECONNRESET', sslError: undefined }
+Error: socket hang up
+    at SecurePair.error (tls.js:1013:23)
+    at EncryptedStream.CryptoStream._done (tls.js:705:22)
+    at CleartextStream.read [as _read] (tls.js:496:24)
+    at CleartextStream.Readable.read (_stream_readable.js:320:10)
+    at EncryptedStream.onCryptoStreamFinish (tls.js:301:47)
+    at EncryptedStream.g (events.js:180:16)
+    at EncryptedStream.EventEmitter.emit (events.js:117:20)
+    at finishMaybe (_stream_writable.js:360:12)
+    at endWritable (_stream_writable.js:367:3)
+    at EncryptedStream.Writable.end (_stream_writable.js:345:5)
+[1915-06-01 10:35:15.792] [ERROR] Gateway - Gateway init, server sync err= { [Error: socket hang up] code: 'ECONNRESET', sslError: undefined }
+Error: socket hang up
+    at SecurePair.error (tls.js:1013:23)
+    at EncryptedStream.CryptoStream._done (tls.js:705:22)
+    at CleartextStream.read [as _read] (tls.js:496:24)
+    at CleartextStream.Readable.read (_stream_readable.js:320:10)
+    at EncryptedStream.onCryptoStreamFinish (tls.js:301:47)
+    at EncryptedStream.g (events.js:180:16)
+    at EncryptedStream.EventEmitter.emit (events.js:117:20)
+    at finishMaybe (_stream_writable.js:360:12)
+    at endWritable (_stream_writable.js:367:3)
+    at EncryptedStream.Writable.end (_stream_writable.js:345:5)
+[1915-06-01 10:35:15.799] [ERROR] Gateway - gateway.sync FAILURE, tries:[4] { [Error: socket hang up] code: 'ECONNRESET', sslError: undefined }
+Error: socket hang up
+    at SecurePair.error (tls.js:1013:23)
+    at EncryptedStream.CryptoStream._done (tls.js:705:22)
+    at CleartextStream.read [as _read] (tls.js:496:24)
+    at CleartextStream.Readable.read (_stream_readable.js:320:10)
+    at EncryptedStream.onCryptoStreamFinish (tls.js:301:47)
+    at EncryptedStream.g (events.js:180:16)
+    at EncryptedStream.EventEmitter.emit (events.js:117:20)
+    at finishMaybe (_stream_writable.js:360:12)
+    at endWritable (_stream_writable.js:367:3)
+    at EncryptedStream.Writable.end (_stream_writable.js:345:5)
+[1915-06-01 10:35:24.241] [ERROR] Gateway - Gateway init, server sync err= { [Error: socket hang up] code: 'ECONNRESET', sslError: undefined }
+Error: socket hang up
+    at SecurePair.error (tls.js:1013:23)
+    at EncryptedStream.CryptoStream._done (tls.js:705:22)
+    at CleartextStream.read [as _read] (tls.js:496:24)
+    at CleartextStream.Readable.read (_stream_readable.js:320:10)
+    at EncryptedStream.onCryptoStreamFinish (tls.js:301:47)
+    at EncryptedStream.g (events.js:180:16)
+    at EncryptedStream.EventEmitter.emit (events.js:117:20)
+    at finishMaybe (_stream_writable.js:360:12)
+    at endWritable (_stream_writable.js:367:3)
+    at EncryptedStream.Writable.end (_stream_writable.js:345:5)
+[1915-06-01 10:35:24.247] [ERROR] Gateway - gateway.sync FAILURE, tries:[5] { [Error: socket hang up] code: 'ECONNRESET', sslError: undefined }
+Error: socket hang up
+    at SecurePair.error (tls.js:1013:23)
+    at EncryptedStream.CryptoStream._done (tls.js:705:22)
+    at CleartextStream.read [as _read] (tls.js:496:24)
+    at CleartextStream.Readable.read (_stream_readable.js:320:10)
+    at EncryptedStream.onCryptoStreamFinish (tls.js:301:47)
+    at EncryptedStream.g (events.js:180:16)
+    at EncryptedStream.EventEmitter.emit (events.js:117:20)
+    at finishMaybe (_stream_writable.js:360:12)
+    at endWritable (_stream_writable.js:367:3)
+    at EncryptedStream.Writable.end (_stream_writable.js:345:5)
+[1915-06-01 10:35:40.691] [ERROR] Gateway - Gateway init, server sync err= { [Error: socket hang up] code: 'ECONNRESET', sslError: undefined }
+Error: socket hang up
+    at SecurePair.error (tls.js:1013:23)
+    at EncryptedStream.CryptoStream._done (tls.js:705:22)
+    at CleartextStream.read [as _read] (tls.js:496:24)
+    at CleartextStream.Readable.read (_stream_readable.js:320:10)
+    at EncryptedStream.onCryptoStreamFinish (tls.js:301:47)
+    at EncryptedStream.g (events.js:180:16)
+    at EncryptedStream.EventEmitter.emit (events.js:117:20)
+    at finishMaybe (_stream_writable.js:360:12)
+    at endWritable (_stream_writable.js:367:3)
+    at EncryptedStream.Writable.end (_stream_writable.js:345:5)
+[1915-06-01 10:35:40.697] [ERROR] Gateway - gateway.sync FAILURE, tries:[6] { [Error: socket hang up] code: 'ECONNRESET', sslError: undefined }
+Error: socket hang up
+    at SecurePair.error (tls.js:1013:23)
+    at EncryptedStream.CryptoStream._done (tls.js:705:22)
+    at CleartextStream.read [as _read] (tls.js:496:24)
+    at CleartextStream.Readable.read (_stream_readable.js:320:10)
+    at EncryptedStream.onCryptoStreamFinish (tls.js:301:47)
+    at EncryptedStream.g (events.js:180:16)
+    at EncryptedStream.EventEmitter.emit (events.js:117:20)
+    at finishMaybe (_stream_writable.js:360:12)
+    at endWritable (_stream_writable.js:367:3)
+    at EncryptedStream.Writable.end (_stream_writable.js:345:5)
+[90mGET / [33m401 [90m119.280 ms - -[0m
+[90mGET / [33m401 [90m64.507 ms - -[0m
+[90mGET / [32m200 [90m163.456 ms - 4622[0m
+[90mGET /components/sidr/stylesheets/jquery.sidr.dark.css [32m200 [90m133.365 ms - 3493[0m
+[90mGET /styles/app.css [32m200 [90m114.101 ms - 6240[0m
+[90mGET /styles/bootstrap.css [32m200 [90m234.213 ms - 119625[0m
+[90mGET /components/requirejs/require.js [32m200 [90m153.867 ms - 82718[0m
+[90mGET /scripts/main.js [32m200 [90m26.549 ms - 5569[0m
+[90mGET /scripts/app.js [32m200 [90m163.856 ms - 365[0m
+[90mGET /components/requirejs-domready/domReady.js [32m200 [90m157.157 ms - 4035[0m
+[90mGET /scripts/services/restService.js [32m200 [90m174.976 ms - 443[0m
+[90mGET /scripts/services/logger.js [32m200 [90m168.523 ms - 1185[0m
+[90mGET /scripts/services/userService.js [32m200 [90m1139.589 ms - 254[0m
+[90mGET /scripts/controllers/homeController.js [32m200 [90m1167.723 ms - 7184[0m
+[90mGET /components/lodash/dist/lodash.js [32m200 [90m1370.917 ms - 229855[0m
+[90mGET /scripts/controllers/menuController.js [32m200 [90m244.555 ms - 2936[0m
+[90mGET /scripts/controllers/registerController.js [32m200 [90m218.555 ms - 11925[0m
+[90mGET /scripts/controllers/settingController.js [32m200 [90m207.691 ms - 7914[0m
+[90mGET /scripts/controllers/modemController.js [32m200 [90m186.016 ms - 1103[0m
+[90mGET /scripts/controllers/httpController.js [32m200 [90m166.075 ms - 3216[0m
+[90mGET /scripts/controllers/aboutController.js [32m200 [90m214.752 ms - 313[0m
+[90mGET /scripts/directives/dwAccordion.js [32m200 [90m198.101 ms - 701[0m
+[90mGET /scripts/directives/dwExpander.js [32m200 [90m190.080 ms - 819[0m
+[90mGET /scripts/directives/dwNoti.js [32m200 [90m183.712 ms - 1375[0m
+[90mGET /scripts/directives/ngbkFocus.js [32m200 [90m89.547 ms - 388[0m
+[90mGET /scripts/directives/indiClick.js [32m200 [90m62.917 ms - 1612[0m
+[90mGET /scripts/directives/dwTime.js [32m200 [90m89.819 ms - 923[0m
+[90mGET /scripts/vendor/jquery-mobile/jquery.mobile.support.orientation.js [32m200 [90m61.621 ms - 490[0m
+[90mGET /scripts/vendor/jquery-mobile/throttledresize.js [32m200 [90m128.048 ms - 1088[0m
+[90mGET /scripts/controllers/controllers.js [32m200 [90m122.000 ms - 104[0m
+[90mGET /components/jquery/jquery.js [32m200 [90m235.669 ms - 242142[0m
+[90mGET /scripts/services/services.js [32m200 [90m110.117 ms - 113[0m
+[90mGET /scripts/filters/filters.js [32m200 [90m83.248 ms - 347[0m
+[90mGET /scripts/directives/directives.js [32m200 [90m76.859 ms - 103[0m
+[90mGET /components/requirejs-i18n/i18n.js [32m200 [90m73.861 ms - 7977[0m
+[90mGET /components/js-md5/js/md5.js [32m200 [90m74.203 ms - 9639[0m
+[90mGET /scripts/services/httpService.js [32m200 [90m97.952 ms - 667[0m
+[90mGET /scripts/controllers/aboutInfoController.js [32m200 [90m91.541 ms - 243[0m
+[90mGET /scripts/controllers/aboutHintController.js [32m200 [90m76.357 ms - 243[0m
+[90mGET /components/spin.js/spin.js [32m200 [90m84.144 ms - 10371[0m
+[90mGET /components/bootstrap/js/collapse.js [32m200 [90m93.851 ms - 4840[0m
+[90mGET /components/bootstrap/js/dropdown.js [32m200 [90m87.669 ms - 4246[0m
+[90mGET /components/bootstrap/js/button.js [32m200 [90m225.989 ms - 2883[0m
+[90mGET /components/jquery.animate-enhanced/jquery.animate-enhanced.min.js [32m200 [90m227.643 ms - 8228[0m
+[90mGET /components/jquery-touchswipe/jquery.touchSwipe.js [32m200 [90m288.640 ms - 67396[0m
+[90mGET /scripts/nls/labels.js [32m200 [90m228.827 ms - 346[0m
+[90mGET /scripts/vendor/jquery-mobile/orientationchange.js [32m200 [90m222.667 ms - 6348[0m
+[90mGET /components/momentjs/min/moment.min.js [32m200 [90m196.960 ms - 27524[0m
+[90mGET /components/sidr/jquery.sidr.min.js [32m200 [90m197.248 ms - 3673[0m
+[90mGET /components/angular/angular.js [32m200 [90m667.536 ms - 756488[0m
+[90mGET /components/angular-route/angular-route.js [32m200 [90m191.445 ms - 33126[0m
+[90mGET /components/angular-resource/angular-resource.js [32m200 [90m185.067 ms - 23837[0m
+[90mGET /components/angular-cookies/angular-cookies.js [32m200 [90m178.960 ms - 5421[0m
+[90mGET /components/angular-sanitize/angular-sanitize.js [32m200 [90m172.464 ms - 20772[0m
+[90mGET /components/ngUpload/ng-upload.js [32m200 [90m151.328 ms - 6954[0m
+[90mGET /components/angular-ui-router/release/angular-ui-router.js [32m200 [90m196.683 ms - 116478[0m
+[90mGET /views/root-header.html [32m200 [90m53.584 ms - 942[0m
+[90mGET /views/home.html [32m200 [90m47.365 ms - 10188[0m
+[1915-06-01 10:36:01.154] [INFO] Main - [HTTPAPI] /api/server/info {
+  "config": {
+    "mqtt": {
+      "protocol": "mqtts",
+      "host": "mqtt.thingplus.net",
+      "port": "8883",
+      "retryConnectInterval": 60000,
+      "ackTimeout": 30000
+    },
+    "service": {
+      "protocol": "https",
+      "host": "www.thingplus.net",
+      "port": "8443"
+    }
+  },
+  "status": {
+    "mqtt": {
+      "connected": false,
+      "lastError": ""
+    },
+    "service": {
+      "connected": false,
+      "lastError": ""
+    }
+  },
+  "registered": false
+}
+[90mGET /api/server/info [32m200 [90m200.597 ms - 319[0m
+[90mGET /api/modems [33m404 [90m370.965 ms - 9[0m
+[1915-06-01 10:36:01.382] [INFO] Main - [HTTPAPI] getInterface modem, getModemConfig modem scanner is not available
+[1915-06-01 10:36:01.573] [INFO] Main - [HTTPAPI] getInterfaces netInfo [ { id: 'eth0',
+    address: '10.0.1.201',
+    family: 'IPv4',
+    internal: false,
+    RxBytes: '51817254',
+    TxBytes: '2860041' } ]
+[90mGET /api/interfaces [32m200 [90m559.771 ms - 112[0m
+[90mGET /styles/font-awesome/font/fontawesome-webfont.woff?v=3.2.1 [32m200 [90m530.219 ms - 43572[0m
+[1915-06-01 10:36:01.967] [ERROR] Gateway - Gateway init, server sync err= { [Error: socket hang up] code: 'ECONNRESET', sslError: undefined }
+Error: socket hang up
+    at SecurePair.error (tls.js:1013:23)
+    at EncryptedStream.CryptoStream._done (tls.js:705:22)
+    at CleartextStream.read [as _read] (tls.js:496:24)
+    at CleartextStream.Readable.read (_stream_readable.js:320:10)
+    at EncryptedStream.onCryptoStreamFinish (tls.js:301:47)
+    at EncryptedStream.g (events.js:180:16)
+    at EncryptedStream.EventEmitter.emit (events.js:117:20)
+    at finishMaybe (_stream_writable.js:360:12)
+    at endWritable (_stream_writable.js:367:3)
+    at EncryptedStream.Writable.end (_stream_writable.js:345:5)
+[90mGET /api/gateway/info [32m200 [90m971.792 ms - 142[0m
+[1915-06-01 10:36:02.024] [INFO] Main - [HTTPAPI] /api/sensor/data {}
+[90mGET /api/sensor/data [32m200 [90m24.155 ms - 2[0m
+[1915-06-01 10:36:14.045] [ERROR] Gateway - Gateway init, server sync err= { [Error: socket hang up] code: 'ECONNRESET', sslError: undefined }
+Error: socket hang up
+    at SecurePair.error (tls.js:1013:23)
+    at EncryptedStream.CryptoStream._done (tls.js:705:22)
+    at CleartextStream.read [as _read] (tls.js:496:24)
+    at CleartextStream.Readable.read (_stream_readable.js:320:10)
+    at EncryptedStream.onCryptoStreamFinish (tls.js:301:47)
+    at EncryptedStream.g (events.js:180:16)
+    at EncryptedStream.EventEmitter.emit (events.js:117:20)
+    at finishMaybe (_stream_writable.js:360:12)
+    at endWritable (_stream_writable.js:367:3)
+    at EncryptedStream.Writable.end (_stream_writable.js:345:5)
+[1915-06-01 10:36:14.057] [ERROR] Gateway - gateway.sync FAILURE, tries:[7] { [Error: socket hang up] code: 'ECONNRESET', sslError: undefined }
+Error: socket hang up
+    at SecurePair.error (tls.js:1013:23)
+    at EncryptedStream.CryptoStream._done (tls.js:705:22)
+    at CleartextStream.read [as _read] (tls.js:496:24)
+    at CleartextStream.Readable.read (_stream_readable.js:320:10)
+    at EncryptedStream.onCryptoStreamFinish (tls.js:301:47)
+    at EncryptedStream.g (events.js:180:16)
+    at EncryptedStream.EventEmitter.emit (events.js:117:20)
+    at finishMaybe (_stream_writable.js:360:12)
+    at endWritable (_stream_writable.js:367:3)
+    at EncryptedStream.Writable.end (_stream_writable.js:345:5)
+[1915-06-01 10:36:16.819] [INFO] Sensors - [766420553510] status { status: 'err', duration: -1, sensors: [] }
+[1915-06-01 10:36:16.838] [WARN] Sensors - Gateway status: NOT SENT due to unavailable mqtt
+[90mGET /views/setting.html [32m200 [90m58.832 ms - 7660[0m
+[90mGET /api/apikey [32m200 [90m280.011 ms - 0[0m
+[1915-06-01 10:37:11.498] [ERROR] Gateway - Gateway init, server sync err= { [Error: socket hang up] code: 'ECONNRESET', sslError: undefined }
+Error: socket hang up
+    at SecurePair.error (tls.js:1013:23)
+    at EncryptedStream.CryptoStream._done (tls.js:705:22)
+    at CleartextStream.read [as _read] (tls.js:496:24)
+    at CleartextStream.Readable.read (_stream_readable.js:320:10)
+    at EncryptedStream.onCryptoStreamFinish (tls.js:301:47)
+    at EncryptedStream.g (events.js:180:16)
+    at EncryptedStream.EventEmitter.emit (events.js:117:20)
+    at finishMaybe (_stream_writable.js:360:12)
+    at endWritable (_stream_writable.js:367:3)
+    at EncryptedStream.Writable.end (_stream_writable.js:345:5)
+[90mGET /api/gateway/info [36m304 [90m875.899 ms - -[0m
+[90mPOST /api/apikeyUpload [32m200 [90m134.069 ms - 64[0m
+[90mGET /api/gateway/ping [32m200 [90m9.072 ms - -[0m
+[1915-06-01 10:37:16.862] [INFO] Sensors - [766420553510] status { status: 'err', duration: -1, sensors: [] }
+[1915-06-01 10:37:16.872] [WARN] Sensors - Gateway status: NOT SENT due to unavailable mqtt
+[90mGET /api/gateway/ping [32m200 [90m7.701 ms - -[0m
+[1915-06-01 10:37:18.515] [ERROR] Gateway - Gateway init, server sync err= { [Error: socket hang up] code: 'ECONNRESET', sslError: undefined }
+Error: socket hang up
+    at SecurePair.error (tls.js:1013:23)
+    at EncryptedStream.CryptoStream._done (tls.js:705:22)
+    at CleartextStream.read [as _read] (tls.js:496:24)
+    at CleartextStream.Readable.read (_stream_readable.js:320:10)
+    at EncryptedStream.onCryptoStreamFinish (tls.js:301:47)
+    at EncryptedStream.g (events.js:180:16)
+    at EncryptedStream.EventEmitter.emit (events.js:117:20)
+    at finishMaybe (_stream_writable.js:360:12)
+    at endWritable (_stream_writable.js:367:3)
+    at EncryptedStream.Writable.end (_stream_writable.js:345:5)
+[1915-06-01 10:37:18.522] [ERROR] Gateway - gateway.sync FAILURE, tries:[8] { [Error: socket hang up] code: 'ECONNRESET', sslError: undefined }
+Error: socket hang up
+    at SecurePair.error (tls.js:1013:23)
+    at EncryptedStream.CryptoStream._done (tls.js:705:22)
+    at CleartextStream.read [as _read] (tls.js:496:24)
+    at CleartextStream.Readable.read (_stream_readable.js:320:10)
+    at EncryptedStream.onCryptoStreamFinish (tls.js:301:47)
+    at EncryptedStream.g (events.js:180:16)
+    at EncryptedStream.EventEmitter.emit (events.js:117:20)
+    at finishMaybe (_stream_writable.js:360:12)
+    at endWritable (_stream_writable.js:367:3)
+    at EncryptedStream.Writable.end (_stream_writable.js:345:5)
+[1915-06-01 10:37:20.436] [INFO] Main - SIGTERM
+[32m[1915-06-01 10:39:33.297] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[foscamSensor] [ 'FI9821WS' ]
+[32m[1915-06-01 10:39:33.417] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[foscamActuator] [ 'FI9821WA' ]
+[36m[1915-06-01 10:39:33.444] [DEBUG] Sensor - [39m[sensor/index.js] updated DRIVER_CFG { dht: [ 'dht11', 'dht22' ],
+  digitalLight: [ 'TSL2561', 'BH1750' ],
+  digitalCO2: [ 'X100' ],
+  digitalHumidity: [ 'HTU21D' ],
+  magneticSwitch: [ 'normallyClose', 'normallyOpen' ],
+  motionDetector: [ 'passiveInfrared' ],
+  foscamSensor: [ 'FI9821WS' ],
+  foscamActuator: [ 'FI9821WA' ] }
+[32m[1915-06-01 10:39:34.998] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[futureSensor] [ 'futureDi',
+  'futureTemp',
+  'futureHumi',
+  'futureGas',
+  'futurePower',
+  'futureDust',
+  'futureCount',
+  'futureCountEvent',
+  'futureVoltage',
+  'futureCurrent',
+  'futurePressure' ]
+[32m[1915-06-01 10:39:35.017] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[futureActuator] [ 'futureDo', 'futureTempCtrl' ]
+[36m[1915-06-01 10:39:35.027] [DEBUG] Sensor - [39m[sensor/index.js] updated DRIVER_CFG { dht: [ 'dht11', 'dht22' ],
+  digitalLight: [ 'TSL2561', 'BH1750' ],
+  digitalCO2: [ 'X100' ],
+  digitalHumidity: [ 'HTU21D' ],
+  magneticSwitch: [ 'normallyClose', 'normallyOpen' ],
+  motionDetector: [ 'passiveInfrared' ],
+  foscamSensor: [ 'FI9821WS' ],
+  foscamActuator: [ 'FI9821WA' ],
+  futureSensor: 
+   [ 'futureDi',
+     'futureTemp',
+     'futureHumi',
+     'futureGas',
+     'futurePower',
+     'futureDust',
+     'futureCount',
+     'futureCountEvent',
+     'futureVoltage',
+     'futureCurrent',
+     'futurePressure' ],
+  futureActuator: [ 'futureDo', 'futureTempCtrl' ] }
+[32m[1915-06-01 10:39:35.788] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[jsonrpcSensor] [ 'jsonrpcTemp',
+  'jsonrpcHumi',
+  'jsonrpcLight',
+  'jsonrpcNoise',
+  'jsonrpcDi',
+  'jsonrpcMotion',
+  'jsonrpcCo2',
+  'jsonrpcCo',
+  'jsonrpcVoc',
+  'jsonrpcPower',
+  'jsonrpcDust',
+  'jsonrpcCount',
+  'jsonrpcCountEvent',
+  'jsonrpcVoltage',
+  'jsonrpcWeight',
+  'jsonrpcColor',
+  'jsonrpcVibration',
+  'jsonrpcSpeed',
+  'jsonrpcAccelerometer',
+  'jsonrpcString',
+  'jsonrpcPressure' ]
+[32m[1915-06-01 10:39:35.809] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[jsonrpcActuator] [ 'jsonrpcDo', 'jsonrpcTempCtrl', 'jsonrpcServomotor' ]
+[36m[1915-06-01 10:39:35.819] [DEBUG] Sensor - [39m[sensor/index.js] updated DRIVER_CFG { dht: [ 'dht11', 'dht22' ],
+  digitalLight: [ 'TSL2561', 'BH1750' ],
+  digitalCO2: [ 'X100' ],
+  digitalHumidity: [ 'HTU21D' ],
+  magneticSwitch: [ 'normallyClose', 'normallyOpen' ],
+  motionDetector: [ 'passiveInfrared' ],
+  foscamSensor: [ 'FI9821WS' ],
+  foscamActuator: [ 'FI9821WA' ],
+  futureSensor: 
+   [ 'futureDi',
+     'futureTemp',
+     'futureHumi',
+     'futureGas',
+     'futurePower',
+     'futureDust',
+     'futureCount',
+     'futureCountEvent',
+     'futureVoltage',
+     'futureCurrent',
+     'futurePressure' ],
+  futureActuator: [ 'futureDo', 'futureTempCtrl' ],
+  jsonrpcSensor: 
+   [ 'jsonrpcTemp',
+     'jsonrpcHumi',
+     'jsonrpcLight',
+     'jsonrpcNoise',
+     'jsonrpcDi',
+     'jsonrpcMotion',
+     'jsonrpcCo2',
+     'jsonrpcCo',
+     'jsonrpcVoc',
+     'jsonrpcPower',
+     'jsonrpcDust',
+     'jsonrpcCount',
+     'jsonrpcCountEvent',
+     'jsonrpcVoltage',
+     'jsonrpcWeight',
+     'jsonrpcColor',
+     'jsonrpcVibration',
+     'jsonrpcSpeed',
+     'jsonrpcAccelerometer',
+     'jsonrpcString',
+     'jsonrpcPressure' ],
+  jsonrpcActuator: [ 'jsonrpcDo', 'jsonrpcTempCtrl', 'jsonrpcServomotor' ] }
+[32m[1915-06-01 10:39:36.098] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[visudreamSensor] [ 'visudreamSum',
+  'visudreamV',
+  'visudreamI',
+  'visudreamPf',
+  'visudreamFreq' ]
+[36m[1915-06-01 10:39:36.109] [DEBUG] Sensor - [39m[sensor/index.js] updated DRIVER_CFG { dht: [ 'dht11', 'dht22' ],
+  digitalLight: [ 'TSL2561', 'BH1750' ],
+  digitalCO2: [ 'X100' ],
+  digitalHumidity: [ 'HTU21D' ],
+  magneticSwitch: [ 'normallyClose', 'normallyOpen' ],
+  motionDetector: [ 'passiveInfrared' ],
+  foscamSensor: [ 'FI9821WS' ],
+  foscamActuator: [ 'FI9821WA' ],
+  futureSensor: 
+   [ 'futureDi',
+     'futureTemp',
+     'futureHumi',
+     'futureGas',
+     'futurePower',
+     'futureDust',
+     'futureCount',
+     'futureCountEvent',
+     'futureVoltage',
+     'futureCurrent',
+     'futurePressure' ],
+  futureActuator: [ 'futureDo', 'futureTempCtrl' ],
+  jsonrpcSensor: 
+   [ 'jsonrpcTemp',
+     'jsonrpcHumi',
+     'jsonrpcLight',
+     'jsonrpcNoise',
+     'jsonrpcDi',
+     'jsonrpcMotion',
+     'jsonrpcCo2',
+     'jsonrpcCo',
+     'jsonrpcVoc',
+     'jsonrpcPower',
+     'jsonrpcDust',
+     'jsonrpcCount',
+     'jsonrpcCountEvent',
+     'jsonrpcVoltage',
+     'jsonrpcWeight',
+     'jsonrpcColor',
+     'jsonrpcVibration',
+     'jsonrpcSpeed',
+     'jsonrpcAccelerometer',
+     'jsonrpcString',
+     'jsonrpcPressure' ],
+  jsonrpcActuator: [ 'jsonrpcDo', 'jsonrpcTempCtrl', 'jsonrpcServomotor' ],
+  visudreamSensor: 
+   [ 'visudreamSum',
+     'visudreamV',
+     'visudreamI',
+     'visudreamPf',
+     'visudreamFreq' ] }
+[1915-06-01 10:39:39.544] [INFO] Main - ... Starting [FTM] ...
+[1915-06-01 10:39:39.651] [WARN] Main - MODULES_NOT_SUPPORTED - memwatch
+[1915-06-01 10:39:39.747] [WARN] Main - MODULES_NOT_SUPPORTED - rgbLed
+[1915-06-01 10:39:48.294] [INFO] Main - 1. get mac
+[1915-06-01 10:39:48.477] [INFO] Main - discovery BOUND port=[28282]
+[1915-06-01 10:39:48.750] [INFO] Main - 2. store init
+[1915-06-01 10:39:48.919] [INFO] Store - Memory 36.79849218470737%[46383104/126046208] limit: 0%
+[1915-06-01 10:39:48.991] [INFO] Main - 3. mqtt init
+[1915-06-01 10:39:49.022] [INFO] MQTT - [mqtt-init] opts { clientId: '766420553510',
+  keepalive: 120,
+  clean: true,
+  autopuback: false,
+  logger: 
+   { category: 'MQTT',
+     _events: { log: [Function] },
+     level: { level: 20000, levelStr: 'INFO' } },
+  will: 
+   { topic: 'v/a/g/766420553510/mqtt/status',
+     payload: 'err',
+     retain: true } }
+[1915-06-01 10:39:49.286] [INFO] MQTT - MH CREATE secure(yes) mqtt.thingplus.net:8883
+[1915-06-01 10:39:49.296] [INFO] Main - 4. server init
+[1915-06-01 10:39:49.313] [WARN] Server - time: NOT IN SYNC
+[1915-06-01 10:39:50.248] [INFO] Store - Filesystem 7371165696/7819091968 > 10%
+[1915-06-01 10:39:50.609] [WARN] MQTT - mqtt close
+[1915-06-01 10:39:50.873] [INFO] Server - [mqtt] - DISCONNECTED
+[1915-06-01 10:39:50.878] [INFO] Server - [service] - DISCONNECTED
+[1915-06-01 10:39:50.884] [INFO] Main - 5. gateway init
+[1915-06-01 10:39:51.020] [INFO] Gateway - [Gateway.init] board= { macaddress: '766420553510' }
+[1915-06-01 10:39:51.681] [ERROR] Gateway - Gateway init, NOT IN SYNC, ignoring { [Error: 404] statusCode: 404 }
+Error: 404
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-01 10:39:51.827] [INFO] Main - 6. sensor init
+[1915-06-01 10:39:51.845] [WARN] Sensors - ... Start gathering data - REPORT_INTERVAL(60000) ...
+[1915-06-01 10:39:51.895] [WARN] Main - ... Init done: Listening on port 80 ...
+[1915-06-01 10:39:52.416] [ERROR] Gateway - Gateway not found and remove all sensors
+[1915-06-01 10:39:52.427] [ERROR] Gateway - gateway.sync FAILURE, tries:[1] { [Error: 404] statusCode: 404 }
+Error: 404
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[90mGET / [33m401 [90m134.997 ms - -[0m
+[90mGET / [36m304 [90m151.003 ms - -[0m
+[90mGET /api/gateway/ping [32m200 [90m24.379 ms - -[0m
+[90mGET /styles/bootstrap.css [36m304 [90m111.163 ms - -[0m
+[90mGET /components/sidr/stylesheets/jquery.sidr.dark.css [36m304 [90m92.992 ms - -[0m
+[90mGET /styles/app.css [36m304 [90m84.491 ms - -[0m
+[90mGET /components/requirejs/require.js [36m304 [90m80.304 ms - -[0m
+[90mGET /scripts/main.js [36m304 [90m19.157 ms - -[0m
+[90mGET /scripts/app.js [36m304 [90m90.053 ms - -[0m
+[90mGET /components/requirejs-domready/domReady.js [36m304 [90m88.651 ms - -[0m
+[90mGET /components/lodash/dist/lodash.js [36m304 [90m84.485 ms - -[0m
+[90mGET /scripts/services/restService.js [36m304 [90m79.563 ms - -[0m
+[90mGET /scripts/controllers/homeController.js [36m304 [90m54.976 ms - -[0m
+[90mGET /scripts/controllers/menuController.js [36m304 [90m51.003 ms - -[0m
+[90mGET /scripts/controllers/registerController.js [36m304 [90m49.136 ms - -[0m
+[90mGET /scripts/services/userService.js [36m304 [90m82.971 ms - -[0m
+[90mGET /scripts/services/logger.js [36m304 [90m80.272 ms - -[0m
+[90mGET /scripts/controllers/settingController.js [36m304 [90m76.485 ms - -[0m
+[90mGET /scripts/controllers/modemController.js [36m304 [90m75.120 ms - -[0m
+[90mGET /scripts/controllers/httpController.js [36m304 [90m72.731 ms - -[0m
+[1915-06-01 10:39:54.670] [ERROR] Gateway - Gateway not found and remove all sensors
+[1915-06-01 10:39:54.678] [ERROR] Gateway - gateway.sync FAILURE, tries:[2] { [Error: 404] statusCode: 404 }
+Error: 404
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[90mGET /scripts/directives/dwExpander.js [36m304 [90m75.883 ms - -[0m
+[90mGET /scripts/directives/dwNoti.js [36m304 [90m72.864 ms - -[0m
+[90mGET /scripts/directives/ngbkFocus.js [36m304 [90m70.597 ms - -[0m
+[90mGET /scripts/controllers/aboutController.js [36m304 [90m154.597 ms - -[0m
+[90mGET /scripts/directives/dwAccordion.js [36m304 [90m123.568 ms - -[0m
+[90mGET /scripts/directives/dwTime.js [36m304 [90m102.299 ms - -[0m
+[90mGET /components/jquery/jquery.js [36m304 [90m99.637 ms - -[0m
+[90mGET /scripts/vendor/jquery-mobile/jquery.mobile.support.orientation.js [36m304 [90m141.632 ms - -[0m
+[90mGET /scripts/directives/indiClick.js [36m304 [90m62.469 ms - -[0m
+[90mGET /scripts/services/services.js [36m304 [90m59.045 ms - -[0m
+[90mGET /scripts/filters/filters.js [36m304 [90m105.765 ms - -[0m
+[90mGET /scripts/vendor/jquery-mobile/throttledresize.js [36m304 [90m63.739 ms - -[0m
+[90mGET /scripts/controllers/controllers.js [36m304 [90m61.648 ms - -[0m
+[90mGET /components/js-md5/js/md5.js [36m304 [90m89.995 ms - -[0m
+[90mGET /scripts/directives/directives.js [36m304 [90m46.581 ms - -[0m
+[90mGET /components/requirejs-i18n/i18n.js [36m304 [90m45.323 ms - -[0m
+[90mGET /scripts/services/httpService.js [36m304 [90m46.757 ms - -[0m
+[90mGET /scripts/controllers/aboutInfoController.js [36m304 [90m45.477 ms - -[0m
+[90mGET /scripts/controllers/aboutHintController.js [36m304 [90m43.856 ms - -[0m
+[90mGET /components/angular/angular.js [36m304 [90m52.101 ms - -[0m
+[90mGET /components/bootstrap/js/collapse.js [36m304 [90m48.107 ms - -[0m
+[90mGET /components/bootstrap/js/dropdown.js [36m304 [90m45.712 ms - -[0m
+[90mGET /components/bootstrap/js/button.js [36m304 [90m49.968 ms - -[0m
+[90mGET /components/jquery.animate-enhanced/jquery.animate-enhanced.min.js [36m304 [90m49.243 ms - -[0m
+[90mGET /components/jquery-touchswipe/jquery.touchSwipe.js [36m304 [90m94.741 ms - -[0m
+[90mGET /components/spin.js/spin.js [36m304 [90m64.261 ms - -[0m
+[90mGET /components/momentjs/min/moment.min.js [36m304 [90m60.592 ms - -[0m
+[90mGET /scripts/vendor/jquery-mobile/orientationchange.js [36m304 [90m57.824 ms - -[0m
+[90mGET /scripts/nls/labels.js [36m304 [90m36.192 ms - -[0m
+[90mGET /components/angular-route/angular-route.js [36m304 [90m33.221 ms - -[0m
+[90mGET /components/angular-resource/angular-resource.js [36m304 [90m66.293 ms - -[0m
+[90mGET /components/angular-cookies/angular-cookies.js [36m304 [90m64.128 ms - -[0m
+[90mGET /components/angular-sanitize/angular-sanitize.js [36m304 [90m61.435 ms - -[0m
+[90mGET /components/angular-ui-router/release/angular-ui-router.js [36m304 [90m57.643 ms - -[0m
+[90mGET /components/ngUpload/ng-upload.js [36m304 [90m184.880 ms - -[0m
+[90mGET /components/sidr/jquery.sidr.min.js [36m304 [90m182.240 ms - -[0m
+[90mGET /views/root-header.html [36m304 [90m33.483 ms - -[0m
+[90mGET /views/setting.html [36m304 [90m29.621 ms - -[0m
+[90mGET /api/apikey [32m200 [90m475.440 ms - 28[0m
+[90mGET /styles/font-awesome/font/fontawesome-webfont.woff?v=3.2.1 [36m304 [90m519.200 ms - -[0m
+[1915-06-01 10:39:57.870] [ERROR] Gateway - Gateway not found and remove all sensors
+[1915-06-01 10:39:57.888] [ERROR] Gateway - gateway.sync FAILURE, tries:[3] { [Error: 404] statusCode: 404 }
+Error: 404
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-01 10:39:58.458] [ERROR] Gateway - Gateway not found and remove all sensors
+[90mGET /api/gateway/info [36m304 [90m1310.603 ms - -[0m
+[1915-06-01 10:40:02.403] [ERROR] Gateway - Gateway not found and remove all sensors
+[1915-06-01 10:40:02.407] [ERROR] Gateway - gateway.sync FAILURE, tries:[4] { [Error: 404] statusCode: 404 }
+Error: 404
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-01 10:40:09.365] [INFO] Main - [HTTPAPI] /api/software/info { local: 
+   { version: '755ab9a',
+     date: '2015-06-22 08:40:26 +0000',
+     comment: 'Added rsync node module.' },
+  remote: 
+   { version: '755ab9a',
+     date: '2015-06-22 08:40:26 +0000',
+     comment: 'Added rsync node module.' } }
+[90mGET /api/software/info [32m200 [90m12250.053 ms - 206[0m
+[1915-06-01 10:40:10.885] [ERROR] Gateway - Gateway not found and remove all sensors
+[1915-06-01 10:40:10.890] [ERROR] Gateway - gateway.sync FAILURE, tries:[5] { [Error: 404] statusCode: 404 }
+Error: 404
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[90mGET /views/home.html [36m304 [90m16.667 ms - -[0m
+[1915-06-01 10:40:19.800] [INFO] Main - [HTTPAPI] getInterface modem, getModemConfig modem scanner is not available
+[90mGET /api/modems [33m404 [90m149.301 ms - 9[0m
+[1915-06-01 10:40:19.955] [INFO] Main - [HTTPAPI] getInterfaces netInfo [ { id: 'eth0',
+    address: '10.0.1.201',
+    family: 'IPv4',
+    internal: false,
+    RxBytes: '140583',
+    TxBytes: '48039' } ]
+[90mGET /api/interfaces [32m200 [90m304.363 ms - 108[0m
+[1915-06-01 10:40:20.443] [INFO] Server - [mqtt] - DISCONNECTED
+[90mGET /api/server/info [32m200 [90m836.357 ms - 337[0m
+[1915-06-01 10:40:20.447] [INFO] Server - [service] - DISCONNECTED
+[1915-06-01 10:40:20.461] [INFO] Main - [HTTPAPI] /api/server/info {
+  "config": {
+    "mqtt": {
+      "protocol": "mqtts",
+      "host": "mqtt.thingplus.net",
+      "port": "8883",
+      "retryConnectInterval": 60000,
+      "ackTimeout": 30000
+    },
+    "service": {
+      "protocol": "https",
+      "host": "www.thingplus.net",
+      "port": "8443"
+    }
+  },
+  "status": {
+    "mqtt": {
+      "connected": false,
+      "lastError": ""
+    },
+    "service": {
+      "connected": false,
+      "lastError": "Gateway - Not Found"
+    }
+  },
+  "registered": true
+}
+[1915-06-01 10:40:20.514] [ERROR] Gateway - Gateway not found and remove all sensors
+[90mGET /api/gateway/info [36m304 [90m877.589 ms - -[0m
+[1915-06-01 10:40:20.559] [INFO] Main - [HTTPAPI] /api/sensor/data {}
+[90mGET /api/sensor/data [36m304 [90m51.051 ms - -[0m
+[1915-06-01 10:40:27.365] [ERROR] Gateway - Gateway not found and remove all sensors
+[1915-06-01 10:40:27.369] [ERROR] Gateway - gateway.sync FAILURE, tries:[6] { [Error: 404] statusCode: 404 }
+Error: 404
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-01 10:40:50.675] [INFO] MQTT - MH CREATE secure(yes) mqtt.thingplus.net:8883
+[1915-06-01 10:40:50.903] [WARN] MQTT - mqtt close
+[1915-06-01 10:40:59.886] [ERROR] Gateway - Gateway not found and remove all sensors
+[1915-06-01 10:40:59.892] [ERROR] Gateway - gateway.sync FAILURE, tries:[7] { [Error: 404] statusCode: 404 }
+Error: 404
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-01 10:41:01.890] [INFO] Sensors - [766420553510] status { status: 'err', duration: -1, sensors: [] }
+[1915-06-01 10:41:01.908] [WARN] Sensors - Gateway status: NOT SENT due to unavailable mqtt
+[1915-06-01 10:41:50.942] [INFO] MQTT - MH CREATE secure(yes) mqtt.thingplus.net:8883
+[1915-06-01 10:41:51.166] [WARN] MQTT - mqtt close
+[1915-06-01 10:42:01.924] [INFO] Sensors - [766420553510] status { status: 'err', duration: -1, sensors: [] }
+[1915-06-01 10:42:01.931] [WARN] Sensors - Gateway status: NOT SENT due to unavailable mqtt
+[1915-06-01 10:42:04.435] [WARN] Gateway - Gateway.sync {
+  "synced": true,
+  "initialized": true,
+  "id": "766420553510",
+  "name": "FTM",
+  "sensors": {},
+  "reportInterval": 60000,
+  "board": {
+    "macaddress": "766420553510"
+  },
+  "lastSync": -1722604675567
+}
+[1915-06-01 10:42:04.440] [WARN] Gateway - gateway.sync SUCCESS, tries:[8]
+[1915-06-01 10:42:51.198] [INFO] MQTT - MH CREATE secure(yes) mqtt.thingplus.net:8883
+[1915-06-01 10:43:01.955] [INFO] Sensors - [766420553510] status { status: 'err', duration: -1, sensors: [] }
+[1915-06-01 10:43:01.960] [WARN] Sensors - Gateway status: NOT SENT due to unavailable mqtt
+[1915-06-01 10:43:21.226] [WARN] MQTT - [mqtt.init] MH.ackTimer out : try disconnect
+[1915-06-01 10:43:21.243] [WARN] MQTT - mqtt close
+[1915-06-01 10:44:01.986] [INFO] Sensors - [766420553510] status { status: 'err', duration: -1, sensors: [] }
+[1915-06-01 10:44:01.991] [WARN] Sensors - Gateway status: NOT SENT due to unavailable mqtt
+[1915-06-01 10:44:21.291] [INFO] MQTT - MH CREATE secure(yes) mqtt.thingplus.net:8883
+[1915-06-01 10:44:39.768] [INFO] Main - [init check] initialized OK
+[1915-06-01 10:44:51.307] [WARN] MQTT - [mqtt.init] MH.ackTimer out : try disconnect
+[1915-06-01 10:44:51.319] [WARN] MQTT - mqtt close
+[1915-06-01 10:45:02.018] [INFO] Sensors - [766420553510] status { status: 'err', duration: -1, sensors: [] }
+[1915-06-01 10:45:02.023] [WARN] Sensors - Gateway status: NOT SENT due to unavailable mqtt
+[32m[1915-06-01 10:51:43.553] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[foscamSensor] [ 'FI9821WS' ]
+[32m[1915-06-01 10:51:43.674] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[foscamActuator] [ 'FI9821WA' ]
+[36m[1915-06-01 10:51:43.698] [DEBUG] Sensor - [39m[sensor/index.js] updated DRIVER_CFG { dht: [ 'dht11', 'dht22' ],
+  digitalLight: [ 'TSL2561', 'BH1750' ],
+  digitalCO2: [ 'X100' ],
+  digitalHumidity: [ 'HTU21D' ],
+  magneticSwitch: [ 'normallyClose', 'normallyOpen' ],
+  motionDetector: [ 'passiveInfrared' ],
+  foscamSensor: [ 'FI9821WS' ],
+  foscamActuator: [ 'FI9821WA' ] }
+[32m[1915-06-01 10:51:45.262] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[futureSensor] [ 'futureDi',
+  'futureTemp',
+  'futureHumi',
+  'futureGas',
+  'futurePower',
+  'futureDust',
+  'futureCount',
+  'futureCountEvent',
+  'futureVoltage',
+  'futureCurrent',
+  'futurePressure' ]
+[32m[1915-06-01 10:51:45.280] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[futureActuator] [ 'futureDo', 'futureTempCtrl' ]
+[36m[1915-06-01 10:51:45.290] [DEBUG] Sensor - [39m[sensor/index.js] updated DRIVER_CFG { dht: [ 'dht11', 'dht22' ],
+  digitalLight: [ 'TSL2561', 'BH1750' ],
+  digitalCO2: [ 'X100' ],
+  digitalHumidity: [ 'HTU21D' ],
+  magneticSwitch: [ 'normallyClose', 'normallyOpen' ],
+  motionDetector: [ 'passiveInfrared' ],
+  foscamSensor: [ 'FI9821WS' ],
+  foscamActuator: [ 'FI9821WA' ],
+  futureSensor: 
+   [ 'futureDi',
+     'futureTemp',
+     'futureHumi',
+     'futureGas',
+     'futurePower',
+     'futureDust',
+     'futureCount',
+     'futureCountEvent',
+     'futureVoltage',
+     'futureCurrent',
+     'futurePressure' ],
+  futureActuator: [ 'futureDo', 'futureTempCtrl' ] }
+[32m[1915-06-01 10:51:46.058] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[jsonrpcSensor] [ 'jsonrpcTemp',
+  'jsonrpcHumi',
+  'jsonrpcLight',
+  'jsonrpcNoise',
+  'jsonrpcDi',
+  'jsonrpcMotion',
+  'jsonrpcCo2',
+  'jsonrpcCo',
+  'jsonrpcVoc',
+  'jsonrpcPower',
+  'jsonrpcDust',
+  'jsonrpcCount',
+  'jsonrpcCountEvent',
+  'jsonrpcVoltage',
+  'jsonrpcWeight',
+  'jsonrpcColor',
+  'jsonrpcVibration',
+  'jsonrpcSpeed',
+  'jsonrpcAccelerometer',
+  'jsonrpcString',
+  'jsonrpcPressure' ]
+[32m[1915-06-01 10:51:46.085] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[jsonrpcActuator] [ 'jsonrpcDo', 'jsonrpcTempCtrl', 'jsonrpcServomotor' ]
+[36m[1915-06-01 10:51:46.095] [DEBUG] Sensor - [39m[sensor/index.js] updated DRIVER_CFG { dht: [ 'dht11', 'dht22' ],
+  digitalLight: [ 'TSL2561', 'BH1750' ],
+  digitalCO2: [ 'X100' ],
+  digitalHumidity: [ 'HTU21D' ],
+  magneticSwitch: [ 'normallyClose', 'normallyOpen' ],
+  motionDetector: [ 'passiveInfrared' ],
+  foscamSensor: [ 'FI9821WS' ],
+  foscamActuator: [ 'FI9821WA' ],
+  futureSensor: 
+   [ 'futureDi',
+     'futureTemp',
+     'futureHumi',
+     'futureGas',
+     'futurePower',
+     'futureDust',
+     'futureCount',
+     'futureCountEvent',
+     'futureVoltage',
+     'futureCurrent',
+     'futurePressure' ],
+  futureActuator: [ 'futureDo', 'futureTempCtrl' ],
+  jsonrpcSensor: 
+   [ 'jsonrpcTemp',
+     'jsonrpcHumi',
+     'jsonrpcLight',
+     'jsonrpcNoise',
+     'jsonrpcDi',
+     'jsonrpcMotion',
+     'jsonrpcCo2',
+     'jsonrpcCo',
+     'jsonrpcVoc',
+     'jsonrpcPower',
+     'jsonrpcDust',
+     'jsonrpcCount',
+     'jsonrpcCountEvent',
+     'jsonrpcVoltage',
+     'jsonrpcWeight',
+     'jsonrpcColor',
+     'jsonrpcVibration',
+     'jsonrpcSpeed',
+     'jsonrpcAccelerometer',
+     'jsonrpcString',
+     'jsonrpcPressure' ],
+  jsonrpcActuator: [ 'jsonrpcDo', 'jsonrpcTempCtrl', 'jsonrpcServomotor' ] }
+[32m[1915-06-01 10:51:46.377] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[visudreamSensor] [ 'visudreamSum',
+  'visudreamV',
+  'visudreamI',
+  'visudreamPf',
+  'visudreamFreq' ]
+[36m[1915-06-01 10:51:46.388] [DEBUG] Sensor - [39m[sensor/index.js] updated DRIVER_CFG { dht: [ 'dht11', 'dht22' ],
+  digitalLight: [ 'TSL2561', 'BH1750' ],
+  digitalCO2: [ 'X100' ],
+  digitalHumidity: [ 'HTU21D' ],
+  magneticSwitch: [ 'normallyClose', 'normallyOpen' ],
+  motionDetector: [ 'passiveInfrared' ],
+  foscamSensor: [ 'FI9821WS' ],
+  foscamActuator: [ 'FI9821WA' ],
+  futureSensor: 
+   [ 'futureDi',
+     'futureTemp',
+     'futureHumi',
+     'futureGas',
+     'futurePower',
+     'futureDust',
+     'futureCount',
+     'futureCountEvent',
+     'futureVoltage',
+     'futureCurrent',
+     'futurePressure' ],
+  futureActuator: [ 'futureDo', 'futureTempCtrl' ],
+  jsonrpcSensor: 
+   [ 'jsonrpcTemp',
+     'jsonrpcHumi',
+     'jsonrpcLight',
+     'jsonrpcNoise',
+     'jsonrpcDi',
+     'jsonrpcMotion',
+     'jsonrpcCo2',
+     'jsonrpcCo',
+     'jsonrpcVoc',
+     'jsonrpcPower',
+     'jsonrpcDust',
+     'jsonrpcCount',
+     'jsonrpcCountEvent',
+     'jsonrpcVoltage',
+     'jsonrpcWeight',
+     'jsonrpcColor',
+     'jsonrpcVibration',
+     'jsonrpcSpeed',
+     'jsonrpcAccelerometer',
+     'jsonrpcString',
+     'jsonrpcPressure' ],
+  jsonrpcActuator: [ 'jsonrpcDo', 'jsonrpcTempCtrl', 'jsonrpcServomotor' ],
+  visudreamSensor: 
+   [ 'visudreamSum',
+     'visudreamV',
+     'visudreamI',
+     'visudreamPf',
+     'visudreamFreq' ] }
+[1915-06-01 10:51:49.838] [INFO] Main - ... Starting [FTM] ...
+[1915-06-01 10:51:49.947] [WARN] Main - MODULES_NOT_SUPPORTED - memwatch
+[1915-06-01 10:51:50.030] [WARN] Main - MODULES_NOT_SUPPORTED - rgbLed
+[1915-06-01 10:51:58.563] [INFO] Main - 1. get mac
+[1915-06-01 10:51:58.746] [INFO] Main - discovery BOUND port=[28282]
+[1915-06-01 10:51:59.019] [INFO] Main - 2. store init
+[1915-06-01 10:51:59.194] [INFO] Store - Memory 36.7140025346895%[46276608/126046208] limit: 0%
+[1915-06-01 10:51:59.260] [INFO] Main - 3. mqtt init
+[1915-06-01 10:51:59.295] [INFO] MQTT - [mqtt-init] opts { clientId: '00405c010001',
+  keepalive: 120,
+  clean: true,
+  autopuback: false,
+  logger: 
+   { category: 'MQTT',
+     _events: { log: [Function] },
+     level: { level: 20000, levelStr: 'INFO' } },
+  will: 
+   { topic: 'v/a/g/00405c010001/mqtt/status',
+     payload: 'err',
+     retain: true } }
+[1915-06-01 10:51:59.562] [INFO] MQTT - MH CREATE secure(yes) mqtt.thingplus.net:8883
+[1915-06-01 10:51:59.573] [INFO] Main - 4. server init
+[1915-06-01 10:51:59.590] [WARN] Server - time: NOT IN SYNC
+[1915-06-01 10:52:00.533] [INFO] Store - Filesystem 7371137024/7819091968 > 10%
+[1915-06-01 10:52:00.910] [WARN] MQTT - mqtt close
+[1915-06-01 10:52:01.205] [INFO] Server - [mqtt] - DISCONNECTED
+[1915-06-01 10:52:01.211] [INFO] Server - [service] - DISCONNECTED
+[1915-06-01 10:52:01.216] [INFO] Main - 5. gateway init
+[1915-06-01 10:52:01.353] [INFO] Gateway - [Gateway.init] board= { macaddress: '00405c010001' }
+[1915-06-01 10:52:02.003] [ERROR] Gateway - Gateway init, NOT IN SYNC, ignoring { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-01 10:52:02.151] [INFO] Main - 6. sensor init
+[1915-06-01 10:52:02.169] [WARN] Sensors - ... Start gathering data - REPORT_INTERVAL(60000) ...
+[1915-06-01 10:52:02.218] [WARN] Main - ... Init done: Listening on port 80 ...
+[1915-06-01 10:52:02.738] [ERROR] Gateway - Gateway init, server sync err= { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-01 10:52:02.815] [ERROR] Gateway - gateway.sync FAILURE, tries:[1] { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-01 10:52:04.338] [ERROR] Gateway - Gateway init, server sync err= { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-01 10:52:04.404] [ERROR] Gateway - gateway.sync FAILURE, tries:[2] { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-01 10:52:06.926] [ERROR] Gateway - Gateway init, server sync err= { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-01 10:52:06.991] [ERROR] Gateway - gateway.sync FAILURE, tries:[3] { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-01 10:52:11.496] [ERROR] Gateway - Gateway init, server sync err= { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-01 10:52:11.559] [ERROR] Gateway - gateway.sync FAILURE, tries:[4] { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[90mGET / [33m401 [90m139.115 ms - -[0m
+[90mGET / [36m304 [90m149.616 ms - -[0m
+[90mGET /styles/bootstrap.css [36m304 [90m118.245 ms - -[0m
+[90mGET /components/sidr/stylesheets/jquery.sidr.dark.css [36m304 [90m94.053 ms - -[0m
+[90mGET /styles/app.css [36m304 [90m81.269 ms - -[0m
+[90mGET /components/requirejs/require.js [36m304 [90m84.085 ms - -[0m
+[90mGET /scripts/main.js [36m304 [90m17.963 ms - -[0m
+[90mGET /scripts/app.js [36m304 [90m99.067 ms - -[0m
+[90mGET /components/requirejs-domready/domReady.js [36m304 [90m97.365 ms - -[0m
+[90mGET /components/lodash/dist/lodash.js [36m304 [90m93.877 ms - -[0m
+[90mGET /scripts/services/restService.js [36m304 [90m90.085 ms - -[0m
+[90mGET /scripts/services/logger.js [36m304 [90m84.304 ms - -[0m
+[90mGET /scripts/services/userService.js [36m304 [90m82.597 ms - -[0m
+[90mGET /scripts/controllers/menuController.js [36m304 [90m92.773 ms - -[0m
+[90mGET /scripts/controllers/registerController.js [36m304 [90m1082.160 ms - -[0m
+[90mGET /scripts/controllers/settingController.js [36m304 [90m1094.491 ms - -[0m
+[90mGET /scripts/controllers/modemController.js [36m304 [90m1097.013 ms - -[0m
+[90mGET /scripts/controllers/httpController.js [36m304 [90m1097.088 ms - -[0m
+[90mGET /scripts/controllers/homeController.js [36m304 [90m1095.515 ms - -[0m
+[90mGET /scripts/controllers/aboutController.js [36m304 [90m121.669 ms - -[0m
+[90mGET /scripts/directives/dwAccordion.js [36m304 [90m98.107 ms - -[0m
+[90mGET /scripts/directives/dwExpander.js [36m304 [90m90.288 ms - -[0m
+[90mGET /scripts/directives/dwNoti.js [36m304 [90m86.005 ms - -[0m
+[90mGET /scripts/directives/ngbkFocus.js [36m304 [90m83.696 ms - -[0m
+[90mGET /scripts/directives/indiClick.js [36m304 [90m81.541 ms - -[0m
+[90mGET /scripts/directives/dwTime.js [36m304 [90m94.016 ms - -[0m
+[90mGET /components/jquery/jquery.js [36m304 [90m92.576 ms - -[0m
+[90mGET /scripts/vendor/jquery-mobile/jquery.mobile.support.orientation.js [36m304 [90m88.795 ms - -[0m
+[90mGET /scripts/vendor/jquery-mobile/throttledresize.js [36m304 [90m84.848 ms - -[0m
+[90mGET /scripts/controllers/controllers.js [36m304 [90m83.216 ms - -[0m
+[90mGET /scripts/services/services.js [36m304 [90m81.451 ms - -[0m
+[90mGET /scripts/filters/filters.js [36m304 [90m92.709 ms - -[0m
+[90mGET /scripts/directives/directives.js [36m304 [90m90.645 ms - -[0m
+[90mGET /components/requirejs-i18n/i18n.js [36m304 [90m89.147 ms - -[0m
+[90mGET /components/js-md5/js/md5.js [36m304 [90m85.936 ms - -[0m
+[90mGET /scripts/services/httpService.js [36m304 [90m83.888 ms - -[0m
+[90mGET /scripts/controllers/aboutInfoController.js [36m304 [90m81.205 ms - -[0m
+[90mGET /scripts/controllers/aboutHintController.js [36m304 [90m96.528 ms - -[0m
+[90mGET /components/spin.js/spin.js [36m304 [90m95.307 ms - -[0m
+[90mGET /components/angular/angular.js [36m304 [90m92.341 ms - -[0m
+[90mGET /components/bootstrap/js/collapse.js [36m304 [90m87.808 ms - -[0m
+[90mGET /components/bootstrap/js/dropdown.js [36m304 [90m83.168 ms - -[0m
+[90mGET /components/bootstrap/js/button.js [36m304 [90m81.115 ms - -[0m
+[90mGET /components/jquery.animate-enhanced/jquery.animate-enhanced.min.js [36m304 [90m96.891 ms - -[0m
+[90mGET /components/jquery-touchswipe/jquery.touchSwipe.js [36m304 [90m92.891 ms - -[0m
+[90mGET /scripts/vendor/jquery-mobile/orientationchange.js [36m304 [90m89.920 ms - -[0m
+[90mGET /components/momentjs/min/moment.min.js [36m304 [90m87.797 ms - -[0m
+[90mGET /scripts/nls/labels.js [36m304 [90m85.691 ms - -[0m
+[90mGET /components/angular-route/angular-route.js [36m304 [90m84.379 ms - -[0m
+[90mGET /components/angular-resource/angular-resource.js [36m304 [90m81.989 ms - -[0m
+[90mGET /components/angular-cookies/angular-cookies.js [36m304 [90m79.157 ms - -[0m
+[90mGET /components/angular-sanitize/angular-sanitize.js [36m304 [90m76.107 ms - -[0m
+[90mGET /components/angular-ui-router/release/angular-ui-router.js [36m304 [90m72.320 ms - -[0m
+[90mGET /components/ngUpload/ng-upload.js [36m304 [90m68.320 ms - -[0m
+[90mGET /components/sidr/jquery.sidr.min.js [36m304 [90m18.811 ms - -[0m
+[90mGET /views/root-header.html [36m304 [90m32.048 ms - -[0m
+[90mGET /views/home.html [36m304 [90m28.160 ms - -[0m
+[1915-06-01 10:52:19.888] [INFO] Main - [HTTPAPI] getInterface modem, getModemConfig modem scanner is not available
+[90mGET /api/modems [33m404 [90m416.256 ms - 9[0m
+[90mGET /styles/font-awesome/font/fontawesome-webfont.woff?v=3.2.1 [36m304 [90m527.584 ms - -[0m
+[1915-06-01 10:52:20.154] [INFO] Main - [HTTPAPI] getInterfaces netInfo [ { id: 'eth0',
+    address: '10.0.1.201',
+    family: 'IPv4',
+    internal: false,
+    RxBytes: '117724',
+    TxBytes: '36975' } ]
+[90mGET /api/interfaces [32m200 [90m680.309 ms - 108[0m
+[1915-06-01 10:52:20.856] [INFO] Server - [mqtt] - DISCONNECTED
+[90mGET /api/server/info [32m200 [90m1400.667 ms - 340[0m
+[90mGET /api/gateway/info [32m200 [90m1609.051 ms - 147[0m
+[1915-06-01 10:52:20.860] [INFO] Server - [service] - DISCONNECTED
+[1915-06-01 10:52:20.874] [INFO] Main - [HTTPAPI] /api/server/info {
+  "config": {
+    "mqtt": {
+      "protocol": "mqtts",
+      "host": "mqtt.thingplus.net",
+      "port": "8883",
+      "retryConnectInterval": 60000,
+      "ackTimeout": 30000
+    },
+    "service": {
+      "protocol": "https",
+      "host": "www.thingplus.net",
+      "port": "8443"
+    }
+  },
+  "status": {
+    "mqtt": {
+      "connected": false,
+      "lastError": ""
+    },
+    "service": {
+      "connected": false,
+      "lastError": "Gateway - Unauthorized"
+    }
+  },
+  "registered": true
+}
+[1915-06-01 10:52:20.948] [ERROR] Gateway - Gateway init, server sync err= { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[90mGET /api/sensor/data [36m304 [90m30.629 ms - -[0m
+[1915-06-01 10:52:21.015] [ERROR] Gateway - gateway.sync FAILURE, tries:[5] { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-01 10:52:21.037] [ERROR] Gateway - Gateway init, server sync err= { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-01 10:52:21.157] [INFO] Main - [HTTPAPI] /api/sensor/data {}
+[1915-06-01 10:52:37.538] [ERROR] Gateway - Gateway init, server sync err= { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-01 10:52:37.603] [ERROR] Gateway - gateway.sync FAILURE, tries:[6] { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[90mGET /views/setting.html [36m304 [90m16.757 ms - -[0m
+[90mGET /api/apikey [36m304 [90m272.693 ms - -[0m
+[1915-06-01 10:52:43.178] [ERROR] Gateway - Gateway init, server sync err= { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[90mGET /api/gateway/info [36m304 [90m970.789 ms - -[0m
+[90mPOST /api/apikeyUpload [32m200 [90m129.040 ms - 64[0m
+[90mGET /api/gateway/ping [32m200 [90m9.845 ms - -[0m
+[90mGET /api/gateway/ping [32m200 [90m7.461 ms - -[0m
+[1915-06-01 10:52:53.243] [INFO] Main - SIGTERM
+[32m[1915-06-01 10:54:29.162] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[foscamSensor] [ 'FI9821WS' ]
+[32m[1915-06-01 10:54:29.282] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[foscamActuator] [ 'FI9821WA' ]
+[36m[1915-06-01 10:54:29.306] [DEBUG] Sensor - [39m[sensor/index.js] updated DRIVER_CFG { dht: [ 'dht11', 'dht22' ],
+  digitalLight: [ 'TSL2561', 'BH1750' ],
+  digitalCO2: [ 'X100' ],
+  digitalHumidity: [ 'HTU21D' ],
+  magneticSwitch: [ 'normallyClose', 'normallyOpen' ],
+  motionDetector: [ 'passiveInfrared' ],
+  foscamSensor: [ 'FI9821WS' ],
+  foscamActuator: [ 'FI9821WA' ] }
+[32m[1915-06-01 10:54:30.871] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[futureSensor] [ 'futureDi',
+  'futureTemp',
+  'futureHumi',
+  'futureGas',
+  'futurePower',
+  'futureDust',
+  'futureCount',
+  'futureCountEvent',
+  'futureVoltage',
+  'futureCurrent',
+  'futurePressure' ]
+[32m[1915-06-01 10:54:30.889] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[futureActuator] [ 'futureDo', 'futureTempCtrl' ]
+[36m[1915-06-01 10:54:30.899] [DEBUG] Sensor - [39m[sensor/index.js] updated DRIVER_CFG { dht: [ 'dht11', 'dht22' ],
+  digitalLight: [ 'TSL2561', 'BH1750' ],
+  digitalCO2: [ 'X100' ],
+  digitalHumidity: [ 'HTU21D' ],
+  magneticSwitch: [ 'normallyClose', 'normallyOpen' ],
+  motionDetector: [ 'passiveInfrared' ],
+  foscamSensor: [ 'FI9821WS' ],
+  foscamActuator: [ 'FI9821WA' ],
+  futureSensor: 
+   [ 'futureDi',
+     'futureTemp',
+     'futureHumi',
+     'futureGas',
+     'futurePower',
+     'futureDust',
+     'futureCount',
+     'futureCountEvent',
+     'futureVoltage',
+     'futureCurrent',
+     'futurePressure' ],
+  futureActuator: [ 'futureDo', 'futureTempCtrl' ] }
+[32m[1915-06-01 10:54:31.671] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[jsonrpcSensor] [ 'jsonrpcTemp',
+  'jsonrpcHumi',
+  'jsonrpcLight',
+  'jsonrpcNoise',
+  'jsonrpcDi',
+  'jsonrpcMotion',
+  'jsonrpcCo2',
+  'jsonrpcCo',
+  'jsonrpcVoc',
+  'jsonrpcPower',
+  'jsonrpcDust',
+  'jsonrpcCount',
+  'jsonrpcCountEvent',
+  'jsonrpcVoltage',
+  'jsonrpcWeight',
+  'jsonrpcColor',
+  'jsonrpcVibration',
+  'jsonrpcSpeed',
+  'jsonrpcAccelerometer',
+  'jsonrpcString',
+  'jsonrpcPressure' ]
+[32m[1915-06-01 10:54:31.692] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[jsonrpcActuator] [ 'jsonrpcDo', 'jsonrpcTempCtrl', 'jsonrpcServomotor' ]
+[36m[1915-06-01 10:54:31.702] [DEBUG] Sensor - [39m[sensor/index.js] updated DRIVER_CFG { dht: [ 'dht11', 'dht22' ],
+  digitalLight: [ 'TSL2561', 'BH1750' ],
+  digitalCO2: [ 'X100' ],
+  digitalHumidity: [ 'HTU21D' ],
+  magneticSwitch: [ 'normallyClose', 'normallyOpen' ],
+  motionDetector: [ 'passiveInfrared' ],
+  foscamSensor: [ 'FI9821WS' ],
+  foscamActuator: [ 'FI9821WA' ],
+  futureSensor: 
+   [ 'futureDi',
+     'futureTemp',
+     'futureHumi',
+     'futureGas',
+     'futurePower',
+     'futureDust',
+     'futureCount',
+     'futureCountEvent',
+     'futureVoltage',
+     'futureCurrent',
+     'futurePressure' ],
+  futureActuator: [ 'futureDo', 'futureTempCtrl' ],
+  jsonrpcSensor: 
+   [ 'jsonrpcTemp',
+     'jsonrpcHumi',
+     'jsonrpcLight',
+     'jsonrpcNoise',
+     'jsonrpcDi',
+     'jsonrpcMotion',
+     'jsonrpcCo2',
+     'jsonrpcCo',
+     'jsonrpcVoc',
+     'jsonrpcPower',
+     'jsonrpcDust',
+     'jsonrpcCount',
+     'jsonrpcCountEvent',
+     'jsonrpcVoltage',
+     'jsonrpcWeight',
+     'jsonrpcColor',
+     'jsonrpcVibration',
+     'jsonrpcSpeed',
+     'jsonrpcAccelerometer',
+     'jsonrpcString',
+     'jsonrpcPressure' ],
+  jsonrpcActuator: [ 'jsonrpcDo', 'jsonrpcTempCtrl', 'jsonrpcServomotor' ] }
+[32m[1915-06-01 10:54:31.983] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[visudreamSensor] [ 'visudreamSum',
+  'visudreamV',
+  'visudreamI',
+  'visudreamPf',
+  'visudreamFreq' ]
+[36m[1915-06-01 10:54:31.994] [DEBUG] Sensor - [39m[sensor/index.js] updated DRIVER_CFG { dht: [ 'dht11', 'dht22' ],
+  digitalLight: [ 'TSL2561', 'BH1750' ],
+  digitalCO2: [ 'X100' ],
+  digitalHumidity: [ 'HTU21D' ],
+  magneticSwitch: [ 'normallyClose', 'normallyOpen' ],
+  motionDetector: [ 'passiveInfrared' ],
+  foscamSensor: [ 'FI9821WS' ],
+  foscamActuator: [ 'FI9821WA' ],
+  futureSensor: 
+   [ 'futureDi',
+     'futureTemp',
+     'futureHumi',
+     'futureGas',
+     'futurePower',
+     'futureDust',
+     'futureCount',
+     'futureCountEvent',
+     'futureVoltage',
+     'futureCurrent',
+     'futurePressure' ],
+  futureActuator: [ 'futureDo', 'futureTempCtrl' ],
+  jsonrpcSensor: 
+   [ 'jsonrpcTemp',
+     'jsonrpcHumi',
+     'jsonrpcLight',
+     'jsonrpcNoise',
+     'jsonrpcDi',
+     'jsonrpcMotion',
+     'jsonrpcCo2',
+     'jsonrpcCo',
+     'jsonrpcVoc',
+     'jsonrpcPower',
+     'jsonrpcDust',
+     'jsonrpcCount',
+     'jsonrpcCountEvent',
+     'jsonrpcVoltage',
+     'jsonrpcWeight',
+     'jsonrpcColor',
+     'jsonrpcVibration',
+     'jsonrpcSpeed',
+     'jsonrpcAccelerometer',
+     'jsonrpcString',
+     'jsonrpcPressure' ],
+  jsonrpcActuator: [ 'jsonrpcDo', 'jsonrpcTempCtrl', 'jsonrpcServomotor' ],
+  visudreamSensor: 
+   [ 'visudreamSum',
+     'visudreamV',
+     'visudreamI',
+     'visudreamPf',
+     'visudreamFreq' ] }
+[1915-06-01 10:54:35.446] [INFO] Main - ... Starting [FTM] ...
+[1915-06-01 10:54:35.554] [WARN] Main - MODULES_NOT_SUPPORTED - memwatch
+[1915-06-01 10:54:35.637] [WARN] Main - MODULES_NOT_SUPPORTED - rgbLed
+[1915-06-01 10:54:44.221] [INFO] Main - 1. get mac
+[1915-06-01 10:54:44.404] [INFO] Main - discovery BOUND port=[28282]
+[1915-06-01 10:54:44.677] [INFO] Main - 2. store init
+[1915-06-01 10:54:44.851] [INFO] Store - Memory 36.8049913885549%[46362624/126046208] limit: 0%
+[1915-06-01 10:54:44.921] [INFO] Main - 3. mqtt init
+[1915-06-01 10:54:44.951] [INFO] MQTT - [mqtt-init] opts { clientId: '00405c010001',
+  keepalive: 120,
+  clean: true,
+  autopuback: false,
+  logger: 
+   { category: 'MQTT',
+     _events: { log: [Function] },
+     level: { level: 20000, levelStr: 'INFO' } },
+  will: 
+   { topic: 'v/a/g/00405c010001/mqtt/status',
+     payload: 'err',
+     retain: true } }
+[1915-06-01 10:54:45.215] [INFO] MQTT - MH CREATE secure(yes) mqtt.thingplus.net:8883
+[1915-06-01 10:54:45.225] [INFO] Main - 4. server init
+[1915-06-01 10:54:45.242] [WARN] Server - time: NOT IN SYNC
+[1915-06-01 10:54:46.166] [INFO] Store - Filesystem 7371112448/7819091968 > 10%
+[1915-06-01 10:54:46.521] [WARN] MQTT - mqtt close
+[1915-06-01 10:54:46.783] [INFO] Server - [mqtt] - DISCONNECTED
+[1915-06-01 10:54:46.788] [INFO] Server - [service] - DISCONNECTED
+[1915-06-01 10:54:46.794] [INFO] Main - 5. gateway init
+[1915-06-01 10:54:46.931] [INFO] Gateway - [Gateway.init] board= { macaddress: '00405c010001' }
+[1915-06-01 10:54:47.577] [ERROR] Gateway - Gateway init, NOT IN SYNC, ignoring { [Error: 404] statusCode: 404 }
+Error: 404
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-01 10:54:47.728] [INFO] Main - 6. sensor init
+[1915-06-01 10:54:47.746] [WARN] Sensors - ... Start gathering data - REPORT_INTERVAL(60000) ...
+[1915-06-01 10:54:47.794] [WARN] Main - ... Init done: Listening on port 80 ...
+[1915-06-01 10:54:48.325] [ERROR] Gateway - Gateway not found and remove all sensors
+[1915-06-01 10:54:48.336] [ERROR] Gateway - gateway.sync FAILURE, tries:[1] { [Error: 404] statusCode: 404 }
+Error: 404
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-01 10:54:49.877] [ERROR] Gateway - Gateway not found and remove all sensors
+[1915-06-01 10:54:49.885] [ERROR] Gateway - gateway.sync FAILURE, tries:[2] { [Error: 404] statusCode: 404 }
+Error: 404
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-01 10:54:52.394] [ERROR] Gateway - Gateway not found and remove all sensors
+[1915-06-01 10:54:52.400] [ERROR] Gateway - gateway.sync FAILURE, tries:[3] { [Error: 404] statusCode: 404 }
+Error: 404
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[90mGET /api/gateway/ping [32m200 [90m85.520 ms - -[0m
+[1915-06-01 10:54:56.873] [ERROR] Gateway - Gateway not found and remove all sensors
+[1915-06-01 10:54:56.877] [ERROR] Gateway - gateway.sync FAILURE, tries:[4] { [Error: 404] statusCode: 404 }
+Error: 404
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[90mGET /api/gateway/ping [32m200 [90m29.413 ms - -[0m
+[1915-06-01 10:55:05.364] [ERROR] Gateway - Gateway not found and remove all sensors
+[1915-06-01 10:55:05.369] [ERROR] Gateway - gateway.sync FAILURE, tries:[5] { [Error: 404] statusCode: 404 }
+Error: 404
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[90mGET /api/server/info [33m401 [90m68.944 ms - -[0m
+[90mGET /api/gateway/info [33m401 [90m20.357 ms - -[0m
+[90mGET /api/modems [33m401 [90m9.333 ms - -[0m
+[90mGET /api/interfaces [33m401 [90m7.760 ms - -[0m
+[1915-06-01 10:55:07.903] [INFO] Main - [HTTPAPI] getInterface modem, getModemConfig modem scanner is not available
+[90mGET /api/modems [33m404 [90m1199.440 ms - 9[0m
+[1915-06-01 10:55:08.137] [INFO] Main - [HTTPAPI] getInterfaces netInfo [ { id: 'eth0',
+    address: '10.0.1.201',
+    family: 'IPv4',
+    internal: false,
+    RxBytes: '72645',
+    TxBytes: '26154' } ]
+[90mGET /api/interfaces [32m200 [90m1434.240 ms - 107[0m
+[1915-06-01 10:55:08.692] [INFO] Server - [mqtt] - DISCONNECTED
+[90mGET /api/server/info [32m200 [90m2150.736 ms - 337[0m
+[1915-06-01 10:55:08.697] [INFO] Server - [service] - DISCONNECTED
+[90mGET /api/gateway/info [36m304 [90m2060.667 ms - -[0m
+[1915-06-01 10:55:08.713] [INFO] Main - [HTTPAPI] /api/server/info {
+  "config": {
+    "mqtt": {
+      "protocol": "mqtts",
+      "host": "mqtt.thingplus.net",
+      "port": "8883",
+      "retryConnectInterval": 60000,
+      "ackTimeout": 30000
+    },
+    "service": {
+      "protocol": "https",
+      "host": "www.thingplus.net",
+      "port": "8443"
+    }
+  },
+  "status": {
+    "mqtt": {
+      "connected": false,
+      "lastError": ""
+    },
+    "service": {
+      "connected": false,
+      "lastError": "Gateway - Not Found"
+    }
+  },
+  "registered": true
+}
+[1915-06-01 10:55:08.767] [ERROR] Gateway - Gateway not found and remove all sensors
+[90mGET /api/sensor/data [36m304 [90m36.512 ms - -[0m
+[1915-06-01 10:55:08.863] [INFO] Main - [HTTPAPI] /api/sensor/data {}
+[1915-06-01 10:55:21.944] [ERROR] Gateway - Gateway not found and remove all sensors
+[1915-06-01 10:55:21.950] [ERROR] Gateway - gateway.sync FAILURE, tries:[6] { [Error: 404] statusCode: 404 }
+Error: 404
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-01 10:55:46.590] [INFO] MQTT - MH CREATE secure(yes) mqtt.thingplus.net:8883
+[1915-06-01 10:55:46.826] [WARN] MQTT - mqtt close
+[1915-06-01 10:55:54.498] [WARN] Gateway - Gateway.sync {
+  "synced": true,
+  "initialized": true,
+  "id": "00405c010001",
+  "name": "FTM-50S2",
+  "sensors": {},
+  "reportInterval": 60000,
+  "board": {
+    "macaddress": "00405c010001"
+  },
+  "lastSync": -1722603845505
+}
+[1915-06-01 10:55:54.502] [WARN] Gateway - gateway.sync SUCCESS, tries:[7]
+[1915-06-01 10:55:57.789] [INFO] Sensors - [00405c010001] status { status: 'err', duration: -1, sensors: [] }
+[1915-06-01 10:55:57.809] [WARN] Sensors - Gateway status: NOT SENT due to unavailable mqtt
+[1915-06-01 10:56:46.871] [INFO] MQTT - MH CREATE secure(yes) mqtt.thingplus.net:8883
+[1915-06-01 10:56:47.098] [WARN] MQTT - mqtt close
+[1915-06-01 10:56:57.843] [INFO] Sensors - [00405c010001] status { status: 'err', duration: -1, sensors: [] }
+[1915-06-01 10:56:57.853] [WARN] Sensors - Gateway status: NOT SENT due to unavailable mqtt
+[1915-06-01 10:57:47.136] [INFO] MQTT - MH CREATE secure(yes) mqtt.thingplus.net:8883
+[1915-06-01 10:57:47.361] [WARN] MQTT - mqtt close
+[1915-06-01 10:57:57.873] [INFO] Sensors - [00405c010001] status { status: 'err', duration: -1, sensors: [] }
+[1915-06-01 10:57:57.878] [WARN] Sensors - Gateway status: NOT SENT due to unavailable mqtt
+[1915-06-01 10:58:47.397] [INFO] MQTT - MH CREATE secure(yes) mqtt.thingplus.net:8883
+[1915-06-01 10:58:47.625] [WARN] MQTT - mqtt close
+[1915-06-01 10:58:57.905] [INFO] Sensors - [00405c010001] status { status: 'err', duration: -1, sensors: [] }
+[1915-06-01 10:58:57.911] [WARN] Sensors - Gateway status: NOT SENT due to unavailable mqtt
+[1915-06-01 10:59:35.667] [INFO] Main - [init check] initialized OK
+[1915-06-01 10:59:47.659] [INFO] MQTT - MH CREATE secure(yes) mqtt.thingplus.net:8883
+[1915-06-01 10:59:47.889] [WARN] MQTT - mqtt close
+[1915-06-01 10:59:57.937] [INFO] Sensors - [00405c010001] status { status: 'err', duration: -1, sensors: [] }
+[1915-06-01 10:59:57.943] [WARN] Sensors - Gateway status: NOT SENT due to unavailable mqtt
+[1915-06-01 11:00:47.930] [INFO] MQTT - MH CREATE secure(yes) mqtt.thingplus.net:8883
+[1915-06-01 11:00:48.158] [WARN] MQTT - mqtt close
+[1915-06-01 11:00:57.969] [INFO] Sensors - [00405c010001] status { status: 'err', duration: -1, sensors: [] }
+[1915-06-01 11:00:57.975] [WARN] Sensors - Gateway status: NOT SENT due to unavailable mqtt
+[1915-06-01 11:01:48.202] [INFO] MQTT - MH CREATE secure(yes) mqtt.thingplus.net:8883
+[1915-06-01 11:01:48.432] [WARN] MQTT - mqtt close
+[2015-09-21 07:24:02.658] [INFO] Sensors - [00405c010001] status { status: 'err', duration: -1, sensors: [] }
+[2015-09-21 07:24:02.664] [WARN] Sensors - Gateway status: NOT SENT due to unavailable mqtt
+[2015-09-21 07:24:02.694] [INFO] Store - timeSync: [62ojrm] 2015-09-21T07:15:03.987Z + [538.688]
+[2015-09-21 07:24:02.716] [INFO] Main - time: IN SYNC
+[2015-09-21 07:24:02.741] [INFO] MQTT - MH CREATE secure(yes) mqtt.thingplus.net:8883
+[2015-09-21 07:24:03.161] [INFO] MQTT - [PingTimer] keepalive check every 40, pingresp interval <80
+[2015-09-21 07:24:03.231] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 07:24:03.242] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:24:03.254] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:24:03.260] [INFO] MQTT - mqtt CONNECTED
+[2015-09-21 07:24:03.367] [INFO] MQTT - subscribe:  granted= [ { topic: 'v/a/g/00405c010001/req', qos: 1 },
+  { topic: 'v/a/g/00405c010001/log/filter', qos: 1 } ]
+[2015-09-21 07:24:03.413] [INFO] MQTT - gatewayRpc: { uid: 1442820258875,
+  cmd: 'timeSync',
+  id: '1442820258875',
+  method: 'timeSync',
+  params: { time: 1442820258875 } }
+[2015-09-21 07:24:03.434] [INFO] Main - time sync already
+[2015-09-21 07:24:03.443] [INFO] MQTT - remocon.process done { uid: 1442820258875,
+  cmd: 'timeSync',
+  id: '1442820258875',
+  method: 'timeSync',
+  params: { time: 1442820258875 } }
+[2015-09-21 07:24:13.064] [INFO] Main - SIGTERM
+[32m[2015-09-21 07:24:39.387] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[foscamSensor] [ 'FI9821WS' ]
+[32m[2015-09-21 07:24:39.504] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[foscamActuator] [ 'FI9821WA' ]
+[36m[2015-09-21 07:24:39.528] [DEBUG] Sensor - [39m[sensor/index.js] updated DRIVER_CFG { dht: [ 'dht11', 'dht22' ],
+  digitalLight: [ 'TSL2561', 'BH1750' ],
+  digitalCO2: [ 'X100' ],
+  digitalHumidity: [ 'HTU21D' ],
+  magneticSwitch: [ 'normallyClose', 'normallyOpen' ],
+  motionDetector: [ 'passiveInfrared' ],
+  foscamSensor: [ 'FI9821WS' ],
+  foscamActuator: [ 'FI9821WA' ] }
+[32m[2015-09-21 07:24:41.015] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[futureSensor] [ 'futureDi',
+  'futureTemp',
+  'futureHumi',
+  'futureGas',
+  'futurePower',
+  'futureDust',
+  'futureCount',
+  'futureCountEvent',
+  'futureVoltage',
+  'futureCurrent',
+  'futurePressure' ]
+[32m[2015-09-21 07:24:41.033] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[futureActuator] [ 'futureDo', 'futureTempCtrl' ]
+[36m[2015-09-21 07:24:41.044] [DEBUG] Sensor - [39m[sensor/index.js] updated DRIVER_CFG { dht: [ 'dht11', 'dht22' ],
+  digitalLight: [ 'TSL2561', 'BH1750' ],
+  digitalCO2: [ 'X100' ],
+  digitalHumidity: [ 'HTU21D' ],
+  magneticSwitch: [ 'normallyClose', 'normallyOpen' ],
+  motionDetector: [ 'passiveInfrared' ],
+  foscamSensor: [ 'FI9821WS' ],
+  foscamActuator: [ 'FI9821WA' ],
+  futureSensor: 
+   [ 'futureDi',
+     'futureTemp',
+     'futureHumi',
+     'futureGas',
+     'futurePower',
+     'futureDust',
+     'futureCount',
+     'futureCountEvent',
+     'futureVoltage',
+     'futureCurrent',
+     'futurePressure' ],
+  futureActuator: [ 'futureDo', 'futureTempCtrl' ] }
+[32m[2015-09-21 07:24:41.766] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[jsonrpcSensor] [ 'jsonrpcTemp',
+  'jsonrpcHumi',
+  'jsonrpcLight',
+  'jsonrpcNoise',
+  'jsonrpcDi',
+  'jsonrpcMotion',
+  'jsonrpcCo2',
+  'jsonrpcCo',
+  'jsonrpcVoc',
+  'jsonrpcPower',
+  'jsonrpcDust',
+  'jsonrpcCount',
+  'jsonrpcCountEvent',
+  'jsonrpcVoltage',
+  'jsonrpcWeight',
+  'jsonrpcColor',
+  'jsonrpcVibration',
+  'jsonrpcSpeed',
+  'jsonrpcAccelerometer',
+  'jsonrpcString',
+  'jsonrpcPressure' ]
+[32m[2015-09-21 07:24:41.787] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[jsonrpcActuator] [ 'jsonrpcDo', 'jsonrpcTempCtrl', 'jsonrpcServomotor' ]
+[36m[2015-09-21 07:24:41.797] [DEBUG] Sensor - [39m[sensor/index.js] updated DRIVER_CFG { dht: [ 'dht11', 'dht22' ],
+  digitalLight: [ 'TSL2561', 'BH1750' ],
+  digitalCO2: [ 'X100' ],
+  digitalHumidity: [ 'HTU21D' ],
+  magneticSwitch: [ 'normallyClose', 'normallyOpen' ],
+  motionDetector: [ 'passiveInfrared' ],
+  foscamSensor: [ 'FI9821WS' ],
+  foscamActuator: [ 'FI9821WA' ],
+  futureSensor: 
+   [ 'futureDi',
+     'futureTemp',
+     'futureHumi',
+     'futureGas',
+     'futurePower',
+     'futureDust',
+     'futureCount',
+     'futureCountEvent',
+     'futureVoltage',
+     'futureCurrent',
+     'futurePressure' ],
+  futureActuator: [ 'futureDo', 'futureTempCtrl' ],
+  jsonrpcSensor: 
+   [ 'jsonrpcTemp',
+     'jsonrpcHumi',
+     'jsonrpcLight',
+     'jsonrpcNoise',
+     'jsonrpcDi',
+     'jsonrpcMotion',
+     'jsonrpcCo2',
+     'jsonrpcCo',
+     'jsonrpcVoc',
+     'jsonrpcPower',
+     'jsonrpcDust',
+     'jsonrpcCount',
+     'jsonrpcCountEvent',
+     'jsonrpcVoltage',
+     'jsonrpcWeight',
+     'jsonrpcColor',
+     'jsonrpcVibration',
+     'jsonrpcSpeed',
+     'jsonrpcAccelerometer',
+     'jsonrpcString',
+     'jsonrpcPressure' ],
+  jsonrpcActuator: [ 'jsonrpcDo', 'jsonrpcTempCtrl', 'jsonrpcServomotor' ] }
+[32m[2015-09-21 07:24:42.070] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[visudreamSensor] [ 'visudreamSum',
+  'visudreamV',
+  'visudreamI',
+  'visudreamPf',
+  'visudreamFreq' ]
+[36m[2015-09-21 07:24:42.081] [DEBUG] Sensor - [39m[sensor/index.js] updated DRIVER_CFG { dht: [ 'dht11', 'dht22' ],
+  digitalLight: [ 'TSL2561', 'BH1750' ],
+  digitalCO2: [ 'X100' ],
+  digitalHumidity: [ 'HTU21D' ],
+  magneticSwitch: [ 'normallyClose', 'normallyOpen' ],
+  motionDetector: [ 'passiveInfrared' ],
+  foscamSensor: [ 'FI9821WS' ],
+  foscamActuator: [ 'FI9821WA' ],
+  futureSensor: 
+   [ 'futureDi',
+     'futureTemp',
+     'futureHumi',
+     'futureGas',
+     'futurePower',
+     'futureDust',
+     'futureCount',
+     'futureCountEvent',
+     'futureVoltage',
+     'futureCurrent',
+     'futurePressure' ],
+  futureActuator: [ 'futureDo', 'futureTempCtrl' ],
+  jsonrpcSensor: 
+   [ 'jsonrpcTemp',
+     'jsonrpcHumi',
+     'jsonrpcLight',
+     'jsonrpcNoise',
+     'jsonrpcDi',
+     'jsonrpcMotion',
+     'jsonrpcCo2',
+     'jsonrpcCo',
+     'jsonrpcVoc',
+     'jsonrpcPower',
+     'jsonrpcDust',
+     'jsonrpcCount',
+     'jsonrpcCountEvent',
+     'jsonrpcVoltage',
+     'jsonrpcWeight',
+     'jsonrpcColor',
+     'jsonrpcVibration',
+     'jsonrpcSpeed',
+     'jsonrpcAccelerometer',
+     'jsonrpcString',
+     'jsonrpcPressure' ],
+  jsonrpcActuator: [ 'jsonrpcDo', 'jsonrpcTempCtrl', 'jsonrpcServomotor' ],
+  visudreamSensor: 
+   [ 'visudreamSum',
+     'visudreamV',
+     'visudreamI',
+     'visudreamPf',
+     'visudreamFreq' ] }
+[2015-09-21 07:24:45.339] [INFO] Main - ... Starting [FTM] ...
+[2015-09-21 07:24:45.445] [WARN] Main - MODULES_NOT_SUPPORTED - memwatch
+[2015-09-21 07:24:45.528] [WARN] Main - MODULES_NOT_SUPPORTED - rgbLed
+[2015-09-21 07:24:53.723] [INFO] Main - 1. get mac
+[2015-09-21 07:24:53.906] [INFO] Main - discovery BOUND port=[28282]
+[2015-09-21 07:24:54.182] [INFO] Main - 2. store init
+[2015-09-21 07:24:54.356] [INFO] Store - Memory 36.54177363272999%[46030848/126046208] limit: 0%
+[2015-09-21 07:24:54.423] [INFO] Main - 3. mqtt init
+[2015-09-21 07:24:54.458] [INFO] MQTT - [mqtt-init] opts { clientId: '00405c010001',
+  keepalive: 120,
+  clean: true,
+  autopuback: false,
+  logger: 
+   { category: 'MQTT',
+     _events: { log: [Function] },
+     level: { level: 20000, levelStr: 'INFO' } },
+  will: 
+   { topic: 'v/a/g/00405c010001/mqtt/status',
+     payload: 'err',
+     retain: true } }
+[2015-09-21 07:24:54.734] [INFO] MQTT - MH CREATE secure(yes) mqtt.thingplus.net:8883
+[2015-09-21 07:24:54.744] [INFO] Main - 4. server init
+[2015-09-21 07:24:54.787] [INFO] Store - timeSync: [62ojrm] 2015-09-21T07:15:03.987Z + [590.778]
+[2015-09-21 07:24:54.809] [INFO] Main - time: IN SYNC
+[2015-09-21 07:24:55.734] [INFO] Store - Filesystem 7371091968/7819091968 > 10%
+[2015-09-21 07:24:56.179] [INFO] MQTT - [PingTimer] keepalive check every 40, pingresp interval <80
+[2015-09-21 07:24:56.271] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:24:56.282] [INFO] MQTT - mqtt CONNECTED
+[2015-09-21 07:24:56.451] [INFO] Server - [mqtt] - CONNECTED
+[2015-09-21 07:24:56.454] [INFO] Server - [service] - CONNECTED
+[2015-09-21 07:24:56.459] [INFO] Main - 5. gateway init
+[2015-09-21 07:24:56.631] [INFO] MQTT - subscribe:  granted= [ { topic: 'v/a/g/00405c010001/req', qos: 1 },
+  { topic: 'v/a/g/00405c010001/log/filter', qos: 1 } ]
+[2015-09-21 07:24:56.671] [INFO] MQTT - gatewayRpc: { uid: 1442820311902,
+  cmd: 'timeSync',
+  id: '1442820311902',
+  method: 'timeSync',
+  params: { time: 1442820311902 } }
+[2015-09-21 07:24:56.696] [INFO] Main - time sync already
+[2015-09-21 07:24:56.704] [INFO] MQTT - remocon.process done { uid: 1442820311902,
+  cmd: 'timeSync',
+  id: '1442820311902',
+  method: 'timeSync',
+  params: { time: 1442820311902 } }
+[2015-09-21 07:24:56.757] [INFO] Gateway - [Gateway.init] board= { macaddress: '00405c010001' }
+[2015-09-21 07:24:57.394] [WARN] Gateway - Gateway.init {
+  "synced": true,
+  "initialized": true,
+  "id": "00405c010001",
+  "name": "FTM-50S2",
+  "sensors": {},
+  "reportInterval": 60000,
+  "board": {
+    "macaddress": "00405c010001"
+  },
+  "model": "4",
+  "deviceModels": [
+    {
+      "model": "FTE-ES1"
+    }
+  ],
+  "autoCreateDiscoverable": "y",
+  "lastSync": 1442820297368
+}
+[2015-09-21 07:24:57.401] [INFO] Main - 6. sensor init
+[2015-09-21 07:24:57.434] [WARN] Sensors - ... Start gathering data - REPORT_INTERVAL(60000) ...
+[2015-09-21 07:24:57.483] [WARN] Main - ... Init done: Listening on port 80 ...
+[90mGET / [33m401 [90m135.131 ms - -[0m
+[2015-09-21 07:24:57.535] [INFO] Server - [getSensorDrivers] url https://www.thingplus.net/api/sensorDrivers
+[90mGET / [36m304 [90m168.592 ms - -[0m
+[90mGET /styles/bootstrap.css [36m304 [90m103.205 ms - -[0m
+[90mGET /components/sidr/stylesheets/jquery.sidr.dark.css [36m304 [90m77.568 ms - -[0m
+[90mGET /styles/app.css [36m304 [90m64.080 ms - -[0m
+[90mGET /components/requirejs/require.js [36m304 [90m60.843 ms - -[0m
+[90mGET /scripts/main.js [36m304 [90m41.232 ms - -[0m
+[2015-09-21 07:24:59.603] [INFO] Server - [getGatewayModels] url https://www.thingplus.net/api/gatewayModels/4
+[90mGET /scripts/app.js [36m304 [90m84.437 ms - -[0m
+[90mGET /components/requirejs-domready/domReady.js [36m304 [90m81.077 ms - -[0m
+[90mGET /components/lodash/dist/lodash.js [36m304 [90m104.768 ms - -[0m
+[90mGET /scripts/services/restService.js [36m304 [90m61.467 ms - -[0m
+[90mGET /scripts/services/logger.js [36m304 [90m56.912 ms - -[0m
+[90mGET /scripts/services/userService.js [36m304 [90m39.376 ms - -[0m
+[90mGET /scripts/controllers/homeController.js [36m304 [90m111.861 ms - -[0m
+[90mGET /scripts/controllers/menuController.js [36m304 [90m88.277 ms - -[0m
+[90mGET /scripts/controllers/registerController.js [36m304 [90m86.651 ms - -[0m
+[90mGET /scripts/controllers/settingController.js [36m304 [90m85.595 ms - -[0m
+[90mGET /scripts/controllers/modemController.js [36m304 [90m19.051 ms - -[0m
+[90mGET /scripts/controllers/httpController.js [36m304 [90m78.304 ms - -[0m
+[90mGET /scripts/controllers/aboutController.js [36m304 [90m74.779 ms - -[0m
+[90mGET /scripts/directives/dwAccordion.js [36m304 [90m73.653 ms - -[0m
+[90mGET /scripts/directives/dwExpander.js [36m304 [90m71.547 ms - -[0m
+[90mGET /scripts/directives/dwNoti.js [36m304 [90m69.408 ms - -[0m
+[90mGET /scripts/directives/ngbkFocus.js [36m304 [90m95.104 ms - -[0m
+[2015-09-21 07:25:00.795] [INFO] Network - future:bcastAddrs [ '10.0.1.255' ]
+[90mGET /scripts/directives/indiClick.js [36m304 [90m232.763 ms - -[0m
+[90mGET /scripts/directives/dwTime.js [36m304 [90m230.101 ms - -[0m
+[90mGET /components/jquery/jquery.js [36m304 [90m228.869 ms - -[0m
+[90mGET /scripts/vendor/jquery-mobile/jquery.mobile.support.orientation.js [36m304 [90m226.555 ms - -[0m
+[90mGET /scripts/vendor/jquery-mobile/throttledresize.js [36m304 [90m222.843 ms - -[0m
+[90mGET /scripts/controllers/controllers.js [36m304 [90m21.157 ms - -[0m
+[90mGET /scripts/services/services.js [36m304 [90m81.067 ms - -[0m
+[90mGET /scripts/filters/filters.js [36m304 [90m79.808 ms - -[0m
+[90mGET /scripts/directives/directives.js [36m304 [90m77.621 ms - -[0m
+[90mGET /components/requirejs-i18n/i18n.js [36m304 [90m76.219 ms - -[0m
+[90mGET /components/js-md5/js/md5.js [36m304 [90m73.525 ms - -[0m
+[90mGET /scripts/services/httpService.js [36m304 [90m20.416 ms - -[0m
+[90mGET /scripts/controllers/aboutInfoController.js [36m304 [90m81.504 ms - -[0m
+[90mGET /scripts/controllers/aboutHintController.js [36m304 [90m80.928 ms - -[0m
+[90mGET /components/spin.js/spin.js [36m304 [90m80.272 ms - -[0m
+[90mGET /components/angular/angular.js [36m304 [90m76.267 ms - -[0m
+[90mGET /components/bootstrap/js/collapse.js [36m304 [90m95.701 ms - -[0m
+[90mGET /components/bootstrap/js/dropdown.js [36m304 [90m31.008 ms - -[0m
+[90mGET /components/bootstrap/js/button.js [36m304 [90m71.008 ms - -[0m
+[90mGET /components/jquery.animate-enhanced/jquery.animate-enhanced.min.js [36m304 [90m69.387 ms - -[0m
+[90mGET /components/jquery-touchswipe/jquery.touchSwipe.js [36m304 [90m65.963 ms - -[0m
+[90mGET /scripts/vendor/jquery-mobile/orientationchange.js [36m304 [90m62.443 ms - -[0m
+[90mGET /components/momentjs/min/moment.min.js [36m304 [90m36.549 ms - -[0m
+[90mGET /scripts/nls/labels.js [36m304 [90m32.944 ms - -[0m
+[90mGET /components/angular-route/angular-route.js [36m304 [90m65.771 ms - -[0m
+[90mGET /components/angular-resource/angular-resource.js [36m304 [90m63.803 ms - -[0m
+[90mGET /components/angular-cookies/angular-cookies.js [36m304 [90m60.720 ms - -[0m
+[90mGET /components/angular-sanitize/angular-sanitize.js [36m304 [90m57.973 ms - -[0m
+[90mGET /components/angular-ui-router/release/angular-ui-router.js [36m304 [90m35.835 ms - -[0m
+[90mGET /components/ngUpload/ng-upload.js [36m304 [90m31.893 ms - -[0m
+[90mGET /components/sidr/jquery.sidr.min.js [36m304 [90m17.093 ms - -[0m
+[90mGET /views/root-header.html [36m304 [90m31.952 ms - -[0m
+[90mGET /views/home.html [36m304 [90m28.464 ms - -[0m
+[2015-09-21 07:25:02.147] [INFO] Main - [HTTPAPI] getInterface modem, getModemConfig modem scanner is not available
+[90mGET /api/modems [33m404 [90m324.379 ms - 9[0m
+[90mGET /styles/font-awesome/font/fontawesome-webfont.woff?v=3.2.1 [36m304 [90m375.019 ms - -[0m
+[2015-09-21 07:25:02.344] [INFO] Main - [HTTPAPI] getInterfaces netInfo [ { id: 'eth0',
+    address: '10.0.1.201',
+    family: 'IPv4',
+    internal: false,
+    RxBytes: '309564',
+    TxBytes: '90086' } ]
+[90mGET /api/interfaces [32m200 [90m511.285 ms - 108[0m
+[2015-09-21 07:25:02.853] [INFO] Server - [mqtt] - CONNECTED
+[90mGET /api/server/info [32m200 [90m1054.304 ms - 316[0m
+[2015-09-21 07:25:02.857] [INFO] Server - [service] - CONNECTED
+[90mGET /api/gateway/info [32m200 [90m1108.379 ms - 249[0m
+[2015-09-21 07:25:02.870] [INFO] Main - [HTTPAPI] /api/server/info {
+  "config": {
+    "mqtt": {
+      "protocol": "mqtts",
+      "host": "mqtt.thingplus.net",
+      "port": "8883",
+      "retryConnectInterval": 60000,
+      "ackTimeout": 30000
+    },
+    "service": {
+      "protocol": "https",
+      "host": "www.thingplus.net",
+      "port": "8443"
+    }
+  },
+  "status": {
+    "mqtt": {
+      "connected": true,
+      "lastError": ""
+    },
+    "service": {
+      "connected": true,
+      "lastError": ""
+    }
+  },
+  "registered": true
+}
+[2015-09-21 07:25:02.939] [WARN] Gateway - Gateway.sync {
+  "synced": true,
+  "initialized": true,
+  "id": "00405c010001",
+  "name": "FTM-50S2",
+  "sensors": {},
+  "reportInterval": 60000,
+  "board": {
+    "macaddress": "00405c010001"
+  },
+  "model": "4",
+  "deviceModels": [
+    {
+      "model": "FTE-ES1"
+    }
+  ],
+  "autoCreateDiscoverable": "y",
+  "lastSync": 1442820302935
+}
+[90mGET /api/sensor/data [36m304 [90m25.568 ms - -[0m
+[2015-09-21 07:25:02.995] [INFO] Main - [HTTPAPI] /api/sensor/data {}
+[2015-09-21 07:25:04.853] [INFO] Network - future:network init done
+[2015-09-21 07:25:04.866] [INFO] Sensors - discovered devices info []
+[2015-09-21 07:25:04.879] [ERROR] Sensors - [init] discover err { [Error: 404 not found] statusCode: 404 }
+Error: 404 not found
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at /opt/thingplus-gateway/device/app.min.js:9:6493
+    at _discover (/opt/thingplus-gateway/device/node_modules/sensorjs-futuretek/network/future/index.js:294:7)
+    at /opt/thingplus-gateway/device/node_modules/sensorjs-futuretek/network/future/index.js:355:18
+    at /opt/thingplus-gateway/device/node_modules/async/lib/async.js:254:17
+    at /opt/thingplus-gateway/device/node_modules/async/lib/async.js:157:25
+    at /opt/thingplus-gateway/device/node_modules/async/lib/async.js:251:21
+    at /opt/thingplus-gateway/device/node_modules/async/lib/async.js:615:34
+    at null._onTimeout (/opt/thingplus-gateway/device/node_modules/sensorjs-futuretek/network/future/index.js:344:16)
+[2015-09-21 07:25:04.984] [INFO] Sensors - discovered devices info []
+[2015-09-21 07:25:04.988] [ERROR] Sensors - [init] discover err { [Error: 404 not found] statusCode: 404 }
+Error: 404 not found
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at /opt/thingplus-gateway/device/app.min.js:9:6493
+    at _discover (/opt/thingplus-gateway/device/node_modules/sensorjs-futuretek/network/future/index.js:294:7)
+    at Future.discover (/opt/thingplus-gateway/device/node_modules/sensorjs-futuretek/network/future/index.js:303:5)
+    at Object.exports.discover (/opt/thingplus-gateway/device/node_modules/sensorjs/lib/sensor/index.js:192:15)
+    at Object.H.discover (/opt/thingplus-gateway/device/app.min.js:9:6106)
+    at /opt/thingplus-gateway/device/app.min.js:9:11003
+    at iterate (/opt/thingplus-gateway/device/node_modules/async/lib/async.js:149:13)
+    at /opt/thingplus-gateway/device/node_modules/async/lib/async.js:160:25
+[2015-09-21 07:25:05.021] [INFO] Sensors - discovered devices info []
+[2015-09-21 07:25:05.024] [ERROR] Sensors - [init] discover err { [Error: 404 not found] statusCode: 404 }
+Error: 404 not found
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at /opt/thingplus-gateway/device/app.min.js:9:6493
+    at _discover (/opt/thingplus-gateway/device/node_modules/sensorjs-futuretek/network/future/index.js:294:7)
+    at Future.discover (/opt/thingplus-gateway/device/node_modules/sensorjs-futuretek/network/future/index.js:303:5)
+    at Object.exports.discover (/opt/thingplus-gateway/device/node_modules/sensorjs/lib/sensor/index.js:192:15)
+    at Object.H.discover (/opt/thingplus-gateway/device/app.min.js:9:6106)
+    at /opt/thingplus-gateway/device/app.min.js:9:11003
+    at iterate (/opt/thingplus-gateway/device/node_modules/async/lib/async.js:149:13)
+    at /opt/thingplus-gateway/device/node_modules/async/lib/async.js:160:25
+[2015-09-21 07:25:05.051] [INFO] Sensors - discovered devices info []
+[2015-09-21 07:25:05.054] [ERROR] Sensors - [init] discover err { [Error: 404 not found] statusCode: 404 }
+Error: 404 not found
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at /opt/thingplus-gateway/device/app.min.js:9:6493
+    at _discover (/opt/thingplus-gateway/device/node_modules/sensorjs-futuretek/network/future/index.js:294:7)
+    at Future.discover (/opt/thingplus-gateway/device/node_modules/sensorjs-futuretek/network/future/index.js:303:5)
+    at Object.exports.discover (/opt/thingplus-gateway/device/node_modules/sensorjs/lib/sensor/index.js:192:15)
+    at Object.H.discover (/opt/thingplus-gateway/device/app.min.js:9:6106)
+    at /opt/thingplus-gateway/device/app.min.js:9:11003
+    at iterate (/opt/thingplus-gateway/device/node_modules/async/lib/async.js:149:13)
+    at /opt/thingplus-gateway/device/node_modules/async/lib/async.js:160:25
+[2015-09-21 07:25:05.081] [INFO] Sensors - discovered devices info []
+[2015-09-21 07:25:05.085] [ERROR] Sensors - [init] discover err { [Error: 404 not found] statusCode: 404 }
+Error: 404 not found
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at /opt/thingplus-gateway/device/app.min.js:9:6493
+    at _discover (/opt/thingplus-gateway/device/node_modules/sensorjs-futuretek/network/future/index.js:294:7)
+    at Future.discover (/opt/thingplus-gateway/device/node_modules/sensorjs-futuretek/network/future/index.js:303:5)
+    at Object.exports.discover (/opt/thingplus-gateway/device/node_modules/sensorjs/lib/sensor/index.js:192:15)
+    at Object.H.discover (/opt/thingplus-gateway/device/app.min.js:9:6106)
+    at /opt/thingplus-gateway/device/app.min.js:9:11003
+    at iterate (/opt/thingplus-gateway/device/node_modules/async/lib/async.js:149:13)
+    at /opt/thingplus-gateway/device/node_modules/async/lib/async.js:160:25
+[2015-09-21 07:25:05.111] [INFO] Sensors - discovered devices info []
+[2015-09-21 07:25:05.114] [ERROR] Sensors - [init] discover err { [Error: 404 not found] statusCode: 404 }
+Error: 404 not found
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at /opt/thingplus-gateway/device/app.min.js:9:6493
+    at _discover (/opt/thingplus-gateway/device/node_modules/sensorjs-futuretek/network/future/index.js:294:7)
+    at Future.discover (/opt/thingplus-gateway/device/node_modules/sensorjs-futuretek/network/future/index.js:303:5)
+    at Object.exports.discover (/opt/thingplus-gateway/device/node_modules/sensorjs/lib/sensor/index.js:192:15)
+    at Object.H.discover (/opt/thingplus-gateway/device/app.min.js:9:6106)
+    at /opt/thingplus-gateway/device/app.min.js:9:11003
+    at iterate (/opt/thingplus-gateway/device/node_modules/async/lib/async.js:149:13)
+    at /opt/thingplus-gateway/device/node_modules/async/lib/async.js:160:25
+[2015-09-21 07:25:05.141] [INFO] Sensors - discovered devices info []
+[2015-09-21 07:25:05.144] [ERROR] Sensors - [init] discover err { [Error: 404 not found] statusCode: 404 }
+Error: 404 not found
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at /opt/thingplus-gateway/device/app.min.js:9:6493
+    at _discover (/opt/thingplus-gateway/device/node_modules/sensorjs-futuretek/network/future/index.js:294:7)
+    at Future.discover (/opt/thingplus-gateway/device/node_modules/sensorjs-futuretek/network/future/index.js:303:5)
+    at Object.exports.discover (/opt/thingplus-gateway/device/node_modules/sensorjs/lib/sensor/index.js:192:15)
+    at Object.H.discover (/opt/thingplus-gateway/device/app.min.js:9:6106)
+    at /opt/thingplus-gateway/device/app.min.js:9:11003
+    at iterate (/opt/thingplus-gateway/device/node_modules/async/lib/async.js:149:13)
+    at /opt/thingplus-gateway/device/node_modules/async/lib/async.js:160:25
+[2015-09-21 07:25:05.170] [INFO] Sensors - discovered devices info []
+[2015-09-21 07:25:05.174] [ERROR] Sensors - [init] discover err { [Error: 404 not found] statusCode: 404 }
+Error: 404 not found
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at /opt/thingplus-gateway/device/app.min.js:9:6493
+    at _discover (/opt/thingplus-gateway/device/node_modules/sensorjs-futuretek/network/future/index.js:294:7)
+    at Future.discover (/opt/thingplus-gateway/device/node_modules/sensorjs-futuretek/network/future/index.js:303:5)
+    at Object.exports.discover (/opt/thingplus-gateway/device/node_modules/sensorjs/lib/sensor/index.js:192:15)
+    at Object.H.discover (/opt/thingplus-gateway/device/app.min.js:9:6106)
+    at /opt/thingplus-gateway/device/app.min.js:9:11003
+    at iterate (/opt/thingplus-gateway/device/node_modules/async/lib/async.js:149:13)
+    at /opt/thingplus-gateway/device/node_modules/async/lib/async.js:160:25
+[2015-09-21 07:25:05.200] [INFO] Sensors - discovered devices info []
+[2015-09-21 07:25:05.204] [ERROR] Sensors - [init] discover err { [Error: 404 not found] statusCode: 404 }
+Error: 404 not found
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at /opt/thingplus-gateway/device/app.min.js:9:6493
+    at _discover (/opt/thingplus-gateway/device/node_modules/sensorjs-futuretek/network/future/index.js:294:7)
+    at Future.discover (/opt/thingplus-gateway/device/node_modules/sensorjs-futuretek/network/future/index.js:303:5)
+    at Object.exports.discover (/opt/thingplus-gateway/device/node_modules/sensorjs/lib/sensor/index.js:192:15)
+    at Object.H.discover (/opt/thingplus-gateway/device/app.min.js:9:6106)
+    at /opt/thingplus-gateway/device/app.min.js:9:11003
+    at iterate (/opt/thingplus-gateway/device/node_modules/async/lib/async.js:149:13)
+    at /opt/thingplus-gateway/device/node_modules/async/lib/async.js:160:25
+[2015-09-21 07:25:05.230] [INFO] Sensors - discovered devices info []
+[2015-09-21 07:25:05.233] [ERROR] Sensors - [init] discover err { [Error: 404 not found] statusCode: 404 }
+Error: 404 not found
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at /opt/thingplus-gateway/device/app.min.js:9:6493
+    at _discover (/opt/thingplus-gateway/device/node_modules/sensorjs-futuretek/network/future/index.js:294:7)
+    at Future.discover (/opt/thingplus-gateway/device/node_modules/sensorjs-futuretek/network/future/index.js:303:5)
+    at Object.exports.discover (/opt/thingplus-gateway/device/node_modules/sensorjs/lib/sensor/index.js:192:15)
+    at Object.H.discover (/opt/thingplus-gateway/device/app.min.js:9:6106)
+    at /opt/thingplus-gateway/device/app.min.js:9:11003
+    at iterate (/opt/thingplus-gateway/device/node_modules/async/lib/async.js:149:13)
+    at /opt/thingplus-gateway/device/node_modules/async/lib/async.js:160:25
+[2015-09-21 07:25:05.257] [INFO] Sensors - discovered devices info []
+[2015-09-21 07:25:05.260] [ERROR] Sensors - [init] discover err { [Error: 404 not found] statusCode: 404 }
+Error: 404 not found
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at /opt/thingplus-gateway/device/app.min.js:9:6493
+    at _discover (/opt/thingplus-gateway/device/node_modules/sensorjs-futuretek/network/future/index.js:294:7)
+    at Future.discover (/opt/thingplus-gateway/device/node_modules/sensorjs-futuretek/network/future/index.js:303:5)
+    at Object.exports.discover (/opt/thingplus-gateway/device/node_modules/sensorjs/lib/sensor/index.js:192:15)
+    at Object.H.discover (/opt/thingplus-gateway/device/app.min.js:9:6106)
+    at /opt/thingplus-gateway/device/app.min.js:9:11003
+    at iterate (/opt/thingplus-gateway/device/node_modules/async/lib/async.js:149:13)
+    at /opt/thingplus-gateway/device/node_modules/async/lib/async.js:160:25
+[2015-09-21 07:25:05.280] [INFO] Sensors - discovered devices info []
+[2015-09-21 07:25:05.283] [ERROR] Sensors - [init] discover err { [Error: 404 not found] statusCode: 404 }
+Error: 404 not found
+    at Error (<anonymous>)
+    at a.exports.statusError (/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at /opt/thingplus-gateway/device/app.min.js:9:6493
+    at _discover (/opt/thingplus-gateway/device/node_modules/sensorjs-futuretek/network/future/index.js:294:7)
+    at Future.discover (/opt/thingplus-gateway/device/node_modules/sensorjs-futuretek/network/future/index.js:303:5)
+    at Object.exports.discover (/opt/thingplus-gateway/device/node_modules/sensorjs/lib/sensor/index.js:192:15)
+    at Object.H.discover (/opt/thingplus-gateway/device/app.min.js:9:6106)
+    at /opt/thingplus-gateway/device/app.min.js:9:11003
+    at iterate (/opt/thingplus-gateway/device/node_modules/async/lib/async.js:149:13)
+    at /opt/thingplus-gateway/device/node_modules/async/lib/async.js:160:25
+[2015-09-21 07:25:05.299] [INFO] Sensors - [sensors] init done undefined
+[2015-09-21 07:26:07.474] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 07:26:07.493] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:27:07.517] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 07:27:07.527] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:28:07.557] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 07:28:07.562] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:29:07.588] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 07:29:07.595] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:29:45.561] [INFO] Main - [init check] initialized OK
+[2015-09-21 07:30:07.621] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 07:30:07.627] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:31:07.653] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 07:31:07.659] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:32:07.685] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 07:32:07.691] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:33:07.716] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 07:33:07.722] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:34:07.749] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 07:34:07.755] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:35:07.781] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 07:35:07.787] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:36:07.813] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 07:36:07.819] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:37:07.845] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 07:37:07.851] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:38:07.877] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 07:38:07.883] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:39:07.909] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 07:39:07.915] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:40:07.941] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 07:40:07.947] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:41:07.973] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 07:41:07.979] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:42:08.005] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 07:42:08.011] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:43:08.037] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 07:43:08.043] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:44:08.069] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 07:44:08.075] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:45:08.101] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 07:45:08.107] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:46:08.133] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 07:46:08.139] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:47:08.165] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 07:47:08.171] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:48:08.197] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 07:48:08.203] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:49:08.229] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 07:49:08.235] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:50:08.261] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 07:50:08.267] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:51:08.293] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 07:51:08.299] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:52:08.325] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 07:52:08.331] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:53:08.357] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 07:53:08.363] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:54:08.389] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 07:54:08.395] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:55:08.421] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 07:55:08.427] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:56:08.453] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 07:56:08.459] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:57:08.485] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 07:57:08.491] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:58:08.517] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 07:58:08.523] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 07:59:08.549] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 07:59:08.555] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 08:00:08.581] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 08:00:08.587] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 08:01:08.613] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 08:01:08.619] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 08:02:08.645] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 08:02:08.651] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 08:03:08.677] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 08:03:08.683] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 08:04:08.709] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 08:04:08.715] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 08:05:08.741] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 08:05:08.747] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 08:06:08.773] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 08:06:08.779] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 08:07:08.805] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 08:07:08.811] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 08:08:08.837] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 08:08:08.843] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 08:09:08.869] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 08:09:08.875] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 08:10:08.901] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 08:10:08.907] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 08:11:08.933] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 08:11:08.939] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 08:12:08.965] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 08:12:08.971] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 08:13:08.997] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 08:13:09.003] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 08:14:09.029] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 08:14:09.035] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 08:15:09.071] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 08:15:09.077] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 08:16:09.103] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 08:16:09.109] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 08:17:09.135] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 08:17:09.141] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 08:18:09.167] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 08:18:09.173] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 08:19:09.199] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 08:19:09.205] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 08:20:09.231] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 08:20:09.237] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 08:21:09.263] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 08:21:09.269] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 08:22:09.295] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 08:22:09.301] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 08:23:09.327] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 08:23:09.333] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 08:24:09.359] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 08:24:09.365] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 08:24:54.424] [INFO] Store - Memory 34.98196470932311%[44093440/126046208] limit: 0%
+[2015-09-21 08:24:54.504] [INFO] Store - Filesystem 7371059200/7819091968 > 10%
+[2015-09-21 08:25:09.391] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 08:25:09.396] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 08:26:09.423] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 08:26:09.429] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 08:27:09.455] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 08:27:09.461] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 08:28:09.487] [INFO] Sensors - [00405c010001] status { status: 'on', duration: 90, sensors: [] }
+[2015-09-21 08:28:09.493] [INFO] MQTT - sent(direct) [v/a/g/00405c010001/status] : on,90
+[2015-09-21 08:28:58.006] [INFO] Main - SIGTERM
+[32m[1915-06-02 10:25:03.827] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[foscamSensor] [ 'FI9821WS' ]
+[32m[1915-06-02 10:25:03.959] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[foscamActuator] [ 'FI9821WA' ]
+[36m[1915-06-02 10:25:03.989] [DEBUG] Sensor - [39m[sensor/index.js] updated DRIVER_CFG { dht: [ 'dht11', 'dht22' ],
+  digitalLight: [ 'TSL2561', 'BH1750' ],
+  digitalCO2: [ 'X100' ],
+  digitalHumidity: [ 'HTU21D' ],
+  magneticSwitch: [ 'normallyClose', 'normallyOpen' ],
+  motionDetector: [ 'passiveInfrared' ],
+  foscamSensor: [ 'FI9821WS' ],
+  foscamActuator: [ 'FI9821WA' ] }
+[32m[1915-06-02 10:25:05.486] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[futureSensor] [ 'futureDi',
+  'futureTemp',
+  'futureHumi',
+  'futureGas',
+  'futurePower',
+  'futureDust',
+  'futureCount',
+  'futureCountEvent',
+  'futureVoltage',
+  'futureCurrent',
+  'futurePressure' ]
+[32m[1915-06-02 10:25:05.502] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[futureActuator] [ 'futureDo', 'futureTempCtrl' ]
+[36m[1915-06-02 10:25:05.521] [DEBUG] Sensor - [39m[sensor/index.js] updated DRIVER_CFG { dht: [ 'dht11', 'dht22' ],
+  digitalLight: [ 'TSL2561', 'BH1750' ],
+  digitalCO2: [ 'X100' ],
+  digitalHumidity: [ 'HTU21D' ],
+  magneticSwitch: [ 'normallyClose', 'normallyOpen' ],
+  motionDetector: [ 'passiveInfrared' ],
+  foscamSensor: [ 'FI9821WS' ],
+  foscamActuator: [ 'FI9821WA' ],
+  futureSensor: 
+   [ 'futureDi',
+     'futureTemp',
+     'futureHumi',
+     'futureGas',
+     'futurePower',
+     'futureDust',
+     'futureCount',
+     'futureCountEvent',
+     'futureVoltage',
+     'futureCurrent',
+     'futurePressure' ],
+  futureActuator: [ 'futureDo', 'futureTempCtrl' ] }
+[32m[1915-06-02 10:25:06.446] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[jsonrpcSensor] [ 'jsonrpcTemp',
+  'jsonrpcHumi',
+  'jsonrpcLight',
+  'jsonrpcNoise',
+  'jsonrpcDi',
+  'jsonrpcMotion',
+  'jsonrpcCo2',
+  'jsonrpcCo',
+  'jsonrpcVoc',
+  'jsonrpcPower',
+  'jsonrpcDust',
+  'jsonrpcCount',
+  'jsonrpcCountEvent',
+  'jsonrpcVoltage',
+  'jsonrpcWeight',
+  'jsonrpcColor',
+  'jsonrpcVibration',
+  'jsonrpcSpeed',
+  'jsonrpcAccelerometer',
+  'jsonrpcString',
+  'jsonrpcPressure' ]
+[32m[1915-06-02 10:25:06.476] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[jsonrpcActuator] [ 'jsonrpcDo', 'jsonrpcTempCtrl', 'jsonrpcServomotor' ]
+[36m[1915-06-02 10:25:06.494] [DEBUG] Sensor - [39m[sensor/index.js] updated DRIVER_CFG { dht: [ 'dht11', 'dht22' ],
+  digitalLight: [ 'TSL2561', 'BH1750' ],
+  digitalCO2: [ 'X100' ],
+  digitalHumidity: [ 'HTU21D' ],
+  magneticSwitch: [ 'normallyClose', 'normallyOpen' ],
+  motionDetector: [ 'passiveInfrared' ],
+  foscamSensor: [ 'FI9821WS' ],
+  foscamActuator: [ 'FI9821WA' ],
+  futureSensor: 
+   [ 'futureDi',
+     'futureTemp',
+     'futureHumi',
+     'futureGas',
+     'futurePower',
+     'futureDust',
+     'futureCount',
+     'futureCountEvent',
+     'futureVoltage',
+     'futureCurrent',
+     'futurePressure' ],
+  futureActuator: [ 'futureDo', 'futureTempCtrl' ],
+  jsonrpcSensor: 
+   [ 'jsonrpcTemp',
+     'jsonrpcHumi',
+     'jsonrpcLight',
+     'jsonrpcNoise',
+     'jsonrpcDi',
+     'jsonrpcMotion',
+     'jsonrpcCo2',
+     'jsonrpcCo',
+     'jsonrpcVoc',
+     'jsonrpcPower',
+     'jsonrpcDust',
+     'jsonrpcCount',
+     'jsonrpcCountEvent',
+     'jsonrpcVoltage',
+     'jsonrpcWeight',
+     'jsonrpcColor',
+     'jsonrpcVibration',
+     'jsonrpcSpeed',
+     'jsonrpcAccelerometer',
+     'jsonrpcString',
+     'jsonrpcPressure' ],
+  jsonrpcActuator: [ 'jsonrpcDo', 'jsonrpcTempCtrl', 'jsonrpcServomotor' ] }
+[32m[1915-06-02 10:25:06.821] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[visudreamSensor] [ 'visudreamSum',
+  'visudreamV',
+  'visudreamI',
+  'visudreamPf',
+  'visudreamFreq' ]
+[36m[1915-06-02 10:25:06.832] [DEBUG] Sensor - [39m[sensor/index.js] updated DRIVER_CFG { dht: [ 'dht11', 'dht22' ],
+  digitalLight: [ 'TSL2561', 'BH1750' ],
+  digitalCO2: [ 'X100' ],
+  digitalHumidity: [ 'HTU21D' ],
+  magneticSwitch: [ 'normallyClose', 'normallyOpen' ],
+  motionDetector: [ 'passiveInfrared' ],
+  foscamSensor: [ 'FI9821WS' ],
+  foscamActuator: [ 'FI9821WA' ],
+  futureSensor: 
+   [ 'futureDi',
+     'futureTemp',
+     'futureHumi',
+     'futureGas',
+     'futurePower',
+     'futureDust',
+     'futureCount',
+     'futureCountEvent',
+     'futureVoltage',
+     'futureCurrent',
+     'futurePressure' ],
+  futureActuator: [ 'futureDo', 'futureTempCtrl' ],
+  jsonrpcSensor: 
+   [ 'jsonrpcTemp',
+     'jsonrpcHumi',
+     'jsonrpcLight',
+     'jsonrpcNoise',
+     'jsonrpcDi',
+     'jsonrpcMotion',
+     'jsonrpcCo2',
+     'jsonrpcCo',
+     'jsonrpcVoc',
+     'jsonrpcPower',
+     'jsonrpcDust',
+     'jsonrpcCount',
+     'jsonrpcCountEvent',
+     'jsonrpcVoltage',
+     'jsonrpcWeight',
+     'jsonrpcColor',
+     'jsonrpcVibration',
+     'jsonrpcSpeed',
+     'jsonrpcAccelerometer',
+     'jsonrpcString',
+     'jsonrpcPressure' ],
+  jsonrpcActuator: [ 'jsonrpcDo', 'jsonrpcTempCtrl', 'jsonrpcServomotor' ],
+  visudreamSensor: 
+   [ 'visudreamSum',
+     'visudreamV',
+     'visudreamI',
+     'visudreamPf',
+     'visudreamFreq' ] }
+[1915-06-02 10:25:10.826] [INFO] Main - ... Starting [FTM-50S] ...
+[1915-06-02 10:25:10.955] [WARN] Main - MODULES_NOT_SUPPORTED - memwatch
+[1915-06-02 10:25:11.061] [WARN] Main - MODULES_NOT_SUPPORTED - rgbLed
+[1915-06-02 10:25:21.281] [INFO] Main - 1. get mac
+[1915-06-02 10:25:21.465] [INFO] Main - discovery BOUND port=[28282]
+[1915-06-02 10:25:21.763] [INFO] Main - 2. store init
+[1915-06-02 10:25:21.983] [INFO] Store - Memory 36.44428557501706%[45936640/126046208] limit: 0%
+[1915-06-02 10:25:22.071] [INFO] Main - 3. mqtt init
+[1915-06-02 10:25:22.106] [INFO] MQTT - [mqtt-init] opts { clientId: '00405c010101',
+  keepalive: 120,
+  clean: true,
+  autopuback: false,
+  logger: 
+   { category: 'MQTT',
+     _events: { log: [Function] },
+     level: { level: 20000, levelStr: 'INFO' } },
+  will: 
+   { topic: 'v/a/g/00405c010101/mqtt/status',
+     payload: 'err',
+     retain: true } }
+[1915-06-02 10:25:22.382] [INFO] MQTT - MH CREATE secure(yes) mqtt.thingplus.net:8883
+[1915-06-02 10:25:22.392] [INFO] Main - 4. server init
+[1915-06-02 10:25:22.409] [WARN] Server - time: NOT IN SYNC
+[1915-06-02 10:25:23.378] [INFO] Store - Filesystem 7371051008/7819091968 > 10%
+[1915-06-02 10:25:23.800] [WARN] MQTT - mqtt close
+[1915-06-02 10:25:24.100] [INFO] Server - [mqtt] - DISCONNECTED
+[1915-06-02 10:25:24.110] [INFO] Server - [service] - DISCONNECTED
+[1915-06-02 10:25:24.116] [INFO] Main - 5. gateway init
+[1915-06-02 10:25:24.278] [INFO] Gateway - [Gateway.init] board= { macaddress: '00405c010101' }
+[1915-06-02 10:25:24.929] [ERROR] Gateway - Gateway init, NOT IN SYNC, ignoring { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:25:25.071] [INFO] Main - 6. sensor init
+[1915-06-02 10:25:25.098] [WARN] Sensors - ... Start gathering data - REPORT_INTERVAL(60000) ...
+[1915-06-02 10:25:25.147] [WARN] Main - ... Init done: Listening on port 80 ...
+[1915-06-02 10:25:25.647] [ERROR] Gateway - Gateway init, server sync err= { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:25:25.729] [ERROR] Gateway - gateway.sync FAILURE, tries:[1] { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:25:27.238] [ERROR] Gateway - Gateway init, server sync err= { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:25:27.305] [ERROR] Gateway - gateway.sync FAILURE, tries:[2] { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:25:29.795] [ERROR] Gateway - Gateway init, server sync err= { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:25:29.858] [ERROR] Gateway - gateway.sync FAILURE, tries:[3] { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:25:35.142] [ERROR] Gateway - Gateway init, server sync err= { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:25:35.211] [ERROR] Gateway - gateway.sync FAILURE, tries:[4] { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:25:43.749] [ERROR] Gateway - Gateway init, server sync err= { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:25:43.811] [ERROR] Gateway - gateway.sync FAILURE, tries:[5] { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:26:00.315] [ERROR] Gateway - Gateway init, server sync err= { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:26:00.378] [ERROR] Gateway - gateway.sync FAILURE, tries:[6] { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:26:23.858] [INFO] MQTT - MH CREATE secure(yes) mqtt.thingplus.net:8883
+[1915-06-02 10:26:24.099] [WARN] MQTT - mqtt close
+[1915-06-02 10:26:32.866] [ERROR] Gateway - Gateway init, server sync err= { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:26:32.931] [ERROR] Gateway - gateway.sync FAILURE, tries:[7] { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:26:35.152] [INFO] Sensors - [00405c010101] status { status: 'err', duration: -1, sensors: [] }
+[1915-06-02 10:26:35.181] [WARN] Sensors - Gateway status: NOT SENT due to unavailable mqtt
+[1915-06-02 10:27:24.142] [INFO] MQTT - MH CREATE secure(yes) mqtt.thingplus.net:8883
+[1915-06-02 10:27:24.357] [WARN] MQTT - mqtt close
+[1915-06-02 10:27:35.213] [INFO] Sensors - [00405c010101] status { status: 'err', duration: -1, sensors: [] }
+[1915-06-02 10:27:35.227] [WARN] Sensors - Gateway status: NOT SENT due to unavailable mqtt
+[1915-06-02 10:27:37.448] [ERROR] Gateway - Gateway init, server sync err= { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:27:37.511] [ERROR] Gateway - gateway.sync FAILURE, tries:[8] { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:28:24.387] [INFO] MQTT - MH CREATE secure(yes) mqtt.thingplus.net:8883
+[1915-06-02 10:28:24.617] [WARN] MQTT - mqtt close
+[1915-06-02 10:28:35.252] [INFO] Sensors - [00405c010101] status { status: 'err', duration: -1, sensors: [] }
+[1915-06-02 10:28:35.258] [WARN] Sensors - Gateway status: NOT SENT due to unavailable mqtt
+[1915-06-02 10:29:24.658] [INFO] MQTT - MH CREATE secure(yes) mqtt.thingplus.net:8883
+[1915-06-02 10:29:24.871] [WARN] MQTT - mqtt close
+[1915-06-02 10:29:35.284] [INFO] Sensors - [00405c010101] status { status: 'err', duration: -1, sensors: [] }
+[1915-06-02 10:29:35.290] [WARN] Sensors - Gateway status: NOT SENT due to unavailable mqtt
+[1915-06-02 10:29:46.042] [ERROR] Gateway - Gateway init, server sync err= { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:29:46.106] [ERROR] Gateway - gateway.sync FAILURE, tries:[9] { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:30:11.086] [INFO] Main - [init check] initialized OK
+[1915-06-02 10:30:24.909] [INFO] MQTT - MH CREATE secure(yes) mqtt.thingplus.net:8883
+[1915-06-02 10:30:25.122] [WARN] MQTT - mqtt close
+[1915-06-02 10:30:35.317] [INFO] Sensors - [00405c010101] status { status: 'err', duration: -1, sensors: [] }
+[1915-06-02 10:30:35.323] [WARN] Sensors - Gateway status: NOT SENT due to unavailable mqtt
+[1915-06-02 10:31:25.161] [INFO] MQTT - MH CREATE secure(yes) mqtt.thingplus.net:8883
+[1915-06-02 10:31:25.389] [WARN] MQTT - mqtt close
+[1915-06-02 10:31:35.348] [INFO] Sensors - [00405c010101] status { status: 'err', duration: -1, sensors: [] }
+[1915-06-02 10:31:35.355] [WARN] Sensors - Gateway status: NOT SENT due to unavailable mqtt
+[1915-06-02 10:32:25.433] [INFO] MQTT - MH CREATE secure(yes) mqtt.thingplus.net:8883
+[1915-06-02 10:32:25.647] [WARN] MQTT - mqtt close
+[1915-06-02 10:32:35.390] [INFO] Sensors - [00405c010101] status { status: 'err', duration: -1, sensors: [] }
+[1915-06-02 10:32:35.397] [WARN] Sensors - Gateway status: NOT SENT due to unavailable mqtt
+[1915-06-02 10:33:25.685] [INFO] MQTT - MH CREATE secure(yes) mqtt.thingplus.net:8883
+[1915-06-02 10:33:25.900] [WARN] MQTT - mqtt close
+[1915-06-02 10:33:35.432] [INFO] Sensors - [00405c010101] status { status: 'err', duration: -1, sensors: [] }
+[1915-06-02 10:33:35.438] [WARN] Sensors - Gateway status: NOT SENT due to unavailable mqtt
+[1915-06-02 10:34:02.571] [ERROR] Gateway - Gateway init, server sync err= { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:34:02.634] [ERROR] Gateway - gateway.sync FAILURE, tries:[10] { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:34:25.937] [INFO] MQTT - MH CREATE secure(yes) mqtt.thingplus.net:8883
+[1915-06-02 10:34:26.154] [WARN] MQTT - mqtt close
+[1915-06-02 10:34:35.455] [INFO] Sensors - [00405c010101] status { status: 'err', duration: -1, sensors: [] }
+[1915-06-02 10:34:35.461] [WARN] Sensors - Gateway status: NOT SENT due to unavailable mqtt
+[1915-06-02 10:35:26.188] [INFO] MQTT - MH CREATE secure(yes) mqtt.thingplus.net:8883
+[1915-06-02 10:35:26.405] [WARN] MQTT - mqtt close
+[1915-06-02 10:35:35.496] [INFO] Sensors - [00405c010101] status { status: 'err', duration: -1, sensors: [] }
+[1915-06-02 10:35:35.503] [WARN] Sensors - Gateway status: NOT SENT due to unavailable mqtt
+[1915-06-02 10:36:26.440] [INFO] MQTT - MH CREATE secure(yes) mqtt.thingplus.net:8883
+[1915-06-02 10:36:26.649] [WARN] MQTT - mqtt close
+[32m[1915-06-02 10:47:36.985] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[foscamSensor] [ 'FI9821WS' ]
+[32m[1915-06-02 10:47:37.115] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[foscamActuator] [ 'FI9821WA' ]
+[36m[1915-06-02 10:47:37.140] [DEBUG] Sensor - [39m[sensor/index.js] updated DRIVER_CFG { dht: [ 'dht11', 'dht22' ],
+  digitalLight: [ 'TSL2561', 'BH1750' ],
+  digitalCO2: [ 'X100' ],
+  digitalHumidity: [ 'HTU21D' ],
+  magneticSwitch: [ 'normallyClose', 'normallyOpen' ],
+  motionDetector: [ 'passiveInfrared' ],
+  foscamSensor: [ 'FI9821WS' ],
+  foscamActuator: [ 'FI9821WA' ] }
+[32m[1915-06-02 10:47:38.943] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[futureSensor] [ 'futureDi',
+  'futureTemp',
+  'futureHumi',
+  'futureGas',
+  'futurePower',
+  'futureDust',
+  'futureCount',
+  'futureCountEvent',
+  'futureVoltage',
+  'futureCurrent',
+  'futurePressure' ]
+[32m[1915-06-02 10:47:38.961] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[futureActuator] [ 'futureDo', 'futureTempCtrl' ]
+[36m[1915-06-02 10:47:38.981] [DEBUG] Sensor - [39m[sensor/index.js] updated DRIVER_CFG { dht: [ 'dht11', 'dht22' ],
+  digitalLight: [ 'TSL2561', 'BH1750' ],
+  digitalCO2: [ 'X100' ],
+  digitalHumidity: [ 'HTU21D' ],
+  magneticSwitch: [ 'normallyClose', 'normallyOpen' ],
+  motionDetector: [ 'passiveInfrared' ],
+  foscamSensor: [ 'FI9821WS' ],
+  foscamActuator: [ 'FI9821WA' ],
+  futureSensor: 
+   [ 'futureDi',
+     'futureTemp',
+     'futureHumi',
+     'futureGas',
+     'futurePower',
+     'futureDust',
+     'futureCount',
+     'futureCountEvent',
+     'futureVoltage',
+     'futureCurrent',
+     'futurePressure' ],
+  futureActuator: [ 'futureDo', 'futureTempCtrl' ] }
+[32m[1915-06-02 10:47:39.874] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[jsonrpcSensor] [ 'jsonrpcTemp',
+  'jsonrpcHumi',
+  'jsonrpcLight',
+  'jsonrpcNoise',
+  'jsonrpcDi',
+  'jsonrpcMotion',
+  'jsonrpcCo2',
+  'jsonrpcCo',
+  'jsonrpcVoc',
+  'jsonrpcPower',
+  'jsonrpcDust',
+  'jsonrpcCount',
+  'jsonrpcCountEvent',
+  'jsonrpcVoltage',
+  'jsonrpcWeight',
+  'jsonrpcColor',
+  'jsonrpcVibration',
+  'jsonrpcSpeed',
+  'jsonrpcAccelerometer',
+  'jsonrpcString',
+  'jsonrpcPressure' ]
+[32m[1915-06-02 10:47:39.904] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[jsonrpcActuator] [ 'jsonrpcDo', 'jsonrpcTempCtrl', 'jsonrpcServomotor' ]
+[36m[1915-06-02 10:47:39.917] [DEBUG] Sensor - [39m[sensor/index.js] updated DRIVER_CFG { dht: [ 'dht11', 'dht22' ],
+  digitalLight: [ 'TSL2561', 'BH1750' ],
+  digitalCO2: [ 'X100' ],
+  digitalHumidity: [ 'HTU21D' ],
+  magneticSwitch: [ 'normallyClose', 'normallyOpen' ],
+  motionDetector: [ 'passiveInfrared' ],
+  foscamSensor: [ 'FI9821WS' ],
+  foscamActuator: [ 'FI9821WA' ],
+  futureSensor: 
+   [ 'futureDi',
+     'futureTemp',
+     'futureHumi',
+     'futureGas',
+     'futurePower',
+     'futureDust',
+     'futureCount',
+     'futureCountEvent',
+     'futureVoltage',
+     'futureCurrent',
+     'futurePressure' ],
+  futureActuator: [ 'futureDo', 'futureTempCtrl' ],
+  jsonrpcSensor: 
+   [ 'jsonrpcTemp',
+     'jsonrpcHumi',
+     'jsonrpcLight',
+     'jsonrpcNoise',
+     'jsonrpcDi',
+     'jsonrpcMotion',
+     'jsonrpcCo2',
+     'jsonrpcCo',
+     'jsonrpcVoc',
+     'jsonrpcPower',
+     'jsonrpcDust',
+     'jsonrpcCount',
+     'jsonrpcCountEvent',
+     'jsonrpcVoltage',
+     'jsonrpcWeight',
+     'jsonrpcColor',
+     'jsonrpcVibration',
+     'jsonrpcSpeed',
+     'jsonrpcAccelerometer',
+     'jsonrpcString',
+     'jsonrpcPressure' ],
+  jsonrpcActuator: [ 'jsonrpcDo', 'jsonrpcTempCtrl', 'jsonrpcServomotor' ] }
+[32m[1915-06-02 10:47:40.246] [INFO] Sensor - [39m[sensor/index.js] updated DRIVER_CFG[visudreamSensor] [ 'visudreamSum',
+  'visudreamV',
+  'visudreamI',
+  'visudreamPf',
+  'visudreamFreq' ]
+[36m[1915-06-02 10:47:40.260] [DEBUG] Sensor - [39m[sensor/index.js] updated DRIVER_CFG { dht: [ 'dht11', 'dht22' ],
+  digitalLight: [ 'TSL2561', 'BH1750' ],
+  digitalCO2: [ 'X100' ],
+  digitalHumidity: [ 'HTU21D' ],
+  magneticSwitch: [ 'normallyClose', 'normallyOpen' ],
+  motionDetector: [ 'passiveInfrared' ],
+  foscamSensor: [ 'FI9821WS' ],
+  foscamActuator: [ 'FI9821WA' ],
+  futureSensor: 
+   [ 'futureDi',
+     'futureTemp',
+     'futureHumi',
+     'futureGas',
+     'futurePower',
+     'futureDust',
+     'futureCount',
+     'futureCountEvent',
+     'futureVoltage',
+     'futureCurrent',
+     'futurePressure' ],
+  futureActuator: [ 'futureDo', 'futureTempCtrl' ],
+  jsonrpcSensor: 
+   [ 'jsonrpcTemp',
+     'jsonrpcHumi',
+     'jsonrpcLight',
+     'jsonrpcNoise',
+     'jsonrpcDi',
+     'jsonrpcMotion',
+     'jsonrpcCo2',
+     'jsonrpcCo',
+     'jsonrpcVoc',
+     'jsonrpcPower',
+     'jsonrpcDust',
+     'jsonrpcCount',
+     'jsonrpcCountEvent',
+     'jsonrpcVoltage',
+     'jsonrpcWeight',
+     'jsonrpcColor',
+     'jsonrpcVibration',
+     'jsonrpcSpeed',
+     'jsonrpcAccelerometer',
+     'jsonrpcString',
+     'jsonrpcPressure' ],
+  jsonrpcActuator: [ 'jsonrpcDo', 'jsonrpcTempCtrl', 'jsonrpcServomotor' ],
+  visudreamSensor: 
+   [ 'visudreamSum',
+     'visudreamV',
+     'visudreamI',
+     'visudreamPf',
+     'visudreamFreq' ] }
+[1915-06-02 10:47:44.205] [INFO] Main - ... Starting [FTM-50S] ...
+[1915-06-02 10:47:44.330] [WARN] Main - MODULES_NOT_SUPPORTED - memwatch
+[1915-06-02 10:47:44.481] [WARN] Main - MODULES_NOT_SUPPORTED - rgbLed
+[1915-06-02 10:47:53.988] [INFO] Main - 1. get mac
+[1915-06-02 10:47:54.169] [INFO] Main - discovery BOUND port=[28282]
+[1915-06-02 10:47:54.462] [INFO] Main - 2. store init
+[1915-06-02 10:47:54.682] [INFO] Store - Memory 35.960094888376176%[45326336/126046208] limit: 0%
+[1915-06-02 10:47:54.763] [INFO] Main - 3. mqtt init
+[1915-06-02 10:47:54.798] [INFO] MQTT - [mqtt-init] opts { clientId: '00405c010101',
+  keepalive: 120,
+  clean: true,
+  autopuback: false,
+  logger: 
+   { category: 'MQTT',
+     _events: { log: [Function] },
+     level: { level: 20000, levelStr: 'INFO' } },
+  will: 
+   { topic: 'v/a/g/00405c010101/mqtt/status',
+     payload: 'err',
+     retain: true } }
+[1915-06-02 10:47:55.073] [INFO] MQTT - MH CREATE secure(yes) mqtt.thingplus.net:8883
+[1915-06-02 10:47:55.083] [INFO] Main - 4. server init
+[1915-06-02 10:47:55.099] [WARN] Server - time: NOT IN SYNC
+[1915-06-02 10:47:56.048] [INFO] Store - Filesystem 7371022336/7819091968 > 10%
+[1915-06-02 10:47:56.454] [WARN] MQTT - mqtt close
+[1915-06-02 10:47:56.739] [INFO] Server - [mqtt] - DISCONNECTED
+[1915-06-02 10:47:56.748] [INFO] Server - [service] - DISCONNECTED
+[1915-06-02 10:47:56.760] [INFO] Main - 5. gateway init
+[1915-06-02 10:47:56.916] [INFO] Gateway - [Gateway.init] board= { macaddress: '00405c010101' }
+[1915-06-02 10:47:57.620] [ERROR] Gateway - Gateway init, NOT IN SYNC, ignoring { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:47:57.768] [INFO] Main - 6. sensor init
+[1915-06-02 10:47:57.796] [WARN] Sensors - ... Start gathering data - REPORT_INTERVAL(60000) ...
+[1915-06-02 10:47:57.845] [WARN] Main - ... Init done: Listening on port 80 ...
+[1915-06-02 10:47:58.334] [ERROR] Gateway - Gateway init, server sync err= { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:47:58.416] [ERROR] Gateway - gateway.sync FAILURE, tries:[1] { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:47:59.915] [ERROR] Gateway - Gateway init, server sync err= { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:47:59.980] [ERROR] Gateway - gateway.sync FAILURE, tries:[2] { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:48:02.452] [ERROR] Gateway - Gateway init, server sync err= { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:48:02.513] [ERROR] Gateway - gateway.sync FAILURE, tries:[3] { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:48:07.003] [ERROR] Gateway - Gateway init, server sync err= { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:48:07.066] [ERROR] Gateway - gateway.sync FAILURE, tries:[4] { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:48:15.552] [ERROR] Gateway - Gateway init, server sync err= { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:48:15.614] [ERROR] Gateway - gateway.sync FAILURE, tries:[5] { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:48:32.094] [ERROR] Gateway - Gateway init, server sync err= { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:48:32.156] [ERROR] Gateway - gateway.sync FAILURE, tries:[6] { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:48:56.506] [INFO] MQTT - MH CREATE secure(yes) mqtt.thingplus.net:8883
+[1915-06-02 10:48:56.735] [WARN] MQTT - mqtt close
+[1915-06-02 10:49:04.723] [ERROR] Gateway - Gateway init, server sync err= { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:49:04.784] [ERROR] Gateway - gateway.sync FAILURE, tries:[7] { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:49:07.830] [INFO] Sensors - [00405c010101] status { status: 'err', duration: -1, sensors: [] }
+[1915-06-02 10:49:07.847] [WARN] Sensors - Gateway status: NOT SENT due to unavailable mqtt
+[1915-06-02 10:49:56.844] [INFO] MQTT - MH CREATE secure(yes) mqtt.thingplus.net:8883
+[1915-06-02 10:49:57.094] [WARN] MQTT - mqtt close
+[1915-06-02 10:50:07.882] [INFO] Sensors - [00405c010101] status { status: 'err', duration: -1, sensors: [] }
+[1915-06-02 10:50:07.893] [WARN] Sensors - Gateway status: NOT SENT due to unavailable mqtt
+[1915-06-02 10:50:09.453] [ERROR] Gateway - Gateway init, server sync err= { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:50:09.522] [ERROR] Gateway - gateway.sync FAILURE, tries:[8] { [Error: 401] statusCode: 401 }
+Error: 401
+    at Error (<anonymous>)
+    at a.exports.statusError (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:25503)
+    at Request._callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/app.min.js:9:15053)
+    at Request.self.callback (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:132:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:829:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/mnt/mmcblk0p1/opt/thingplus-gateway/device/node_modules/request/index.js:786:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:919:16
+[1915-06-02 10:50:57.142] [INFO] MQTT - MH CREATE secure(yes) mqtt.thingplus.net:8883
+[1915-06-02 10:50:57.370] [WARN] MQTT - mqtt close
+[1915-06-02 10:51:07.911] [INFO] Sensors - [00405c010101] status { status: 'err', duration: -1, sensors: [] }
+[1915-06-02 10:51:07.918] [WARN] Sensors - Gateway status: NOT SENT due to unavailable mqtt
+[1915-06-02 10:51:57.014] [INFO] Main - SIGTERM

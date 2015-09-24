@@ -35,9 +35,8 @@
 static struct mtd_partition partition_info[] = {
 	PARTITION("X-loader",	0x000000,  0x10000),
 	PARTITION("U-Boot",		0x010000,  0x40000),
-	PARTITION("Kernel",		0x050000,  0x38000),
-	PARTITION("Kernel",		0x3D0000,  0x38000),
-	PARTITION("SysInfo",	0x7D0000,  0x03000),
+	PARTITION("Kernel",		0x050000,  0x2c000),
+	PARTITION("ramdisk",	0x310000,  0x4F000)
 };
 
 /* emi nor flash resources registeration */
@@ -52,7 +51,11 @@ static struct resource emi_nor_resources[] = {
 /* ethernet phy device */
 static struct plat_stmmacphy_data phy_private_data = {
 	.bus_id = 0,
+#if CONFIG_MACH_FTM_50S2
+	.phy_addr = 0,
+#else	
 	.phy_addr = 7,
+#endif
 	.phy_mask = 0,
 	.interface = PHY_INTERFACE_MODE_MII,
 };

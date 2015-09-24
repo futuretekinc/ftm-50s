@@ -51,6 +51,10 @@
 #define	STMMAC_CLK_RANGE_250_300M	5	/* MDC = Clk/122 */
 u32 *mac1_bus;
 
+#if CONFIG_MACH_FTM_50S2
+struct mii_bus *pMII = NULL;
+#endif
+
 static int stmmac_mdio_busy_wait(unsigned long ioaddr, unsigned int mii_addr)
 {
 	unsigned long finish = jiffies + 3 * HZ;
@@ -279,6 +283,10 @@ int stmmac_mdio_register(struct net_device *ndev)
 
 	priv->mii = new_bus;
 
+#if CONFIG_MACH_FTM_50S2
+	pMII = new_bus;
+#endif
+
 	found = 0;
 	for (addr = 0; addr < 32; addr++) {
 		struct phy_device *phydev = new_bus->phy_map[addr];
@@ -322,3 +330,26 @@ int stmmac_mdio_unregister(struct net_device *ndev)
 
 	return 0;
 }
+
+#if CONFIG_MACH_FTM_50S2
+
+int stmmac_mdio_mv88e6060_write(int phyaddr, int phyreg, u16 phydata)
+{
+	if (pMII == NULL)
+	{
+		return	-1;
+	}
+
+	return	stmmac_mdio_write(pMII, phyaddr, phyreg, phydata);
+}
+
+int stmmac_mdio_mv88e6060_read(int phyaddr, int phyreg)
+{
+	if (pMII == NULL)
+	{
+		return	-1;
+	}
+
+	return	stmmac_mdio_read(pMII, phyaddr, phyreg);
+}
+#endif

@@ -19,11 +19,7 @@ distclean:
 	done
 
 install:
-    $(shell mkdir -p $(TARGETDIR)/bin)
-    $(shell mkdir -p $(TARGETDIR)/usr/sbin)
-    $(shell cp busybox-1.21.0/busybox       $(TARGETDIR)/bin/)
-    $(shell cp ppp-2.4.5/pppd/pppd          $(TARGETDIR)/usr/sbin/)
-    $(shell cp ppp-2.4.5/pppdump/pppdump    $(TARGETDIR)/usr/sbin/)
-    $(shell cp ppp-2.4.5/pppstats/pppstats  $(TARGETDIR)/usr/sbin/)
-    $(shell cp ppp-2.4.5/chat/chat          $(TARGETDIR)/usr/sbin/)
+	for dir in $(SUBDIRS); do \
+		$(MAKE) -C $$dir install DESTDIR=/home/xtra/work/ftm-50s/initrd/apps/target; \
+	done
 

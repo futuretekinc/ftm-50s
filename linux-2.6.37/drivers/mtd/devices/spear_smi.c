@@ -163,9 +163,9 @@ static struct mtd_partition part_info_8M[] = {
 static struct mtd_partition part_info_16M[] = {
 	DEFINE_PARTS("Xloader", 0x00000000, 0x00010000),
 	DEFINE_PARTS("UBoot",	0x00010000, 0x00040000),
-	DEFINE_PARTS("Kernel",	0x00050000, 0x00300000),
-	DEFINE_PARTS("Kernel",	0x00350000, 0x00300000),
-	DEFINE_PARTS("SysInfo", 0x00650000, 0x009A0000),
+	DEFINE_PARTS("Kernel",	0x00050000, 0x002C0000),
+	DEFINE_PARTS("Initrd",	0x00310000, 0x004C0000),
+	DEFINE_PARTS("User", 	0x01000000, 0x00800000),
 };
 /* Define spear specific structures */
 

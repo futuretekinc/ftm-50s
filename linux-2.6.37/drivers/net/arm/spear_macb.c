@@ -196,7 +196,7 @@ static void __macb_set_hwaddr(struct macb *bp)
 
 static void __init macb_get_hwaddr(struct macb *bp)
 {
-#if defined(CONFIG_MACH_SPEAR320_FTM) || defined(CONFIG_MACH_SPEAR320_FTM2)
+#if defined(CONFIG_MACH_SPEAR320_FTM)
 	u8 addr[6];
 
 	extern	void get_ethaddr(int id, u8 *addr);
@@ -227,6 +227,7 @@ static void __init macb_get_hwaddr(struct macb *bp)
 
 static int macb_mdio_read(struct mii_bus *bus, int mii_id, int regnum)
 {
+#if ! CONFIG_MACH_FTM_50S2
 	int value;
 	struct macb *bp;
 	struct macb_base_data *pdata;
@@ -250,11 +251,23 @@ static int macb_mdio_read(struct mii_bus *bus, int mii_id, int regnum)
 	value = MACB_BFEXT(DATA, macb_readl(bp, MAN));
 
 	return value;
+#else
+	switch(regnum)
+	{
+	case	1:	return	0x784d;
+	case	2:	return	(mii_id == 0)?0x0141:0xFFFF;
+	case	3:	return	(mii_id == 0)?0x0c87:0xFFFF;
+	case	4:	return	0x8101;
+	case	5:	return	0x0000;	
+		break;
+	}
+#endif
 }
 
 static int macb_mdio_write(struct mii_bus *bus, int mii_id, int regnum,
 		u16 value)
 {
+#if ! CONFIG_MACH_FTM_50S2
 	struct macb *bp;
 	struct macb_base_data *pdata;
 
@@ -276,6 +289,9 @@ static int macb_mdio_write(struct mii_bus *bus, int mii_id, int regnum,
 		cpu_relax();
 
 	return 0;
+#else
+	return	0;
+#endif
 }
 
 static int macb_mdio_reset(struct mii_bus *bus)
@@ -340,6 +356,7 @@ static void macb_handle_link_change(struct net_device *dev)
 static int macb_mii_probe(struct net_device *dev)
 {
 	struct macb *bp = netdev_priv(dev);
+#if CONFIG_MACH_FTM_50S2
 	struct phy_device *phydev = NULL;
 	struct macb_base_data *pdata;
 	int phy_addr;
@@ -379,7 +396,11 @@ static int macb_mii_probe(struct net_device *dev)
 	bp->speed = 0;
 	bp->duplex = -1;
 	bp->phy_dev = phydev;
-
+#else
+	bp->link = 1;
+	bp->speed = SPEED_100;
+	bp->duplex = 1;
+#endif
 	return 0;
 }
 

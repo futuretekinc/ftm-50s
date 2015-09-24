@@ -5,7 +5,7 @@
 
 case "$1" in
     start)
-		. /etc/sysconfig/watchdog.conf
+		. /etc/config/watchdog.conf
         watchdog -t $WATCHDOG_TIMEOUT /dev/watchdog
         ;;
     stop)

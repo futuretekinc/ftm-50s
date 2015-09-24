@@ -1201,16 +1201,17 @@ void spear3xx_macb_plat_mdio_control(struct platform_device *pdev)
 		return;
 	}
 
+#if	!CONFIG_MACH_FTM_50S2
 	/* pdev->id can only be from 0 to (maxintf - 1) */
 	if (pdev->id > (maxintf - 1)) {
 		pr_err("macb mdio control: invalid pdev->id:%d\n", pdev->id);
 		return;
 	}
-
 	tmp = readl(reg);
 	tmp &= ~(mask << shift);
 	tmp |= pdev->id << shift;
 	writel(tmp, reg);
+#endif
 }
 
 void spear3xx_macb_setup(void)

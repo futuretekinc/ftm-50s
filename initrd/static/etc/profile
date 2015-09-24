@@ -1,5 +1,5 @@
 #! /bin/ash
-export LD_LIBRARY_PATH=/lib:/usr/lib:/usr/local/lib
-export PATH=/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/sbin
+export LD_LIBRARY_PATH=/lib:/usr/local/lib
+export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
 export SHELL=/bin/ash
 export TMOUT=300

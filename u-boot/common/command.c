@@ -78,7 +78,7 @@ int _do_help (cmd_tbl_t *cmd_start, int cmd_items, cmd_tbl_t * cmdtp, int
 			printf("%-*s- %s\n", CONFIG_SYS_HELP_CMD_WIDTH,
 			       cmd_array[i]->name, usage);
 		}
-#if defined(CONFIG_SPEAR320_FTM)
+#if defined(CONFIG_SPEAR320_FTM) && !defined(CONFIG_SPEAR320_FTM2)
 		telit_stat();
 #endif
 		return 0;

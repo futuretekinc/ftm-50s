@@ -31,6 +31,7 @@ modules.builtin
 *.lzo
 *.patch
 *.gcno
+*.img
 
 System.map
 tags
@@ -91,3 +92,5 @@ linux-2.6.37/include/config/tristate.conf
 
 u-boot/u-boot.img
 u-boot/u-boot
+
+initrd/apps/target

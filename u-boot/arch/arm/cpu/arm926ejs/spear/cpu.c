@@ -86,8 +86,6 @@ int print_cpuinfo(void)
 	printf("CPU:   SPEAr320_HMI\n");
 #elif defined(CONFIG_SPEAR320_FTM)
 	printf("CPU:   SPEAr320\n");
-#elif defined(CONFIG_SPEAR320_FTM2)
-	printf("CPU:   SPEAr320\n");
 #elif defined(CONFIG_SPEAR600)
 	printf("CPU:   SPEAr600\n");
 #else

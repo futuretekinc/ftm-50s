@@ -1,20 +1,29 @@
 #!/bin/bash
 
-ROOTFS_DIR=target
+IMAGE=initrd
+ROOT=_root
+OUTPUT=initrd.img
 
-dd if=/dev/zero of=ramdisk bs=1k count=32768
-mke2fs -F ramdisk
+dd if=/dev/zero of=$IMAGE bs=1k count=32768
+mke2fs -F $IMAGE 
 
-sudo mount -o loop ramdisk target
+if [ ! -e $ROOT ]
+then
+	mkdir $ROOT
+fi
+
+sudo mount -o loop $IMAGE $ROOT
 
 (
-	cd 	$ROOTFS_DIR
+	cd 	$ROOT
 	echo	"Create sub directories"
 
 	mkdir -p bin boot dev etc sbin usr var/log var/lock tmp
 	mkdir -p usr/bin usr/sbin usr/lib etc/init.d etc/rc.d etc/sysconfig/network
+)
 
-	cd	dev
+(
+	cd	$ROOT/dev
 	sudo mknod ram0	   	b 	1 	0	# all on needs is ram0
 	sudo mknod ram1	   	b 	1 	1
 
@@ -65,7 +74,6 @@ sudo mount -o loop ramdisk target
 	sudo mknod ppp     	c	108	0 	# Point-to-Point Protocol
 
 	ln -s ram0				ramdisk
-	ln -s urandom 			random  # used by dropbear workaround, 1,8 was dead
 	ln -s ../proc/self/fd/0 stdin 	# process i/o
 	ln -s ../proc/self/fd/1 stdout
 	ln -s ../proc/self/fd/2 stderr
@@ -75,75 +83,76 @@ sudo mount -o loop ramdisk target
 )
 
 (
-    cd $ROOTFS_DIR/usr/bin
+    cd $ROOT/usr/bin
     cp /opt/STM/STLinux-2.4/devkit/armv5/target/usr/sbin/mkfs.jffs2 .
+    cp /opt/STM/STLinux-2.4/devkit/armv5/target/usr/sbin/e2fsck .
     cp /opt/STM/STLinux-2.4/devkit/armv5/target/usr/sbin/flash_erase .
 
     exit    3
 )
 
 (
-    cd $ROOTFS_DIR/usr/lib
+    cd $ROOT/usr/lib
     cp /opt/STM/STLinux-2.4/devkit/armv5/target/usr/lib/libz.so.1.2.5 .
     ln -s libz.so.1.2.5 libz.so.1
     cp /opt/STM/STLinux-2.4/devkit/armv5/target/usr/lib/liblzo2.so.2.0.0 .
     ln -s liblzow.so.2.0.0 liblzo2.so.2
+    cp /opt/STM/STLinux-2.4/devkit/armv5/target/usr/lib/libtermcap.so.2.0.8 .
+    ln -s libtermcap.so.2.0.8 libtermcap.so.2
 
     exit    3
 )
 
 (
-	mkdir -p $ROOTFS_DIR/etc/rc3.d
-	rm -rf $ROOTFS_DIR/etc/rc3.d/*
+	ln -sf ../init.d/watchdog   $ROOT/etc/rc.d/S10watchdog
+#	ln -sf ../init.d/gpio       $ROOT/etc/rc.d/S11gpio
 
-	ln -sf ../init.d/watchdog   $ROOTFS_DIR/etc/rc3.d/S10watchdog
-#	ln -sf ../init.d/gpio       $ROOTFS_DIR/etc/rc3.d/S11gpio
+	ln -sf ../init.d/syslogd    $ROOT/etc/rc.d/S22syslogd
+#	ln -sf ../init.d/firewall   $ROOT/etc/rc.d/S23firewall
+#	ln -sf ../init.d/tc         $ROOT/etc/rc.d/S23tc
 
-#	ln -sf ../init.d/network    $ROOTFS_DIR/etc/rc3.d/S21network
-#	ln -sf ../init.d/syslogd    $ROOTFS_DIR/etc/rc3.d/S22syslogd
-#	ln -sf ../init.d/firewall   $ROOTFS_DIR/etc/rc3.d/S23firewall
-#	ln -sf ../init.d/tc         $ROOTFS_DIR/etc/rc3.d/S23tc
+#	ln -sf ../init.d/hostapd    $ROOT/etc/rc.d/S30hostapd 
+#	ln -sf ../init.d/ntpd       $ROOT/etc/rc.d/S31ntpd
+#	ln -sf ../init.d/dnsmasq    $ROOT/etc/rc.d/S32dnsmasq
 
-#	ln -sf ../init.d/hostapd    $ROOTFS_DIR/etc/rc3.d/S30hostapd 
-#	ln -sf ../init.d/ntpd       $ROOTFS_DIR/etc/rc3.d/S31ntpd
-#	ln -sf ../init.d/dnsmasq    $ROOTFS_DIR/etc/rc3.d/S32dnsmasq
+	ln -sf ../init.d/networking $ROOT/etc/rc.d/S40networking
+#	ln -sf ../init.d/dropbear   $ROOT/etc/rc.d/S40dropbear
+#	ln -sf ../init.d/mini_httpd $ROOT/etc/rc.d/S41mini_httpd
 
-#	ln -sf ../init.d/dropbear   $ROOTFS_DIR/etc/rc3.d/S40dropbear
-#	ln -sf ../init.d/mini_httpd $ROOTFS_DIR/etc/rc3.d/S41mini_httpd
+#	ln -sf ../init.d/l2tpd      $ROOT/etc/rc.d/S50l2tpd
+#	ln -sf ../init.d/racoon     $ROOT/etc/rc.d/S52racoon
 
-#	ln -sf ../init.d/l2tpd      $ROOTFS_DIR/etc/rc3.d/S50l2tpd
-#	ln -sf ../init.d/racoon     $ROOTFS_DIR/etc/rc3.d/S52racoon
+#	ln -sf ../init.d/l2tpd      $ROOT/etc/rc.d/K10l2tpd
+#	ln -sf ../init.d/racoon     $ROOT/etc/rc.d/K11racoon
 
-#	ln -sf ../init.d/l2tpd      $ROOTFS_DIR/etc/rc3.d/K10l2tpd
-#	ln -sf ../init.d/racoon     $ROOTFS_DIR/etc/rc3.d/K11racoon
+#	ln -sf ../init.d/mini_httpd $ROOT/etc/rc.d/K20mini_httpd
+#	ln -sf ../init.d/dropbear   $ROOT/etc/rc.d/K21dropbear
 
-#	ln -sf ../init.d/mini_httpd $ROOTFS_DIR/etc/rc3.d/K20mini_httpd
-#	ln -sf ../init.d/dropbear   $ROOTFS_DIR/etc/rc3.d/K21dropbear
+#	ln -sf ../init.d/dnsmasq    $ROOT/etc/rc.d/K30dnsmasq
+#	ln -sf ../init.d/ntpd       $ROOT/etc/rc.d/K31ntpd
+	ln -sf ../init.d/hostapd    $ROOT/etc/rc.d/K32hostapd 
 
-#	ln -sf ../init.d/dnsmasq    $ROOTFS_DIR/etc/rc3.d/K30dnsmasq
-#	ln -sf ../init.d/ntpd       $ROOTFS_DIR/etc/rc3.d/K31ntpd
-	ln -sf ../init.d/hostapd    $ROOTFS_DIR/etc/rc3.d/K32hostapd 
-
-#	ln -sf ../init.d/tc         $ROOTFS_DIR/etc/rc3.d/K40tc 
-#	ln -sf ../init.d/firewall   $ROOTFS_DIR/etc/rc3.d/K41firewall
-#	ln -sf ../init.d/syslogd    $ROOTFS_DIR/etc/rc3.d/K42syslogd
-#	ln -sf ../init.d/network    $ROOTFS_DIR/etc/rc3.d/K43network
-#	ln -sf ../init.d/gpio       $ROOTFS_DIR/etc/rc3.d/K44gpio
+#	ln -sf ../init.d/tc         $ROOT/etc/rc.d/K40tc 
+#	ln -sf ../init.d/firewall   $ROOT/etc/rc.d/K41firewall
+#	ln -sf ../init.d/syslogd    $ROOT/etc/rc.d/K42syslogd
+#	ln -sf ../init.d/network    $ROOT/etc/rc.d/K43network
+#	ln -sf ../init.d/gpio       $ROOT/etc/rc.d/K44gpio
 
     exit    3
 )
 
 (
-	cp -rf static/* target/
-	cp -rf apps/target/* target/
-	cp -rf apps/target/bin/* target/bin/
+	cp -rf static/* $ROOT
+	cp -rf apps/target/* $ROOT
 
 
-	sudo umount target
+	sudo umount $ROOT
 
-	gzip -f9 ramdisk
-	mkimage -n Ramdisk -A arm -O linux -T ramdisk -C gzip -a 0x00a00000 -d ramdisk.gz ramdisk.img
-	cp ramdisk.img /tftpboot/ftm-50s-xtra/rootfs.img
+	gzip -f9 $IMAGE
+	mkimage -n Ramdisk -A arm -O linux -T ramdisk -C gzip -a 0x00a00000 -d $IMAGE.gz $OUTPUT
+	cp $OUTPUT /tftpboot/ftm-50s-xtra/$OUTPUT
+
+	rm -rf $IMAGE.gz $ROOT
 
 #	for dir in $(SUBDIRS); do \
 #		$(MAKE) -C $$dir; \

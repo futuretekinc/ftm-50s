@@ -1,10 +1,9 @@
-#!/bin/ash
+#!/bin/sh
 
-if [ "${RCINIT}" != "done" ]; then
 #   ---------------------------------------------
 #   Common settings
 #   ---------------------------------------------
-HOSTNAME=FTM
+HOSTNAME=FTM-50S
 VERSION=V1.0.0.0
 
 hostname $HOSTNAME
@@ -49,6 +48,11 @@ create_gpio()
     esac
 }
 
+print_mounting()
+{
+	echo $1 | awk '{ printf(" Mounting %-20s : ", $1)}'
+}
+
 #   ---------------------------------------------
 #   Get verbose
 #   ---------------------------------------------
@@ -65,61 +69,88 @@ echo ""
 
 
 #   ---------------------------------------------
+#   Mount file system 
+#   ---------------------------------------------
+
+print_mounting "/proc"
+mount -t proc proc /proc
+status $? 1
+
+print_mounting "/sys"
+mount -t sysfs sysfs /sys
+status $? 1
+
+print_mounting "/dev"
+mount -t tmpfs mdev /dev
+status $? 1
+
+print_mounting "/mnt"
+mount -t tmpfs tmpfs /mnt
+status $? 0
+
+#   ---------------------------------------------
 #   MDEV Support
 #   (Requires sysfs support in the kernel)
 #   ---------------------------------------------
-echo -n " Mounting /proc             : "
-mount -n -t proc /proc /proc
-status $? 1
-
-echo -n " Mounting /sys              : "
-mount -n -t sysfs sysfs /sys
-status $? 1
-
-echo -n " Mounting /dev              : "
-mount -n -t tmpfs mdev /dev
-status $? 1
-
-echo -n " Mounting /mnt              : "
-mount -n -t tmpfs tmpfs /mnt
-status $? 1
-
-echo -n " Mounting /dev/pts          : "
+print_mounting "/dev/pts"
 mkdir /dev/pts
 mount -t devpts devpts /dev/pts
-status $? 1
-
-echo -n " Enabling hot-plug          : "
-echo "/sbin/mdev" > /proc/sys/kernel/hotplug
 status $? 0
 
-echo -n " Mounting /proc/bus/usb     : "
-mount -n -t usbfs usbfs /proc/bus/usb
-status $? 1
-
-echo -n " Populating /dev            : "
+echo -n " Populating devices            : "
 mkdir /dev/input
 mkdir /dev/snd
-
 mdev -s
 status $? 0
 
 #   ---------------------------------------------
-#   Mount debugfs
+#   Mount User Space
 #   ---------------------------------------------
-cat /proc/filesystems | grep -q debugfs
+cat /proc/mtd | grep User >& /dev/null
 if [ $? -eq 0 ] ; then
-        echo -n " Mounting debugfs             : "
-	mkdir /dev/debug
-        mount -n -t debugfs debugfs /sys/kernel
-        status $? 1
+	print_mounting "/mnt/data"
+	MTDBLOCK=`cat /proc/mtd | grep "User" | awk '{ print $1 }' | sed -e 's/mtd//' -e 's/://' | awk '{ print "mtdblock" $1 }'`
+    mkdir /mnt/data
+	
+    mount -t jffs2 /dev/$MTDBLOCK /mnt/data >& /dev/null
+	if [ $? -eq 0 ] ; then
+		echo "[SUCCESS]"
+	else
+		rmdir /mnt/data
+   		echo "[FAILED]"
+	fi 
 fi
 
+
+if [ -d /mnt/data ] ; then
+	if [ ! -d /mnt/data/etc ] ; then
+		cp -r /etc /mnt/data/
+	fi
+
+	mv /etc /init/
+	ln -s /mnt/data/etc /etc
+
+	if [ ! -d /mnt/data/root ] ; then
+		cp -r /root /mnt/data/
+	fi
+
+	mv /root /init/
+	ln -s /mnt/data/root /root
+fi 
+
 #   ---------------------------------------------
-#   Mount the default file systems
+#   fstab support
 #   ---------------------------------------------
-echo -n " Mounting other filesystems : "
+print_mounting "fstab"
 mount -a
+if [ $? -eq 0 ] ; then
+    echo "[SUCCESS]"
+else
+    echo "[FAILED]"
+fi
+
+echo -n " Enabling hot-plug             : "
+echo "/sbin/mdev" > /proc/sys/kernel/hotplug
 status $? 0
 
 #   ---------------------------------------------
@@ -127,90 +158,31 @@ status $? 0
 #   ---------------------------------------------
 
 create_gpio 15 fectory_reset in
-create_gpio 77 nf_wp out 1
-create_gpio 81 gps_rst out 1
 create_gpio 85 led_status  out 1
 
-#   ---------------------------------------------
-#   Mount User Space
-#   ---------------------------------------------
-cat /proc/mtd | grep mtd10 >& /dev/null
-if [ $? -eq 0 ] ; then
-    echo -n " Mounting User Space : "
-    mkdir /mnt/mtd
-    mount -t jffs2 /dev/mtdblock10 /mnt/mtd
-    echo "[SUCCESS]"
-else
-    echo "[FAILED]"
-fi 
+if [ -e /mnt/mmcblk0p1 ] && [ -e /mnt/mmcblk0p1/package/install.sh ] ; then
+	/mnt/mmcblk0p1/package/install.sh	
+fi
 
-#   ---------------------------------------------
-#   Configuration User Space
-#   ---------------------------------------------
-
-#if [ -d /mnt/mtd/etc ] 
-#then
-#    echo    ""
-#else
-#    echo "Check 1"
-#    cd /mnt/mtd
-#    mkdir etc
-#    cp -rf /etc/* etc/
-#fi
-
-#mv /etc /etc.init
-#mkdir /etc
-#ln -s /mnt/mtd/etc /etc
-#/etc/rc.d/rc.sysinit
-   
-#export  RCINIT=done
-
-#else
-
-#   ---------------------------------------------
-#   Set PATH
-#   ---------------------------------------------
-export LD_LIBRARY_PATH=/lib:/usr/local/lib:/opt/lib:/opt/usr/lib
-export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/opt/bin:/opt/usr/bin:/opt/usr/local/sbin
-    
-    
 #   ---------------------------------------------
 #	Network Configuration
 #   ---------------------------------------------
-echo "ifup lo"
-ifup lo
-    
-echo "ifup eth0"
-ifup eth0
-    
-httpd -h /www
-snmpd
-    
-#   ---------------------------------------------
-#   Start the subsystems
-#   ---------------------------------------------
-# FAIL=0
-# for i in /etc/rc3.d/S* ; do
-# 	SERVICENAME=${ii#/etc/rc3.d/S??}
-# 	echo -n "Starting $SERVICENAME .."
-# 	if [ -f /etc/sysconfig/$SERVICENAME.conf ] ||
-# 		[ -d /etc/sysconfig/$SERVICENAME ] ; then
-# 		if $ii start; then
-# 			echo ""
-# 		else
-# 			echo " [FAIL]"
-# 			FAIL=1
-#		fi
-# 	else
-#		echo " [NO_CONF]"
-#	fi
-# done
+echo ""
+echo "Start services"
+for i in /etc/rc.d/S* ; do
+ 	SERVICENAME=${i#/etc/rc.d/S??}
+	echo $SERVICENAME | awk '{ printf(" Starting %-20s : ", $1)}'
+ 	if $i start >& /dev/null ; then
+ 		echo "[SUCCESS]"
+ 	else
+ 		echo "[FAIL]"
+ 		FAIL=1
+	fi
+done
 
 #   ---------------------------------------------
 #   Done!
 #   ---------------------------------------------
 echo ""
 echo "System initialization complete."
-fi
-
 

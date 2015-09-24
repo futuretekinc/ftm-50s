@@ -174,23 +174,23 @@ int board_eth_init(bd_t *bis)
 
 	miiphy_write("mii0", 0x0F, 0x0A, 0x8000);
 
-	reg_short = 0x8000;
-	while(reg_short & 0x8000)
+	do	
 	{
 		miiphy_read("mii0", 0x0F, 0x0A, &reg_short);
 	}
+	while(reg_short & 0x8000);
 
 	miiphy_read("mii0", 0x08, 0x03, &reg_short) ;
 
 	for(i = 0 ; i < 4 ; i++)
 	{
 		miiphy_write("mii0", i, PHY_BMCR, PHY_BMCR_RESET);
-		reg_short = PHY_BMCR_RESET;
-
-		while (reg_short & PHY_BMCR_RESET)
+		
+		do
 		{
 			miiphy_read("mii0", i, PHY_BMCR, &reg_short);// Be here until Phy_Reset bit gets clear
 		}
+		while (reg_short & PHY_BMCR_RESET);
 	}
 
 	for(i = 0 ; i < 6 ; i++)
@@ -234,3 +234,106 @@ int board_power_hold(int on)
 	return	0;
 	
 }
+
+int board_post_init (void)
+{
+	unsigned short reg_short, val;
+	int i;
+
+	// MV88E6060 Reset release
+//	val = readl(SPEAR320_START_RAS_REG + 0x3c);
+//	val |= (1 << (68 % 32));
+//	writel(val, SPEAR320_START_RAS_REG + 0x3c);
+
+	udelay(10000);
+
+	// MV88E6060 Softreset
+	miiphy_write("mii0", 0x0F, 0x0A, 0x8000);
+	do
+	{
+		miiphy_read("mii0", 0x0F, 0x0A, &reg_short);
+	}
+	while(reg_short & 0x8000); // Be here until Phy_Reset bit gets clear
+
+	miiphy_read("mii0", 0x08, 0x03, &val) ;
+	
+	if ((val >> 4) == 0x153)
+	{
+		for(i = 0 ; i < 5 ; i++)
+		{
+			miiphy_write("mii0", i, PHY_BMCR, PHY_BMCR_RESET);
+			do
+			{
+				miiphy_read("mii0", i, PHY_BMCR, &reg_short);
+			}
+			while (reg_short & PHY_BMCR_RESET)	// Be here until Phy_Reset bit gets clear
+					/*  printf("\nINSIDE PHY RESET Routine ") */ ;
+		}
+
+		for(i = 0 ; i < 7 ; i++)
+		{
+			miiphy_read("mii0", PORT_ID(i), 0x04, &reg_short);
+			miiphy_write("mii0", PORT_ID(i), 0x04, reg_short & ~0x0003);
+		}
+
+		miiphy_write("mii0", PORT_ID(0), 0x06, 0x0040);
+		miiphy_write("mii0", PORT_ID(1), 0x06, 0x003C);
+		miiphy_write("mii0", PORT_ID(2), 0x06, 0x003A);
+		miiphy_write("mii0", PORT_ID(3), 0x06, 0x0036);
+		miiphy_write("mii0", PORT_ID(4), 0x06, 0x002E);
+		miiphy_write("mii0", PORT_ID(5), 0x06, 0x001E);
+		miiphy_write("mii0", PORT_ID(6), 0x06, 0x0001);
+
+		for(i = 0 ; i < 7 ; i++)
+		{
+			miiphy_read("mii0", PORT_ID(i), 0x04, &reg_short);
+			miiphy_write("mii0", PORT_ID(i), 0x04, reg_short | 0x0003);
+		}
+
+		for(i = 0 ; i < 5 ; i++)
+		{
+			miiphy_write("mii0", i, 0x16, 0x4A35);
+		}
+	}
+	else
+	{
+		printf("MARVELL MV88E6060 Supported\n");
+		for(i = 0 ; i < 4 ; i++)
+		{
+			miiphy_write("mii0", i, PHY_BMCR, PHY_BMCR_RESET);
+			do 
+			{
+				miiphy_read("mii0", i, PHY_BMCR, &reg_short);
+			}
+			while (reg_short & PHY_BMCR_RESET)	// Be here until Phy_Reset bit gets clear
+					/*  printf("\nINSIDE PHY RESET Routine ") */ ;
+		}
+
+		for(i = 0 ; i < 6 ; i++)
+		{
+			miiphy_read("mii0", PORT_ID(i), 0x04, &reg_short);
+			miiphy_write("mii0", PORT_ID(i), 0x04, reg_short & ~0x0003);
+		}
+
+		miiphy_write("mii0", PORT_ID(0), 0x06, 0x0010);
+		miiphy_write("mii0", PORT_ID(1), 0x06, 0x002C);
+		miiphy_write("mii0", PORT_ID(2), 0x06, 0x002A);
+		miiphy_write("mii0", PORT_ID(3), 0x06, 0x0026);
+		miiphy_write("mii0", PORT_ID(4), 0x06, 0x0001);
+		miiphy_write("mii0", PORT_ID(5), 0x06, 0x000E);
+
+		for(i = 0 ; i < 6 ; i++)
+		{
+			miiphy_read("mii0", PORT_ID(i), 0x04, &reg_short);
+			miiphy_write("mii0", PORT_ID(i), 0x04, reg_short | 0x0003);
+		}
+
+		for(i = 0 ; i < 4 ; i++)
+		{
+			miiphy_write("mii0", i, 0x16, 0x4A35);
+		}
+	}
+
+	return 0;
+}
+

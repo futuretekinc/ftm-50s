@@ -51,7 +51,7 @@ static struct resource emi_nor_resources[] = {
 /* ethernet phy device */
 static struct plat_stmmacphy_data phy_private_data = {
 	.bus_id = 0,
-	.phy_addr = 7,
+	.phy_addr = 0,
 	.phy_mask = 0,
 	.interface = PHY_INTERFACE_MODE_MII,
 };

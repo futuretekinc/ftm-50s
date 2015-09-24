@@ -395,6 +395,11 @@ void main_loop (void)
 #endif /* CONFIG_BOOTCOUNT_LIMIT */
 		s = getenv ("bootcmd");
 
+#if CONFIG_SPEAR320_FTM2
+	extern int board_post_init(void);
+	board_post_init();
+#endif
+
 	debug ("### main_loop: bootcmd=\"%s\"\n", s ? s : "<UNDEFINED>");
 
 	if (bootdelay >= 0 && s && !abortboot (bootdelay)) {

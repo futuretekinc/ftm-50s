@@ -20,7 +20,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston,
  * MA 02111-1307 USA
  */
-
+ 
 #ifndef __CONFIG_H
 #define __CONFIG_H
 
@@ -38,8 +38,9 @@
 	#if defined(CONFIG_MK_hmi)
 	#define CONFIG_SPEAR3XX			1
 	#define CONFIG_SPEAR320_HMI		1
-	#elif defined(CONFIG_MK_ftm)
+	#elif defined(CONFIG_MK_ftm2)
 	#define CONFIG_SPEAR3XX			1
+	#define CONFIG_SPEAR320_FTM		1
 	#define CONFIG_SPEAR320_FTM2	1
 	#else
 	#define CONFIG_SPEAR3XX			1
@@ -162,7 +163,7 @@
 						CONFIG_SYS_CS5_FLASH_BASE }
 #define CONFIG_SYS_MAX_FLASH_BANKS		6
 
-#elif defined(CONFIG_SPEAR320) || defined(CONFIG_SPEAR320_HMI) || defined(CONFIG_SPEAR320_FTM)
+#elif defined(CONFIG_SPEAR320) || defined(CONFIG_SPEAR320_HMI) || defined(CONFIG_SPEAR320_FTM) || defined(CONFIG_SPEAR320_FTM2)
 #define CONFIG_SYS_FLASH_PROTECTION		1
 #define CONFIG_SYS_FLASH_BASE			0x44000000
 #define CONFIG_SYS_CS1_FLASH_BASE		0x45000000
@@ -211,12 +212,12 @@
 	"kernel_name=uImage\0"\
 	"kernel_loc=0xf8050000\0"\
 	"kernel_size=0x002c0000\0"\
-	"rootfs_name=rootfs.img\0"\
-	"rootfs_loc=0xf8310000\0"\
-	"rootfs_size=0x004f0000\0"\
+	"initrd_name=initrd.img\0"\
+	"initrd_loc=0xf8310000\0"\
+	"initrd_size=0x004f0000\0"\
 	"rf_loader=tftp $(flashfiles)$(loader_name);"\
-	           "protect off 1:1-4;"\
-	           "erase 1:1-4;"\
+	           "protect off 1:1-3;"\
+	           "erase 1:1-3;"\
 	           "cp.b $(fileaddr) $(loader_loc) $(filesize);"\
 	           "protect on 1:1-3\0"\
 	"rf_kernel=tftp $(flashfiles)$(kernel_name)\;"\
@@ -224,15 +225,15 @@
 	           "erase 1:5-47\;"\
 	           "cp.b $(fileaddr) $(kernel_loc) $(filesize)\;"\
 	           "protect on 1:5-47\0"\
-	"rf_rootfs=tftp $(flashfiles)$(rootfs_name)\;"\
+	"rf_initrd=tftp $(flashfiles)$(initrd_name)\;"\
 			   "protect off 1:49-127\;"\
 	           "erase 1:49-127\;"\
-	           "cp.b $(fileaddr) $(rootfs_loc) $(filesize)\;"\
+	           "cp.b $(fileaddr) $(initrd_loc) $(filesize)\;"\
 	           "protect on 1:5-47\0"\
-	"bootargs=console=ttyS0,115200 "\
+	"setbootargs=setenv bootargs console=ttyS0,115200 "\
 			   "mem=128M "\
 			   "root=/dev/ram rw "\
-			   "initrd=0xa00000,32M"\
+			   "initrd=0xa00000,32M "\
 			   "ethaddr=$(ethaddr) eth1addr=$(eth1addr) "\
 			   "model=$(model) "\
 			   "devid=$(devid)\0"
@@ -243,7 +244,7 @@
 #undef	CONFIG_NFSBOOTCOMMAND
 
 #undef	CONFIG_BOOTCOMMAND
-#define	CONFIG_BOOTCOMMAND	"bootm $(kernel_loc) $(rootfs_loc)"
+#define	CONFIG_BOOTCOMMAND	"run setbootargs; bootm $(kernel_loc) $(initrd_loc)"
 
 
 #endif  /* __CONFIG_H */
